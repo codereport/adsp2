@@ -4,7 +4,7 @@ title: Episodes
 # subtitle: From the pexels folder
 permalink: /gallery/
 # gallery_path: "assets/img/pexels"
-feature-img: "assets/img/pexels/bg-index.jpg"
+feature-img: "assets/img/pexels/adsp2.png"
 tags: [Episode List]
 ---
 
