@@ -2,13 +2,22 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/pexels/travel.jpeg"
-tags: [About, Archive]
+feature-img: "assets/img/pexels/bg-index.jpg"
+tags: [About]
 ---
 
-Type on Strap is based on Type Theme, a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+ADSP: The Podcast is an informal podcast inspired by [Magic Read Along](http://www.magicreadalong.com/). We plan to talk about whatever we feel like - algorithms, data structures, programming languages, latest news in tech and more. Feel free to follow us on Twitter at [@adspthepodcast](https://twitter.com/adspthepodcast).
 
-Head over to the [theme's documentation](https://github.io/sylhare/Type-on-Strap) for much more information about Type on Strap or to install this theme on your own Jekyll site.
+Your two co-hosts are:
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+### Bryce Adelstein Lelbach 
+
+**Twitter:** [@blelbach](https://twitter.com/blelbach)
+
+__insert bio__
+
+### Conor Hoekstra 
+
+**Twitter:** [@code_report](https://twitter.com/code_report)
  
+Conor is a Senior Library Software Engineer at NVIDIA working on the [RAPIDS](https://rapids.ai/) team. He is extremely passionate about programming languages, algorithms and beautiful code. He is the founder and organizer of the [Programming Languages Virtual Meetup](https://www.meetup.com/Programming-Languages-Toronto-Meetup/) and he has a [YouTube channel](https://www.youtube.com/codereport).
