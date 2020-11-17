@@ -1,0 +1,13 @@
+{% assign author = site.data.authors[include.author] %}
+{% assign date = include.date %}
+
+<div class="post-info">
+  {%- if author.url -%}<a href="{{ author.url | relative_url }}" target="_blank">{%- endif -%}
+    {% if author.avatar  %}
+      <img src="{{ author.avatar | relative_url }}">
+    {% endif %}
+    <p class="meta">
+      {% if author.name %}{{ author.name }} - {% endif %}{{ date | date: "%B %-d, %Y" }}
+    </p>
+  {%- if author.url -%}</a>{%- endif -%}
+</div>
