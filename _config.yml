@@ -10,7 +10,7 @@ favicon: assets/img/pexels/logo.png                             # Icon displayed
 
 # Header and footer text
 header_text: "ADSP: The Podcast"  # Change Blog header text
-header_feature_image: assets/img/pexels/adsp1.png
+header_feature_image: assets/img/pexels/adsp2.png
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
