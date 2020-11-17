@@ -1,12 +1,12 @@
 # SITE CONFIGURATION
 baseurl: "adsp2"
-url: "https://sylhare.github.io"
+url: "https://www.adspthepodcast.com"
 
 # THEME-SPECIFIC CONFIGURATION
 title: "ADSP: The Podcast"                                    # site's title
 description: "Conor Hoekstra & Bryce Adelstein Lelbach"      # used by search engines
 avatar: assets/img/pexels/logo.png                         # Empty for no avatar in navbar
-favicon: assets/favicon.ico                             # Icon displayed in the tab
+favicon: assets/img/pexels/logo.png                             # Icon displayed in the tab
 
 # Header and footer text
 header_text: "ADSP: The Podcast"  # Change Blog header text
