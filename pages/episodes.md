@@ -2,8 +2,7 @@
 layout: page
 title: Episodes
 # subtitle: From the pexels folder
-permalink: /gallery/
-# gallery_path: "assets/img/pexels"
+permalink: /episodes/
 feature-img: "assets/img/pexels/adsp2.png"
 tags: [Episode List]
 ---
