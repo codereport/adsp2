@@ -25,7 +25,7 @@ youtube:          # Youtube channel token like: UCqECaJ8Gagnn7YCbPEzWH6g
 
 # rss specify feed path
 feed:
-  path: feed.xml
+  path: https://feeds.buzzsprout.com/1501960.rss
 
 # Share button options
 share:
