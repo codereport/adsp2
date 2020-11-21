@@ -16,6 +16,6 @@ tags: [listen]
 | Podcast Addict |                 [Link](https://podcastaddict.com/podcast/3164467)                 |
 |   Podchaser    | [Link](https://www.podchaser.com/podcasts/algorithms-data-structures-pro-1557693) |
 |     Deezer     |                  [Link](https://www.deezer.com/en/show/1999182)                   |
-|  Listen Notes  |                                      coming                                       |
+|  Listen Notes  |[Link](https://www.listennotes.com/podcasts/algorithms-data-structures-programs-conor-qysezt3F9wj/)|
 |   Player FM    |       [Link](https://player.fm/series/algorithms-data-structures-programs)        |
 | Podcast Index  |                 [Link](https://podcastindex.org/podcast/1331453)                  |
