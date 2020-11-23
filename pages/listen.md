@@ -11,7 +11,7 @@ tags: [listen]
 |      Site      |                                       Link                                        |
 | :------------: | :-------------------------------------------------------------------------------: |
 |    Spotify     |           [Link](https://open.spotify.com/show/5hcsSlBadLYlO1rfjPnssA)            |
-|     iTunes     |                                      coming                                       |
+| Apple Podcasts |[Link](https://podcasts.apple.com/ca/podcast/algorithms-data-structures-programs/id1541407369)|
 |Google Podcast|coming|
 |Overcast|coming|
 |Castro|coming|
