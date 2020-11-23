@@ -12,6 +12,7 @@ tags: [listen]
 | :------------: | :-------------------------------------------------------------------------------: |
 |    Spotify     |           [Link](https://open.spotify.com/show/5hcsSlBadLYlO1rfjPnssA)            |
 |     iTunes     |                                      coming                                       |
+|Google Podcast|coming|
 |Overcast|coming|
 |Castro|coming|
 |Castbox|coming|
