@@ -14,10 +14,10 @@ tags: [listen]
 | Apple Podcasts |[Link](https://podcasts.apple.com/ca/podcast/algorithms-data-structures-programs/id1541407369)|
 |Google Podcast|coming|
 |Overcast|coming|
-|Castro|coming|
+|Castro|[Link](https://castro.fm/podcast/bd698c72-6f4e-4a81-bf18-7924f64011be)|
 |Castbox|coming|
 |Pocket Casts|coming|
-|Podfriend|coming|
+|Podfriend|[Link](https://web.podfriend.com/podcast/1541407369)|
 |  Amazon Music  |                                      coming                                       |
 | Podcast Addict |                 [Link](https://podcastaddict.com/podcast/3164467)                 |
 |   Podchaser    | [Link](https://www.podchaser.com/podcasts/algorithms-data-structures-pro-1557693) |
