@@ -12,6 +12,11 @@ tags: [listen]
 | :------------: | :-------------------------------------------------------------------------------: |
 |    Spotify     |           [Link](https://open.spotify.com/show/5hcsSlBadLYlO1rfjPnssA)            |
 |     iTunes     |                                      coming                                       |
+|Overcast|coming|
+|Castro|coming|
+|Castbox|coming|
+|Pocket Casts|coming|
+|Podfriend|coming|
 |  Amazon Music  |                                      coming                                       |
 | Podcast Addict |                 [Link](https://podcastaddict.com/podcast/3164467)                 |
 |   Podchaser    | [Link](https://www.podchaser.com/podcasts/algorithms-data-structures-pro-1557693) |
