@@ -13,9 +13,9 @@ tags: [listen]
 |    Spotify     |           [Link](https://open.spotify.com/show/5hcsSlBadLYlO1rfjPnssA)            |
 | Apple Podcasts |[Link](https://podcasts.apple.com/ca/podcast/algorithms-data-structures-programs/id1541407369)|
 |Google Podcast|coming|
-|Overcast|coming|
+|Overcast|[Link to App](https://overcast.fm/)|
 |Castro|[Link](https://castro.fm/podcast/bd698c72-6f4e-4a81-bf18-7924f64011be)|
-|Castbox|coming|
+|Castbox|[Link](https://castbox.fm/channel/id3544076?utm_campaign=ex_share_ch&utm_medium=exlink&country=gb)|
 |Pocket Casts|[Link](https://pca.st/c9ft6kvu)|
 |Podfriend|[Link](https://web.podfriend.com/podcast/1541407369)|
 |  Amazon Music  |                                      coming                                       |
