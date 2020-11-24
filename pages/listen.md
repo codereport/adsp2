@@ -16,7 +16,7 @@ tags: [listen]
 |Overcast|coming|
 |Castro|[Link](https://castro.fm/podcast/bd698c72-6f4e-4a81-bf18-7924f64011be)|
 |Castbox|coming|
-|Pocket Casts|coming|
+|Pocket Casts|[Link](https://pca.st/c9ft6kvu)|
 |Podfriend|[Link](https://web.podfriend.com/podcast/1541407369)|
 |  Amazon Music  |                                      coming                                       |
 | Podcast Addict |                 [Link](https://podcastaddict.com/podcast/3164467)                 |
