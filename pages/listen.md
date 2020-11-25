@@ -25,3 +25,6 @@ tags: [listen]
 |  Listen Notes  |[Link](https://www.listennotes.com/podcasts/algorithms-data-structures-programs-conor-qysezt3F9wj/)|
 |   Player FM    |       [Link](https://player.fm/series/algorithms-data-structures-programs)        |
 | Podcast Index  |                 [Link](https://podcastindex.org/podcast/1331453)                  |
+|BeyondPod|[Link](http://player.beyondpod.mobi/details/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xNTAxOTYwLnJzcw==)|
+|DownCast|[Link to App](https://www.downcastapp.com/)|
+|Podcast Republic|[Link](https://www.podcastrepublic.net/podcast/1541407369)|
