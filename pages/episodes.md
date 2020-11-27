@@ -10,5 +10,6 @@ List of all episodes.
 
 |   #   |                                      Title                                      | Release Date |
 | :---: | :-----------------------------------------------------------------------------: | :----------: |
+|   1   | [Our Favorite Algorithms - Part II](https://adspthepodcast.com/2020/11/27/Episode-1.html) | 2020-11-27|
 |   0   | [Our Favorite Algorithms](https://adspthepodcast.com/2020/11/20/Episode-0.html) |  2020-11-20  |
 
