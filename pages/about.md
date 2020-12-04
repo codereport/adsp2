@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 feature-img: "assets/img/pexels/adsp2.png"
-tags: [About]
 ---
 
 **ADSP: The Podcast** is an informal podcast inspired by [Magic Read Along](http://www.magicreadalong.com/). We plan to talk about whatever we feel like - algorithms, data structures, programming languages, latest news in tech and more. Feel free to follow us on Twitter at [@adspthepodcast](https://twitter.com/adspthepodcast).
