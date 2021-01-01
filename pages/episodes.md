@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                             Title                                              | Release Date |
 | :---: | :--------------------------------------------------------------------------------------------: | :----------: |
+|   6   |    [2020 Retro (Part 1) and Fortran](https://adspthepodcast.com/2021/01/01/Episode-6.html)     |  2021-01-01  |
 |   5   |  [Holiday Special - From China to APL](https://adspthepodcast.com/2020/12/25/Episode-5.html)   |  2020-12-25  |
 |   4   |    [How Many Programming Languages?](https://adspthepodcast.com/2020/12/18/Episode-4.html)     |  2020-12-18  |
 |   3   | [Our Favorite Data Structures - Part II](https://adspthepodcast.com/2020/12/11/Episode-3.html) |  2020-12-11  |
