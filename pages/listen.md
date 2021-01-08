@@ -11,7 +11,7 @@ feature-img: "assets/img/pexels/adsp2.png"
 | :--------------: | :---------------------------------------------------------------------------------------------------: |
 |     Spotify      |                     [Link](https://open.spotify.com/show/5hcsSlBadLYlO1rfjPnssA)                      |
 |  Apple Podcasts  |    [Link](https://podcasts.apple.com/ca/podcast/algorithms-data-structures-programs/id1541407369)     |
-|  Google Podcast  |                                                coming                                                 |
+|  Google Podcast  |   [Link](https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xNTAxOTYwLnJzcw==)   |
 |     Overcast     |                                  [Link to App](https://overcast.fm/)                                  |
 |      Castro      |                [Link](https://castro.fm/podcast/bd698c72-6f4e-4a81-bf18-7924f64011be)                 |
 |     Castbox      |  [Link](https://castbox.fm/channel/id3544076?utm_campaign=ex_share_ch&utm_medium=exlink&country=gb)   |
@@ -27,3 +27,4 @@ feature-img: "assets/img/pexels/adsp2.png"
 |    BeyondPod     | [Link](http://player.beyondpod.mobi/details/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xNTAxOTYwLnJzcw==) |
 |     DownCast     |                              [Link to App](https://www.downcastapp.com/)                              |
 | Podcast Republic |                      [Link](https://www.podcastrepublic.net/podcast/1541407369)                       |
+|     Pandora      |           [Link](https://www.pandora.com/podcast/algorithms-plus-data-structures-programs/)           |
