@@ -17,7 +17,6 @@ feature-img: "assets/img/pexels/adsp2.png"
 |     Castbox      |  [Link](https://castbox.fm/channel/id3544076?utm_campaign=ex_share_ch&utm_medium=exlink&country=gb)   |
 |   Pocket Casts   |                                    [Link](https://pca.st/c9ft6kvu)                                    |
 |    Podfriend     |                         [Link](https://web.podfriend.com/podcast/1541407369)                          |
-|   Amazon Music   |                                                coming                                                 |
 |  Podcast Addict  |                           [Link](https://podcastaddict.com/podcast/3164467)                           |
 |    Podchaser     |           [Link](https://www.podchaser.com/podcasts/algorithms-data-structures-pro-1557693)           |
 |      Deezer      |                            [Link](https://www.deezer.com/en/show/1999182)                             |
