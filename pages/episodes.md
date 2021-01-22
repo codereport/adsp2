@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                             Title                                              | Release Date |
 | :---: | :--------------------------------------------------------------------------------------------: | :----------: |
+|   9   |       [What's the title? (Part 2)](https://adspthepodcast.com/2021/01/22/Episode-9.html)       |  2021-01-22  |
 |   8   |       [What's the title? (Part 1)](https://adspthepodcast.com/2021/01/15/Episode-8.html)       |  2021-01-15  |
 |   7   |          [2020 Retro (Part 2)](https://adspthepodcast.com/2021/01/08/Episode-7.html)           |  2021-01-08  |
 |   6   |    [2020 Retro (Part 1) and Fortran](https://adspthepodcast.com/2021/01/01/Episode-6.html)     |  2021-01-01  |
