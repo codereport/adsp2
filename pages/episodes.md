@@ -7,15 +7,16 @@ feature-img: "assets/img/pexels/adsp2.png"
 
 List of all episodes.
 
-|   #   |                                             Title                                              | Release Date |
-| :---: | :--------------------------------------------------------------------------------------------: | :----------: |
-|   9   |       [What's the title? (Part 2)](https://adspthepodcast.com/2021/01/22/Episode-9.html)       |  2021-01-22  |
-|   8   |       [What's the title? (Part 1)](https://adspthepodcast.com/2021/01/15/Episode-8.html)       |  2021-01-15  |
-|   7   |          [2020 Retro (Part 2)](https://adspthepodcast.com/2021/01/08/Episode-7.html)           |  2021-01-08  |
-|   6   |    [2020 Retro (Part 1) and Fortran](https://adspthepodcast.com/2021/01/01/Episode-6.html)     |  2021-01-01  |
-|   5   |  [Holiday Special - From China to APL](https://adspthepodcast.com/2020/12/25/Episode-5.html)   |  2020-12-25  |
-|   4   |    [How Many Programming Languages?](https://adspthepodcast.com/2020/12/18/Episode-4.html)     |  2020-12-18  |
-|   3   | [Our Favorite Data Structures - Part II](https://adspthepodcast.com/2020/12/11/Episode-3.html) |  2020-12-11  |
-|   2   |      [Our Favorite Data Structures](https://adspthepodcast.com/2020/12/04/Episode-2.html)      |  2020-12-04  |
-|   1   |   [Our Favorite Algorithms - Part II](https://adspthepodcast.com/2020/11/27/Episode-1.html)    |  2020-11-27  |
-|   0   |        [Our Favorite Algorithms](https://adspthepodcast.com/2020/11/20/Episode-0.html)         |  2020-11-20  |
+|   #   |                                               Title                                                | Release Date |
+| :---: | :------------------------------------------------------------------------------------------------: | :----------: |
+|  10   | [snake_case vs camelCase (Naming - Part 3)](https://adspthepodcast.com/2021/01/29/Episode-10.html) |  2021-01-29  |
+|   9   | [C++ vs Clojure partition (Naming - Part 2)](https://adspthepodcast.com/2021/01/22/Episode-9.html) |  2021-01-22  |
+|   8   |    [What's the title? (Naming - Part 1)](https://adspthepodcast.com/2021/01/15/Episode-8.html)     |  2021-01-15  |
+|   7   |            [2020 Retro (Part 2)](https://adspthepodcast.com/2021/01/08/Episode-7.html)             |  2021-01-08  |
+|   6   |      [2020 Retro (Part 1) and Fortran](https://adspthepodcast.com/2021/01/01/Episode-6.html)       |  2021-01-01  |
+|   5   |    [Holiday Special - From China to APL](https://adspthepodcast.com/2020/12/25/Episode-5.html)     |  2020-12-25  |
+|   4   |      [How Many Programming Languages?](https://adspthepodcast.com/2020/12/18/Episode-4.html)       |  2020-12-18  |
+|   3   |   [Our Favorite Data Structures - Part II](https://adspthepodcast.com/2020/12/11/Episode-3.html)   |  2020-12-11  |
+|   2   |        [Our Favorite Data Structures](https://adspthepodcast.com/2020/12/04/Episode-2.html)        |  2020-12-04  |
+|   1   |     [Our Favorite Algorithms - Part II](https://adspthepodcast.com/2020/11/27/Episode-1.html)      |  2020-11-27  |
+|   0   |          [Our Favorite Algorithms](https://adspthepodcast.com/2020/11/20/Episode-0.html)           |  2020-11-20  |
