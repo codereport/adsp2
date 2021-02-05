@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                               Title                                                | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------: | :----------: |
+|  11   |     [Standard vs Open Source Libraries](https://adspthepodcast.com/2021/02/05/Episode-11.html)     |  2021-02-05  |
 |  10   | [snake_case vs camelCase (Naming - Part 3)](https://adspthepodcast.com/2021/01/29/Episode-10.html) |  2021-01-29  |
 |   9   | [C++ vs Clojure partition (Naming - Part 2)](https://adspthepodcast.com/2021/01/22/Episode-9.html) |  2021-01-22  |
 |   8   |    [What's the title? (Naming - Part 1)](https://adspthepodcast.com/2021/01/15/Episode-8.html)     |  2021-01-15  |
