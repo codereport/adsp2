@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                               Title                                                | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------: | :----------: |
+|  13   |           [I'm an Excel Wizard!](https://adspthepodcast.com/2021/02/19/Episode-13.html)            |  2021-02-19  |
 |  12   |        [Formatting && (Parentheses)](https://adspthepodcast.com/2021/02/12/Episode-12.html)        |  2021-02-12  |
 |  11   |   [What belongs in the standard library?](https://adspthepodcast.com/2021/02/05/Episode-11.html)   |  2021-02-05  |
 |  10   | [snake_case vs camelCase (Naming - Part 3)](https://adspthepodcast.com/2021/01/29/Episode-10.html) |  2021-01-29  |
