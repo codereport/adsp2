@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                               Title                                                | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------: | :----------: |
+|  14   |           [Inclusive Terminology](https://adspthepodcast.com/2021/02/26/Episode-14.html)           |  2021-02-26  |
 |  13   |           [I'm an Excel Wizard!](https://adspthepodcast.com/2021/02/19/Episode-13.html)            |  2021-02-19  |
 |  12   |        [Formatting && (Parentheses)](https://adspthepodcast.com/2021/02/12/Episode-12.html)        |  2021-02-12  |
 |  11   |   [What belongs in the standard library?](https://adspthepodcast.com/2021/02/05/Episode-11.html)   |  2021-02-05  |
