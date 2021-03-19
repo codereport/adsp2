@@ -9,6 +9,8 @@ List of all episodes.
 
 |   #   |                                               Title                                                | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------: | :----------: |
+|  17   |        [Special Guest Sean Parent!](https://adspthepodcast.com/2021/03/19/Episode-17.html)         |  2021-03-19  |
+|  16   |         [Macros Almigthy! (Part 2)](https://adspthepodcast.com/2021/03/12/Episode-16.html)         |  2021-03-12  |
 |  15   |             [Macros Almigthy!](https://adspthepodcast.com/2021/03/05/Episode-15.html)              |  2021-03-05  |
 |  14   |           [Inclusive Terminology](https://adspthepodcast.com/2021/02/26/Episode-14.html)           |  2021-02-26  |
 |  13   |           [I'm an Excel Wizard!](https://adspthepodcast.com/2021/02/19/Episode-13.html)            |  2021-02-19  |
