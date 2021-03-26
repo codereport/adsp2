@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                               Title                                                | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------: | :----------: |
+|  18   |    [Special Guest Sean Parent! (Part 2)](https://adspthepodcast.com/2021/03/26/Episode-18.html)    |  2021-03-26  |
 |  17   |        [Special Guest Sean Parent!](https://adspthepodcast.com/2021/03/19/Episode-17.html)         |  2021-03-19  |
 |  16   |         [Macros Almigthy! (Part 2)](https://adspthepodcast.com/2021/03/12/Episode-16.html)         |  2021-03-12  |
 |  15   |             [Macros Almigthy!](https://adspthepodcast.com/2021/03/05/Episode-15.html)              |  2021-03-05  |
