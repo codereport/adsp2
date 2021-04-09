@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                               Title                                                | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------: | :----------: |
+|  20   |   [GTC 2021 Preview & Thrust Algorithms](https://adspthepodcast.com/2021/04/09/Episode-20.html)    |  2021-04-09  |
 |  19   |         [Finding Your Way in Tech](https://adspthepodcast.com/2021/04/02/Episode-19.html)          |  2021-04-02  |
 |  18   |    [Special Guest Sean Parent! (Part 2)](https://adspthepodcast.com/2021/03/26/Episode-18.html)    |  2021-03-26  |
 |  17   |        [Special Guest Sean Parent!](https://adspthepodcast.com/2021/03/19/Episode-17.html)         |  2021-03-19  |
