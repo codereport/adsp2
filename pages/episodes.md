@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                               Title                                                | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------: | :----------: |
+|  22   |        [Our Favorite Tech TV Shows](https://adspthepodcast.com/2021/04/23/Episode-22.html)         |  2021-04-23  |
 |  21   |    [Galaxy Brain Programming Languages](https://adspthepodcast.com/2021/04/16/Episode-21.html)     |  2021-04-16  |
 |  20   |   [GTC 2021 Preview & Thrust Algorithms](https://adspthepodcast.com/2021/04/09/Episode-20.html)    |  2021-04-09  |
 |  19   |         [Finding Your Way in Tech](https://adspthepodcast.com/2021/04/02/Episode-19.html)          |  2021-04-02  |
