@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                Title                                                | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------: | :----------: |
+|  25   |             [The Lost Reduction](https://adspthepodcast.com/2021/05/14/Episode-25.html)             |  2021-05-14  |
 |  24   | [C++Now 2021 with Ben Deane & Tony Van Eerd](https://adspthepodcast.com/2021/05/07/Episode-24.html) |  2021-05-07  |
 |  23   |         [Algorithms: Anamorphisms!](https://adspthepodcast.com/2021/04/30/Episode-23.html)          |  2021-04-30  |
 |  22   |         [Our Favorite Tech TV Shows](https://adspthepodcast.com/2021/04/23/Episode-22.html)         |  2021-04-23  |
