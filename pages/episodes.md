@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                Title                                                | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------: | :----------: |
+|  26   |      [MacHack & Apple with Sean Parent](https://adspthepodcast.com/2021/05/21/Episode-27.html)      |  2021-05-28  |
 |  26   |   [Sean Parent on Slides Decks, UI & More](https://adspthepodcast.com/2021/05/21/Episode-26.html)   |  2021-05-21  |
 |  25   |             [The Lost Reduction](https://adspthepodcast.com/2021/05/14/Episode-25.html)             |  2021-05-14  |
 |  24   | [C++Now 2021 with Ben Deane & Tony Van Eerd](https://adspthepodcast.com/2021/05/07/Episode-24.html) |  2021-05-07  |
