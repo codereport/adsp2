@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                Title                                                | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------: | :----------: |
+|  29   |    [From Papa John's to Google (Part 1)](https://adspthepodcast.com/2021/06/11/Episode-29.html)     |  2021-06-11  |
 |  28   |          [Steve Jobs & Sean Parent](https://adspthepodcast.com/2021/06/04/Episode-28.html)          |  2021-06-04  |
 |  27   |      [MacHack & Apple with Sean Parent](https://adspthepodcast.com/2021/05/28/Episode-27.html)      |  2021-05-28  |
 |  26   |   [Sean Parent on Slides Decks, UI & More](https://adspthepodcast.com/2021/05/21/Episode-26.html)   |  2021-05-21  |
