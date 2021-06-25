@@ -20,4 +20,4 @@ Bryce Adelstein Lelbach has spent nearly a decade developing programming languag
 
 **Twitter:** [@code_report](https://twitter.com/code_report)
  
-Conor is a Senior Library Software Engineer at NVIDIA working on the [RAPIDS](https://rapids.ai/) team. He is extremely passionate about programming languages, algorithms and beautiful code. He is the founder and organizer of the [Programming Languages Virtual Meetup](https://www.meetup.com/Programming-Languages-Toronto-Meetup/) and he has a [YouTube channel](https://www.youtube.com/codereport).
+Conor is a Senior Library Software Engineer at NVIDIA working on the [RAPIDS](https://rapids.ai/) team. He is extremely passionate about programming languages, algorithms and beautiful code. He is the founder and organizer of the [Programming Languages Virtual Meetup](https://www.meetup.com/Programming-Languages-Toronto-Meetup/), he has a [YouTube channel](https://www.youtube.com/codereport) and he is also host of another podcast on array languages, [ArrayCast](https://www.arraycast.com/).
