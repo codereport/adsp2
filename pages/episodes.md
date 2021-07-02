@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  32   | [Hiring Inclusively & Company Culture (Part 4)](https://adspthepodcast.com/2021/07/02/Episode-32.html)  |  2021-07-02  |
 |  31   |   [Strategic Decision Making & More (Part 3)](https://adspthepodcast.com/2021/06/25/Episode-31.html)    |  2021-06-25  |
 |  30   | [Google, Interviews, Leadership & More (Part 2)](https://adspthepodcast.com/2021/06/18/Episode-30.html) |  2021-06-18  |
 |  29   |      [From Papa John's to Google (Part 1)](https://adspthepodcast.com/2021/06/11/Episode-29.html)       |  2021-06-11  |
