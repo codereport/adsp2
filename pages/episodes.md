@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  33   |              [New York, New York!](https://adspthepodcast.com/2021/07/09/Episode-33.html)               |  2021-07-09  |
 |  32   | [Hiring Inclusively & Company Culture (Part 4)](https://adspthepodcast.com/2021/07/02/Episode-32.html)  |  2021-07-02  |
 |  31   |   [Strategic Decision Making & More (Part 3)](https://adspthepodcast.com/2021/06/25/Episode-31.html)    |  2021-06-25  |
 |  30   | [Google, Interviews, Leadership & More (Part 2)](https://adspthepodcast.com/2021/06/18/Episode-30.html) |  2021-06-18  |
