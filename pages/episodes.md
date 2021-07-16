@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  34   |           [Tuples, Arrays, APL & More](https://adspthepodcast.com/2021/07/16/Episode-34.html)           |  2021-07-16  |
 |  33   |              [New York, New York!](https://adspthepodcast.com/2021/07/09/Episode-33.html)               |  2021-07-09  |
 |  32   | [Hiring Inclusively & Company Culture (Part 4)](https://adspthepodcast.com/2021/07/02/Episode-32.html)  |  2021-07-02  |
 |  31   |   [Strategic Decision Making & More (Part 3)](https://adspthepodcast.com/2021/06/25/Episode-31.html)    |  2021-06-25  |
