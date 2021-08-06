@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  37   |             [`std::inclusive_scan`](https://adspthepodcast.com/2021/08/06/Episode-37.html)              |  2021-08-06  |
 |  36   |      [`std::transform` vs `std::for_each`](https://adspthepodcast.com/2021/07/30/Episode-36.html)       |  2021-07-30  |
 |  35   |                [SkyNet is Here!](https://adspthepodcast.com/2021/07/23/Episode-35.html)                 |  2021-07-23  |
 |  34   |           [Tuples, Arrays, APL & More](https://adspthepodcast.com/2021/07/16/Episode-34.html)           |  2021-07-16  |
