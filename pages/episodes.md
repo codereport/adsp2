@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  41   |            [I Apologize To Listeners](https://adspthepodcast.com/2021/09/03/Episode-41.html)            |  2021-09-03  |
 |  40   |    [Star Trek vs PowerPC (with Sean Parent)](https://adspthepodcast.com/2021/08/27/Episode-40.html)     |  2021-08-27  |
 |  39   |        [How Steve Jobs Saved Sean Parent](https://adspthepodcast.com/2021/08/20/Episode-39.html)        |  2021-08-20  |
 |  38   |    [Adobe STLab is Back! (with Sean Parent)](https://adspthepodcast.com/2021/08/13/Episode-38.html)     |  2021-08-13  |
