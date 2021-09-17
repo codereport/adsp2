@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  43   |        [Parallel Scans and Associativity](https://adspthepodcast.com/2021/09/17/Episode-43.html)        |  2021-09-17  |
 |  42   |          [Inverse Aglorithms and More!](https://adspthepodcast.com/2021/09/10/Episode-42.html)          |  2021-09-10  |
 |  41   |            [I Apologize To Listeners](https://adspthepodcast.com/2021/09/03/Episode-41.html)            |  2021-09-03  |
 |  40   |    [Star Trek vs PowerPC (with Sean Parent)](https://adspthepodcast.com/2021/08/27/Episode-40.html)     |  2021-08-27  |
