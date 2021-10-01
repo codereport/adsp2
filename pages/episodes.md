@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  45   |          [Algebraic Groups and Birds!](https://adspthepodcast.com/2021/10/01/Episode-45.html)           |  2021-10-01  |
 |  44   |         [Should You Drop Out of School?](https://adspthepodcast.com/2021/09/24/Episode-44.html)         |  2021-09-24  |
 |  43   |        [Parallel Scans and Associativity](https://adspthepodcast.com/2021/09/17/Episode-43.html)        |  2021-09-17  |
 |  42   |          [Inverse Aglorithms and More!](https://adspthepodcast.com/2021/09/10/Episode-42.html)          |  2021-09-10  |
