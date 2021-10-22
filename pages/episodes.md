@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  48   |          [Special Guest Dave Abrahams!](https://adspthepodcast.com/2021/10/22/Episode-48.html)          |  2021-10-22  |
 |  47   |               [Combinatory Logic!](https://adspthepodcast.com/2021/10/15/Episode-47.html)               |  2021-10-15  |
 |  46   |   [Programming Language Awards ~ Coming Soon!](https://adspthepodcast.com/2021/10/08/Episode-46.html)   |  2021-10-08  |
 |  45   |          [Algebraic Groups and Birds!](https://adspthepodcast.com/2021/10/01/Episode-45.html)           |  2021-10-01  |
