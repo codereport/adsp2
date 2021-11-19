@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  52   |             [One Year Anniversary!](https://adspthepodcast.com/2021/11/19/Episode-52.html)              |  2021-11-19  |
 |  51   |              [Efficiency vs Speed](https://adspthepodcast.com/2021/11/12/Episode-51.html)               |  2021-11-12  |
 |  50   |       [The Great Twitter War: Bryce vs JF](https://adspthepodcast.com/2021/11/05/Episode-50.html)       |  2021-11-05  |
 |  49   |     [Special Guest Dave Abrahams! (Part 2)](https://adspthepodcast.com/2021/10/29/Episode-49.html)      |  2021-10-29  |
