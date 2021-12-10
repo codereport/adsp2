@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  55   |            [LeetCode in C++ (Part 1)](https://adspthepodcast.com/2021/12/10/Episode-55.html)            |  2021-12-10  |
 |  54   |            [`std::partition` in BQN](https://adspthepodcast.com/2021/12/03/Episode-54.html)             |  2021-12-03  |
 |  53   |               [Florida & LeetCode](https://adspthepodcast.com/2021/11/26/Episode-53.html)               |  2021-11-26  |
 |  52   |             [One Year Anniversary!](https://adspthepodcast.com/2021/11/19/Episode-52.html)              |  2021-11-19  |
