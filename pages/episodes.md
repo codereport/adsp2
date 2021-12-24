@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  57   |  [Holiday Special #2 - Ljubljana, Here We Come!](https://adspthepodcast.com/2021/12/24/Episode-57.html) |  2021-12-24  |
 |  56   |            [LeetCode in BQN (Part 2)](https://adspthepodcast.com/2021/12/17/Episode-56.html)            |  2021-12-17  |
 |  55   |            [LeetCode in C++ (Part 1)](https://adspthepodcast.com/2021/12/10/Episode-55.html)            |  2021-12-10  |
 |  54   |            [`std::partition` in BQN](https://adspthepodcast.com/2021/12/03/Episode-54.html)             |  2021-12-03  |
