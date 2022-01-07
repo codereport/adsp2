@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  59   |         [Otto & Eric Niebler! (Part 2)](https://adspthepodcast.com/2021/01/07/Episode-59.html)          |  2022-01-07  |
 |  58   |         [Otto & Eric Niebler! (Part 1)](https://adspthepodcast.com/2021/12/31/Episode-58.html)          |  2021-12-31  |
 |  57   | [Holiday Special #2 - Ljubljana, Here We Come!](https://adspthepodcast.com/2021/12/24/Episode-57.html)  |  2021-12-24  |
 |  56   |            [LeetCode in BQN (Part 2)](https://adspthepodcast.com/2021/12/17/Episode-56.html)            |  2021-12-17  |
