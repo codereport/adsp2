@@ -9,8 +9,9 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
-|  60   |    [BQN's After (⟜) and the Parentheses Poll](https://adspthepodcast.com/2021/01/14/Episode-60.html)    |  2022-01-14  |
-|  59   |         [Otto & Eric Niebler! (Part 2)](https://adspthepodcast.com/2021/01/07/Episode-59.html)          |  2022-01-07  |
+|  61   |              [2021 Retro (Part 1)](https://adspthepodcast.com/2021/01/22/Episode-61.html)               |  2022-01-21  |
+|  60   |    [BQN's After (⟜) and the Parentheses Poll](https://adspthepodcast.com/2022/01/14/Episode-60.html)    |  2022-01-14  |
+|  59   |         [Otto & Eric Niebler! (Part 2)](https://adspthepodcast.com/2022/01/07/Episode-59.html)          |  2022-01-07  |
 |  58   |         [Otto & Eric Niebler! (Part 1)](https://adspthepodcast.com/2021/12/31/Episode-58.html)          |  2021-12-31  |
 |  57   | [Holiday Special #2 - Ljubljana, Here We Come!](https://adspthepodcast.com/2021/12/24/Episode-57.html)  |  2021-12-24  |
 |  56   |            [LeetCode in BQN (Part 2)](https://adspthepodcast.com/2021/12/17/Episode-56.html)            |  2021-12-17  |
