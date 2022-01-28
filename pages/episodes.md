@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  62   |              [2021 Retro (Part 2)](https://adspthepodcast.com/2022/01/28/Episode-62.html)               |  2022-01-28  |
 |  61   |              [2021 Retro (Part 1)](https://adspthepodcast.com/2022/01/21/Episode-61.html)               |  2022-01-21  |
 |  60   |    [BQN's After (⟜) and the Parentheses Poll](https://adspthepodcast.com/2022/01/14/Episode-60.html)    |  2022-01-14  |
 |  59   |         [Otto & Eric Niebler! (Part 2)](https://adspthepodcast.com/2022/01/07/Episode-59.html)          |  2022-01-07  |
