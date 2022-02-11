@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  64   |        [2022 Preview, Birds & Sponsors!](https://adspthepodcast.com/2022/02/11/Episode-64.html)         |  2022-02-11  |
 |  63   |                    [Wordle!](https://adspthepodcast.com/2022/02/04/Episode-63.html)                     |  2022-02-04  |
 |  62   |              [2021 Retro (Part 2)](https://adspthepodcast.com/2022/01/28/Episode-62.html)               |  2022-01-28  |
 |  61   |              [2021 Retro (Part 1)](https://adspthepodcast.com/2022/01/21/Episode-61.html)               |  2022-01-21  |
