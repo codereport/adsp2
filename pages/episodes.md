@@ -9,7 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
-|  66   |       [Exiciting C++ News (and Wordle #3)](https://adspthepodcast.com/2022/02/25/Episode-66.html)       |  2022-02-25  |
+|  66   |       [Exciting C++ News (and Wordle #3)](https://adspthepodcast.com/2022/02/25/Episode-66.html)       |  2022-02-25  |
 |  65   |       [NVIDIA is Hiring! (and Wordle #2)](https://adspthepodcast.com/2022/02/18/Episode-65.html)        |  2022-02-18  |
 |  64   |        [2022 Preview, Birds & Sponsors!](https://adspthepodcast.com/2022/02/11/Episode-64.html)         |  2022-02-11  |
 |  63   |                    [Wordle!](https://adspthepodcast.com/2022/02/04/Episode-63.html)                     |  2022-02-04  |
