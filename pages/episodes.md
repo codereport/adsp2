@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  70   |         [The Programming Language Quiz](https://adspthepodcast.com/2022/03/25/Episode-70.html)          |  2022-03-25  |
 |  69   |   [Special Guest Andrei Alexandrescu (Part 2)](https://adspthepodcast.com/2022/03/18/Episode-69.html)   |  2022-03-18  |
 |  68   |       [Special Guest Andrei Alexandrescu](https://adspthepodcast.com/2022/03/11/Episode-68.html)        |  2022-03-11  |
 |  67   |          [How to Get Started with C++](https://adspthepodcast.com/2022/03/04/Episode-67.html)           |  2022-03-04  |
