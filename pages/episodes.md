@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  72   |           [C++ Algorithm Family Feud!](https://adspthepodcast.com/2022/04/08/Episode-71.html)           |  2022-04-08  |
 |  71   |            [APL, COBOL, BASIC & More](https://adspthepodcast.com/2022/04/01/Episode-71.html)            |  2022-04-01  |
 |  70   |         [The Programming Language Quiz](https://adspthepodcast.com/2022/03/25/Episode-70.html)          |  2022-03-25  |
 |  69   |   [Special Guest Andrei Alexandrescu (Part 2)](https://adspthepodcast.com/2022/03/18/Episode-69.html)   |  2022-03-18  |
