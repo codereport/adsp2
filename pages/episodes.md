@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  75   |     [C++ Algorithms with Ben Deane (Part 1)](https://adspthepodcast.com/2022/04/29/Episode-75.html)     |  2022-04-29  |
 |  74   |        [C++ Education, Cats and More! 🐈‍⬛](https://adspthepodcast.com/2022/04/22/Episode-74.html)        |  2022-04-22  |
 |  73   |            [CppNorth, Bagels & More!](https://adspthepodcast.com/2022/04/15/Episode-73.html)            |  2022-04-15  |
 |  72   |           [C++ Algorithm Family Feud!](https://adspthepodcast.com/2022/04/08/Episode-72.html)           |  2022-04-08  |
