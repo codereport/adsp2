@@ -9,7 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
-|  80   |         [C++ Multidimensional Arrays and GPUs](https://adspthepodcast.com/2022/06/03/Episode-80.html)          |  2022-06-03  |
+|  80   |      [C++ Multidimensional Arrays and GPUs](https://adspthepodcast.com/2022/06/03/Episode-80.html)      |  2022-06-03  |
 |  79   |         [C++Now 2022, Circle and Clang](https://adspthepodcast.com/2022/05/27/Episode-79.html)          |  2022-05-27  |
 |  78   |     [C++ Algorithms with Ben Deane (Part 4)](https://adspthepodcast.com/2022/05/20/Episode-78.html)     |  2022-05-20  |
 |  77   |     [C++ Algorithms with Ben Deane (Part 3)](https://adspthepodcast.com/2022/05/13/Episode-77.html)     |  2022-05-13  |
