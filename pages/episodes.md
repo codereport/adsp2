@@ -9,7 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
-|  82   |     [GPUs: Responding To Reddit Comments](https://adspthepodcast.com/2022/06/17/Episode-82.html)        |  2022-06-10  |
+|  82   |      [GPUs - Responding To Reddit Comments](https://adspthepodcast.com/2022/06/17/Episode-82.html)      |  2022-06-17  |
 |  81   |              [C++ Should Leave ISO](https://adspthepodcast.com/2022/06/10/Episode-81.html)              |  2022-06-10  |
 |  80   |      [C++ Multidimensional Arrays and GPUs](https://adspthepodcast.com/2022/06/03/Episode-80.html)      |  2022-06-03  |
 |  79   |         [C++Now 2022, Circle and Clang](https://adspthepodcast.com/2022/05/27/Episode-79.html)          |  2022-05-27  |
