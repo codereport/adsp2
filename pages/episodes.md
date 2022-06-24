@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  83   |        [ARRAY 2022, `mdspaces`, & More!](https://adspthepodcast.com/2022/06/24/Episode-83.html)         |  2022-06-24  |
 |  82   |      [GPUs - Responding To Reddit Comments](https://adspthepodcast.com/2022/06/17/Episode-82.html)      |  2022-06-17  |
 |  81   |              [C++ Should Leave ISO](https://adspthepodcast.com/2022/06/10/Episode-81.html)              |  2022-06-10  |
 |  80   |      [C++ Multidimensional Arrays and GPUs](https://adspthepodcast.com/2022/06/03/Episode-80.html)      |  2022-06-03  |
