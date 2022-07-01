@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  84   |          [Special Guest Tony Van Eerd!](https://adspthepodcast.com/2022/07/01/Episode-84.html)          |  2022-07-01  |
 |  83   |        [ARRAY 2022, `mdspace`s, & More!](https://adspthepodcast.com/2022/06/24/Episode-83.html)         |  2022-06-24  |
 |  82   |      [GPUs - Responding To Reddit Comments](https://adspthepodcast.com/2022/06/17/Episode-82.html)      |  2022-06-17  |
 |  81   |              [C++ Should Leave ISO](https://adspthepodcast.com/2022/06/10/Episode-81.html)              |  2022-06-10  |
