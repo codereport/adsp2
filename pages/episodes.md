@@ -9,7 +9,8 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
-|  86   |     [Special Guest Tony Van Eerd! (Part 3)](https://adspthepodcast.com/2022/07/15/Episode-85.html)      |  2022-07-15  |
+|  87   |     [Special Guest Tony Van Eerd! (Part 4)](https://adspthepodcast.com/2022/07/22/Episode-87.html)      |  2022-07-22  |
+|  86   |     [Special Guest Tony Van Eerd! (Part 3)](https://adspthepodcast.com/2022/07/15/Episode-86.html)      |  2022-07-15  |
 |  85   |     [Special Guest Tony Van Eerd! (Part 2)](https://adspthepodcast.com/2022/07/08/Episode-85.html)      |  2022-07-08  |
 |  84   |          [Special Guest Tony Van Eerd!](https://adspthepodcast.com/2022/07/01/Episode-84.html)          |  2022-07-01  |
 |  83   |        [ARRAY 2022, `mdspace`s, & More!](https://adspthepodcast.com/2022/06/24/Episode-83.html)         |  2022-06-24  |
