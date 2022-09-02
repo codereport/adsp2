@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  93   |      [Special Guest Kate Gregory! (Part 2)](https://adspthepodcast.com/2022/09/02/Episode-93.html)      |  2022-09-02  |
 |  92   |          [Special Guest Kate Gregory!](https://adspthepodcast.com/2022/08/26/Episode-92.html)           |  2022-08-26  |
 |  91   |                 [C++23 (Part 2)](https://adspthepodcast.com/2022/08/19/Episode-91.html)                 |  2022-08-19  |
 |  90   |                     [C++23](https://adspthepodcast.com/2022/08/12/Episode-90.html)                      |  2022-08-12  |
