@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                  Title                                                  | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------: | :----------: |
+|  95   |    [Kate Gregory on Carbon vs C++! (Part 4)](https://adspthepodcast.com/2022/09/16/Episode-95.html)     |  2022-09-16  |
 |  94   |      [Special Guest Kate Gregory! (Part 3)](https://adspthepodcast.com/2022/09/09/Episode-94.html)      |  2022-09-09  |
 |  93   |      [Special Guest Kate Gregory! (Part 2)](https://adspthepodcast.com/2022/09/02/Episode-93.html)      |  2022-09-02  |
 |  92   |          [Special Guest Kate Gregory!](https://adspthepodcast.com/2022/08/26/Episode-92.html)           |  2022-08-26  |
