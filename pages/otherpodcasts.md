@@ -23,7 +23,7 @@ List of other podcasts.
 
 |                           Podcast                           | Active | Frequency |
 | :---------------------------------------------------------: | :----: | :-------: |
-|       [LamdaCast](https://soundcloud.com/lambda-cast)       |   ⛔    |           |
+|      [LambdaCast](https://soundcloud.com/lambda-cast)       |   ⛔    |           |
 |  [Functional Geekery](https://www.functionalgeekery.com/)   |   ✅    | ~monthly  |
 |           [CoRecursive](https://corecursive.com/)           |   ✅    | ~monthly  |
 |     [Magic Read Along](http://www.magicreadalong.com/)      |   ⛔    |           |
