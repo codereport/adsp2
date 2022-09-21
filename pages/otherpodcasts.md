@@ -23,9 +23,9 @@ List of other podcasts.
 
 |                           Podcast                           | Active | Frequency |
 | :---------------------------------------------------------: | :----: | :-------: |
-|       [LamdaCast](https://soundcloud.com/lambda-cast)       |        |           |
+|       [LamdaCast](https://soundcloud.com/lambda-cast)       |   ⛔    |           |
 |  [Functional Geekery](https://www.functionalgeekery.com/)   |   ✅    | ~monthly  |
 |           [CoRecursive](https://corecursive.com/)           |   ✅    | ~monthly  |
 |     [Magic Read Along](http://www.magicreadalong.com/)      |   ⛔    |           |
 | [Cognicast](https://www.cognitect.com/cognicast/index.html) |   ✅    | ~monthly  |
-|           [ArrayCast](https://www.arraycast.com/)           |   ✅    | ~biweekly |
+|           [ArrayCast](https://www.arraycast.com/)           |   ✅    | biweekly  |
