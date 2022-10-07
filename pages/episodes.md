@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                     Title                                                     | Release Date |
 | :---: | :-----------------------------------------------------------------------------------------------------------: | :----------: |
+|  98   |     [The Future of C++ with Sean Baxter (Part 2)](https://adspthepodcast.com/2022/10/07/Episode-98.html)      |  2022-10-07  |
 |  97   | [C++ vs Carbon vs Circle vs CppFront with Sean Baxter](https://adspthepodcast.com/2022/09/30/Episode-97.html) |  2022-09-30  |
 |  96   |              [The K Programming Language](https://adspthepodcast.com/2022/09/23/Episode-96.html)              |  2022-09-23  |
 |  95   |       [Kate Gregory on Carbon vs C++! (Part 4)](https://adspthepodcast.com/2022/09/16/Episode-95.html)        |  2022-09-16  |
