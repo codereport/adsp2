@@ -3,10 +3,10 @@ baseurl: ""
 url: "https://www.adspthepodcast.com"
 
 # THEME-SPECIFIC CONFIGURATION
-title: "ADSP: The Podcast"                                    # site's title
+title: "ADSP: The Podcast"                                   # site's title
 description: "Conor Hoekstra & Bryce Adelstein Lelbach"      # used by search engines
-avatar: assets/img/pexels/logo_dark.png                         # Empty for no avatar in navbar
-favicon: assets/img/pexels/logo_dark.png                             # Icon displayed in the tab
+avatar: assets/img/pexels/adsp_white_on_red.jpg.png          # Empty for no avatar in navbar
+favicon: assets/img/pexels/adsp_white_on_red.jpg.png         # Icon displayed in the tab
 
 # Header and footer text
 header_text: "ADSP: The Podcast"  # Change Blog header text
