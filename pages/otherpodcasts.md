@@ -21,15 +21,15 @@ List of other podcasts.
 
 #### Rust Podcasts
 
-|                                    Podcast                                    | Active | # of Ep  | Frequency  |  Est.   | Subs* | Views* |
-| :---------------------------------------------------------------------------: | :----: | :-----:  | :--------: | :-----: | :---: | :----: |
+|                                    Podcast                                    | Active | # of Ep | Frequency  |  Est.   | Subs* | Views* |
+| :---------------------------------------------------------------------------: | :----: | :-----: | :--------: | :-----: | :---: | :----: |
 |                  [New Rustacean](https://newrustacean.com/)                   |   ⛔    |   103   |            | 2015-09 |  984  | 17.2k  |
 |              [Rustacean Station](https://rustacean-station.org/)              |   ✅    |   94    |  ~weekly   | 2019-07 |  242  | 10.3k  |
-|               [Rusty Spike](https://twitter.com/rustyspikecast)               |   🏴‍☠️   |   37     |            | 2017-09 |  223  |  2.2k  |
+|               [Rusty Spike](https://twitter.com/rustyspikecast)               |   🏴‍☠️   |   37    |            | 2017-09 |  223  |  2.2k  |
 |                   [Rust Game Dev](https://rustgamedev.com/)                   |   ✅    |    9    | ~bimonthly | 2020-08 |  71   |  565   |
 |          [Building with Rust](https://anchor.fm/building-with-rust)           |   ⛔    |    7    |            | 2021-02 |  60   |  475   |
 | [Request for Explanation](https://request-for-explanation.github.io/podcast/) |   ⛔    |   12    |            | 2017-06 |  44   |  138   |
-|         [Are We Podcast Yet](https://soundcloud.com/arewepodcastyet)          |   ⛔    |   38    |            | 2019-10 |  38   |  475   |
+|         [Are We Podcast Yet](https://soundcloud.com/arewepodcastyet)          |   ⛔    |    9    |            | 2019-10 |  38   |  475   |
 
 #### Conor's Favorite Podcasts
 
