@@ -25,7 +25,7 @@ List of other podcasts.
 | :---------------------------------------------------------------------------: | :----: | :-----: | :--------: | :---: | :----: |
 |                  [New Rustacean](https://newrustacean.com/)                   |   ⛔    |   103   |            |  984  | 17.2k  |
 |              [Rustacean Station](https://rustacean-station.org/)              |   ✅    |   94    |  ~weekly   |  242  | 10.3k  |
-|               [Rusty Spike](https://twitter.com/rustyspikecast)               |   ⛔    |   37    |            |  223  |  2.2k  |
+|               [Rusty Spike](https://twitter.com/rustyspikecast)               |   🏴‍☠️    |   37    |            |  223  |  2.2k  |
 |                   [Rust Game Dev](https://rustgamedev.com/)                   |   ✅    |    9    | ~bimonthly |  71   |  565   |
 |          [Building with Rust](https://anchor.fm/building-with-rust)           |   ⛔    |    7    |            |  60   |  475   |
 | [Request for Explanation](https://request-for-explanation.github.io/podcast/) |   ⛔    |   12    |            |  44   |  138   |
