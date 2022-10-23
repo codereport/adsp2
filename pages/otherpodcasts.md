@@ -14,7 +14,7 @@ List of other podcasts.
 |              [CppCast](https://cppcast.com/)               |   ⛔    |   349   |            | 2.6k  | 79.4k  |   -   |  +100   |
 |               [cpp.chat](https://cpp.chat/)                |   ⛔    |   59    |            |  272  |  4.1k  |   -   |    -    |
 |            [ADSP](https://adspthepodcast.com/)             |   ✅    |   101   |   weekly   |  238  |  7.0k  |  +14  |  +500   |
-|    [Two's Complement](https://www.twoscomplement.org/)     |   ✅    |   28    |  ~monthly  |  69   |  1.7k  |  + 2  |    -    |
+|    [Two's Complement](https://www.twoscomplement.org/)     |   ✅    |   28    |  ~monthly  |  69   |  1.7k  |  +2   |    -    |
 |                [TLB HIT](https://tlbh.it/)                 |   ✅    |    5    | ~4-monthly |  52   |  329   |  -1   |    -    |
 | [No Diagnostic Required](https://nodiagnosticrequired.tv/) |   ⛔    |   15    |            |  25   |  379   |  -1   |   +1    |
 |              [C++ Club](https://cppclub.uk/)               |   ✅    |   29    | ~biweekly  |  17   |  289   |  +3   |   +46   |
