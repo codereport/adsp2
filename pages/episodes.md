@@ -9,7 +9,8 @@ List of all episodes.
 
 |   #   |                                                      Title                                                       | Release Date |
 | :---: | :--------------------------------------------------------------------------------------------------------------: | :----------: |
-|  101  |                [C++ Developers Try Rust!](https://adspthepodcast.com/2022/10/28/Episode-101.html)                |  2022-10-28  | 
+|  102  |           [Rust scan (vs C++ & Haskell scans)](https://adspthepodcast.com/2022/11/04/Episode-102.html)           |  2022-11-04  |
+|  101  |                [C++ Developers Try Rust!](https://adspthepodcast.com/2022/10/28/Episode-101.html)                |  2022-10-28  |
 |  100  | [Programming Language Logos, Top 3 C++ Features & More!](https://adspthepodcast.com/2022/10/21/Episode-100.html) |  2022-10-21  |
 |  99   |             [Moby Dick & Our Favorite Movies](https://adspthepodcast.com/2022/10/14/Episode-99.html)             |  2022-10-14  |
 |  98   |       [The Future of C++ with Sean Baxter (Part 2)](https://adspthepodcast.com/2022/10/07/Episode-98.html)       |  2022-10-07  |
