@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                      Title                                                       | Release Date |
 | :---: | :--------------------------------------------------------------------------------------------------------------: | :----------: |
+|  103  |               [Jason Turner from CppCast!](https://adspthepodcast.com/2022/11/11/Episode-103.html)               |  2022-11-11  |
 |  102  |           [Rust scan (vs C++ & Haskell scans)](https://adspthepodcast.com/2022/11/04/Episode-102.html)           |  2022-11-04  |
 |  101  |                [C++ Developers Try Rust!](https://adspthepodcast.com/2022/10/28/Episode-101.html)                |  2022-10-28  |
 |  100  | [Programming Language Logos, Top 3 C++ Features & More!](https://adspthepodcast.com/2022/10/21/Episode-100.html) |  2022-10-21  |
