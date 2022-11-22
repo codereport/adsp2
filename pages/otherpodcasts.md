@@ -40,7 +40,7 @@ List of other podcasts.
 |           [CoRecursive](https://corecursive.com/)           |   ✅    |   76    | ~monthly  | 2018-01 | 1.7k  | 41.5k  | +100  |  +600   |
 |     [Magic Read Along](http://www.magicreadalong.com/)      |   ⛔    |   102   |           | 2016-06 |  78   |  1.8k  |   -   |    -    |
 | [Cognicast](https://www.cognitect.com/cognicast/index.html) |   ✅    |   172   | ~monthly  | 2011-12 | 1.0k  |  5.0k  |  +2   |    -    |
-|           [ArrayCast](https://www.arraycast.com/)           |   ✅    |   38    | biweekly  | 2021-05 |  33   |  812   |  +1   |  +203   |
+|           [ArrayCast](https://www.arraycast.com/)           |   ✅    |   40    | biweekly  | 2021-05 |  33   |  812   |  +1   |  +203   |
 
 ----
 
