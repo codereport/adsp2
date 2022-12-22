@@ -49,5 +49,5 @@ List of other podcasts.
 
 ----
 
-\* Only in the [CastBox](https://castbox.fm/) podcast app (excluding other apps) as of 2022/11/22
+\* Only in the [CastBox](https://castbox.fm/) podcast app (excluding other apps) as of 2022/12/22
 <br>\* Δ is one month change
