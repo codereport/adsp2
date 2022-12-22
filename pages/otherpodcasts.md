@@ -10,6 +10,7 @@ List of other podcasts.
 * ✅ - Active
 * 🟡 - No episodes in over 6 months
 * ⛔ - Not active (retired or no episodes in over 1 year)
+* 🏴‍☠️ - No longer hosted / accessible
 
 #### C++ Podcasts 
 
@@ -30,8 +31,8 @@ List of other podcasts.
 |                  [New Rustacean](https://newrustacean.com/)                   |   ⛔    |   103   |            | 2015-09 |  987  | 17.5k  |  +4   |  +300   |
 |              [Rustacean Station](https://rustacean-station.org/)              |   ✅    |   101   |  ~weekly   | 2019-07 |  251  | 11.1k  |  +6   |  +500   |
 |               [Rusty Spike](https://twitter.com/rustyspikecast)               |   🏴‍☠️   |   37    |            | 2017-09 |  223  |  2.2k  |   -   |    -    |
-|                   [Rust Game Dev](https://rustgamedev.com/)                   |   ✅    |    9    | ~bimonthly | 2020-08 |  73   |  577   |  +1   |   +5    |
-|          [Building with Rust](https://anchor.fm/building-with-rust)           |   🟡    |    7    |            | 2021-02 |  64   |  504   |  +3   |   +10   |
+|                   [Rust Game Dev](https://rustgamedev.com/)                   |   🟡    |    9    | ~bimonthly | 2020-08 |  73   |  577   |  +1   |   +5    |
+|          [Building with Rust](https://anchor.fm/building-with-rust)           |   ⛔    |    7    |            | 2021-02 |  64   |  504   |  +3   |   +10   |
 | [Request for Explanation](https://request-for-explanation.github.io/podcast/) |   ⛔    |   12    |            | 2017-06 |  45   |  172   |   -   |    -    |
 |         [Are We Podcast Yet](https://soundcloud.com/arewepodcastyet)          |   ⛔    |    9    |            | 2019-10 |  39   |  496   |   -   |    -    |
 
