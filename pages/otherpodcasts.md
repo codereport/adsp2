@@ -16,7 +16,7 @@ List of other podcasts.
 
 |                          Podcast                           | Active | # of Ep | Frequency  |  Est.   | Subs* | Views* | Sub Δ | Views Δ |
 | :--------------------------------------------------------: | :----: | :-----: | :--------: | :-----: | :---: | :----: | :---: | :-----: |
-|              [CppCast](https://cppcast.com/)               |   ⛔    |   349   |            | 2015-02 | 3.0k  | 91.4k  |   -   |  +200   |
+|              [CppCast](https://cppcast.com/)               |   ✅    |   349   |            | 2015-02 | 3.0k  | 91.4k  |   -   |  +200   |
 |               [cpp.chat](https://cpp.chat/)                |   ⛔    |   59    |            | 2018-04 |  272  |  4.1k  |   -   |    -    |
 |            [ADSP](https://adspthepodcast.com/)             |   ✅    |   109   |   weekly   | 2020-11 |  249  |  7.9k  |  +4   |  +400   |
 |    [Two's Complement](https://www.twoscomplement.org/)     |   ✅    |   30    |  ~monthly  | 2020-12 |  73   |  2.0k  |  +3   |  +200   |
