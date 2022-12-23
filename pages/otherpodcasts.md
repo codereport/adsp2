@@ -21,7 +21,7 @@ List of other podcasts.
 |            [ADSP](https://adspthepodcast.com/)             |   ✅    |   109   |   weekly   | 2020-11 |  249  |  7.9k  |  +4   |  +400   |
 |    [Two's Complement](https://www.twoscomplement.org/)     |   ✅    |   30    |  ~monthly  | 2020-12 |  73   |  2.0k  |  +3   |  +200   |
 |                [TLB HIT](https://tlbh.it/)                 |   ⚠️    |    5    | ~4-monthly | 2020-11 |  52   |  340   |   -   |   +7    |
-| [No Diagnostic Required](https://nodiagnosticrequired.tv/) |   ⚠️    |   15    |            | 2020-12 |  25   |  381   |   -   |   +1    |
+| [No Diagnostic Required](https://nodiagnosticrequired.tv/) |   ⛔    |   15    |            | 2020-12 |  25   |  381   |   -   |   +1    |
 |              [C++ Club](https://cppclub.uk/)               |   ✅    |   31    | ~biweekly  | 2021-04 |  19   |  365   |  +1   |   +60   |
 
 #### Rust Podcasts
