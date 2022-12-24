@@ -5,9 +5,9 @@ permalink: /about/
 feature-img: "assets/img/pexels/adsp2.png"
 ---
 
-**ADSP: The Podcast** is an informal podcast inspired by [Magic Read Along](http://www.magicreadalong.com/). We plan to talk about whatever we feel like - algorithms, data structures, programming languages, latest news in tech and more. Feel free to follow us on Twitter at [@adspthepodcast](https://twitter.com/adspthepodcast).
+**ADSP: The Podcast** is a programming podcast hosted by two NVIDIA software engineers that focuses on the C++ and Rust programming languages. Topics discussed include algorithms, data structures, programming languages, latest news in tech and more. The podcast was initially inspired by [Magic Read Along](http://www.magicreadalong.com/). Feel free to follow us on Twitter at [@adspthepodcast](https://twitter.com/adspthepodcast).
 
-Your two co-hosts are:
+The two co-hosts are:
 
 ### Bryce Adelstein Lelbach 
 
