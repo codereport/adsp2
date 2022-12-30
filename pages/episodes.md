@@ -8,7 +8,8 @@ feature-img: "assets/img/pexels/adsp2.png"
 List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
-| :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: | 
+| :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  110  |                    [Compiler Diagnostics](https://adspthepodcast.com/2022/12/30/Episode-110.html)                    |  2022-12-30  |
 |  109  | [Holiday Special #3 - Trees, Travel, Twitter & Terminology!](https://adspthepodcast.com/2022/12/23/Episode-109.html) |  2022-12-23  |
 |  108  |            [Jane Losare-Lusby on Rust! (Part 3)](https://adspthepodcast.com/2022/12/16/Episode-108.html)             |  2022-12-16  |
 |  107  |            [Jane Losare-Lusby on Rust! (Part 2)](https://adspthepodcast.com/2022/12/09/Episode-107.html)             |  2022-12-09  |
