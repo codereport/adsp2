@@ -38,14 +38,15 @@ List of other podcasts.
 
 #### Conor's Favorite Podcasts
 
-|                           Podcast                           | Active | # of Ep | Frequency |  Est.   | Subs* | Views* | Sub Δ | Views Δ |
-| :---------------------------------------------------------: | :----: | :-----: | :-------: | :-----: | :---: | :----: | :---: | :-----: |
-|      [LambdaCast](https://soundcloud.com/lambda-cast)       |   ⛔    |   22    |           | 2016-07 |  753  |  7.7k  |   -   |    -    |
-|  [Functional Geekery](https://www.functionalgeekery.com/)   |   ✅    |   141   | ~monthly  | 2013-12 | 5.3k  |  9.4k  |   -   |  +100   |
-|           [CoRecursive](https://corecursive.com/)           |   ✅    |   76    |  monthly  | 2018-01 | 1.7k  | 42.1k  |   -   |  +600   |
-|     [Magic Read Along](http://www.magicreadalong.com/)      |   ⛔    |   102   |           | 2016-06 |  78   |  1.8k  |   -   |    -    |
-| [Cognicast](https://www.cognitect.com/cognicast/index.html) |   ✅    |   172   |  monthly  | 2011-12 | 1.0k  |  5.2k  |   -   |  +200   |
-|           [ArrayCast](https://www.arraycast.com/)           |   ✅    |   40    | biweekly  | 2021-05 |  35   |  874   |  +2   |   +62   |
+|                                Podcast                                 | Active | # of Ep | Frequency |  Est.   | Subs* | Views* | Sub Δ | Views Δ |
+| :--------------------------------------------------------------------: | :----: | :-----: | :-------: | :-----: | :---: | :----: | :---: | :-----: |
+|            [LambdaCast](https://soundcloud.com/lambda-cast)            |   ⛔    |   22    |           | 2016-07 |  753  |  7.7k  |   -   |    -    |
+|        [Functional Geekery](https://www.functionalgeekery.com/)        |   ✅    |   141   | ~monthly  | 2013-12 | 5.3k  |  9.4k  |   -   |  +100   |
+|                [CoRecursive](https://corecursive.com/)                 |   ✅    |   76    |  monthly  | 2018-01 | 1.7k  | 42.1k  |   -   |  +600   |
+| [Oxide and Friends](https://oxide.computer/podcasts/oxide-and-friends) |   ✅    |   65    |  weekly   | 2021-03 |  14   |  467   |  N/A  |   N/A   |
+|           [Magic Read Along](http://www.magicreadalong.com/)           |   ⛔    |   102   |           | 2016-06 |  78   |  1.8k  |   -   |    -    |
+|      [Cognicast](https://www.cognitect.com/cognicast/index.html)       |   ✅    |   172   |  monthly  | 2011-12 | 1.0k  |  5.2k  |   -   |  +200   |
+|                [ArrayCast](https://www.arraycast.com/)                 |   ✅    |   40    | biweekly  | 2021-05 |  35   |  874   |  +2   |   +62   |
 
 ----
 
