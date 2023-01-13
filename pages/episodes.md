@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  112  |                   [2022 Retro & Running!](https://adspthepodcast.com/2023/01/13/Episode-112.html)                    |  2023-01-13  |
 |  111  |            [C++23 Ranges, 2022 Retro & Star Wars](https://adspthepodcast.com/2023/01/06/Episode-111.html)            |  2023-01-06  |
 |  110  |                    [Compiler Diagnostics](https://adspthepodcast.com/2022/12/30/Episode-110.html)                    |  2022-12-30  |
 |  109  | [Holiday Special #3 - Trees, Travel, Twitter & Terminology!](https://adspthepodcast.com/2022/12/23/Episode-109.html) |  2022-12-23  |
