@@ -9,7 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
-|  115  |                      [Max Gap in C++23](https://adspthepodcast.com/2023/02/01/Episode-115.html)                      |  2023-02-03  |
+|  115  |                      [Max Gap in C++23](https://adspthepodcast.com/2023/02/03/Episode-115.html)                      |  2023-02-03  |
 |  114  |   [Rust, Val, Carbon, ChatGPT & Errors with Barry Revzin!](https://adspthepodcast.com/2023/01/27/Episode-114.html)   |  2023-01-27  |
 |  113  |       [The C++26 Pipeline Operator with Barry Revzin!](https://adspthepodcast.com/2023/01/20/Episode-113.html)       |  2023-01-20  |
 |  112  |                   [2022 Retro & Running!](https://adspthepodcast.com/2023/01/13/Episode-112.html)                    |  2023-01-13  |
