@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 # Posts
 print("POST CHECKS")
@@ -47,7 +48,6 @@ for post_name in os.listdir("_posts/"):
         for line in post:
             if "Date Released:" in line:
                 if line.strip().split()[-1] != date:
-                    print(post_name + " ➡️ " + line.strip().split()[-1]) 
                     problem = True
 print (("❌" if problem else "✅") + " - Date in Release Date")
 
@@ -63,10 +63,22 @@ for post_name in os.listdir("_posts/"):
                     problem = True
 print (("❌" if problem else "✅") + " - Discussion Link Issue Number")
 
+# Dates Differ by 7 Days
+problem = False
+dates = []
+for post_name in os.listdir("_posts/"):
+    date = post_name[:10]
+    dates.append(datetime.strptime(date, "%Y-%m-%d"))
+dates.sort()
+for a, b in zip(dates[:-1], dates[1:]):
+    if (b - a).days != 7:
+        problem = True
+print (("❌" if problem else "✅") + " - Dates Differ by 7 Days")
+
 # Episodes
 print("EPISODES CHECKS")
 
-# TODO add comment
+# Number, Title & Link in Episodes.md
 problem_title      = False
 problem_date       = False
 problem_link_date  = False
@@ -92,8 +104,6 @@ for post_name in os.listdir("_posts/"):
                         if date != other_date:
                             problem_date = True
                         if title != other_title and 'Ben Deane' not in title:
-                            print(title + " ➡️ ")
-                            print(other_title)
                             problem_title = True
                         if date != link_date:
                             problem_link_date = True
@@ -104,13 +114,3 @@ print (("❌" if problem_date      else "✅") + " - Episode Date")
 print (("❌" if problem_title     else "✅") + " - Episode Title")
 print (("❌" if problem_link_date else "✅") + " - Episode Date in Link")
 print (("❌" if problem_link_num  else "✅") + " - Episode Number in Link")
-
-# TODO
-
-# Posts
-# =====
-# - File names
-
-# Episodes 
-# ========
-# - Date and Title match
