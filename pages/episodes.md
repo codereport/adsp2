@@ -9,7 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
-|  116  |                   [Max Gap in Count C++23](https://adspthepodcast.com/2023/02/10/Episode-116.html)                   |  2023-02-10  |
+|  116  |                   [Max Gap Count in C++23](https://adspthepodcast.com/2023/02/10/Episode-116.html)                   |  2023-02-10  |
 |  115  |                      [Max Gap in C++23](https://adspthepodcast.com/2023/02/03/Episode-115.html)                      |  2023-02-03  |
 |  114  |   [Rust, Val, Carbon, ChatGPT & Errors with Barry Revzin!](https://adspthepodcast.com/2023/01/27/Episode-114.html)   |  2023-01-27  |
 |  113  |       [The C++26 Pipeline Operator with Barry Revzin!](https://adspthepodcast.com/2023/01/20/Episode-113.html)       |  2023-01-20  |
@@ -83,7 +83,7 @@ List of all episodes.
 |  45   |                 [Algebraic Groups and Birds!](https://adspthepodcast.com/2021/10/01/Episode-45.html)                 |  2021-10-01  |
 |  44   |               [Should You Drop Out of School?](https://adspthepodcast.com/2021/09/24/Episode-44.html)                |  2021-09-24  |
 |  43   |              [Parallel Scans and Associativity](https://adspthepodcast.com/2021/09/17/Episode-43.html)               |  2021-09-17  |
-|  42   |                [Inverse Aglorithms and More!](https://adspthepodcast.com/2021/09/10/Episode-42.html)                 |  2021-09-10  |
+|  42   |                [Inverse Algorithms and More!](https://adspthepodcast.com/2021/09/10/Episode-42.html)                 |  2021-09-10  |
 |  41   |                  [I Apologize To Listeners](https://adspthepodcast.com/2021/09/03/Episode-41.html)                   |  2021-09-03  |
 |  40   |           [Star Trek vs PowerPC (with Sean Parent)](https://adspthepodcast.com/2021/08/27/Episode-40.html)           |  2021-08-27  |
 |  39   |              [How Steve Jobs Saved Sean Parent](https://adspthepodcast.com/2021/08/20/Episode-39.html)               |  2021-08-20  |
@@ -109,8 +109,8 @@ List of all episodes.
 |  19   |                  [Finding Your Way in Tech](https://adspthepodcast.com/2021/04/02/Episode-19.html)                   |  2021-04-02  |
 |  18   |             [Special Guest Sean Parent! (Part 2)](https://adspthepodcast.com/2021/03/26/Episode-18.html)             |  2021-03-26  |
 |  17   |                 [Special Guest Sean Parent!](https://adspthepodcast.com/2021/03/19/Episode-17.html)                  |  2021-03-19  |
-|  16   |                  [Macros Almigthy! (Part 2)](https://adspthepodcast.com/2021/03/12/Episode-16.html)                  |  2021-03-12  |
-|  15   |                      [Macros Almigthy!](https://adspthepodcast.com/2021/03/05/Episode-15.html)                       |  2021-03-05  |
+|  16   |                  [Macros Almighty! (Part 2)](https://adspthepodcast.com/2021/03/12/Episode-16.html)                  |  2021-03-12  |
+|  15   |                      [Macros Almighty!](https://adspthepodcast.com/2021/03/05/Episode-15.html)                       |  2021-03-05  |
 |  14   |                    [Inclusive Terminology](https://adspthepodcast.com/2021/02/26/Episode-14.html)                    |  2021-02-26  |
 |  13   |                    [I'm an Excel Wizard!](https://adspthepodcast.com/2021/02/19/Episode-13.html)                     |  2021-02-19  |
 |  12   |                 [Formatting && (Parentheses)](https://adspthepodcast.com/2021/02/12/Episode-12.html)                 |  2021-02-12  |
