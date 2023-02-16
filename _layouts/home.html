@@ -3,11 +3,42 @@ layout: default
 ---
 
 <div class="home">
-
-    <div id="main" class="call-out"
-         style="background-image: url('{{ site.header_feature_image | relative_url }}')">
+    <!-- <div class="feature-image-padding"></div> -->
+    <div id="main" class="call-out" style="background-image: url('{{ site.header_feature_image | relative_url }}')">
         <h1> {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}} </h1>
     </div>
+
+    <center>
+        <div style="display: inline-block; margin-left: auto;  margin-right: auto">
+            <h3>Listen on:</h3>
+            <div style="float:left;">
+                <a href="https://open.spotify.com/show/5hcsSlBadLYlO1rfjPnssA">
+                    <img src="https://depts.washington.edu/uwautism/wp-content/uploads/2022/02/Spotify-podcast-logo-finance2.png"
+                        height=80px>
+                </a>
+            </div>
+            <div style="float: left;">
+                <a href="https://podcasts.apple.com/ca/podcast/algorithms-data-structures-programs/id1541407369">
+                    <img src="https://depts.washington.edu/uwautism/wp-content/uploads/2022/02/apple-podcast-logo-1536x393.jpeg"
+                        height=80px>
+                </a>
+            </div>
+            <div style="float: left;">
+                <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xNTAxOTYwLnJzcw==">
+                    <img src="https://depts.washington.edu/uwautism/wp-content/uploads/2022/02/Google-Podcast-Logo.png"
+                        height=80px>
+                </a>
+            </div>
+        </div>
+        <h3>Featured Episode:</h3>
+        <div style="padding-left: 350px; padding-right: 350px">
+            <div id="buzzsprout-player-11991887"></div>
+            <script
+                src="https://www.buzzsprout.com/1501960/11991887-episode-111-c-23-ranges-2022-retro-star-wars.js?container_id=buzzsprout-player-11991887&player=small"
+                type="text/javascript" charset="utf-8"></script>
+        </div>
+        <h3>Most Recent Episodes:</h3>
+    </center>
 
     {% include blog.html %}
 
