@@ -34,7 +34,7 @@
 %padding-header {
   padding: $padding-medium $padding-large;
   @media (min-width: $xl-break) {
-    padding: $padding-large $padding-large;
+    padding: 2% 2%;
   }
   @media (max-width: $sm-break) {
     padding: $padding-large;

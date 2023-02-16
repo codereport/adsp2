@@ -52,6 +52,8 @@
     width: 100%;
     margin-bottom: 0;
     display: inline-block;
+    padding-top: 0;
+    padding-bottom: 1;
     background-size: $feature-image-size;
     border-bottom: 1px solid $border-color;
 
@@ -61,7 +63,7 @@
 
     .post-img {
       vertical-align: middle;
-      border-radius: 10px;
+      border-radius: 0px;
       overflow: hidden;
 
       @media (min-width: $break) {
