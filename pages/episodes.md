@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  117  |   [OOP, C++ Containers, APIs, EOP & More with Zach Laine!](https://adspthepodcast.com/2023/02/17/Episode-117.html)   |  2023-02-17  |
 |  116  |                   [Max Gap Count in C++23](https://adspthepodcast.com/2023/02/10/Episode-116.html)                   |  2023-02-10  |
 |  115  |                      [Max Gap in C++23](https://adspthepodcast.com/2023/02/03/Episode-115.html)                      |  2023-02-03  |
 |  114  |   [Rust, Val, Carbon, ChatGPT & Errors with Barry Revzin!](https://adspthepodcast.com/2023/01/27/Episode-114.html)   |  2023-01-27  |
