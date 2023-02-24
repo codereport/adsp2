@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  118  |          [C++ Allocators with Zach Laine! (Part 2)](https://adspthepodcast.com/2023/02/24/Episode-118.html)          |  2023-02-24  |
 |  117  |   [OOP, C++ Containers, APIs, EOP & More with Zach Laine!](https://adspthepodcast.com/2023/02/17/Episode-117.html)   |  2023-02-17  |
 |  116  |                   [Max Gap Count in C++23](https://adspthepodcast.com/2023/02/10/Episode-116.html)                   |  2023-02-10  |
 |  115  |                      [Max Gap in C++23](https://adspthepodcast.com/2023/02/03/Episode-115.html)                      |  2023-02-03  |
