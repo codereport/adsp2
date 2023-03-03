@@ -59,7 +59,7 @@ for post_name in os.listdir("_posts/"):
         for line in post:
             if "Discuss this episode" in line:
                 # Ep 115 started with Issue 5 (so subtract 110)
-                if num - 110 != int(line[:-2].split('/')[-1]):
+                if num - 110 + (num > 116) != int(line[:-2].split('/')[-1]):
                     problem = True
 print (("❌" if problem else "✅") + " - Discussion Link Issue Number")
 
