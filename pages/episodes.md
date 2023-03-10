@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  120  |  [C++ Safety, Tuples & Variants with Zach Laine! (Part 4)](https://adspthepodcast.com/2023/03/10/Episode-120.html)   |  2023-03-10  |
 |  119  |  [Why APL & Haskell are AWESOME with Zach Laine! (Part 3)](https://adspthepodcast.com/2023/03/03/Episode-119.html)   |  2023-03-03  |
 |  118  |          [C++ Allocators with Zach Laine! (Part 2)](https://adspthepodcast.com/2023/02/24/Episode-118.html)          |  2023-02-24  |
 |  117  |   [OOP, C++ Containers, APIs, EOP & More with Zach Laine!](https://adspthepodcast.com/2023/02/17/Episode-117.html)   |  2023-02-17  |
