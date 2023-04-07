@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  124  |              [Vectorizing `std::views::filter`](https://adspthepodcast.com/2023/04/07/Episode-124.html)              |  2023-04-07  |
 |  123  |                   [An Algorithm Taxonomy](https://adspthepodcast.com/2023/03/31/Episode-123.html)                    |  2023-03-31  |
 |  122  |       [ChatGPT, GTC 2023 & Stickers on our Foreheads](https://adspthepodcast.com/2023/03/24/Episode-122.html)        |  2023-03-24  |
 |  121  |        [Stories & Chatting with Zach Laine! (Part 5)](https://adspthepodcast.com/2023/03/17/Episode-121.html)        |  2023-03-17  |
