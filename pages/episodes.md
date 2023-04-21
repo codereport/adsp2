@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  126  |            [Flux (and Flow) with Tristan Brindle](https://adspthepodcast.com/2023/04/21/Episode-126.html)            |  2023-04-21  |
 |  125  |               [NanoRange with Tristan Brindle](https://adspthepodcast.com/2023/04/14/Episode-125.html)               |  2023-04-14  |
 |  124  |              [Vectorizing `std::views::filter`](https://adspthepodcast.com/2023/04/07/Episode-124.html)              |  2023-04-07  |
 |  123  |                   [An Algorithm Taxonomy](https://adspthepodcast.com/2023/03/31/Episode-123.html)                    |  2023-03-31  |
