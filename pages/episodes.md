@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  129  |                   [Circle is Charizard! 🔥](https://adspthepodcast.com/2023/05/12/Episode-129.html)                   |  2023-05-12  |
 |  128  |            [GCC 13.1 🥳 and Upcoming Conferences!](https://adspthepodcast.com/2023/05/05/Episode-128.html)            |  2023-05-05  |
 |  127  |         [Flux, ChatGPT & More with Tristan Brindle](https://adspthepodcast.com/2023/04/28/Episode-127.html)          |  2023-04-28  |
 |  126  |            [Flux (and Flow) with Tristan Brindle](https://adspthepodcast.com/2023/04/21/Episode-126.html)            |  2023-04-21  |
