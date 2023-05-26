@@ -9,7 +9,8 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
-|  130  |   [C++Now 2023 with Ben Deane & Tristan Brindle!](https://adspthepodcast.com/2023/05/19/Episode-130.html)             |  2023-05-19  |
+|  131  |              [One Algorithm To Rule Them All!](https://adspthepodcast.com/2023/05/26/Episode-131.html)               |  2023-05-26  |
+|  130  |       [C++Now 2023 with Ben Deane & Tristan Brindle!](https://adspthepodcast.com/2023/05/19/Episode-130.html)        |  2023-05-19  |
 |  129  |                   [Circle is Charizard! 🔥](https://adspthepodcast.com/2023/05/12/Episode-129.html)                   |  2023-05-12  |
 |  128  |            [GCC 13.1 🥳 and Upcoming Conferences!](https://adspthepodcast.com/2023/05/05/Episode-128.html)            |  2023-05-05  |
 |  127  |         [Flux, ChatGPT & More with Tristan Brindle](https://adspthepodcast.com/2023/04/28/Episode-127.html)          |  2023-04-28  |
