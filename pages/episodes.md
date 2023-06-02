@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  132  |                       [RustConf Drama](https://adspthepodcast.com/2023/06/02/Episode-132.html)                       |  2023-06-02  |
 |  131  |              [One Algorithm To Rule Them All!](https://adspthepodcast.com/2023/05/26/Episode-131.html)               |  2023-05-26  |
 |  130  |       [C++Now 2023 with Ben Deane & Tristan Brindle!](https://adspthepodcast.com/2023/05/19/Episode-130.html)        |  2023-05-19  |
 |  129  |                   [Circle is Charizard! 🔥](https://adspthepodcast.com/2023/05/12/Episode-129.html)                   |  2023-05-12  |
