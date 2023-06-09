@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                        Title                                                         | Release Date |
 | :---: | :------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  133  |     [Lambda Days Live! José Valim, Alexis King & More!](https://adspthepodcast.com/2023/06/09/Episode-133.html)      |  2023-06-09  |
 |  132  |                       [RustConf Drama](https://adspthepodcast.com/2023/06/02/Episode-132.html)                       |  2023-06-02  |
 |  131  |              [One Algorithm To Rule Them All!](https://adspthepodcast.com/2023/05/26/Episode-131.html)               |  2023-05-26  |
 |  130  |       [C++Now 2023 with Ben Deane & Tristan Brindle!](https://adspthepodcast.com/2023/05/19/Episode-130.html)        |  2023-05-19  |
