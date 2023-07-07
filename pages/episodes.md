@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                         Title                                                         | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  137  |                [Sean Parent on Val (vs Rust)!](https://adspthepodcast.com/2023/07/07/Episode-137.html)                |  2023-07-07  |
 |  136  |    [C++ On Sea Live! CppCast, TLB HIT & Two's Complement!](https://adspthepodcast.com/2023/06/30/Episode-136.html)    |  2023-06-30  |
 |  135  |                [🇸🇮 Slovenia 🇸🇮 2023 Road Trip!](https://adspthepodcast.com/2023/06/23/Episode-135.html)                 |  2023-06-23  |
 |  134  | [Lambda Days Live! Simon Peyton Jones, Jordan Miller & More!](https://adspthepodcast.com/2023/06/16/Episode-134.html) |  2023-06-16  |
