@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                         Title                                                         | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  139  |                [Why Sean Parent Joined Adobe](https://adspthepodcast.com/2023/07/21/Episode-139.html)                 |  2023-07-21  |
 |  138  |                [Sean Parent on Val! (Part 2)](https://adspthepodcast.com/2023/07/14/Episode-138.html)                 |  2023-07-14  |
 |  137  |                [Sean Parent on Val (vs Rust)!](https://adspthepodcast.com/2023/07/07/Episode-137.html)                |  2023-07-07  |
 |  136  |    [C++ On Sea Live! CppCast, TLB HIT & Two's Complement!](https://adspthepodcast.com/2023/06/30/Episode-136.html)    |  2023-06-30  |
