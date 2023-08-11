@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  142  |     [🇸🇮 SRT23 - Lake Bled & Bled Cake + Haskell, Rust & C++](https://adspthepodcast.com/2023/08/11/Episode-142.html)      |  2023-08-11  |
 |  141  | [🇨🇦 CppNorth Live 🇨🇦 Kate Gregory, Jessica Kerr & Kristen Shaker!](https://adspthepodcast.com/2023/08/04/Episode-141.html) |  2023-08-04  |
 |  140  |      [🇨🇦 CppNorth Live 🇨🇦 Victor Ciura, Andreas Weis & More!](https://adspthepodcast.com/2023/07/28/Episode-140.html)      |  2023-07-28  |
 |  139  |                  [Why Sean Parent Joined Adobe](https://adspthepodcast.com/2023/07/21/Episode-139.html)                  |  2023-07-21  |
