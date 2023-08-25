@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  144  |  [🇸🇮 SRT23 - Nigeria, Here We Come! (and How Bryce Almost Died)](https://adspthepodcast.com/2023/08/25/Episode-144.html)  |  2023-08-25  |
 |  143  |        [🇸🇮 SRT23 - Hiša Franko, Postojna, Podcasts and R](https://adspthepodcast.com/2023/08/18/Episode-143.html)         |  2023-08-18  |
 |  142  |     [🇸🇮 SRT23 - Lake Bled & Bled Cake + Haskell, Rust & C++](https://adspthepodcast.com/2023/08/11/Episode-142.html)      |  2023-08-11  |
 |  141  | [🇨🇦 CppNorth Live 🇨🇦 Kate Gregory, Jessica Kerr & Kristen Shaker!](https://adspthepodcast.com/2023/08/04/Episode-141.html) |  2023-08-04  |
