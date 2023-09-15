@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  147  | [🇸🇮 SRT23 - Parallel std::unique Revisited (on a Walk in Venice)](https://adspthepodcast.com/2023/09/15/Episode-147.html) |  2023-09-15  |
 |  146  |        [🇸🇮 SRT23 - Algorithms, BQN's Superpowers & More!](https://adspthepodcast.com/2023/09/08/Episode-146.html)         |  2023-09-08  |
 |  145  |                [🇸🇮 SRT23 - Parallel `std::unique`](https://adspthepodcast.com/2023/09/01/Episode-145.html)                |  2023-09-01  |
 |  144  |  [🇸🇮 SRT23 - Nigeria, Here We Come! (and How Bryce Almost Died)](https://adspthepodcast.com/2023/08/25/Episode-144.html)  |  2023-08-25  |
