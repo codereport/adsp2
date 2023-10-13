@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  151  |                    [Is C++ Dying (Response)](https://adspthepodcast.com/2023/10/13/Episode-151.html)                     |  2023-10-13  |
 |  150  |                         [Is C++ Dying?](https://adspthepodcast.com/2023/10/06/Episode-150.html)                          |  2023-10-06  |
 |  149  |          [CityStrides.com, Graph Algorithms and More!](https://adspthepodcast.com/2023/09/29/Episode-149.html)           |  2023-09-29  |
 |  148  |            [🇸🇮 SRT23 - Robert Leahy on C++ in FinTech](https://adspthepodcast.com/2023/09/22/Episode-148.html)            |  2023-09-22  |
