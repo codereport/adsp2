@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  152  |             [Ruby in Rwanda with Jonathon O'Connor](https://adspthepodcast.com/2023/10/20/Episode-152.html)              |  2023-10-20  |
 |  151  |                    [Is C++ Dying (Response)](https://adspthepodcast.com/2023/10/13/Episode-151.html)                     |  2023-10-13  |
 |  150  |                         [Is C++ Dying?](https://adspthepodcast.com/2023/10/06/Episode-150.html)                          |  2023-10-06  |
 |  149  |          [CityStrides.com, Graph Algorithms and More!](https://adspthepodcast.com/2023/09/29/Episode-149.html)           |  2023-09-29  |
