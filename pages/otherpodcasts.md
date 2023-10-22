@@ -16,12 +16,12 @@ List of other podcasts.
 
 |                          Podcast                           | Active | # of Ep | Frequency  |  Est.   | Subs* | Views* | Sub Δ | Views Δ |
 | :--------------------------------------------------------: | :----: | :-----: | :--------: | :-----: | :---: | :----: | :---: | :-----: |
-|              [CppCast](https://cppcast.com/)               |   ✅    |   368   |  biweekly  | 2015-02 | 3.1k  | 96.4k  |   -   |  +400   |
-|            [ADSP](https://adspthepodcast.com/)             |   ✅    |   149   |   weekly   | 2020-11 |  309  | 11.3k  |  +5   |  +300   |
+|              [CppCast](https://cppcast.com/)               |   ✅    |   369   |  biweekly  | 2015-02 | 3.1k  | 96.6k  |   -   |  +200   |
+|            [ADSP](https://adspthepodcast.com/)             |   ✅    |   153   |   weekly   | 2020-11 |  318  | 11.6k  |  +9   |  +300   |
 |               [cpp.chat](https://cpp.chat/)                |   ⛔    |   59    |            | 2018-04 |  267  |  4.1k  |   -   |    -    |
-|    [Two's Complement](https://www.twoscomplement.org/)     |   ✅    |   39    |  monthly   | 2020-12 |  87   |  3.1k  |  +3   |  +200   |
-|                [TLB HIT](https://tlbh.it/)                 |   ✅    |    6    | ~4-monthly | 2020-11 |  54   |  381   |   -   |   +1    |
-|              [C++ Club](https://cppclub.uk/)               |   ✅    |   40    | ~biweekly  | 2021-04 |  32   |  559   |   -   |   +23   |
+|    [Two's Complement](https://www.twoscomplement.org/)     |   ✅    |   39    |  monthly   | 2020-12 |  89   |  3.2k  |  +2   |  +100   |
+|                [TLB HIT](https://tlbh.it/)                 |   ✅    |    6    | ~4-monthly | 2020-11 |  55   |  390   |  +1   |   +9    |
+|              [C++ Club](https://cppclub.uk/)               |   ✅    |   40    | ~biweekly  | 2021-04 |  33   |  614   |  +1   |   +55   |
 | [No Diagnostic Required](https://nodiagnosticrequired.tv/) |   ⛔    |   15    |            | 2020-12 |  24   |  386   |   -   |    -    |
 
 #### Rust Podcasts
@@ -29,7 +29,7 @@ List of other podcasts.
 |                                    Podcast                                    | Active | # of Ep | Frequency  |  Est.   | Subs* | Views* | Sub Δ | Views Δ |
 | :---------------------------------------------------------------------------: | :----: | :-----: | :--------: | :-----: | :---: | :----: | :---: | :-----: |
 |                  [New Rustacean](https://newrustacean.com/)                   |   ⛔    |   103   |            | 2015-09 | 1.0k  | 17.9k  |   -   |    -    |
-|              [Rustacean Station](https://rustacean-station.org/)              |   ✅    |   133   |  ~weekly   | 2019-07 |  278  | 14.5k  |  +6   |  +200   |
+|              [Rustacean Station](https://rustacean-station.org/)              |   ✅    |   137   |  ~weekly   | 2019-07 |  288  | 14.9k  |  +10  |  +400   |
 |               [Rusty Spike](https://twitter.com/rustyspikecast)               |   🏴‍☠️   |   37    |            | 2017-09 |  223  |  2.2k  |   -   |    -    |
 |                   [Rust Game Dev](https://rustgamedev.com/)                   |   ⚠️    |    9    | ~bimonthly | 2020-08 |  73   |  601   |   -   |    -    |
 |          [Building with Rust](https://anchor.fm/building-with-rust)           |   ⛔    |    7    |            | 2021-02 |  69   |  571   |   -   |    -    |
@@ -42,13 +42,13 @@ List of other podcasts.
 | :--------------------------------------------------------------------: | :----: | :-----: | :-------: | :-----: | :---: | :----: | :---: | :-----: |
 |            [LambdaCast](https://soundcloud.com/lambda-cast)            |   ⛔    |   22    |           | 2016-07 |  750  |  7.7k  |   -   |    -    |
 |        [Functional Geekery](https://www.functionalgeekery.com/)        |   ⛔    |   141   | ~monthly  | 2013-12 | 5.3k  | 10.0k  |   -   |    -    |
-| [Oxide and Friends](https://oxide.computer/podcasts/oxide-and-friends) |   ✅    |   91    |  weekly   | 2021-03 |  30   |  1.3k  |  +1   |  +100   |
-|                [CoRecursive](https://corecursive.com/)                 |   ✅    |   86    |  monthly  | 2018-01 | 1.8k  | 47.3k  |   -   |  +300   |
+| [Oxide and Friends](https://oxide.computer/podcasts/oxide-and-friends) |   ✅    |   93    |  weekly   | 2021-03 |  33   |  1.5k  |  +3   |  +200   |
+|                [CoRecursive](https://corecursive.com/)                 |   ✅    |   88    |  monthly  | 2018-01 | 1.9k  | 47.6k  | +100  |  +300   |
 |           [Magic Read Along](http://www.magicreadalong.com/)           |   ⛔    |   102   |           | 2016-06 |  79   |  1.8k  |   -   |    -    |
 |      [Cognicast](https://www.cognitect.com/cognicast/index.html)       |   ⚠️    |   172   |  monthly  | 2011-12 | 1.0k  |  5.4k  |   -   |    -    |
-|                [ArrayCast](https://www.arraycast.com/)                 |   ✅    |   62    | biweekly  | 2021-05 |  26   |  1.2k  |   -   |    -    |
+|                [ArrayCast](https://www.arraycast.com/)                 |   ✅    |   64    | biweekly  | 2021-05 |  26   |  1.2k  |   -   |    -    |
 
 ----
 
-\* Only in the [CastBox](https://castbox.fm/) podcast app (excluding other apps) as of 2023/09/22
+\* Only in the [CastBox](https://castbox.fm/) podcast app (excluding other apps) as of 2023/10/22
 <br>\* Δ is one month change
