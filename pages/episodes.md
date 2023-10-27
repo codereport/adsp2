@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  153  |           [Pascal vs C vs Ada with Jonathon O'Connor](https://adspthepodcast.com/2023/10/27/Episode-153.html)            |  2023-10-27  |
 |  152  |             [Ruby in Rwanda with Jonathon O'Connor](https://adspthepodcast.com/2023/10/20/Episode-152.html)              |  2023-10-20  |
 |  151  |                    [Is C++ Dying (Response)](https://adspthepodcast.com/2023/10/13/Episode-151.html)                     |  2023-10-13  |
 |  150  |                         [Is C++ Dying?](https://adspthepodcast.com/2023/10/06/Episode-150.html)                          |  2023-10-06  |
