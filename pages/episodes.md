@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  154  |      [Programming Languages Galore with Jonathan O'Connor](https://adspthepodcast.com/2023/11/03/Episode-154.html)       |  2023-11-03  |
 |  153  |           [Pascal vs C vs Ada with Jonathan O'Connor](https://adspthepodcast.com/2023/10/27/Episode-153.html)            |  2023-10-27  |
 |  152  |             [Ruby in Rwanda with Jonathan O'Connor](https://adspthepodcast.com/2023/10/20/Episode-152.html)              |  2023-10-20  |
 |  151  |                    [Is C++ Dying (Response)](https://adspthepodcast.com/2023/10/13/Episode-151.html)                     |  2023-10-13  |
