@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  156  |           [The Last Strange Loop with Richard Feldman](https://adspthepodcast.com/2023/11/17/Episode-156.html)           |  2023-11-17  |
 |  155  |     [Don't Hurt Yourself (with C++) with Jonathan O'Connor](https://adspthepodcast.com/2023/11/10/Episode-155.html)      |  2023-11-10  |
 |  154  |      [Programming Languages Galore with Jonathan O'Connor](https://adspthepodcast.com/2023/11/03/Episode-154.html)       |  2023-11-03  |
 |  153  |           [Pascal vs C vs Ada with Jonathan O'Connor](https://adspthepodcast.com/2023/10/27/Episode-153.html)            |  2023-10-27  |
