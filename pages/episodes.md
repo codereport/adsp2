@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                          Title                                                           | Release Date |
 | :---: | :----------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  158  |   [The Roc Programming Language with Richard Feldman (Part 2)](https://adspthepodcast.com/2023/12/01/Episode-158.html)   |  2023-12-01  |
 |  157  |       [The Roc Programming Language with Richard Feldman](https://adspthepodcast.com/2023/11/24/Episode-157.html)        |  2023-11-24  |
 |  156  |           [The Last Strange Loop with Richard Feldman](https://adspthepodcast.com/2023/11/17/Episode-156.html)           |  2023-11-17  |
 |  155  |     [Don't Hurt Yourself (with C++) with Jonathan O'Connor](https://adspthepodcast.com/2023/11/10/Episode-155.html)      |  2023-11-10  |
