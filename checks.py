@@ -98,12 +98,15 @@ for post_name in os.listdir("_posts/"):
                     other_num   = int(data[1].strip())
                     other_date  = data[-2].strip()
                     other_title = data[2].split("]")[0].strip()[1:].replace('`', '')
-                    link_num    = int(data[2].split("/")[6].strip()[8:-6])
-                    link_date   = '-'.join(data[2].split("/")[3:6])
+                    link_num    = int(data[2].split(']')[1].split("/")[6].strip()[8:-6])
+                    link_date   = '-'.join(data[2].split(']')[1].split("/")[3:6])
+                    
                     if num == other_num:
                         if date != other_date:
                             problem_date = True
                         if title != other_title and 'Ben Deane' not in title:
+                            print(title)
+                            print(other_title)
                             problem_title = True
                         if date != link_date:
                             problem_link_date = True
