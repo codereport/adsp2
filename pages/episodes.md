@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  162  |                     [Sean Parent on the History of Pascal](https://adspthepodcast.com/2023/12/29/Episode-162.html)                      |  2023-12-29  |
 |  161  | [🎄 EOP, Rust, Hylo, C++20/23/26/29 & More with Zach Laine (Holiday Special #4)](https://adspthepodcast.com/2023/12/22/Episode-161.html) |  2023-12-22  |
 |  160  |                    [Rust & Safety at Adobe with Sean Parent](https://adspthepodcast.com/2023/12/15/Episode-160.html)                    |  2023-12-15  |
 |  159  |          [The Roc Programming Language with Richard Feldman (Part 3)](https://adspthepodcast.com/2023/12/08/Episode-159.html)           |  2023-12-08  |
