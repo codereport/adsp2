@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  166  |                     [Top 20 GPU SDKs, Libraries and Tools!](https://adspthepodcast.com/2024/01/26/Episode-166.html)                     |  2024-01-26  |
 |  165  |                    [2023 Retro! LLMs, Rust vs C++ and More!](https://adspthepodcast.com/2024/01/19/Episode-165.html)                    |  2024-01-19  |
 |  164  |                   [Are We Going to Run Out of Credit Cards?](https://adspthepodcast.com/2024/01/12/Episode-164.html)                    |  2024-01-12  |
 |  163  |                [Sean Parent on Tilt Five, Metrowerks & Be Inc.](https://adspthepodcast.com/2024/01/05/Episode-163.html)                 |  2024-01-05  |
