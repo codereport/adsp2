@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  168  |                                 [Parallel Mode](https://adspthepodcast.com/2024/02/09/Episode-168.html)                                 |  2024-02-09  |
 |  167  |                                   [Phone Tag](https://adspthepodcast.com/2024/02/02/Episode-167.html)                                   |  2024-02-02  |
 |  166  |                     [Top 20 GPU SDKs, Libraries and Tools!](https://adspthepodcast.com/2024/01/26/Episode-166.html)                     |  2024-01-26  |
 |  165  |                    [2023 Retro! LLMs, Rust vs C++ and More!](https://adspthepodcast.com/2024/01/19/Episode-165.html)                    |  2024-01-19  |
