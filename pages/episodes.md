@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  169  |                [`thrust::unique_count` and The Algoritm Advisor](https://adspthepodcast.com/2024/02/16/Episode-169.html)                |  2024-02-16  |
 |  168  |                                 [Parallel Mode](https://adspthepodcast.com/2024/02/09/Episode-168.html)                                 |  2024-02-09  |
 |  167  |                                   [Phone Tag](https://adspthepodcast.com/2024/02/02/Episode-167.html)                                   |  2024-02-02  |
 |  166  |                     [Top 20 GPU SDKs, Libraries and Tools!](https://adspthepodcast.com/2024/01/26/Episode-166.html)                     |  2024-01-26  |
@@ -30,7 +31,7 @@ List of all episodes.
 |  150  |                                 [Is C++ Dying?](https://adspthepodcast.com/2023/10/06/Episode-150.html)                                 |  2023-10-06  |
 |  149  |                  [CityStrides.com, Graph Algorithms and More!](https://adspthepodcast.com/2023/09/29/Episode-149.html)                  |  2023-09-29  |
 |  148  |                   [🇸🇮 SRT23 - Robert Leahy on C++ in FinTech](https://adspthepodcast.com/2023/09/22/Episode-148.html)                    |  2023-09-22  |
-|  147  |        [🇸🇮 SRT23 - Parallel std::unique Revisited (on a Walk in Venice)](https://adspthepodcast.com/2023/09/15/Episode-147.html)         |  2023-09-15  |
+|  147  |       [🇸🇮 SRT23 - Parallel `std::unique` Revisited (on a Walk in Venice)](https://adspthepodcast.com/2023/09/15/Episode-147.html)        |  2023-09-15  |
 |  146  |                [🇸🇮 SRT23 - Algorithms, BQN's Superpowers & More!](https://adspthepodcast.com/2023/09/08/Episode-146.html)                |  2023-09-08  |
 |  145  |                       [🇸🇮 SRT23 - Parallel `std::unique`](https://adspthepodcast.com/2023/09/01/Episode-145.html)                        |  2023-09-01  |
 |  144  |         [🇸🇮 SRT23 - Nigeria, Here We Come! (and How Bryce Almost Died)](https://adspthepodcast.com/2023/08/25/Episode-144.html)          |  2023-08-25  |
