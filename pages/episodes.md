@@ -9,7 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
-|  169  |                [`thrust::unique_count` and The Algoritm Advisor](https://adspthepodcast.com/2024/02/16/Episode-169.html)                |  2024-02-16  |
+|  169  |               [`thrust::unique_count` and The Algorithm Advisor](https://adspthepodcast.com/2024/02/16/Episode-169.html)                |  2024-02-16  |
 |  168  |                                 [Parallel Mode](https://adspthepodcast.com/2024/02/09/Episode-168.html)                                 |  2024-02-09  |
 |  167  |                                   [Phone Tag](https://adspthepodcast.com/2024/02/02/Episode-167.html)                                   |  2024-02-02  |
 |  166  |                     [Top 20 GPU SDKs, Libraries and Tools!](https://adspthepodcast.com/2024/01/26/Episode-166.html)                     |  2024-01-26  |
