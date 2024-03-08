@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  172  |                 [Sean Parent on Flash, Chains & Memory Safety](https://adspthepodcast.com/2024/03/08/Episode-172.html)                  |  2024-03-08  |
 |  171  |                   [Thinking Parallel & C++ Forward Progress](https://adspthepodcast.com/2024/03/01/Episode-171.html)                    |  2024-03-01  |
 |  170  |                                   [VIN & HPX](https://adspthepodcast.com/2024/02/23/Episode-170.html)                                   |  2024-02-23  |
 |  169  |               [`thrust::unique_count` and The Algorithm Advisor](https://adspthepodcast.com/2024/02/16/Episode-169.html)                |  2024-02-16  |
