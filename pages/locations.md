@@ -36,5 +36,6 @@ feature-img: "assets/img/pexels/adsp2.png"
 #### Random
 
 * While Driving
-* While in a New York Cab
-* While in an Elevator
+* In a New York Cab
+* In an Elevator
+* In Bryce's apartment
