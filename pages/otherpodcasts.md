@@ -35,6 +35,7 @@ List of other podcasts.
 |          [Building with Rust](https://anchor.fm/building-with-rust)           |   ⛔    |    7    |            | 2021-02 |  69   |  571   |   -   |    -    |
 | [Request for Explanation](https://request-for-explanation.github.io/podcast/) |   ⛔    |   12    |            | 2017-06 |  44   |  187   |   -   |    -    |
 |         [Are We Podcast Yet](https://soundcloud.com/arewepodcastyet)          |   ⛔    |    9    |            | 2019-10 |  39   |  496   |   -   |    -    |
+|              [Rust in Production](https://corrode.dev/podcast/)               |   ✅    |    8    | ~biweekly  | 2023-12 |  10   |   42   |   -   |    -    |
 
 #### Conor's Favorite Podcasts
 
