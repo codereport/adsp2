@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  174  |                         [Parallel `chunk_by` (Part 2)](https://adspthepodcast.com/2024/03/22/Episode-174.html)                          |  2024-03-22  |
 |  173  |                              [Parallel `chunk_by`](https://adspthepodcast.com/2024/03/15/Episode-173.html)                              |  2024-03-15  |
 |  172  |                 [Sean Parent on Flash, Chains & Memory Safety](https://adspthepodcast.com/2024/03/08/Episode-172.html)                  |  2024-03-08  |
 |  171  |                   [Thinking Parallel & C++ Forward Progress](https://adspthepodcast.com/2024/03/01/Episode-171.html)                    |  2024-03-01  |
