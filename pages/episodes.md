@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  177  |                               [The Couch Episode](https://adspthepodcast.com/2024/04/12/Episode-177.html)                               |  2024-04-12  |
 |  176  |                    [`prior`, `deltas` & Dinner with Phineas](https://adspthepodcast.com/2024/04/05/Episode-176.html)                    |  2024-04-05  |
 |  175  |                         [Parallel `chunk_by` (Part 3)](https://adspthepodcast.com/2024/03/29/Episode-175.html)                          |  2024-03-29  |
 |  174  |                         [Parallel `chunk_by` (Part 2)](https://adspthepodcast.com/2024/03/22/Episode-174.html)                          |  2024-03-22  |
