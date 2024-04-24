@@ -8,7 +8,6 @@ feature-img: "assets/img/pexels/adsp2.png"
 List of other podcasts.
 
 * ✅ - Active
-* ⚠️ - No episodes in over 6 months
 * ⛔ - Not active (retired or no episodes in over 1 year)
 
 #### C++ Podcasts 
