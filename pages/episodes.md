@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  181  |              [The C++0x Concepts Story with Doug Gregor (Part 2)](https://adspthepodcast.com/2024/05/10/Episode-181.html)               |  2024-05-10  |
 |  180  |              [The C++0x Concepts Story with Doug Gregor (Part 1)](https://adspthepodcast.com/2024/05/03/Episode-180.html)               |  2024-05-03  |
 |  179  |                          [CheckGrade, ACCU & CppNorth](https://adspthepodcast.com/2024/04/26/Episode-179.html)                          |  2024-04-26  |
 |  178  |                       [Henry the Clock, chunk_by & more!](https://adspthepodcast.com/2024/04/19/Episode-178.html)                       |  2024-04-19  |
