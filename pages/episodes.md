@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  185  |                              [Name the Algorithm](https://adspthepodcast.com/2024/06/07/Episode-185.html)                               |  2024-06-07  |
 |  184  |             [Safety in Swift 6, Protocols & More with Doug Gregor](https://adspthepodcast.com/2024/05/31/Episode-184.html)              |  2024-05-31  |
 |  183  |                            [Swift with Doug Gregor](https://adspthepodcast.com/2024/05/24/Episode-183.html)                             |  2024-05-24  |
 |  182  |            [C++ Variadic Templates, Swift and More with Doug Gregor](https://adspthepodcast.com/2024/05/17/Episode-182.html)            |  2024-05-17  |
