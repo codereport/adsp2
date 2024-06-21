@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  187  |                                [Parallel Top N](https://adspthepodcast.com/2024/06/21/Episode-187.html)                                 |  2024-06-21  |
 |  186  |                       [How to Get Started in Programming](https://adspthepodcast.com/2024/06/14/Episode-186.html)                       |  2024-06-14  |
 |  185  |                              [Name the Algorithm](https://adspthepodcast.com/2024/06/07/Episode-185.html)                               |  2024-06-07  |
 |  184  |             [Safety in Swift 6, Protocols & More with Doug Gregor](https://adspthepodcast.com/2024/05/31/Episode-184.html)              |  2024-05-31  |
