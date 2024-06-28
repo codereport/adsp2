@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  188  |                              [Parallel std::merge](https://adspthepodcast.com/2024/06/28/Episode-188.html)                              |  2024-06-28  |
 |  187  |                                [Parallel Top N](https://adspthepodcast.com/2024/06/21/Episode-187.html)                                 |  2024-06-21  |
 |  186  |                       [How to Get Started in Programming](https://adspthepodcast.com/2024/06/14/Episode-186.html)                       |  2024-06-14  |
 |  185  |                              [Name the Algorithm](https://adspthepodcast.com/2024/06/07/Episode-185.html)                               |  2024-06-07  |
