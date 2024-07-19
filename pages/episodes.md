@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  191  |                   [Algorithms & Libraries with Kevlin Henney](https://adspthepodcast.com/2024/07/19/Episode-191.html)                   |  2024-07-19  |
 |  190  |                    [C++, Python and More with Kevlin Henney](https://adspthepodcast.com/2024/07/12/Episode-190.html)                    |  2024-07-12  |
 |  189  |                 [C++26 Reflection, `std::execution` & CppNorth](https://adspthepodcast.com/2024/07/05/Episode-189.html)                 |  2024-07-05  |
 |  188  |                              [Parallel std::merge](https://adspthepodcast.com/2024/06/28/Episode-188.html)                              |  2024-06-28  |
