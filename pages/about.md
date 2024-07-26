@@ -19,10 +19,11 @@ Bryce Adelstein Lelbach (he/him) has spent nearly a decade developing programmin
 
 **Twitter:** [@code_report](https://twitter.com/code_report)
  
-Conor (he/him) is a [Research Scientist](https://www.linkedin.com/in/conorhoekstra/) at NVIDIA working on array programming models and languages. He is extremely passionate about programming languages, algorithms and beautiful code. He is the founder and organizer of the [Programming Languages Virtual Meetup](https://www.meetup.com/Programming-Languages-Toronto-Meetup/), he has a [YouTube channel](https://www.youtube.com/codereport) and is the host of three podcasts: 
+Conor (he/him) is a [Research Scientist](https://www.linkedin.com/in/conorhoekstra/) at NVIDIA working on array programming models and languages. He is extremely passionate about programming languages, algorithms and beautiful code. He is the founder and organizer of the [Programming Languages Virtual Meetup](https://www.meetup.com/Programming-Languages-Toronto-Meetup/), he has a [YouTube channel](https://www.youtube.com/codereport) and is the host of four podcasts: 
 
-* [ArrayCast](https://www.arraycast.com/) (a podcast about array languages)
 * [ADSP](https://adspthepodcast.com/) (this podcast)
+* [ArrayCast](https://www.arraycast.com/) (a podcast about array languages)
+* [Tacit Talk](https://tacittalk.com/) (a podcast about array languages and tacit programming)
 * [RUN FOR THE FUN OF IT!](https://runforthefunofit.com/) (a running podcast)
 
 Conor is also an avid conference speaker. You can find all of Conor's conference talks and podcast appearances (on other podcasts) [here](https://github.com/codereport/Talks/blob/master/README.md).
