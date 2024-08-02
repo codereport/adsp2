@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  193  |                       [Kevlin Henneys with Kevlin Henney](https://adspthepodcast.com/2024/08/02/Episode-193.html)                       |  2024-08-02  |
 |  192  |                 [Systems Programming & More with Kevlin Henney](https://adspthepodcast.com/2024/07/26/Episode-192.html)                 |  2024-07-26  |
 |  191  |                   [Algorithms & Libraries with Kevlin Henney](https://adspthepodcast.com/2024/07/19/Episode-191.html)                   |  2024-07-19  |
 |  190  |                    [C++, Python and More with Kevlin Henney](https://adspthepodcast.com/2024/07/12/Episode-190.html)                    |  2024-07-12  |
