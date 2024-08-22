@@ -9,6 +9,8 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  195  |                  [🇨🇦 CppNorth Live 🇨🇦 David Olsen & Pure Chaos!](https://adspthepodcast.com/2024/08/16/Episode-195.html)                  |  2024-08-16  |
+|  194  |         [The One Thing Every Programmer Should Know with Kevlin Henney](https://adspthepodcast.com/2024/08/09/Episode-194.html)         |  2024-08-09  |
 |  193  |                       [Kevlin Henneys with Kevlin Henney](https://adspthepodcast.com/2024/08/02/Episode-193.html)                       |  2024-08-02  |
 |  192  |                 [Systems Programming & More with Kevlin Henney](https://adspthepodcast.com/2024/07/26/Episode-192.html)                 |  2024-07-26  |
 |  191  |                   [Algorithms & Libraries with Kevlin Henney](https://adspthepodcast.com/2024/07/19/Episode-191.html)                   |  2024-07-19  |
