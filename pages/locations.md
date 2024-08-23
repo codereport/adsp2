@@ -18,10 +18,11 @@ feature-img: "assets/img/pexels/adsp2.png"
 
 #### Conferences
 
-* PLDI (San Diego, USA)
-* LambdaDays (Krakow, Poland)
-* C++ On Sea (Folkstone, UK)
-* C++North (Toronto, Canada)
+* PLDI (San Diego, USA) - 2022
+* LambdaDays (Krakow, Poland) - 2023
+* C++ On Sea (Folkstone, UK) - 2023
+* C++North (Toronto, Canada) - 2023, 2024 
+* Iverson College (Cambridge, UK) - 2024
 
 #### Cities (While Walking)
 
@@ -33,9 +34,10 @@ feature-img: "assets/img/pexels/adsp2.png"
 
 * Adobe
 
-#### Restaurants
+#### Restaurants / Pubs
 
-* [Franchia Vegan Cafe](https://franchia.com/)
+* [Franchia Vegan Cafe (New York, USA)](https://franchia.com/)
+* [The Eagle Pub (Cambridge, UK)](https://en.wikipedia.org/wiki/The_Eagle,_Cambridge)
 
 #### Random
 
