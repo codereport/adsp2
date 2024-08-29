@@ -9,11 +9,12 @@ feature-img: "assets/img/pexels/adsp2.png"
 
 #### Countries
 
-* Poland
-* Austria 
-* Slovenia
+* Austria
+* Canada
 * Italy
-* UK (England)
+* Poland
+* Slovenia
+* UK (Folkstone, Cambridge)
 * USA (New York, San Diego)
 
 #### Conferences
