@@ -30,11 +30,11 @@ List of all episodes.
 |  179  |                          [CheckGrade, ACCU & CppNorth](https://adspthepodcast.com/2024/04/26/Episode-179.html)                          |  2024-04-26  |
 |  178  |                       [Henry the Clock, chunk_by & more!](https://adspthepodcast.com/2024/04/19/Episode-178.html)                       |  2024-04-19  |
 |  177  |                               [The Couch Episode](https://adspthepodcast.com/2024/04/12/Episode-177.html)                               |  2024-04-12  |
-|  176  |                    [`prior`, `deltas` & Dinner with Phineas](https://adspthepodcast.com/2024/04/05/Episode-176.html)                    |  2024-04-05  |
+|  176  |                    [🇺🇸 `prior`, `deltas` & Dinner with Phineas](https://adspthepodcast.com/2024/04/05/Episode-176.html)                    |  2024-04-05  |
 |  175  |                         [Parallel `chunk_by` (Part 3)](https://adspthepodcast.com/2024/03/29/Episode-175.html)                          |  2024-03-29  |
 |  174  |                         [Parallel `chunk_by` (Part 2)](https://adspthepodcast.com/2024/03/22/Episode-174.html)                          |  2024-03-22  |
 |  173  |                              [Parallel `chunk_by`](https://adspthepodcast.com/2024/03/15/Episode-173.html)                              |  2024-03-15  |
-|  172  |                 [Sean Parent on Flash, Chains & Memory Safety](https://adspthepodcast.com/2024/03/08/Episode-172.html)                  |  2024-03-08  |
+|  172  |                 [🇺🇸 Sean Parent on Flash, Chains & Memory Safety](https://adspthepodcast.com/2024/03/08/Episode-172.html)                  |  2024-03-08  |
 |  171  |                   [Thinking Parallel & C++ Forward Progress](https://adspthepodcast.com/2024/03/01/Episode-171.html)                    |  2024-03-01  |
 |  170  |                                   [VIN & HPX](https://adspthepodcast.com/2024/02/23/Episode-170.html)                                   |  2024-02-23  |
 |  169  |               [`thrust::unique_count` and The Algorithm Advisor](https://adspthepodcast.com/2024/02/16/Episode-169.html)                |  2024-02-16  |
@@ -123,7 +123,7 @@ List of all episodes.
 |  86   |                     [Special Guest Tony Van Eerd! (Part 3)](https://adspthepodcast.com/2022/07/15/Episode-86.html)                      |  2022-07-15  |
 |  85   |                     [Special Guest Tony Van Eerd! (Part 2)](https://adspthepodcast.com/2022/07/08/Episode-85.html)                      |  2022-07-08  |
 |  84   |                          [Special Guest Tony Van Eerd!](https://adspthepodcast.com/2022/07/01/Episode-84.html)                          |  2022-07-01  |
-|  83   |                        [ARRAY 2022, `mdspace`s, & More!](https://adspthepodcast.com/2022/06/24/Episode-83.html)                         |  2022-06-24  |
+|  83   |                        [🇺🇸 ARRAY 2022, `mdspace`s, & More!](https://adspthepodcast.com/2022/06/24/Episode-83.html)                         |  2022-06-24  |
 |  82   |                      [GPUs - Responding To Reddit Comments](https://adspthepodcast.com/2022/06/17/Episode-82.html)                      |  2022-06-17  |
 |  81   |                              [C++ Should Leave ISO](https://adspthepodcast.com/2022/06/10/Episode-81.html)                              |  2022-06-10  |
 |  80   |                      [C++ Multidimensional Arrays and GPUs](https://adspthepodcast.com/2022/06/03/Episode-80.html)                      |  2022-06-03  |
