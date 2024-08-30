@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  197  |                       [🇬🇧 Algorithms & Tersity with Aaron Hsu](https://adspthepodcast.com/2024/08/30/Episode-197.html)                  |  2024-08-30  |
 |  196  |                       [🇬🇧 Algorithms in APL with Aaron Hsu](https://adspthepodcast.com/2024/08/23/Episode-196.html)                     |  2024-08-23  |
 |  195  |                  [🇨🇦 CppNorth Live 🇨🇦 David Olsen & Pure Chaos!](https://adspthepodcast.com/2024/08/16/Episode-195.html)                  |  2024-08-16  |
 |  194  |         [The One Thing Every Programmer Should Know with Kevlin Henney](https://adspthepodcast.com/2024/08/09/Episode-194.html)         |  2024-08-09  |
