@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  199  |                            [`std::rotate`](https://adspthepodcast.com/2024/09/13/Episode-199.html)                    |  2024-09-13  |
 |  198  |                            [Talks ∧ ¬ (Pigeons ∧ Elevators)](https://adspthepodcast.com/2024/09/06/Episode-198.html)                    |  2024-09-06  |
 |  197  |                       [🇬🇧 Algorithms & Tersity with Aaron Hsu](https://adspthepodcast.com/2024/08/30/Episode-197.html)                  |  2024-08-30  |
 |  196  |                       [🇬🇧 Algorithms in APL with Aaron Hsu](https://adspthepodcast.com/2024/08/23/Episode-196.html)                     |  2024-08-23  |
