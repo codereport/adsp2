@@ -9,11 +9,12 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
-|  200  |                            [Episode 200!](https://adspthepodcast.com/2024/09/20/Episode-200.html)                                       |  2024-09-20  |
-|  199  |                            [`std::rotate`](https://adspthepodcast.com/2024/09/13/Episode-199.html)                                      |  2024-09-13  |
-|  198  |                            [Talks ∧ ¬ (Pigeons ∧ Elevators)](https://adspthepodcast.com/2024/09/06/Episode-198.html)                    |  2024-09-06  |
-|  197  |                       [🇬🇧 Algorithms & Tersity with Aaron Hsu](https://adspthepodcast.com/2024/08/30/Episode-197.html)                  |  2024-08-30  |
-|  196  |                       [🇬🇧 Algorithms in APL with Aaron Hsu](https://adspthepodcast.com/2024/08/23/Episode-196.html)                     |  2024-08-23  |
+|  201  |                              [CppCon 2024 Recap!](https://adspthepodcast.com/2024/09/27/Episode-201.html)                               |  2024-09-27  |
+|  200  |                                 [Episode 200!](https://adspthepodcast.com/2024/09/20/Episode-200.html)                                  |  2024-09-20  |
+|  199  |                                 [`std::rotate`](https://adspthepodcast.com/2024/09/13/Episode-199.html)                                 |  2024-09-13  |
+|  198  |                        [Talks ∧ ¬ (Pigeons ∧ Elevators)](https://adspthepodcast.com/2024/09/06/Episode-198.html)                        |  2024-09-06  |
+|  197  |                     [🇬🇧 Algorithms & Tersity with Aaron Hsu](https://adspthepodcast.com/2024/08/30/Episode-197.html)                     |  2024-08-30  |
+|  196  |                      [🇬🇧 Algorithms in APL with Aaron Hsu](https://adspthepodcast.com/2024/08/23/Episode-196.html)                       |  2024-08-23  |
 |  195  |                  [🇨🇦 CppNorth Live 🇨🇦 David Olsen & Pure Chaos!](https://adspthepodcast.com/2024/08/16/Episode-195.html)                  |  2024-08-16  |
 |  194  |         [The One Thing Every Programmer Should Know with Kevlin Henney](https://adspthepodcast.com/2024/08/09/Episode-194.html)         |  2024-08-09  |
 |  193  |                       [Kevlin Henneys with Kevlin Henney](https://adspthepodcast.com/2024/08/02/Episode-193.html)                       |  2024-08-02  |
@@ -33,11 +34,11 @@ List of all episodes.
 |  179  |                          [CheckGrade, ACCU & CppNorth](https://adspthepodcast.com/2024/04/26/Episode-179.html)                          |  2024-04-26  |
 |  178  |                       [Henry the Clock, chunk_by & more!](https://adspthepodcast.com/2024/04/19/Episode-178.html)                       |  2024-04-19  |
 |  177  |                               [The Couch Episode](https://adspthepodcast.com/2024/04/12/Episode-177.html)                               |  2024-04-12  |
-|  176  |                    [🇺🇸 `prior`, `deltas` & Dinner with Phineas](https://adspthepodcast.com/2024/04/05/Episode-176.html)                    |  2024-04-05  |
+|  176  |                   [🇺🇸 `prior`, `deltas` & Dinner with Phineas](https://adspthepodcast.com/2024/04/05/Episode-176.html)                   |  2024-04-05  |
 |  175  |                         [Parallel `chunk_by` (Part 3)](https://adspthepodcast.com/2024/03/29/Episode-175.html)                          |  2024-03-29  |
 |  174  |                         [Parallel `chunk_by` (Part 2)](https://adspthepodcast.com/2024/03/22/Episode-174.html)                          |  2024-03-22  |
 |  173  |                              [Parallel `chunk_by`](https://adspthepodcast.com/2024/03/15/Episode-173.html)                              |  2024-03-15  |
-|  172  |                 [🇺🇸 Sean Parent on Flash, Chains & Memory Safety](https://adspthepodcast.com/2024/03/08/Episode-172.html)                  |  2024-03-08  |
+|  172  |                [🇺🇸 Sean Parent on Flash, Chains & Memory Safety](https://adspthepodcast.com/2024/03/08/Episode-172.html)                 |  2024-03-08  |
 |  171  |                   [Thinking Parallel & C++ Forward Progress](https://adspthepodcast.com/2024/03/01/Episode-171.html)                    |  2024-03-01  |
 |  170  |                                   [VIN & HPX](https://adspthepodcast.com/2024/02/23/Episode-170.html)                                   |  2024-02-23  |
 |  169  |               [`thrust::unique_count` and The Algorithm Advisor](https://adspthepodcast.com/2024/02/16/Episode-169.html)                |  2024-02-16  |
@@ -70,9 +71,9 @@ List of all episodes.
 |  142  |             [🇸🇮 SRT23 - Lake Bled & Bled Cake + Haskell, Rust & C++](https://adspthepodcast.com/2023/08/11/Episode-142.html)             |  2023-08-11  |
 |  141  |        [🇨🇦 CppNorth Live 🇨🇦 Kate Gregory, Jessica Kerr & Kristen Shaker!](https://adspthepodcast.com/2023/08/04/Episode-141.html)         |  2023-08-04  |
 |  140  |             [🇨🇦 CppNorth Live 🇨🇦 Victor Ciura, Andreas Weis & More!](https://adspthepodcast.com/2023/07/28/Episode-140.html)              |  2023-07-28  |
-|  139  |                         [🇬🇧 Why Sean Parent Joined Adobe](https://adspthepodcast.com/2023/07/21/Episode-139.html)                          |  2023-07-21  |
-|  138  |                         [🇬🇧 Sean Parent on Val! (Part 2)](https://adspthepodcast.com/2023/07/14/Episode-138.html)                          |  2023-07-14  |
-|  137  |                         [🇬🇧 Sean Parent on Val (vs Rust)!](https://adspthepodcast.com/2023/07/07/Episode-137.html)                         |  2023-07-07  |
+|  139  |                        [🇬🇧 Why Sean Parent Joined Adobe](https://adspthepodcast.com/2023/07/21/Episode-139.html)                         |  2023-07-21  |
+|  138  |                        [🇬🇧 Sean Parent on Val! (Part 2)](https://adspthepodcast.com/2023/07/14/Episode-138.html)                         |  2023-07-14  |
+|  137  |                        [🇬🇧 Sean Parent on Val (vs Rust)!](https://adspthepodcast.com/2023/07/07/Episode-137.html)                        |  2023-07-07  |
 |  136  |           [🇬🇧 C++ On Sea Live 🇬🇧 CppCast, TLB HIT & Two's Complement!](https://adspthepodcast.com/2023/06/30/Episode-136.html)            |  2023-06-30  |
 |  135  |                         [🇸🇮 Slovenia 🇸🇮 2023 Road Trip!](https://adspthepodcast.com/2023/06/23/Episode-135.html)                          |  2023-06-23  |
 |  134  |        [🇵🇱 Lambda Days Live 🇵🇱 Simon Peyton Jones, Jordan Miller & More!](https://adspthepodcast.com/2023/06/16/Episode-134.html)         |  2023-06-16  |
@@ -126,7 +127,7 @@ List of all episodes.
 |  86   |                     [Special Guest Tony Van Eerd! (Part 3)](https://adspthepodcast.com/2022/07/15/Episode-86.html)                      |  2022-07-15  |
 |  85   |                     [Special Guest Tony Van Eerd! (Part 2)](https://adspthepodcast.com/2022/07/08/Episode-85.html)                      |  2022-07-08  |
 |  84   |                          [Special Guest Tony Van Eerd!](https://adspthepodcast.com/2022/07/01/Episode-84.html)                          |  2022-07-01  |
-|  83   |                        [🇺🇸 ARRAY 2022, `mdspace`s, & More!](https://adspthepodcast.com/2022/06/24/Episode-83.html)                         |  2022-06-24  |
+|  83   |                       [🇺🇸 ARRAY 2022, `mdspace`s, & More!](https://adspthepodcast.com/2022/06/24/Episode-83.html)                        |  2022-06-24  |
 |  82   |                      [GPUs - Responding To Reddit Comments](https://adspthepodcast.com/2022/06/17/Episode-82.html)                      |  2022-06-17  |
 |  81   |                              [C++ Should Leave ISO](https://adspthepodcast.com/2022/06/10/Episode-81.html)                              |  2022-06-10  |
 |  80   |                      [C++ Multidimensional Arrays and GPUs](https://adspthepodcast.com/2022/06/03/Episode-80.html)                      |  2022-06-03  |
