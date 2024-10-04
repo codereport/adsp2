@@ -9,7 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
-|  202  |                   [Rotates All the Way Down with Sean Parent](https://adspthepodcast.com/2024/10/04/Episode-202.html)                   |  2024-10-04  |
+|  202  |              [Rotates All the Way Down with Sean Parent (Part 1)](https://adspthepodcast.com/2024/10/04/Episode-202.html)               |  2024-10-04  |
 |  201  |                              [CppCon 2024 Recap!](https://adspthepodcast.com/2024/09/27/Episode-201.html)                               |  2024-09-27  |
 |  200  |                                 [Episode 200!](https://adspthepodcast.com/2024/09/20/Episode-200.html)                                  |  2024-09-20  |
 |  199  |                                 [`std::rotate`](https://adspthepodcast.com/2024/09/13/Episode-199.html)                                 |  2024-09-13  |
