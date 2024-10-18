@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  204  |                             [🇪🇸 Lambda World Live 🇪🇸](https://adspthepodcast.com/2024/10/18/Episode-204.html)                             |  2024-10-18  |
 |  203  |              [Rotates All the Way Down with Sean Parent (Part 2)](https://adspthepodcast.com/2024/10/11/Episode-203.html)               |  2024-10-11  |
 |  202  |              [Rotates All the Way Down with Sean Parent (Part 1)](https://adspthepodcast.com/2024/10/04/Episode-202.html)               |  2024-10-04  |
 |  201  |                              [CppCon 2024 Recap!](https://adspthepodcast.com/2024/09/27/Episode-201.html)                               |  2024-09-27  |
