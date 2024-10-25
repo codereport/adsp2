@@ -12,6 +12,7 @@ feature-img: "assets/img/pexels/adsp2.png"
 * Austria
 * Canada
 * Italy
+* Netherlands
 * Poland
 * Slovenia
 * Spain
@@ -26,6 +27,7 @@ feature-img: "assets/img/pexels/adsp2.png"
 * C++North (Toronto, Canada) - 2023, 2024 
 * Iverson College (Cambridge, UK) - 2024
 * Lambda World (Cádiz, Spain) - 2024
+* C++ Under the Sea (Breda, Netherlands) - 2024
 
 #### Cities (While Walking)
 
