@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  206  |          [🇳🇱 C++ Under the Sea Live 🇳🇱 Jason Turner, Inbal Levi & More!](https://adspthepodcast.com/2024/11/01/Episode-206.html)          |  2024-11-01  |
 |  205  |            [🇳🇱 C++ Under the Sea Live 🇳🇱 Phil Nash & Jonathan Müller](https://adspthepodcast.com/2024/10/25/Episode-205.html)             |  2024-10-25  |
 |  204  |                             [🇪🇸 Lambda World Live 🇪🇸](https://adspthepodcast.com/2024/10/18/Episode-204.html)                             |  2024-10-18  |
 |  203  |              [Rotates All the Way Down with Sean Parent (Part 2)](https://adspthepodcast.com/2024/10/11/Episode-203.html)               |  2024-10-11  |
