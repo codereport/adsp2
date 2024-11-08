@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  207  |          [🇳🇱 C++ Under the Sea Live 🇳🇱 Mateusz Pusz, Floris Bob & More!](https://adspthepodcast.com/2024/11/08/Episode-207.html)          |  2024-11-08  |
 |  206  |          [🇳🇱 C++ Under the Sea Live 🇳🇱 Jason Turner, Inbal Levi & More!](https://adspthepodcast.com/2024/11/01/Episode-206.html)          |  2024-11-01  |
 |  205  |            [🇳🇱 C++ Under the Sea Live 🇳🇱 Phil Nash & Jonathan Müller](https://adspthepodcast.com/2024/10/25/Episode-205.html)             |  2024-10-25  |
 |  204  |                             [🇪🇸 Lambda World Live 🇪🇸](https://adspthepodcast.com/2024/10/18/Episode-204.html)                             |  2024-10-18  |
