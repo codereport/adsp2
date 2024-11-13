@@ -5,15 +5,9 @@ permalink: /about/
 feature-img: "assets/img/pexels/adsp2.png"
 ---
 
-**ADSP: The Podcast** is a programming podcast hosted by two NVIDIA software engineers that focuses on the C++ and Rust programming languages. Topics discussed include algorithms, data structures, programming languages, latest news in tech and more. The podcast was initially inspired by [Magic Read Along](http://www.magicreadalong.com/). Feel free to follow us on Twitter at [@adspthepodcast](https://twitter.com/adspthepodcast).
+**ADSP: The Podcast** is a programming podcast hosted by three software engineers that focuses on the C++ and Rust programming languages. Topics discussed include algorithms, data structures, programming languages, latest news in tech and more. The podcast was initially inspired by [Magic Read Along](http://www.magicreadalong.com/). Feel free to follow us on Twitter at [@adspthepodcast](https://twitter.com/adspthepodcast).
 
-The two co-hosts are:
-
-### Bryce Adelstein Lelbach 
-
-**Twitter:** [@blelbach](https://twitter.com/blelbach)
-
-Bryce Adelstein Lelbach (he/him) has spent nearly a decade developing programming languages and software libraries. Bryce is passionate about programming language evolution and is one of the leaders of the C++ community. Bryce chairs [INCITS PL22](https://www.incits.org/committees/pl22), the US standards committee for programming languages. He is also an officer of ISO/IEC JTC1/SC22/WG21, [the Standard C++ Committee](https://isocpp.org/std/the-committee). He chairs the C++ Library Design group (LEWG); previously he chaired the C++ Tooling group (SG15) and the Library Incubator group (SG18). On the C++ Committee, he has personally worked on parallel algorithms, coroutines, executors, futures, senders/receivers, multidimensional arrays, and modules. He is also the program chair for the [C++Now](https://cppnow.org/) and [CppCon](https://cppcon.org/) conferences, and the chief organizer of the Bay Area C++ User Group. Bryce works at NVIDIA, focusing on programming language design and evolution. He leads the CUDA C++ Core Libraries team and works on the NVIDIA HPC compiler. He is one of the initial developers of the HPX parallel runtime system. He also helped start the LLVMLinux initiative and has occasionally contributed to the [Boost C++ libraries](https://www.boost.org/).
+The three co-hosts are:
 
 ### Conor Hoekstra 
 
@@ -27,3 +21,9 @@ Conor (he/him) is a [Research Scientist](https://www.linkedin.com/in/conorhoekst
 * [RUN FOR THE FUN OF IT!](https://runforthefunofit.com/) (a running podcast)
 
 Conor is also an avid conference speaker. You can find all of Conor's conference talks and podcast appearances (on other podcasts) [here](https://github.com/codereport/Talks/blob/master/README.md).
+
+### Bryce Adelstein Lelbach 
+
+**Twitter:** [@blelbach](https://twitter.com/blelbach)
+
+Bryce Adelstein Lelbach (he/him) has spent over a decade developing programming languages, compilers, and software libraries. He is a Principal Architect at NVIDIA, where he leads HPC programming language efforts and drives the technical roadmap for NVIDIA’s HPC compilers and libraries. Bryce is passionate about C++ and is one of the leaders of the C++ community. He has served as chair of [INCITS/PL22](https://www.incits.org/committees/pl22), the US standards committee for programming languages and [the Standard C++](https://isocpp.org/std/the-committee) Library Evolution group. Bryce served as the program chair for the [C++Now](https://cppnow.org/) and [CppCon](https://cppcon.org/) conferences for many years. On the C++ Committee, he has personally worked on concurrency primitives, parallel algorithms, executors, and multidimensional arrays. He is one of the founding developers of the HPX parallel runtime system. Outside of work, Bryce is passionate about airplanes and watches.
