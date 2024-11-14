@@ -30,4 +30,6 @@ Bryce Adelstein Lelbach (he/him) has spent over a decade developing programming 
 
 ### Ben Deane
 
+**Twitter:** [@ben_deane](https://x.com/ben_deane)
+
 Ben has been programming in C++ for this whole millennium. He spent just over 20 years in the games industry working for companies like EA and Blizzard; many of the games he worked on used to be fondly remembered but now he's accepted that they are probably mostly forgotten. After getting more interested in modern C++, in the teens he started giving internal company talks and then [talks at various conferences](https://www.youtube.com/playlist?list=PLVFrD1dmDdvea7aPDCrp9A1EAU3DLw7GE), spreading ideas about types, algorithms and [declarative and functional techniques](https://www.youtube.com/watch?v=2ouxETt75R4). In 2018 he left the games industry and worked in finance for a short spell, writing high-frequency trading platforms using the most modern C++ that compilers could support. Now he is a [Principal Engineer](https://www.linkedin.com/in/elbeno) at Intel where he puts monads inside your CPU.
