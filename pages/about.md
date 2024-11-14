@@ -5,7 +5,7 @@ permalink: /about/
 feature-img: "assets/img/pexels/adsp2.png"
 ---
 
-**ADSP: The Podcast** is a programming podcast hosted by two NVIDIA software engineers that focuses on the C++ and Rust programming languages. Topics discussed include algorithms, data structures, programming languages, latest news in tech and more. The podcast was initially inspired by [Magic Read Along](http://www.magicreadalong.com/). Feel free to follow us on Twitter at [@adspthepodcast](https://twitter.com/adspthepodcast).
+**ADSP: The Podcast** is a programming podcast hosted by three software engineers (Conor, Bryce and Ben) that focuses on the C++ and Rust programming languages. Topics discussed include algorithms, data structures, programming languages, latest news in tech and more. The podcast was initially inspired by [Magic Read Along](http://www.magicreadalong.com/). Feel free to follow us on Twitter at [@adspthepodcast](https://twitter.com/adspthepodcast).
 
 The two co-hosts are:
 
@@ -27,3 +27,7 @@ Conor (he/him) is a [Research Scientist](https://www.linkedin.com/in/conorhoekst
 * [RUN FOR THE FUN OF IT!](https://runforthefunofit.com/) (a running podcast)
 
 Conor is also an avid conference speaker. You can find all of Conor's conference talks and podcast appearances (on other podcasts) [here](https://github.com/codereport/Talks/blob/master/README.md).
+
+### Ben Deane
+
+Ben has been programming in C++ for this whole millennium. He spent just over 20 years in the games industry working for companies like EA and Blizzard; many of the games he worked on used to be fondly remembered but now he's accepted that they are probably mostly forgotten. After getting more interested in modern C++, in the teens he started giving internal company talks and then [talks at various conferences](https://www.youtube.com/playlist?list=PLVFrD1dmDdvea7aPDCrp9A1EAU3DLw7GE), spreading ideas about types, algorithms and [declarative and functional techniques](https://www.youtube.com/watch?v=2ouxETt75R4). In 2018 he left the games industry and worked in finance for a short spell, writing high-frequency trading platforms using the most modern C++ that compilers could support. Now he is a [Principal Engineer](https://www.linkedin.com/in/elbeno) at Intel where he puts monads inside your CPU.
