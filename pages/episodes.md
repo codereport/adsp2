@@ -9,7 +9,8 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
-|  208  |                             [Board Games (Part 1)](https://adspthepodcast.com/2024/11/15/Episode-208.html)                              |  2024-11-15  |
+|  209  |                [Scrabble, Cribbage & More! (Board Games Part 2)](https://adspthepodcast.com/2024/11/22/Episode-209.html)                |  2024-11-22  |
+|  208  |                 [Catan, Codenames & More! (Board Games Part 1)](https://adspthepodcast.com/2024/11/15/Episode-208.html)                 |  2024-11-15  |
 |  207  |          [🇳🇱 C++ Under the Sea Live 🇳🇱 Mateusz Pusz, Floris Bob & More!](https://adspthepodcast.com/2024/11/08/Episode-207.html)          |  2024-11-08  |
 |  206  |          [🇳🇱 C++ Under the Sea Live 🇳🇱 Jason Turner, Inbal Levi & More!](https://adspthepodcast.com/2024/11/01/Episode-206.html)          |  2024-11-01  |
 |  205  |            [🇳🇱 C++ Under the Sea Live 🇳🇱 Phil Nash & Jonathan Müller](https://adspthepodcast.com/2024/10/25/Episode-205.html)             |  2024-10-25  |
