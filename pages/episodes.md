@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  211  |                    [Power, Politics and Misconduct in C++ ✨](https://adspthepodcast.com/2024/12/06/Episode-211.html)                    |  2024-12-06  |
 |  210  |                             [C++ Cryptic Crossword](https://adspthepodcast.com/2024/11/29/Episode-210.html)                             |  2024-11-29  |
 |  209  |                [Scrabble, Cribbage & More! (Board Games Part 2)](https://adspthepodcast.com/2024/11/22/Episode-209.html)                |  2024-11-22  |
 |  208  |                 [Catan, Codenames & More! (Board Games Part 1)](https://adspthepodcast.com/2024/11/15/Episode-208.html)                 |  2024-11-15  |
