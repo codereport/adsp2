@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  214  |                       [Advent of Code in BQN (vs Python)](https://adspthepodcast.com/2024/12/27/Episode-214.html)                       |  2024-12-27  |
 |  213  |                          [NumPy & Summed-Area Tables](https://adspthepodcast.com/2024/12/20/Episode-213.html)                           |  2024-12-20  |
 |  212  |                          [No More AI and Episode 211](https://adspthepodcast.com/2024/12/13/Episode-212.html)                           |  2024-12-13  |
 |  211  |                    [Power, Politics and Misconduct in C++ ✨](https://adspthepodcast.com/2024/12/06/Episode-211.html)                    |  2024-12-06  |
