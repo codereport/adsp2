@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  216  |                [Programming Paradigms and Algorithmic Thinking](https://adspthepodcast.com/2025/01/10/Episode-216.html)                 |  2025-01-10  |
 |  215  |                            [C++ vs BQN (AoC Part 2)](https://adspthepodcast.com/2025/01/03/Episode-215.html)                            |  2025-01-03  |
 |  214  |                       [Advent of Code in BQN (vs Python)](https://adspthepodcast.com/2024/12/27/Episode-214.html)                       |  2024-12-27  |
 |  213  |                          [NumPy & Summed-Area Tables](https://adspthepodcast.com/2024/12/20/Episode-213.html)                           |  2024-12-20  |
