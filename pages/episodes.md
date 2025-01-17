@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  217  |                 [Pragmatic vs Inspiring Talks, A Bug and More](https://adspthepodcast.com/2025/01/17/Episode-217.html)                  |  2025-01-17  |
 |  216  |                [Programming Paradigms and Algorithmic Thinking](https://adspthepodcast.com/2025/01/10/Episode-216.html)                 |  2025-01-10  |
 |  215  |                            [C++ vs BQN (AoC Part 2)](https://adspthepodcast.com/2025/01/03/Episode-215.html)                            |  2025-01-03  |
 |  214  |                       [Advent of Code in BQN (vs Python)](https://adspthepodcast.com/2024/12/27/Episode-214.html)                       |  2024-12-27  |
