@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  218  |                           [Algorithms (by Louridas)](https://adspthepodcast.com/2025/01/24/Episode-218.html)                            |  2025-01-24  |
 |  217  |                 [Pragmatic vs Inspiring Talks, A Bug and More](https://adspthepodcast.com/2025/01/17/Episode-217.html)                  |  2025-01-17  |
 |  216  |                [Programming Paradigms and Algorithmic Thinking](https://adspthepodcast.com/2025/01/10/Episode-216.html)                 |  2025-01-10  |
 |  215  |                            [C++ vs BQN (AoC Part 2)](https://adspthepodcast.com/2025/01/03/Episode-215.html)                            |  2025-01-03  |
