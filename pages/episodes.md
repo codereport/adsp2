@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  219  |                    [Flood Fills & Adaptive Mesh Refinement](https://adspthepodcast.com/2025/01/31/Episode-219.html)                     |  2025-01-31  |
 |  218  |                           [Algorithms (by Louridas)](https://adspthepodcast.com/2025/01/24/Episode-218.html)                            |  2025-01-24  |
 |  217  |                 [Pragmatic vs Inspiring Talks, A Bug and More](https://adspthepodcast.com/2025/01/17/Episode-217.html)                  |  2025-01-17  |
 |  216  |                [Programming Paradigms and Algorithmic Thinking](https://adspthepodcast.com/2025/01/10/Episode-216.html)                 |  2025-01-10  |
