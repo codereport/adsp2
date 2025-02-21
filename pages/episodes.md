@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  222  |                      [From Stepanov to Euler to Shawshank](https://adspthepodcast.com/2025/02/21/Episode-222.html)                      |  2025-02-21  |
 |  221  |                    [2025 Predictions, Conferences and More!](https://adspthepodcast.com/2025/02/14/Episode-221.html)                    |  2025-02-14  |
 |  220  |                  [Graph Algorithms & 7 Bridges of Königsberg](https://adspthepodcast.com/2025/02/07/Episode-220.html)                   |  2025-02-07  |
 |  219  |                    [Flood Fills & Adaptive Mesh Refinement](https://adspthepodcast.com/2025/01/31/Episode-219.html)                     |  2025-01-31  |
