@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  225  |    [CppNorth & Flux Plans, The Slow Death of Twitter and More!](https://adspthepodcast.com/2025/03/14/Episode-225.html)                 |  2025-03-14  |
 |  224  |              [Flux Updates & Internal Iteration](https://adspthepodcast.com/2025/03/07/Episode-224.html)                                |  2025-03-07  |
 |  223  |                               [Is C++ Dying? II](https://adspthepodcast.com/2025/02/28/Episode-223.html)                                |  2025-02-28  |
 |  222  |                      [From Stepanov to Euler to Shawshank](https://adspthepodcast.com/2025/02/21/Episode-222.html)                      |  2025-02-21  |
