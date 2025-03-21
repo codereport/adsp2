@@ -7,6 +7,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}">
 
     <!--Favicon-->
     <link rel="shortcut icon" href="{{ site.favicon | relative_url }}" type="image/x-icon">
@@ -79,4 +80,50 @@
     <meta name="twitter:card" content="{% unless page.thumbnail %}summary{% else %}summary_large_image{% endunless %}">
     <meta name="twitter:image" content="{{ '/' | absolute_url }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}{{ page.feature-img | default: site.header_feature_image }}{% endif %}">
     <meta name="twitter:image:alt" content="{{ page.title | default: site.title }}">
+
+    <!-- Custom styles for site title -->
+    <style>
+        /* Super high specificity to override any other styles */
+        html .site-header .branding a.site-title,
+        html[data-theme="light"] .site-header .branding a.site-title,
+        html[data-theme="dark"] .site-header .branding a.site-title {
+            color: white !important;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.5) !important;
+        }
+    </style>
+
+    <!-- Custom styles for header text ONLY -->
+    <style>
+        /* ONLY the homepage header (call-out) is always white */
+        .call-out h1,
+        html[data-theme="light"] .call-out h1,
+        html[data-theme="dark"] .call-out h1 {
+            color: white !important;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.7) !important;
+        }
+        
+        /* Explicitly remove any white override for the navbar title */
+        .site-header .site-title,
+        html[data-theme="light"] .site-header .site-title,
+        html[data-theme="dark"] .site-header .site-title {
+            color: var(--header-text-color) !important;
+            transition: color 0.3s ease;
+        }
+    </style>
+
+    <!-- Very targeted CSS fix -->
+    <style>
+        /* ONLY make the homepage call-out/hero section text white */
+        .home .call-out h1 {
+            color: white !important;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.7) !important;
+        }
+        
+        /* EXPLICITLY ensure navbar title follows the theme */
+        .site-header .branding .site-title,
+        header.site-header .branding a.site-title {
+            color: var(--header-text-color) !important;
+            text-shadow: none !important;
+        }
+    </style>
 </head>

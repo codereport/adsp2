@@ -1,0 +1,151 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #337ab7;
+  --heading-color: #333333;
+  --header-background: #f5f5f5;
+  --header-text-color: #3a3a3a;
+  --border-color: #dddddd;
+  --post-background: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --link-color: #64b5f6;
+  --heading-color: #ffffff;
+  --header-background: #1e1e1e;
+  --header-text-color: #ffffff;
+  --border-color: #444444;
+  --post-background: #1e1e1e;
+}
+
+/* Base elements */
+html[data-theme="dark"] body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Links */
+html[data-theme="dark"] a {
+  color: var(--link-color);
+}
+
+a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+/* Header */
+html[data-theme="dark"] .site-header {
+  background-color: var(--header-background);
+}
+
+.site-header {
+  background-color: var(--header-background);
+  transition: background-color 0.3s ease;
+}
+
+html[data-theme="dark"] .site-header a,
+html[data-theme="dark"] .site-title {
+  color: var(--header-text-color) !important;
+}
+
+.site-header a, 
+.site-title {
+  color: var(--header-text-color) !important;
+}
+
+/* All headings */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: var(--heading-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color) !important;
+  transition: color 0.3s ease;
+}
+
+/* Post titles */
+html[data-theme="dark"] .post-link,
+html[data-theme="dark"] .post-title,
+html[data-theme="dark"] .title {
+  color: var(--heading-color) !important;
+}
+
+.post-link, .post-title, .title {
+  color: var(--heading-color) !important;
+  transition: color 0.3s ease;
+}
+
+/* Cards and posts */
+html[data-theme="dark"] .post-teaser {
+  background-color: var(--post-background);
+  border-color: var(--border-color);
+}
+
+.post-teaser {
+  background-color: var(--post-background);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Footer */
+html[data-theme="dark"] footer {
+  background-color: var(--header-background);
+  color: var(--header-text-color);
+}
+
+footer {
+  background-color: var(--header-background);
+  color: var(--header-text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Content */
+html[data-theme="dark"] .content {
+  color: var(--text-color);
+}
+
+.content {
+  color: var(--text-color);
+}
+
+/* Post content */
+html[data-theme="dark"] .post-content,
+html[data-theme="dark"] .excerpt {
+  color: var(--text-color);
+}
+
+.post-content, .excerpt {
+  color: var(--text-color);
+}
+
+/* Style for the toggle button */
+.theme-toggle {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+/* Make sure this is in the head.html file */
+/* Check if the dark-mode.css file is properly linked in head.html */
+
+/* Additional override for hover states */
+.site-title:hover,
+a.site-title:hover,
+.branding a.site-title:hover {
+  color: white !important;
+} 

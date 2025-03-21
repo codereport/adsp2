@@ -7,9 +7,19 @@
 			<img alt="logo img" class="avatar" src="{{ site.avatar | relative_url }}" />
 		</a>
         {% endif %}
-        <a class="site-title" aria-label="{{ site.title }}" href="{{ '/' | relative_url }}">
-        {{ site.title }}
-		</a>
+        
+        <!-- COMPLETELY REPLACE the site title with our own styled version -->
+        <a href="{{ '/' | relative_url }}" 
+           class="custom-site-title" 
+           aria-label="{{ site.title }}"
+           style="font-size: 1.5em; font-weight: bold; margin-left: 0.5em; text-decoration: none;">
+            <span id="dynamic-site-title">{{ site.title }}</span>
+        </a>
+        
+        <!-- Hide the original site title that's stuck white -->
+        <a class="site-title" aria-label="{{ site.title }}" href="{{ '/' | relative_url }}" style="display: none !important;">
+            {{ site.title }}
+        </a>
 	</div>
 
     <!-- Toggle menu -->
@@ -38,3 +48,18 @@
 
 	</nav>
 </header>
+
+<style>
+    /* Style for our custom dynamic title */
+    .custom-site-title {
+        color: var(--header-text-color) !important;
+        transition: color 0.3s ease !important;
+    }
+    
+    /* Hide the original title completely */
+    .site-title {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+</style>

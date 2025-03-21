@@ -8,10 +8,50 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    <!-- Simple dark/light mode toggle button - positioned at bottom right -->
+    <div style="position:fixed; bottom:20px; right:20px; z-index:1000; background-color: rgba(255,255,255,0.7); border-radius: 50%; padding: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+      <button id="theme-toggle" style="background:none; border:none; cursor:pointer; font-size:24px; line-height: 1; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;">
+        🌙
+      </button>
+    </div>
+    
     {% include navbar.html %}
     <div class="content">
       {{ content }}
     </div>
     {% include footer.html %}
+    
+    <!-- Inline dark mode script - removed only debugging console.logs -->
+    <script>
+      (function() {
+        const toggle = document.getElementById('theme-toggle');
+        
+        if (!toggle) {
+          return;
+        }
+        
+        // Check saved theme or system preference
+        const savedTheme = localStorage.getItem('theme') || 
+                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        
+        // Function to update theme
+        function applyTheme(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        // Apply saved theme on load
+        applyTheme(savedTheme);
+        
+        // Handle toggle click
+        toggle.addEventListener('click', function() {
+          const currentTheme = document.documentElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          
+          applyTheme(newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      })();
+    </script>
   </body>
 </html>
