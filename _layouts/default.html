@@ -21,7 +21,7 @@
     </div>
     {% include footer.html %}
     
-    <!-- Inline dark mode script - removed only debugging console.logs -->
+    <!-- Inline dark mode script with direct title manipulation -->
     <script>
       (function() {
         const toggle = document.getElementById('theme-toggle');
@@ -38,6 +38,20 @@
         function applyTheme(theme) {
           document.documentElement.setAttribute('data-theme', theme);
           toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+          
+          // Directly manipulate the site title color and remove any shadow
+          const siteTitle = document.querySelector('.site-header .branding a.site-title');
+          if (siteTitle) {
+            siteTitle.style.setProperty('color', theme === 'dark' ? '#ffffff' : '#3a3a3a', 'important');
+            siteTitle.style.setProperty('text-shadow', 'none', 'important');
+          }
+          
+          // Make homepage header always white
+          const calloutHeader = document.querySelector('.call-out h1');
+          if (calloutHeader) {
+            calloutHeader.style.color = 'white';
+            calloutHeader.style.textShadow = '0 0 4px rgba(0, 0, 0, 0.7)';
+          }
         }
         
         // Apply saved theme on load
@@ -51,6 +65,16 @@
           applyTheme(newTheme);
           localStorage.setItem('theme', newTheme);
         });
+        
+        // Run title color update again after a slight delay to catch any late DOM changes
+        setTimeout(function() {
+          const theme = document.documentElement.getAttribute('data-theme');
+          const siteTitle = document.querySelector('.site-header .branding a.site-title');
+          if (siteTitle) {
+            siteTitle.style.setProperty('color', theme === 'dark' ? '#ffffff' : '#3a3a3a', 'important');
+            siteTitle.style.setProperty('text-shadow', 'none', 'important');
+          }
+        }, 100);
       })();
     </script>
   </body>
