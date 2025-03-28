@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  227  |                     [Re: The CUDA C++ Developer’s Toolbox](https://adspthepodcast.com/2025/03/28/Episode-227.html)                      |  2025-03-28  |
 |  226  |                            [NVIDIA GTC 2017 vs 2025](https://adspthepodcast.com/2025/03/21/Episode-226.html)                            |  2025-03-21  |
 |  225  |          [CppNorth & Flux Plans, The Slow Death of Twitter and More!](https://adspthepodcast.com/2025/03/14/Episode-225.html)           |  2025-03-14  |
 |  224  |                       [Flux Updates & Internal Iteration](https://adspthepodcast.com/2025/03/07/Episode-224.html)                       |  2025-03-07  |
