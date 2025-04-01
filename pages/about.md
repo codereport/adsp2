@@ -18,7 +18,7 @@ Conor (he/him) is a [Research Scientist](https://www.linkedin.com/in/conorhoekst
 * [ADSP](https://adspthepodcast.com/) (this podcast)
 * [ArrayCast](https://www.arraycast.com/) (a podcast about array languages)
 * [Tacit Talk](https://tacittalk.com/) (a podcast about array languages and tacit programming)
-* [RUN FOR THE FUN OF IT!](https://runforthefunofit.com/) (a running podcast)
+* [R4](https://r4podcast.com/) (a running podcast)
 
 Conor is also an avid conference speaker. You can find all of Conor's conference talks and podcast appearances (on other podcasts) [here](https://github.com/codereport/Talks/blob/master/README.md).
 
