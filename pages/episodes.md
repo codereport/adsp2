@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  232  |                        [Algorithms! Live from New York!](https://adspthepodcast.com/2025/05/02/Episode-232.html)                        |  2025-05-02  |
 |  231  |                  [C++26 Senders and Receivers (+ `flat_map`)](https://adspthepodcast.com/2025/04/25/Episode-231.html)                   |  2025-04-25  |
 |  230  |                               [Hoogle Translate](https://adspthepodcast.com/2025/04/18/Episode-230.html)                                |  2025-04-18  |
 |  229  |                    [`multi_transform`? `for_each_but_last`?](https://adspthepodcast.com/2025/04/11/Episode-229.html)                    |  2025-04-11  |
