@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  235  |                [C++26 Senders and Receivers Algorithms (Part 1)](https://adspthepodcast.com/2025/05/23/Episode-235.html)                |  2025-05-23  |
 |  234  |                              [C++Now 2025 Recap!](https://adspthepodcast.com/2025/05/16/Episode-234.html)                               |  2025-05-16  |
 |  233  |                           [AI! Live from Sunnyvale!](https://adspthepodcast.com/2025/05/09/Episode-233.html)                            |  2025-05-09  |
 |  232  |                        [Algorithms! Live from New York!](https://adspthepodcast.com/2025/05/02/Episode-232.html)                        |  2025-05-02  |
