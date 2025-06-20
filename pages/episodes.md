@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  239  |                    [Claude-Poisoned Dev Sipping Rocket Fuel](https://adspthepodcast.com/2025/06/20/Episode-239.html)                    |  2025-06-20  |
 |  238  |                 [Recommended Podcast Discussions on AI & LLMs](https://adspthepodcast.com/2025/06/13/Episode-238.html)                  |  2025-06-13  |
 |  237  |                          [Thrust with Jared Hoberock](https://adspthepodcast.com/2025/06/06/Episode-237.html)                           |  2025-06-06  |
 |  236  |                [C++26 Senders and Receivers Algorithms (Part 2)](https://adspthepodcast.com/2025/05/30/Episode-236.html)                |  2025-05-30  |
