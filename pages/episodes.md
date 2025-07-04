@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  241  |                       [Parallel Algorithm Talk (Part 3)](https://adspthepodcast.com/2025/07/04/Episode-241.html)                        |  2025-07-04  |
 |  240  |                  [Thrust, Rust vs C++, Python & More (Part 2)](https://adspthepodcast.com/2025/06/27/Episode-240.html)                  |  2025-06-27  |
 |  239  |                    [Claude-Poisoned Dev Sipping Rocket Fuel](https://adspthepodcast.com/2025/06/20/Episode-239.html)                    |  2025-06-20  |
 |  238  |                 [Recommended Podcast Discussions on AI & LLMs](https://adspthepodcast.com/2025/06/13/Episode-238.html)                  |  2025-06-13  |
