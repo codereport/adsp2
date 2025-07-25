@@ -9,6 +9,8 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  244  |                              [High on AI (Part 1)](https://adspthepodcast.com/2025/07/25/Episode-244.html)                              |  2025-07-25  |
+|  243  |                              [Learning Languages](https://adspthepodcast.com/2025/07/18/Episode-243.html)                               |  2025-07-18  |
 |  242  |                     [Thrust & Parallel Algorithms (Part 4)](https://adspthepodcast.com/2025/07/11/Episode-242.html)                     |  2025-07-11  |
 |  241  |                       [Parallel Algorithm Talk (Part 3)](https://adspthepodcast.com/2025/07/04/Episode-241.html)                        |  2025-07-04  |
 |  240  |                  [Thrust, Rust vs C++, Python & More (Part 2)](https://adspthepodcast.com/2025/06/27/Episode-240.html)                  |  2025-06-27  |
