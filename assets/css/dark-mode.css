@@ -180,3 +180,10 @@ a.site-title:hover,
 .branding a.site-title:hover {
   color: white !important;
 }
+
+/* Logo switching for dark/light mode */
+.theme-logo {
+  transition: opacity 0.3s ease;
+}
+
+/* JavaScript will handle the actual logo switching based on data-theme attribute */

@@ -6,76 +6,98 @@
     https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
 -->
 <html lang="en">
-  {% include head.html %}
-  <body>
-    <!-- Simple dark/light mode toggle button - positioned at bottom right -->
-    <div style="position:fixed; bottom:20px; right:20px; z-index:1000; background-color: rgba(255,255,255,0.7); border-radius: 50%; padding: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-      <button id="theme-toggle" style="background:none; border:none; cursor:pointer; font-size:24px; line-height: 1; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;">
-        🌙
-      </button>
-    </div>
-    
-    {% include navbar.html %}
-    <div class="content">
-      {{ content }}
-    </div>
-    {% include footer.html %}
-    
-    <!-- Inline dark mode script with direct title manipulation -->
-    <script>
-      (function() {
-        const toggle = document.getElementById('theme-toggle');
-        
-        if (!toggle) {
-          return;
+{% include head.html %}
+
+<body>
+  <!-- Simple dark/light mode toggle button - positioned at bottom right -->
+  <div
+    style="position:fixed; bottom:20px; right:20px; z-index:1000; background-color: rgba(255,255,255,0.7); border-radius: 50%; padding: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+    <button id="theme-toggle"
+      style="background:none; border:none; cursor:pointer; font-size:24px; line-height: 1; padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;">
+      🌙
+    </button>
+  </div>
+
+  {% include navbar.html %}
+  <div class="content">
+    {{ content }}
+  </div>
+  {% include footer.html %}
+
+  <!-- Inline dark mode script with direct title manipulation -->
+  <script>
+    (function () {
+      const toggle = document.getElementById('theme-toggle');
+
+      if (!toggle) {
+        return;
+      }
+
+      // Check saved theme or system preference
+      const savedTheme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+      // Function to update theme
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+
+        // Directly manipulate the site title color and remove any shadow
+        const siteTitle = document.querySelector('.site-header .branding a.site-title');
+        if (siteTitle) {
+          siteTitle.style.setProperty('color', theme === 'dark' ? '#ffffff' : '#3a3a3a', 'important');
+          siteTitle.style.setProperty('text-shadow', 'none', 'important');
         }
-        
-        // Check saved theme or system preference
-        const savedTheme = localStorage.getItem('theme') || 
-                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        
-        // Function to update theme
-        function applyTheme(theme) {
-          document.documentElement.setAttribute('data-theme', theme);
-          toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-          
-          // Directly manipulate the site title color and remove any shadow
-          const siteTitle = document.querySelector('.site-header .branding a.site-title');
-          if (siteTitle) {
-            siteTitle.style.setProperty('color', theme === 'dark' ? '#ffffff' : '#3a3a3a', 'important');
-            siteTitle.style.setProperty('text-shadow', 'none', 'important');
-          }
-          
-          // Make homepage header always white
-          const calloutHeader = document.querySelector('.call-out h1');
-          if (calloutHeader) {
-            calloutHeader.style.color = 'white';
-            calloutHeader.style.textShadow = '0 0 4px rgba(0, 0, 0, 0.7)';
-          }
+
+        // Make homepage header always white
+        const calloutHeader = document.querySelector('.call-out h1');
+        if (calloutHeader) {
+          calloutHeader.style.color = 'white';
+          calloutHeader.style.textShadow = '0 0 4px rgba(0, 0, 0, 0.7)';
         }
-        
-        // Apply saved theme on load
-        applyTheme(savedTheme);
-        
-        // Handle toggle click
-        toggle.addEventListener('click', function() {
-          const currentTheme = document.documentElement.getAttribute('data-theme');
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          
-          applyTheme(newTheme);
-          localStorage.setItem('theme', newTheme);
+
+        // Switch logos based on theme
+        switchLogos(theme);
+      }
+
+      // Function to switch logos based on theme
+      function switchLogos(theme) {
+        const logosToSwitch = document.querySelectorAll('img[data-light-src][data-dark-src]');
+        logosToSwitch.forEach(function (img) {
+          const lightSrc = img.getAttribute('data-light-src');
+          const darkSrc = img.getAttribute('data-dark-src');
+
+          if (theme === 'dark' && darkSrc) {
+            img.src = darkSrc;
+          } else if (theme === 'light' && lightSrc) {
+            img.src = lightSrc;
+          }
         });
-        
-        // Run title color update again after a slight delay to catch any late DOM changes
-        setTimeout(function() {
-          const theme = document.documentElement.getAttribute('data-theme');
-          const siteTitle = document.querySelector('.site-header .branding a.site-title');
-          if (siteTitle) {
-            siteTitle.style.setProperty('color', theme === 'dark' ? '#ffffff' : '#3a3a3a', 'important');
-            siteTitle.style.setProperty('text-shadow', 'none', 'important');
-          }
-        }, 100);
-      })();
-    </script>
-  </body>
+      }
+
+      // Apply saved theme on load
+      applyTheme(savedTheme);
+
+      // Handle toggle click
+      toggle.addEventListener('click', function () {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+
+      // Run title color update again after a slight delay to catch any late DOM changes
+      setTimeout(function () {
+        const theme = document.documentElement.getAttribute('data-theme');
+        const siteTitle = document.querySelector('.site-header .branding a.site-title');
+        if (siteTitle) {
+          siteTitle.style.setProperty('color', theme === 'dark' ? '#ffffff' : '#3a3a3a', 'important');
+          siteTitle.style.setProperty('text-shadow', 'none', 'important');
+        }
+      }, 100);
+    })();
+  </script>
+</body>
+
 </html>
