@@ -57,7 +57,7 @@ html[data-theme="dark"] .site-title {
   color: var(--header-text-color) !important;
 }
 
-.site-header a, 
+.site-header a,
 .site-title {
   color: var(--header-text-color) !important;
 }
@@ -72,7 +72,12 @@ html[data-theme="dark"] h6 {
   color: var(--heading-color) !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--heading-color) !important;
   transition: color 0.3s ease;
 }
@@ -84,7 +89,9 @@ html[data-theme="dark"] .title {
   color: var(--heading-color) !important;
 }
 
-.post-link, .post-title, .title {
+.post-link,
+.post-title,
+.title {
   color: var(--heading-color) !important;
   transition: color 0.3s ease;
 }
@@ -128,7 +135,8 @@ html[data-theme="dark"] .excerpt {
   color: var(--text-color);
 }
 
-.post-content, .excerpt {
+.post-content,
+.excerpt {
   color: var(--text-color);
 }
 
@@ -143,9 +151,32 @@ html[data-theme="dark"] .excerpt {
 /* Make sure this is in the head.html file */
 /* Check if the dark-mode.css file is properly linked in head.html */
 
+/* Inline code styling for dark mode */
+html[data-theme="dark"] code.highlighter-rouge {
+  background-color: #2d2d2d !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #444444;
+}
+
+code.highlighter-rouge {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Code blocks for dark mode */
+html[data-theme="dark"] div.highlighter-rouge,
+html[data-theme="dark"] figure.highlight,
+html[data-theme="dark"] .highlight code {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+
+html[data-theme="dark"] .highlight pre {
+  background-color: #1e1e1e !important;
+}
+
 /* Additional override for hover states */
 .site-title:hover,
 a.site-title:hover,
 .branding a.site-title:hover {
   color: white !important;
-} 
+}
