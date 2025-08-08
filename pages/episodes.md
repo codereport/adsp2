@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  246  |                                [Not High on AI?](https://adspthepodcast.com/2025/08/08/Episode-246.html)                                |  2025-08-08  |
 |  245  |                              [High on AI (Part 2)](https://adspthepodcast.com/2025/08/01/Episode-245.html)                              |  2025-08-01  |
 |  244  |                              [High on AI (Part 1)](https://adspthepodcast.com/2025/07/25/Episode-244.html)                              |  2025-07-25  |
 |  243  |                              [Learning Languages](https://adspthepodcast.com/2025/07/18/Episode-243.html)                               |  2025-07-18  |
