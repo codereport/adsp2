@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  248  |                [The Philosophy of Good Software Design (Part 2)](https://adspthepodcast.com/2025/08/22/Episode-248.html)                |  2025-08-22  |
 |  247  |                    [The Philosophy of Good Software Design](https://adspthepodcast.com/2025/08/15/Episode-247.html)                     |  2025-08-15  |
 |  246  |                                [Not High on AI?](https://adspthepodcast.com/2025/08/08/Episode-246.html)                                |  2025-08-08  |
 |  245  |                              [High on AI (Part 2)](https://adspthepodcast.com/2025/08/01/Episode-245.html)                              |  2025-08-01  |
