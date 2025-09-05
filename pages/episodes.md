@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  250  |                               [Sean Parent on AI](https://adspthepodcast.com/2025/09/05/Episode-250.html)                               |  2025-09-05  |
 |  249  |                   [AI, Podcasts, Scandinavia Trip and More!](https://adspthepodcast.com/2025/08/29/Episode-249.html)                    |  2025-08-29  |
 |  248  |                [The Philosophy of Good Software Design (Part 2)](https://adspthepodcast.com/2025/08/22/Episode-248.html)                |  2025-08-22  |
 |  247  |                    [The Philosophy of Good Software Design](https://adspthepodcast.com/2025/08/15/Episode-247.html)                     |  2025-08-15  |
