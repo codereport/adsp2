@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  252  |                          [Sean Parent on Rust and AI](https://adspthepodcast.com/2025/09/19/Episode-252.html)                           |  2025-09-19  |
 |  251  |                 [Sean Parent C++ Under the Sea Keynote Preview](https://adspthepodcast.com/2025/09/12/Episode-251.html)                 |  2025-09-12  |
 |  250  |                               [Sean Parent on AI](https://adspthepodcast.com/2025/09/05/Episode-250.html)                               |  2025-09-05  |
 |  249  |                   [AI, Podcasts, Scandinavia Trip and More!](https://adspthepodcast.com/2025/08/29/Episode-249.html)                    |  2025-08-29  |
