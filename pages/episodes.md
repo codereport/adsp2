@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  254  |             [🇩🇰 Live from Denmark! Roku, EVs, Aarhus (Ø) and more!](https://adspthepodcast.com/2025/10/03/Episode-254.html)              |  2025-10-03  |
 |  253  |                         [Sean Parent on AI and Cursor](https://adspthepodcast.com/2025/09/26/Episode-253.html)                          |  2025-09-26  |
 |  252  |                          [Sean Parent on Rust and AI](https://adspthepodcast.com/2025/09/19/Episode-252.html)                           |  2025-09-19  |
 |  251  |                 [Sean Parent C++ Under the Sea Keynote Preview](https://adspthepodcast.com/2025/09/12/Episode-251.html)                 |  2025-09-12  |
