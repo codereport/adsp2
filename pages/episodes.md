@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  256  |            [🇩🇰 Algorithms: Replicate, Scatter, Gather & RLD (Part 2)](https://adspthepodcast.com/2025/10/17/Episode-256.html)            |  2025-10-17  |
 |  255  |                      [🇩🇰 C++ Copenhagen Meetup & Replicate](https://adspthepodcast.com/2025/10/10/Episode-255.html)                      |  2025-10-10  |
 |  254  |             [🇩🇰 Live from Denmark! Roku, EVs, Aarhus (Ø) and more!](https://adspthepodcast.com/2025/10/03/Episode-254.html)              |  2025-10-03  |
 |  253  |                         [Sean Parent on AI and Cursor](https://adspthepodcast.com/2025/09/26/Episode-253.html)                          |  2025-09-26  |

@@ -11,6 +11,7 @@ feature-img: "assets/img/pexels/adsp2.png"
 
 * Austria
 * Canada
+* Denmark
 * Italy
 * Netherlands
 * Poland
@@ -31,10 +32,11 @@ feature-img: "assets/img/pexels/adsp2.png"
 
 #### Cities (While Walking)
 
-* Venice, Italy
+* Cádiz, Spain
+* Copenhagen, Denmark
 * Folkstone, UK
 * New York, USA
-* Cádiz, Spain
+* Venice, Italy
 
 #### Companies
 
