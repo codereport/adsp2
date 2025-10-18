@@ -187,3 +187,22 @@ a.site-title:hover,
 }
 
 /* JavaScript will handle the actual logo switching based on data-theme attribute */
+
+/* Mobile navigation menu dark mode fixes */
+@media screen and (max-width: 768px) {
+  html[data-theme="dark"] nav li {
+    background-color: #2d2d2d !important;
+  }
+  
+  html[data-theme="dark"] nav li:nth-of-type(4n) {
+    background-color: #1e1e1e !important;
+  }
+  
+  html[data-theme="dark"] nav li a {
+    color: var(--text-color) !important;
+  }
+  
+  html[data-theme="dark"] nav li a:hover {
+    color: var(--link-color) !important;
+  }
+}
