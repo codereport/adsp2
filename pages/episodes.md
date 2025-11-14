@@ -9,6 +9,8 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  260  |              [🇳🇱 C++ Under the Sea 🇳🇱 Ray, Paul, Parrot & Scanman!](https://adspthepodcast.com/2025/11/14/Episode-260.html)               |  2025-11-14  |
+|  259  |                 [🇳🇴 NDC TechTown 🇳🇴 Vittorio Romeo & JF Bastien](https://adspthepodcast.com/2025/11/07/Episode-259.html)                  |  2025-11-07  |
 |  258  |            [🇳🇴 An Algorithm Taxonomy (Serial, Parallel, Cooperative)](https://adspthepodcast.com/2025/10/31/Episode-258.html)            |  2025-10-31  |
 |  257  |         [🇳🇴 Live from Norway! Replicate, Scatter, Gather & RLD (Part 3)](https://adspthepodcast.com/2025/10/24/Episode-257.html)         |  2025-10-24  |
 |  256  |            [🇩🇰 Algorithms: Replicate, Scatter, Gather & RLD (Part 2)](https://adspthepodcast.com/2025/10/17/Episode-256.html)            |  2025-10-17  |
