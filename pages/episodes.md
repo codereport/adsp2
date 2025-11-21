@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  261  |           [🇳🇱 C++ Under the Sea 🇳🇱 Bernhard, Koen & C++26 Reflection!](https://adspthepodcast.com/2025/11/21/Episode-261.html)            |  2025-11-21  |
 |  260  |              [🇳🇱 C++ Under the Sea 🇳🇱 Ray, Paul, Parrot & Scanman!](https://adspthepodcast.com/2025/11/14/Episode-260.html)               |  2025-11-14  |
 |  259  |                 [🇳🇴 NDC TechTown 🇳🇴 Vittorio Romeo & JF Bastien](https://adspthepodcast.com/2025/11/07/Episode-259.html)                  |  2025-11-07  |
 |  258  |            [🇳🇴 An Algorithm Taxonomy (Serial, Parallel, Cooperative)](https://adspthepodcast.com/2025/10/31/Episode-258.html)            |  2025-10-31  |
