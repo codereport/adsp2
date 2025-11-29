@@ -11,16 +11,7 @@ The three co-hosts are:
 
 ### Conor Hoekstra 
 
-**Twitter:** [@code_report](https://twitter.com/code_report)
- 
-Conor (he/him) is a [Research Scientist](https://www.linkedin.com/in/conorhoekstra/) at NVIDIA working on array programming models and languages. He is extremely passionate about programming languages, algorithms and beautiful code. He is the founder and organizer of the [Programming Languages Virtual Meetup](https://www.meetup.com/Programming-Languages-Toronto-Meetup/), he has a [YouTube channel](https://www.youtube.com/codereport) and is the host of four podcasts: 
-
-* [ADSP](https://adspthepodcast.com/) (this podcast)
-* [ArrayCast](https://www.arraycast.com/) (a podcast about array languages)
-* [Tacit Talk](https://tacittalk.com/) (a podcast about array languages and tacit programming)
-* [R4](https://r4podcast.com/) (a running podcast)
-
-Conor is also an avid conference speaker. You can find all of Conor's conference talks and podcast appearances (on other podcasts) [here](https://github.com/codereport/Talks/blob/master/README.md).
+Find Conor's ["about me" here](https://codereport.github.io/vibing/linktree/index.html).
 
 ### Bryce Adelstein Lelbach 
 
