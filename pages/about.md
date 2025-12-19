@@ -11,7 +11,7 @@ The three co-hosts are:
 
 ### Conor Hoekstra 
 
-Conor's bio and link tree can be found [here](https://codereport.github.io/vibing/linktree/index.html).
+Conor's bio and link tree can be found [here](https://conorshakory.com).
 
 ### Bryce Adelstein Lelbach 
 
