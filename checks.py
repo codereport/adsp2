@@ -66,6 +66,7 @@ for post_name in os.listdir("_posts/"):
                     + (num > 151)
                     + ((num > 181) * 3)
                     + ((num > 184) * 4)
+                    + ((num > 260))
                 )
                 if actual_num != int(line[:-2].split("/")[-1]):
                     print(num, actual_num, int(line[:-2].split("/")[-1]))
