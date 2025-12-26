@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  266  |  [Holiday Special 🎄 CppCon, NDC Toronto, C++Now, Teletext, Bamboozle & More!](https://adspthepodcast.com/2025/12/26/Episode-266.html)   |  2025-12-26  |
 |  265  |                [🇦🇺 YOW! Live 🇦🇺 Kevlin Henney & Damian Maclennan](https://adspthepodcast.com/2025/12/19/Episode-265.html)                 |  2025-12-19  |
 |  264  |          [🇦🇺 Aphantasia, Anendophasia & the Future with Kevlin Henney](https://adspthepodcast.com/2025/12/12/Episode-264.html)           |  2025-12-12  |
 |  263  |                        [🇳🇱 The Sean Parent Origin Story](https://adspthepodcast.com/2025/12/05/Episode-263.html)                         |  2025-12-05  |
