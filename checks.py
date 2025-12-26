@@ -7,6 +7,8 @@ print("POST CHECKS")
 # Episode Number in Title
 problem = False
 for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
     num = int(post_name[:-3].split("-")[-1])
     with open("_posts/" + post_name) as post:
         for line in post:
@@ -18,6 +20,8 @@ print(("❌" if problem else "✅") + " - Episode Number in Title")
 # Episode Number in Link to Website (Text)
 problem = False
 for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
     num = int(post_name[:-3].split("-")[-1])
     with open("_posts/" + post_name) as post:
         idx = 3 if num < 115 else 4
@@ -30,6 +34,8 @@ print(("❌" if problem else "✅") + " - Episode Number in Link to Website (Tex
 # Date in Link to Website (Link)
 problem = False
 for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
     date = post_name[:10]
     with open("_posts/" + post_name) as post:
         idx = 3 if num < 115 else 4
@@ -42,6 +48,8 @@ print(("❌" if problem else "✅") + " - Date in Link to Website (Link)")
 # Date in Release Date
 problem = False
 for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
     date = post_name[:10]
     with open("_posts/" + post_name) as post:
         idx = 3 if num < 115 else 4
@@ -54,6 +62,8 @@ print(("❌" if problem else "✅") + " - Date in Release Date")
 # Discussion Link Issue Number
 problem = False
 for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
     num = int(post_name[:-3].split("-")[-1])
     with open("_posts/" + post_name) as post:
         for line in post:
@@ -77,6 +87,8 @@ print(("❌" if problem else "✅") + " - Discussion Link Issue Number")
 problem = False
 dates = []
 for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
     date = post_name[:10]
     dates.append(datetime.strptime(date, "%Y-%m-%d"))
 dates.sort()
@@ -94,6 +106,8 @@ problem_date = False
 problem_link_date = False
 problem_link_num = False
 for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
     num = int(post_name[:-3].split("-")[-1])
     date = post_name[:10]
     with open("_posts/" + post_name) as post:
