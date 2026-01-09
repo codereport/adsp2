@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  268  |                          [Advent of Code 2025 (Day 6)](https://adspthepodcast.com/2026/01/09/Episode-268.html)                          |  2026-01-09  |
 |  267  |                        [Advent of Code 2025 (Day 2 & 3)](https://adspthepodcast.com/2026/01/02/Episode-267.html)                        |  2026-01-02  |
 |  266  |  [Holiday Special 🎄 CppCon, NDC Toronto, C++Now, Teletext, Bamboozle & More!](https://adspthepodcast.com/2025/12/26/Episode-266.html)   |  2025-12-26  |
 |  265  |                [🇦🇺 YOW! Live 🇦🇺 Kevlin Henney & Damian Maclennan](https://adspthepodcast.com/2025/12/19/Episode-265.html)                 |  2025-12-19  |
