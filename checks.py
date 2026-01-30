@@ -182,3 +182,36 @@ if invalid_links:
         print(f"  {post_name}:{line_num} - q={q_value} (should be numeric)")
 else:
     print("✅ - Hoogle Translate by-algo-id Links Have Numeric q= Parameter")
+
+# Hoogle Translate Link Format (Hoogle Translate first)
+problem = False
+fixed_files = []
+pattern = re.compile(r'\[`([^`]+)` Hoogle Translate\]')
+for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
+    file_path = "_posts/" + post_name
+    with open(file_path) as post:
+        content = post.read()
+    
+    # Find and fix any instances of "`algorithm` Hoogle Translate"
+    matches = pattern.findall(content)
+    if matches:
+        new_content = content
+        for algo in matches:
+            old_pattern = f'[`{algo}` Hoogle Translate]'
+            new_pattern = f'[Hoogle Translate `{algo}`]'
+            new_content = new_content.replace(old_pattern, new_pattern)
+        
+        if new_content != content:
+            with open(file_path, 'w') as post:
+                post.write(new_content)
+            fixed_files.append((post_name, len(matches)))
+            problem = True
+
+if fixed_files:
+    print(f"🔧 - Fixed Hoogle Translate Link Format (Hoogle Translate now first)")
+    for post_name, count in fixed_files:
+        print(f"  {post_name} - Fixed {count} link(s)")
+else:
+    print("✅ - Hoogle Translate Link Format (Hoogle Translate first)")
