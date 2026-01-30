@@ -1,5 +1,7 @@
 import os
+import re
 from datetime import datetime
+from urllib.parse import urlparse, parse_qs
 
 # Posts
 print("POST CHECKS")
@@ -145,3 +147,38 @@ print(("❌" if problem_date else "✅") + " - Episode Date")
 print(("❌" if problem_title else "✅") + " - Episode Title")
 print(("❌" if problem_link_date else "✅") + " - Episode Date in Link")
 print(("❌" if problem_link_num else "✅") + " - Episode Number in Link")
+
+# Hoogle Translate by-algo-id Links Have Numeric q= Parameter
+print("HOOGLE TRANSLATE CHECKS")
+problem = False
+invalid_links = []
+for post_name in os.listdir("_posts/"):
+    if not post_name.endswith('.md'):
+        continue
+    with open("_posts/" + post_name) as post:
+        for line_num, line in enumerate(post, 1):
+            # Find all Hoogle Translate links in the line
+            urls = re.findall(r'https://hoogletranslate\.com/[^\s\)]+', line)
+            for url in urls:
+                # Parse the URL and query parameters
+                parsed = urlparse(url)
+                params = parse_qs(parsed.query)
+                
+                # Check if type=by-algo-id
+                if 'type' in params and 'by-algo-id' in params['type']:
+                    # Check if q parameter exists and is numeric
+                    if 'q' in params:
+                        q_value = params['q'][0]
+                        if not q_value.isdigit():
+                            problem = True
+                            invalid_links.append((post_name, line_num, url, q_value))
+                    else:
+                        problem = True
+                        invalid_links.append((post_name, line_num, url, "MISSING"))
+
+if invalid_links:
+    print(f"❌ - Hoogle Translate by-algo-id Links Have Numeric q= Parameter")
+    for post_name, line_num, url, q_value in invalid_links:
+        print(f"  {post_name}:{line_num} - q={q_value} (should be numeric)")
+else:
+    print("✅ - Hoogle Translate by-algo-id Links Have Numeric q= Parameter")
