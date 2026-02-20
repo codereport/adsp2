@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  274  |            [Recreational Math, Calculators & the Quadratic Formula](https://adspthepodcast.com/2026/02/20/Episode-274.html)             |  2026-02-20  |
 |  273  |             [Recreational Algorithms, 一百四十一, PEDMAS & Orwell](https://adspthepodcast.com/2026/02/13/Episode-273.html)              |  2026-02-13  |
 |  272  |                            [Inverses, Monoids and ∞](https://adspthepodcast.com/2026/02/06/Episode-272.html)                            |  2026-02-06  |
 |  271  |                             [Mastermind Algorithms](https://adspthepodcast.com/2026/01/30/Episode-271.html)                             |  2026-01-30  |
