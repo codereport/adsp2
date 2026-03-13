@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  277  |                               [High on AI Update](https://adspthepodcast.com/2026/03/13/Episode-277.html)                               |  2026-03-13  |
 |  276  |                      [Mini AI / Cursor Update (+ Running)](https://adspthepodcast.com/2026/03/06/Episode-276.html)                      |  2026-03-06  |
 |  275  |                        [Cartel Chaos & Travel Troubles](https://adspthepodcast.com/2026/02/27/Episode-275.html)                         |  2026-02-27  |
 |  274  |            [Recreational Math, Calculators & the Quadratic Formula](https://adspthepodcast.com/2026/02/20/Episode-274.html)             |  2026-02-20  |
