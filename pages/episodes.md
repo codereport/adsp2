@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  279  |                  [ArrayBox.dev & Agentic Software Development](https://adspthepodcast.com/2026/03/27/Episode-279.html)                  |  2026-03-27  |
 |  278  |                               [The Age of Ideas](https://adspthepodcast.com/2026/03/20/Episode-278.html)                                |  2026-03-20  |
 |  277  |                               [High on AI Update](https://adspthepodcast.com/2026/03/13/Episode-277.html)                               |  2026-03-13  |
 |  276  |                      [Mini AI / Cursor Update (+ Running)](https://adspthepodcast.com/2026/03/06/Episode-276.html)                      |  2026-03-06  |
