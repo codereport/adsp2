@@ -17,7 +17,15 @@ layout: default
   {% if page.bootstrap %}
     <div class="bootstrap-iso">
     {% endif %}
+      {% assign buzzsprout_id = page["buzzsprout-id"] %}
+      {% if buzzsprout_id %}
+      <div id="buzzsprout-player-{{ buzzsprout_id }}"></div><script src="https://www.buzzsprout.com/1501960/episodes/{{ buzzsprout_id }}-{{ page.title | slugify }}.js?container_id=buzzsprout-player-{{ buzzsprout_id }}&player=small" type="text/javascript" charset="utf-8"></script>
+      {% endif %}
       {{ content }}
+      {% if buzzsprout_id %}
+      <h3 id="transcript">Transcript</h3>
+      <a href="https://www.buzzsprout.com/1501960/{{ buzzsprout_id }}-{{ page.title | slugify }}/transcript">View transcript</a>
+      {% endif %}
     {% if page.bootstrap %}
     </div>
   {% endif %}
