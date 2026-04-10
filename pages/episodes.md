@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  281  |                  [From Hylomorphisms to Boost Ranges to Jello](https://adspthepodcast.com/2026/04/10/Episode-281.html)                  |  2026-04-10  |
 |  280  |                  [C++26 Big Ticket Items, GCC vs Clang & More](https://adspthepodcast.com/2026/04/03/Episode-280.html)                  |  2026-04-03  |
 |  279  |                  [ArrayBox.dev & Agentic Software Development](https://adspthepodcast.com/2026/03/27/Episode-279.html)                  |  2026-03-27  |
 |  278  |                               [The Age of Ideas](https://adspthepodcast.com/2026/03/20/Episode-278.html)                                |  2026-03-20  |
