@@ -15,7 +15,7 @@ TECHNOLOGIES = {
     'C++': {
         'tag': 'C%2B%2B',
         'img_src':
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png',
+        'https://raw.githubusercontent.com/codereport/logos/main/cpp.png',
         'height': '80px',
         'width': '95px',
         'extra_attrs': ''
@@ -24,20 +24,20 @@ TECHNOLOGIES = {
         'tag':
         'Rust',
         'img_src':
-        'https://github.com/codereport/hoogle-translate/blob/main/public/media/logos/rust_logo.png?raw=true',
+        'https://raw.githubusercontent.com/codereport/logos/main/rust.png',
         'height':
         '80px',
         'width':
         '100px',
         'extra_attrs':
         '''id="rust-logo"
-                        data-light-src="https://github.com/codereport/hoogle-translate/blob/main/public/media/logos/rust_logo.png?raw=true"
-                        data-dark-src="https://github.com/codereport/hoogle-translate/blob/main/public/media/logos/rust_logo_darkmode.png?raw=true"'''
+                        data-light-src="https://raw.githubusercontent.com/codereport/logos/main/rust.png"
+                        data-dark-src="https://raw.githubusercontent.com/codereport/logos/main/rust_darkmode.png"'''
     },
     'APL': {
         'tag': 'APL',
         'img_src':
-        'https://aplwiki.com/images/thumb/c/c6/APL_logo.png/300px-APL_logo.png',
+        'https://raw.githubusercontent.com/codereport/logos/main/apl.png',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
@@ -45,7 +45,7 @@ TECHNOLOGIES = {
     'Swift': {
         'tag': 'Swift',
         'img_src':
-        'https://github.com/codereport/plr/blob/main/public/media/logos/swift_logo.png?raw=true',
+        'https://raw.githubusercontent.com/codereport/logos/main/swift.png',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
@@ -53,7 +53,7 @@ TECHNOLOGIES = {
     'Haskell': {
         'tag': 'Haskell',
         'img_src':
-        'https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/haskell/haskell.svg',
+        'https://raw.githubusercontent.com/codereport/logos/main/haskell.svg',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
@@ -61,7 +61,7 @@ TECHNOLOGIES = {
     'Thrust': {
         'tag': 'Thrust',
         'img_src':
-        'https://github.com/codereport/hoogle-translate/blob/main/public/media/logos/thrust_logo.png?raw=true',
+        'https://raw.githubusercontent.com/codereport/logos/main/thrust.png',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
@@ -69,14 +69,14 @@ TECHNOLOGIES = {
     'Python': {
         'tag': 'Python',
         'img_src':
-        'https://github.com/codereport/plr/blob/main/public/media/logos/python_logo.png?raw=true',
+        'https://raw.githubusercontent.com/codereport/logos/main/python.png',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
     },
     'BQN': {
         'tag': 'BQN',
-        'img_src': 'https://aplwiki.com/images/4/4d/BQN_logo.png',
+        'img_src': 'https://raw.githubusercontent.com/codereport/logos/main/bqn.svg',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
@@ -84,7 +84,7 @@ TECHNOLOGIES = {
     'Fortran': {
         'tag': 'Fortran',
         'img_src':
-        'https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg',
+        'https://raw.githubusercontent.com/codereport/logos/main/fortran.png',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
@@ -92,7 +92,7 @@ TECHNOLOGIES = {
     'CUDA': {
         'tag': 'CUDA',
         'img_src':
-        'https://github.com/codereport/hoogle-translate/blob/main/public/media/logos/cuda.png?raw=true',
+        'https://raw.githubusercontent.com/codereport/logos/main/cuda.png',
         'height': '80px',
         'width': '140px',
         'extra_attrs': ''
@@ -100,7 +100,7 @@ TECHNOLOGIES = {
     'Clojure': {
         'tag': 'Clojure',
         'img_src':
-        'https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg',
+        'https://raw.githubusercontent.com/codereport/logos/main/clojure.png',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
@@ -108,7 +108,7 @@ TECHNOLOGIES = {
     'Erlang': {
         'tag': 'Erlang',
         'img_src':
-        'https://github.com/codereport/plr/blob/main/public/media/logos/erlang_logo.png?raw=true',
+        'https://raw.githubusercontent.com/codereport/logos/main/erlang.png',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
@@ -116,7 +116,7 @@ TECHNOLOGIES = {
     'D': {
         'tag': 'D',
         'img_src':
-        'https://github.com/codereport/plr/blob/main/public/media/logos/d_logo.png?raw=true',
+        'https://raw.githubusercontent.com/codereport/logos/main/d.png',
         'height': '80px',
         'width': '100px',
         'extra_attrs': ''
