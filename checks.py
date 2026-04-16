@@ -101,6 +101,27 @@ for a, b in zip(dates[:-1], dates[1:]):
         problem = True
 print(("❌" if problem else "✅") + " - Dates Differ by 7 Days")
 
+# Unique Buzzsprout IDs
+problem = False
+buzzsprout_ids = {}
+for post_name in sorted(os.listdir("_posts/")):
+    if not post_name.endswith(".md"):
+        continue
+    with open("_posts/" + post_name) as post:
+        for line in post:
+            if line.startswith("buzzsprout-id:"):
+                bid = line.split(":")[1].strip()
+                if bid in buzzsprout_ids:
+                    if not problem:
+                        print("❌ - Unique Buzzsprout IDs")
+                    print(f"  Duplicate buzzsprout-id {bid}: {buzzsprout_ids[bid]} and {post_name}")
+                    problem = True
+                else:
+                    buzzsprout_ids[bid] = post_name
+                break
+if not problem:
+    print("✅ - Unique Buzzsprout IDs")
+
 # Episodes
 print("EPISODES CHECKS")
 
