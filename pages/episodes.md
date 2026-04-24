@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  283  |                  [From 0 Programming to NVIDIA in < 3.5 Years](https://adspthepodcast.com/2026/04/24/Episode-283.html)                  |  2026-04-24  |
 |  282  |                 [Programming Language Archaeology & Semantics](https://adspthepodcast.com/2026/04/17/Episode-282.html)                  |  2026-04-17  |
 |  281  |                  [From Hylomorphisms to Boost Ranges to Jello](https://adspthepodcast.com/2026/04/10/Episode-281.html)                  |  2026-04-10  |
 |  280  |                  [C++26 Big Ticket Items, GCC vs Clang & More](https://adspthepodcast.com/2026/04/03/Episode-280.html)                  |  2026-04-03  |
