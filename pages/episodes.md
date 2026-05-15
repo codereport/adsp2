@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  286  |                [GPU Profiling with NVIDIA Nsight Compute (NCU)](https://adspthepodcast.com/2026/05/15/Episode-286.html)                 |  2026-05-15  |
 |  285  |                              [GPU Rotate (Part 2)](https://adspthepodcast.com/2026/05/08/Episode-285.html)                              |  2026-05-08  |
 |  284  |                                  [GPU Rotate](https://adspthepodcast.com/2026/05/01/Episode-284.html)                                   |  2026-05-01  |
 |  283  |                  [From 0 Programming to NVIDIA in < 3.5 Years](https://adspthepodcast.com/2026/04/24/Episode-283.html)                  |  2026-04-24  |
