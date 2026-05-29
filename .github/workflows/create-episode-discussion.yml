@@ -1,0 +1,126 @@
+name: Create Episode Discussion
+
+# When a new episode post is added under _posts/, automatically create a
+# GitHub Discussion in the "Episode" category whose title matches the episode
+# and whose body links to the episode page.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "_posts/*Episode-*.md"
+  # Allow manually creating the discussion for a specific post if needed.
+  workflow_dispatch:
+    inputs:
+      post:
+        description: "Path to the episode post (e.g. _posts/2026-05-29-Episode-288.md)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  discussions: write
+
+# Avoid two runs racing to create the same discussion.
+concurrency:
+  group: episode-discussion-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  create-discussion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Need history so we can diff against the previous commit.
+          fetch-depth: 0
+
+      - name: Determine newly added episode posts
+        id: posts
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            files="${{ github.event.inputs.post }}"
+          else
+            before="${{ github.event.before }}"
+            # On a brand new branch `before` is all zeros; fall back to the first parent.
+            if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+              before="$(git rev-parse ${{ github.sha }}^ 2>/dev/null || git hash-object -t tree /dev/null)"
+            fi
+            files="$(git diff --name-only --diff-filter=A "$before" "${{ github.sha }}" -- '_posts/*Episode-*.md' || true)"
+          fi
+          {
+            echo "files<<EOF"
+            echo "$files"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "Newly added episode posts:"
+          echo "$files"
+
+      - name: Create discussions
+        if: steps.posts.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          set -euo pipefail
+
+          # Resolve the repository id and the "Episode" category id once.
+          read -r REPO_ID CATEGORY_ID < <(
+            gh api graphql -f owner="$OWNER" -f name="$REPO" -f query='
+              query($owner:String!, $name:String!) {
+                repository(owner:$owner, name:$name) {
+                  id
+                  discussionCategories(first: 25) { nodes { id name } }
+                }
+              }' --jq '.data.repository as $r
+                       | ($r.discussionCategories.nodes[] | select(.name=="Episode") | .id) as $cat
+                       | "\($r.id) \($cat)"'
+          )
+
+          if [ -z "${CATEGORY_ID:-}" ] || [ "$CATEGORY_ID" = "null" ]; then
+            echo "::error::Could not find a discussion category named 'Episode'." >&2
+            exit 1
+          fi
+
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            [ -f "$f" ] || { echo "::warning::$f not found, skipping"; continue; }
+
+            # Title comes from the post front matter: title: "Episode N: ..."
+            title="$(sed -n 's/^title:[[:space:]]*//p' "$f" | head -1)"
+            title="${title%\"}"; title="${title#\"}"
+            title="${title%\'}"; title="${title#\'}"
+
+            # URL is derived from the file name: 2026-05-29-Episode-288.md
+            #   -> https://adspthepodcast.com/2026/05/29/Episode-288.html
+            base="$(basename "$f" .md)"
+            path="$(echo "$base" | sed -E 's#^([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)$#\1/\2/\3/\4#')"
+            url="https://adspthepodcast.com/${path}.html"
+
+            body="$(printf 'Episode Link: %s\n\nFeel free to write comments or ask questions 🙂\n' "$url")"
+
+            echo "Episode post: $f"
+            echo "  title: $title"
+            echo "  url:   $url"
+
+            # Skip if a discussion with this exact title already exists (idempotent re-runs).
+            existing="$(gh api graphql -f q="repo:${OWNER}/${REPO} in:title \"${title}\"" -f query='
+              query($q:String!) { search(query:$q, type:DISCUSSION, first:1) { discussionCount } }' \
+              --jq '.data.search.discussionCount')"
+            if [ "${existing:-0}" -gt 0 ]; then
+              echo "  Discussion with this title already exists, skipping."
+              continue
+            fi
+
+            gh api graphql \
+              -f repo="$REPO_ID" -f cat="$CATEGORY_ID" -f title="$title" -f body="$body" \
+              -f query='
+                mutation($repo:ID!, $cat:ID!, $title:String!, $body:String!) {
+                  createDiscussion(input:{repositoryId:$repo, categoryId:$cat, title:$title, body:$body}) {
+                    discussion { number url }
+                  }
+                }' --jq '.data.createDiscussion.discussion | "Created discussion #\(.number): \(.url)"'
+          done <<< "${{ steps.posts.outputs.files }}"
