@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  289  |                           [Ben's Updated AI Thoughts](https://adspthepodcast.com/2026/06/05/Episode-289.html)                           |  2026-06-05  |
 |  288  |           [C++ Now, Lasting Quality & Programming as Theory Building](https://adspthepodcast.com/2026/05/29/Episode-288.html)           |  2026-05-29  |
 |  287  |                              [AI Takes & AI Taxes](https://adspthepodcast.com/2026/05/22/Episode-287.html)                              |  2026-05-22  |
 |  286  |                [GPU Profiling with NVIDIA Nsight Compute (NCU)](https://adspthepodcast.com/2026/05/15/Episode-286.html)                 |  2026-05-15  |
