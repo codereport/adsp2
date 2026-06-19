@@ -48,7 +48,7 @@ jobs:
             if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
               before="$(git rev-parse ${{ github.sha }}^ 2>/dev/null || git hash-object -t tree /dev/null)"
             fi
-            files="$(git diff --name-only --diff-filter=A "$before" "${{ github.sha }}" -- '_posts/*Episode-*.md' || true)"
+            files="$(git diff --name-only --diff-filter=AR "$before" "${{ github.sha }}" -- '_posts/*Episode-*.md' || true)"
           fi
           {
             echo "files<<EOF"
