@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  291  |                     [autoresearch with Opus 4.8 & GPT 5.5](https://adspthepodcast.com/2026/06/19/Episode-291.html)                      |  2026-06-19  |
 |  290  |            [AI Thoughts & The Best Thing You Can Do for Your Career](https://adspthepodcast.com/2026/06/12/Episode-290.html)            |  2026-06-12  |
 |  289  |                           [Ben's Updated AI Thoughts](https://adspthepodcast.com/2026/06/05/Episode-289.html)                           |  2026-06-05  |
 |  288  |           [C++ Now, Lasting Quality & Programming as Theory Building](https://adspthepodcast.com/2026/05/29/Episode-288.html)           |  2026-05-29  |
