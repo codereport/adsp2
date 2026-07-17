@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  295  |                [CityStrides vs Graph Algorithms vs GPT 5.6 Sol](https://adspthepodcast.com/2026/07/17/Episode-295.html)                 |  2026-07-17  |
 |  294  |                                  [Histocache](https://adspthepodcast.com/2026/07/10/Episode-294.html)                                   |  2026-07-10  |
 |  293  |                                [APL or Assembly](https://adspthepodcast.com/2026/07/03/Episode-293.html)                                |  2026-07-03  |
 |  292  |                 [GPU MODE, PLs, Post AGI, Wingspan & Lawn Care](https://adspthepodcast.com/2026/06/26/Episode-292.html)                 |  2026-06-26  |
