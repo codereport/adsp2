@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  298  |                       [Design of APIs, UIs & Algorithms](https://adspthepodcast.com/2026/08/07/Episode-298.html)                        |  2026-08-07  |
 |  297  |       [Networking, FPS vs RTS, State of Game Industry and the Obra Dinn](https://adspthepodcast.com/2026/07/31/Episode-297.html)        |  2026-07-31  |
 |  296  |                      [Working in the Video Game Industry](https://adspthepodcast.com/2026/07/24/Episode-296.html)                       |  2026-07-24  |
 |  295  |                [CityStrides vs Graph Algorithms vs GPT 5.6 Sol](https://adspthepodcast.com/2026/07/17/Episode-295.html)                 |  2026-07-17  |
