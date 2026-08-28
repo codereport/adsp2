@@ -9,6 +9,7 @@ List of all episodes.
 
 |   #   |                                                                  Title                                                                  | Release Date |
 | :---: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------: |
+|  301  |         [My Existential Crisis, AI Fluency & the Death of Conferences?](https://adspthepodcast.com/2026/08/28/Episode-301.html)         |  2026-08-28  |
 |  300  |                  [Sean Parent "I'm not writing code anymore."](https://adspthepodcast.com/2026/08/21/Episode-300.html)                  |  2026-08-21  |
 |  299  |                        [Do We Need Humans in the Loop?](https://adspthepodcast.com/2026/08/14/Episode-299.html)                         |  2026-08-14  |
 |  298  |                       [Design of APIs, UIs & Algorithms](https://adspthepodcast.com/2026/08/07/Episode-298.html)                        |  2026-08-07  |
