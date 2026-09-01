@@ -16,8 +16,6 @@ TECHNOLOGIES = {
         'tag': 'C%2B%2B',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/cpp.png',
-        'height': '80px',
-        'width': '95px',
         'extra_attrs': ''
     },
     'Rust': {
@@ -25,10 +23,6 @@ TECHNOLOGIES = {
         'Rust',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/rust.png',
-        'height':
-        '80px',
-        'width':
-        '100px',
         'extra_attrs':
         '''id="rust-logo"
                         data-light-src="https://raw.githubusercontent.com/codereport/logos/main/rust.png"
@@ -38,87 +32,65 @@ TECHNOLOGIES = {
         'tag': 'APL',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/apl.png',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'Swift': {
         'tag': 'Swift',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/swift.png',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'Haskell': {
         'tag': 'Haskell',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/haskell.svg',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'Thrust': {
         'tag': 'Thrust',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/thrust.png',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'Python': {
         'tag': 'Python',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/python.png',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'BQN': {
         'tag': 'BQN',
         'img_src': 'https://raw.githubusercontent.com/codereport/logos/main/bqn.svg',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'Fortran': {
         'tag': 'Fortran',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/fortran.png',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'CUDA': {
         'tag': 'CUDA',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/cuda.png',
-        'height': '80px',
-        'width': '140px',
         'extra_attrs': ''
     },
     'Clojure': {
         'tag': 'Clojure',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/clojure.png',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'Erlang': {
         'tag': 'Erlang',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/erlang.png',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     },
     'D': {
         'tag': 'D',
         'img_src':
         'https://raw.githubusercontent.com/codereport/logos/main/d.png',
-        'height': '80px',
-        'width': '100px',
         'extra_attrs': ''
     }
 }
@@ -158,15 +130,12 @@ def count_tags_in_posts():
 
 def generate_logo_html(tech_name, config):
     """Generate HTML for a single logo."""
-    extra_attrs = f'\n                        {config["extra_attrs"]}' if config[
+    extra_attrs = f'{config["extra_attrs"]}\n                    ' if config[
         'extra_attrs'] else ''
 
-    return f'''            <div style="float: left;">
-                <a href="https://adspthepodcast.com/tags/#{config['tag']}">
-                    <img {f'{config["extra_attrs"]} ' if config['extra_attrs'] else ''}src="{config['img_src']}"
-                        height={config['height']} width={config['width']}>
-                </a>
-            </div>'''
+    return f'''            <a class="topic-logo" href="https://adspthepodcast.com/tags/#{config['tag']}">
+                <img {extra_attrs}src="{config['img_src']}" alt="{tech_name}">
+            </a>'''
 
 
 def update_home_html(ordered_technologies):
@@ -186,7 +155,7 @@ def update_home_html(ordered_technologies):
 
     # Find and replace the logos section
     # Look for the pattern between "Episodes about (or mentioning):" and the next h3
-    pattern = r'(\s*<h3>Episodes about \(or mentioning\):</h3>\s*<div style="display: inline-block; margin-left: auto;  margin-right: auto">)(.*?)(\s*</div>\s*<h3>Most Recent Episodes:</h3>)'
+    pattern = r'(\s*<h3>Episodes about \(or mentioning\):</h3>\s*<div class="topic-logos">)(.*?)(\s*</div>\s*<h3>Most Recent Episodes:</h3>)'
 
     replacement = f'\\1\n{new_logos_section}\n        \\3'
 
