@@ -1,7 +1,9 @@
 import os
 import re
 from datetime import datetime
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse, parse_qs
+from urllib.request import Request, urlopen
 
 # Posts
 print("POST CHECKS")
@@ -121,6 +123,55 @@ for post_name in sorted(os.listdir("_posts/")):
                 break
 if not problem:
     print("✅ - Unique Buzzsprout IDs")
+
+# No Unknown Speakers in Buzzsprout Transcripts
+transcript_cache_path = ".transcript-check-cache"
+try:
+    with open(transcript_cache_path) as cache:
+        passed_transcript_ids = {
+            line.strip() for line in cache if line.strip().isdigit()
+        }
+except FileNotFoundError:
+    passed_transcript_ids = set()
+
+problem = False
+newly_passed_transcript_ids = set()
+unknown_speaker_patterns = (
+    re.compile(r"<cite(?:\s[^>]*)?>\s*unknown\s*</cite>", re.IGNORECASE),
+    re.compile(
+        r"(?:<!--block-->|<br\s*/?>\s*<br\s*/?>)\s*unknown\s*:\s*\d{1,2}:\d{2}",
+        re.IGNORECASE,
+    ),
+)
+
+for bid, post_name in sorted(buzzsprout_ids.items(), key=lambda item: item[0]):
+    if not bid or bid in passed_transcript_ids:
+        continue
+
+    transcript_url = f"https://www.buzzsprout.com/1501960/{bid}/transcript"
+    request = Request(transcript_url, headers={"User-Agent": "ADSP transcript checker"})
+    try:
+        with urlopen(request, timeout=15) as response:
+            charset = response.headers.get_content_charset() or "utf-8"
+            transcript = response.read().decode(charset, errors="replace")
+    except (HTTPError, URLError, TimeoutError) as error:
+        print(f"  {post_name}: could not check {transcript_url} ({error})")
+        problem = True
+        continue
+
+    if any(pattern.search(transcript) for pattern in unknown_speaker_patterns):
+        print(f"  {post_name}: unknown speaker in {transcript_url}")
+        problem = True
+    else:
+        newly_passed_transcript_ids.add(bid)
+
+if newly_passed_transcript_ids:
+    passed_transcript_ids.update(newly_passed_transcript_ids)
+    with open(transcript_cache_path, "w") as cache:
+        for bid in sorted(passed_transcript_ids, key=int):
+            cache.write(f"{bid}\n")
+
+print(("❌" if problem else "✅") + " - No Unknown Speakers in Transcripts")
 
 # Episodes
 print("EPISODES CHECKS")
