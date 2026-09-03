@@ -28,23 +28,25 @@ jobs:
           restore-keys: |
             transcript-check-${{ steps.transcript-cache-version.outputs.hash }}-
 
-      - name: Run checks.py
+      - name: Check generated episodes and run checks.py
         id: run-checks
         shell: bash
         run: |
           set +e
-          python3 checks.py | tee checks-output.txt
-          python_status=${PIPESTATUS[0]}
+          python3 generate_episodes.py --check 2>&1 | tee checks-output.txt
+          generator_status=${PIPESTATUS[0]}
+          python3 checks.py 2>&1 | tee -a checks-output.txt
+          checks_status=${PIPESTATUS[0]}
           set -e
 
           failed=false
-          if [ "$python_status" -ne 0 ] || grep -Eq '❌|🔧' checks-output.txt; then
+          if [ "$generator_status" -ne 0 ] || [ "$checks_status" -ne 0 ] || grep -Eq '❌|🔧' checks-output.txt; then
             failed=true
           fi
           echo "failed=$failed" >> "$GITHUB_OUTPUT"
 
           {
-            echo "## checks.py output"
+            echo "## Automated checks output"
             echo '```text'
             cat checks-output.txt
             echo '```'
@@ -70,7 +72,7 @@ jobs:
             const fence = "```";
             const body = [
               marker,
-              "@codereport, `checks.py` failed for this commit.",
+              "@codereport, the automated checks failed for this commit.",
               "",
               `[View the workflow run](${process.env.RUN_URL})`,
               "",

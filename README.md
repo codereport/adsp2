@@ -35,3 +35,19 @@ To host the site locally for development and testing:
    Open your browser and navigate to `http://localhost:4000`
 
 The site will automatically rebuild when you make changes to the source files. Press `Ctrl+C` to stop the server.
+
+## Updating the Episodes Table
+
+Run the generator after adding or editing an episode post:
+
+```bash
+python3 generate_episodes.py
+```
+
+The generator updates episode links, durations, co-hosts, dates, and episode colors.
+Repeated guest profiles and shared conference tags keep a series the same orange or
+purple, while episodes tagged `Road Trip` are green. It copies the title for a new
+episode once, then preserves that title on later runs so you can make small Markdown
+edits such as adding backticks for inline code. If the co-host cannot be inferred
+from the episode introduction, add `cohost: Ben` or `cohost: Bryce` to that post's
+front matter.

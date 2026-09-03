@@ -181,41 +181,43 @@ problem_title = False
 problem_date = False
 problem_link_date = False
 problem_link_num = False
+episodes_rows = {}
+episodes_row_pattern = re.compile(
+    r"^\|\s*(?P<num>\d+)\s*\|\s*\[(?P<title>.*)\]"
+    r"\(https://adspthepodcast\.com/"
+    r"(?P<link_date>\d{4}/\d{2}/\d{2})/Episode-(?P<link_num>\d+)\.html\)"
+    r"(?:\{:[^}]*\})?\s*\|\s*[^|]*\|\s*[^|]*\|"
+    r"\s*(?P<release_date>\d{4}-\d{2}-\d{2})\s*\|"
+)
+
+with open("pages/episodes.md") as file:
+    for line in file:
+        match = episodes_row_pattern.match(line)
+        if match:
+            episodes_rows[int(match.group("num"))] = match.groupdict()
+
 for post_name in os.listdir("_posts/"):
     if not post_name.endswith(".md"):
         continue
     num = int(post_name[:-3].split("-")[-1])
     date = post_name[:10]
-    with open("_posts/" + post_name) as post:
-        for line in post:
-            if "title:" in line:
-                title = " ".join(line.split('"')[-2].split()[2:])
-    with open("pages/episodes.md") as file:
-        for n, line in enumerate(file):
-            if n > 10:
-                data = line.split("|")
-                if len(data) > 3:
-                    other_num = int(data[1].strip())
-                    other_date = data[-2].strip()
-                    other_title = data[2].split("]")[0].strip()[1:].replace("`", "")
-                    link_num = int(data[2].split("]")[1].split("/")[6].strip()[8:-6])
-                    link_date = "-".join(data[2].split("]")[1].split("/")[3:6])
+    row = episodes_rows.get(num)
 
-                    if num == other_num:
-                        if date != other_date:
-                            problem_date = True
-                        if (
-                            title != other_title
-                            and "Ben Deane" not in title
-                            and title != ""
-                        ):
-                            print(title)
-                            print(other_title)
-                            problem_title = True
-                        if date != link_date:
-                            problem_link_date = True
-                        if num != link_num:
-                            problem_link_num = True
+    if not row:
+        problem_title = True
+        problem_date = True
+        problem_link_date = True
+        problem_link_num = True
+        continue
+
+    if not row["title"].strip():
+        problem_title = True
+    if row["release_date"] != date:
+        problem_date = True
+    if row["link_date"].replace("/", "-") != date:
+        problem_link_date = True
+    if int(row["link_num"]) != num:
+        problem_link_num = True
 
 print(("❌" if problem_date else "✅") + " - Episode Date")
 print(("❌" if problem_title else "✅") + " - Episode Title")
