@@ -44,10 +44,10 @@ Run the generator after adding or editing an episode post:
 python3 generate_episodes.py
 ```
 
-The generator updates episode links, durations, co-hosts, dates, and episode colors.
-Repeated guest profiles and shared conference tags keep a series the same orange or
-purple, while episodes tagged `Road Trip` are green. It copies the title for a new
-episode once, then preserves that title on later runs so you can make small Markdown
-edits such as adding backticks for inline code. If the co-host cannot be inferred
-from the episode introduction, add `cohost: Ben` or `cohost: Bryce` to that post's
-front matter.
+The generator updates episode links, durations, co-hosts, dates, episode colors, and
+the collapsible statistics section. Repeated guest profiles and shared conference
+tags keep a series the same orange or purple, while episodes tagged `Road Trip` are
+green. It copies the title for a new episode once, then preserves that title on
+later runs so you can make small Markdown edits such as adding backticks for inline
+code. If the co-host cannot be inferred from the episode introduction, add
+`cohost: Ben` or `cohost: Bryce` to that post's front matter.

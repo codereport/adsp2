@@ -9,9 +9,233 @@ List of all episodes.
 
 <!-- BEGIN GENERATED EPISODES -->
 <!-- Existing title text is preserved when generate_episodes.py runs. -->
+<details class="episode-stats">
+  <summary>
+    <span class="episode-stats-summary-title">Explore episode stats</span>
+    <span class="episode-stats-summary-hint">Guests, lengths and trends</span>
+  </summary>
+  <div class="episode-stats-content">
+    <section aria-labelledby="stats-at-a-glance">
+      <h2 id="stats-at-a-glance">At a glance</h2>
+      <div class="episode-stat-cards">
+        <div class="episode-stat-card">
+          <strong>303</strong><span>episodes listed</span>
+        </div>
+        <div class="episode-stat-card">
+          <strong>169h 06m</strong><span>total listening time</span>
+        </div>
+        <div class="episode-stat-card">
+          <strong>32</strong><span>median minutes</span>
+        </div>
+        <div class="episode-stat-card">
+          <strong>40%</strong><span>guest episodes</span>
+        </div>
+      </div>
+      <p class="episode-stat-highlight">
+        Longest episode:
+<a href="https://adspthepodcast.com/2023/12/22/Episode-161.html">
+Episode 161: 🎄 EOP, Rust, Hylo, C++20/23/26/29 &amp; More with Zach Laine (Holiday Special #4)</a>
+ (1:45)
+      </p>
+      <p class="episode-stat-highlight">
+        Shortest episode:
+<a href="https://adspthepodcast.com/2025/06/20/Episode-239.html">
+Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
+ (5)
+      </p>
+    </section>
+    <div class="episode-chart-grid">
+      <section aria-labelledby="episode-lengths">
+        <h2 id="episode-lengths">Episode lengths</h2>
+        <p class="episode-stat-note">Number of episodes in each duration range.</p>
+        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 12 episodes; 20–29 minutes: 102 episodes; 30–39 minutes: 126 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
+          <div class="episode-histogram-column">
+            <div class="episode-histogram-bar-area">
+              <span>12</span>
+              <span class="episode-histogram-bar" style="--bar-height: 8%"></span>
+            </div>
+            <span>&lt;20</span>
+          </div>
+          <div class="episode-histogram-column">
+            <div class="episode-histogram-bar-area">
+              <span>102</span>
+              <span class="episode-histogram-bar" style="--bar-height: 69%"></span>
+            </div>
+            <span>20–29</span>
+          </div>
+          <div class="episode-histogram-column">
+            <div class="episode-histogram-bar-area">
+              <span>126</span>
+              <span class="episode-histogram-bar" style="--bar-height: 85%"></span>
+            </div>
+            <span>30–39</span>
+          </div>
+          <div class="episode-histogram-column">
+            <div class="episode-histogram-bar-area">
+              <span>48</span>
+              <span class="episode-histogram-bar" style="--bar-height: 32%"></span>
+            </div>
+            <span>40–49</span>
+          </div>
+          <div class="episode-histogram-column">
+            <div class="episode-histogram-bar-area">
+              <span>4</span>
+              <span class="episode-histogram-bar" style="--bar-height: 3%"></span>
+            </div>
+            <span>50–59</span>
+          </div>
+          <div class="episode-histogram-column">
+            <div class="episode-histogram-bar-area">
+              <span>8</span>
+              <span class="episode-histogram-bar" style="--bar-height: 5%"></span>
+            </div>
+            <span>60+</span>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="guest-episodes-over-time">
+        <h2 id="guest-episodes-over-time">Guest episodes over time</h2>
+        <p class="episode-stat-note">Share of releases featuring at least one guest.</p>
+        <div class="guest-share-chart">
+          <div class="guest-share-row" aria-label="2020: 0 of 6 episodes, 0.0 percent">
+            <span>2020</span>
+            <span class="guest-share-track">
+              <span class="guest-share-fill" style="width: 0.0%"></span>
+            </span>
+            <strong>0%</strong>
+          </div>
+          <div class="guest-share-row" aria-label="2021: 16 of 53 episodes, 30.2 percent">
+            <span>2021</span>
+            <span class="guest-share-track">
+              <span class="guest-share-fill" style="width: 30.2%"></span>
+            </span>
+            <strong>30%</strong>
+          </div>
+          <div class="guest-share-row" aria-label="2022: 26 of 52 episodes, 50.0 percent">
+            <span>2022</span>
+            <span class="guest-share-track">
+              <span class="guest-share-fill" style="width: 50.0%"></span>
+            </span>
+            <strong>50%</strong>
+          </div>
+          <div class="guest-share-row" aria-label="2023: 32 of 52 episodes, 61.5 percent">
+            <span>2023</span>
+            <span class="guest-share-track">
+              <span class="guest-share-fill" style="width: 61.5%"></span>
+            </span>
+            <strong>62%</strong>
+          </div>
+          <div class="guest-share-row" aria-label="2024: 22 of 52 episodes, 42.3 percent">
+            <span>2024</span>
+            <span class="guest-share-track">
+              <span class="guest-share-fill" style="width: 42.3%"></span>
+            </span>
+            <strong>42%</strong>
+          </div>
+          <div class="guest-share-row" aria-label="2025: 19 of 52 episodes, 36.5 percent">
+            <span>2025</span>
+            <span class="guest-share-track">
+              <span class="guest-share-fill" style="width: 36.5%"></span>
+            </span>
+            <strong>37%</strong>
+          </div>
+          <div class="guest-share-row" aria-label="2026: 7 of 36 episodes, 19.4 percent">
+            <span>2026</span>
+            <span class="guest-share-track">
+              <span class="guest-share-fill" style="width: 19.4%"></span>
+            </span>
+            <strong>19%</strong>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section aria-labelledby="frequent-guests">
+      <h2 id="frequent-guests">Most frequent guests</h2>
+      <p class="episode-stat-note">Recordings are counted by unique recorded date; one recording can become several episodes.</p>
+      <div class="episode-stats-table-wrapper">
+        <table class="frequent-guests-table">
+          <thead>
+            <tr>
+              <th><button type="button" class="guest-sort" data-sort-key="guest" data-sort-type="text">Guest</button></th>
+              <th><button type="button" class="guest-sort" data-sort-key="recordings" data-sort-type="number">Recordings</button></th>
+              <th><button type="button" class="guest-sort" data-sort-key="episodes" data-sort-type="number">Episodes</button></th>
+              <th><button type="button" class="guest-sort" data-sort-key="total-time" data-sort-type="number">Total Time</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-guest="sean parent" data-recordings="10" data-episodes="24" data-total-time="49418"><td><a href="https://twitter.com/seanparent">Sean Parent</a></td><td>10</td><td>24</td><td>13:43</td></tr>
+            <tr data-guest="tristan brindle" data-recordings="5" data-episodes="11" data-total-time="22902"><td><a href="https://twitter.com/tristanbrindle">Tristan Brindle</a></td><td>5</td><td>11</td><td>6:21</td></tr>
+            <tr data-guest="ben deane" data-recordings="4" data-episodes="8" data-total-time="18046"><td><a href="https://twitter.com/ben_deane">Ben Deane</a></td><td>4</td><td>8</td><td>5:00</td></tr>
+            <tr data-guest="kevlin henney" data-recordings="2" data-episodes="7" data-total-time="12694"><td><a href="https://x.com/KevlinHenney">Kevlin Henney</a></td><td>2</td><td>7</td><td>3:31</td></tr>
+            <tr data-guest="zach laine" data-recordings="2" data-episodes="6" data-total-time="16276"><td>Zach Laine</td><td>2</td><td>6</td><td>4:31</td></tr>
+            <tr data-guest="kate gregory" data-recordings="2" data-episodes="5" data-total-time="9216"><td><a href="https://twitter.com/gregcons">Kate Gregory</a></td><td>2</td><td>5</td><td>2:33</td></tr>
+            <tr data-guest="marco franzreb salgado" data-recordings="2" data-episodes="5" data-total-time="9739"><td><a href="https://www.linkedin.com/in/marco-franzreb-578546176/">Marco Franzreb Salgado</a></td><td>2</td><td>5</td><td>2:42</td></tr>
+            <tr data-guest="tony van eerd" data-recordings="2" data-episodes="5" data-total-time="10821"><td><a href="https://twitter.com/tvaneerd">Tony Van Eerd</a></td><td>2</td><td>5</td><td>3:00</td></tr>
+            <tr data-guest="douglas gregor" data-recordings="1" data-episodes="5" data-total-time="11349"><td><a href="https://twitter.com/dgregor79">Douglas Gregor</a></td><td>1</td><td>5</td><td>3:09</td></tr>
+            <tr data-guest="jason turner" data-recordings="2" data-episodes="4" data-total-time="8115"><td><a href="https://twitter.com/lefticus">Jason Turner</a></td><td>2</td><td>4</td><td>2:15</td></tr>
+          </tbody>
+          <tbody id="additional-guests" hidden>
+            <tr data-guest="jonathan müller" data-recordings="2" data-episodes="4" data-total-time="7716"><td><a href="https://twitter.com/foonathan">Jonathan Müller</a></td><td>2</td><td>4</td><td>2:08</td></tr>
+            <tr data-guest="chandler carruth" data-recordings="1" data-episodes="4" data-total-time="8469"><td><a href="https://twitter.com/chandlerc1024">Chandler Carruth</a></td><td>1</td><td>4</td><td>2:21</td></tr>
+            <tr data-guest="jared hoberock" data-recordings="1" data-episodes="4" data-total-time="9027"><td><a href="https://github.com/jaredhoberock">Jared Hoberock</a></td><td>1</td><td>4</td><td>2:30</td></tr>
+            <tr data-guest="jonathan o&#x27;connor" data-recordings="1" data-episodes="4" data-total-time="8311"><td><a href="https://twitter.com/ninkibah">Jonathan O&#x27;Connor</a></td><td>1</td><td>4</td><td>2:18</td></tr>
+            <tr data-guest="patricia aas" data-recordings="1" data-episodes="4" data-total-time="8469"><td><a href="https://twitter.com/pati_gallardo">Patricia Aas</a></td><td>1</td><td>4</td><td>2:21</td></tr>
+            <tr data-guest="richard feldman" data-recordings="1" data-episodes="4" data-total-time="7306"><td><a href="https://twitter.com/rtfeldman">Richard Feldman</a></td><td>1</td><td>4</td><td>2:01</td></tr>
+            <tr data-guest="jane losare-lusby" data-recordings="1" data-episodes="3" data-total-time="5078"><td><a href="https://twitter.com/yaahc_">Jane Losare-Lusby</a></td><td>1</td><td>3</td><td>1:24</td></tr>
+            <tr data-guest="sean baxter" data-recordings="1" data-episodes="3" data-total-time="8415"><td><a href="https://twitter.com/seanbax">Sean Baxter</a></td><td>1</td><td>3</td><td>2:20</td></tr>
+            <tr data-guest="andor pénzes" data-recordings="2" data-episodes="2" data-total-time="3835"><td><a href="https://twitter.com/sverien">Andor Pénzes</a></td><td>2</td><td>2</td><td>1:03</td></tr>
+            <tr data-guest="jf bastien" data-recordings="2" data-episodes="2" data-total-time="5591"><td><a href="https://twitter.com/jfbastien">JF Bastien</a></td><td>2</td><td>2</td><td>1:33</td></tr>
+            <tr data-guest="phil nash" data-recordings="2" data-episodes="2" data-total-time="4189"><td><a href="https://twitter.com/phil_nash">Phil Nash</a></td><td>2</td><td>2</td><td>1:09</td></tr>
+            <tr data-guest="aaron hsu" data-recordings="1" data-episodes="2" data-total-time="3900"><td><a href="https://www.linkedin.com/in/arcfide/">Aaron Hsu</a></td><td>1</td><td>2</td><td>1:05</td></tr>
+            <tr data-guest="andrei alexandrescu" data-recordings="1" data-episodes="2" data-total-time="4100"><td><a href="https://twitter.com/incomputable">Andrei Alexandrescu</a></td><td>1</td><td>2</td><td>1:08</td></tr>
+            <tr data-guest="barry revzin" data-recordings="1" data-episodes="2" data-total-time="5034"><td><a href="https://twitter.com/BarryRevzin">Barry Revzin</a></td><td>1</td><td>2</td><td>1:23</td></tr>
+            <tr data-guest="dave abrahams" data-recordings="1" data-episodes="2" data-total-time="4422"><td><a href="https://twitter.com/DaveAbrahams">Dave Abrahams</a></td><td>1</td><td>2</td><td>1:13</td></tr>
+            <tr data-guest="eric niebler" data-recordings="1" data-episodes="2" data-total-time="4296"><td><a href="https://twitter.com/ericniebler">Eric Niebler</a></td><td>1</td><td>2</td><td>1:11</td></tr>
+            <tr data-guest="inbal levi" data-recordings="1" data-episodes="2" data-total-time="3527"><td><a href="https://x.com/Inbal_l">Inbal Levi</a></td><td>1</td><td>2</td><td>58</td></tr>
+            <tr data-guest="otto niebler" data-recordings="1" data-episodes="2" data-total-time="4296"><td>Otto Niebler</td><td>1</td><td>2</td><td>1:11</td></tr>
+            <tr data-guest="patrice roy" data-recordings="1" data-episodes="2" data-total-time="4461"><td><a href="https://twitter.com/patriceroy1">Patrice Roy</a></td><td>1</td><td>2</td><td>1:14</td></tr>
+            <tr data-guest="alexis king" data-recordings="1" data-episodes="1" data-total-time="2101"><td><a href="https://twitter.com/lexi_lambda">Alexis King</a></td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="andreas weis" data-recordings="1" data-episodes="1" data-total-time="2513"><td><a href="https://twitter.com/DerGhulbus">Andreas Weis</a></td><td>1</td><td>1</td><td>41</td></tr>
+            <tr data-guest="barbara trojecka" data-recordings="1" data-episodes="1" data-total-time="2579"><td><a href="https://www.linkedin.com/in/barbara-trojecka-17723a41/">Barbara Trojecka</a></td><td>1</td><td>1</td><td>42</td></tr>
+            <tr data-guest="becca williams" data-recordings="1" data-episodes="1" data-total-time="2579"><td><a href="https://twitter.com/WaveTalentBecca">Becca Williams</a></td><td>1</td><td>1</td><td>42</td></tr>
+            <tr data-guest="bernhard" data-recordings="1" data-episodes="1" data-total-time="1537"><td><a href="https://x.com/BernhardMGruber">Bernhard</a></td><td>1</td><td>1</td><td>25</td></tr>
+            <tr data-guest="damian maclennan" data-recordings="1" data-episodes="1" data-total-time="1701"><td><a href="https://bsky.app/profile/damianm.com">Damian Maclennan</a></td><td>1</td><td>1</td><td>28</td></tr>
+            <tr data-guest="david olsen" data-recordings="1" data-episodes="1" data-total-time="2240"><td>David Olsen</td><td>1</td><td>1</td><td>37</td></tr>
+            <tr data-guest="floris bob van elzelingen" data-recordings="1" data-episodes="1" data-total-time="1783"><td><a href="https://x.com/florisbob">Floris Bob van Elzelingen</a></td><td>1</td><td>1</td><td>29</td></tr>
+            <tr data-guest="jan wilmans" data-recordings="1" data-episodes="1" data-total-time="1744"><td><a href="https://x.com/janwilmans">Jan Wilmans</a></td><td>1</td><td>1</td><td>29</td></tr>
+            <tr data-guest="jason walter" data-recordings="1" data-episodes="1" data-total-time="2257"><td><a href="https://twitter.com/jason_d_walter">Jason Walter</a></td><td>1</td><td>1</td><td>37</td></tr>
+            <tr data-guest="jessica kerr" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="https://twitter.com/jessitron">Jessica Kerr</a></td><td>1</td><td>1</td><td>34</td></tr>
+            <tr data-guest="jordan miller" data-recordings="1" data-episodes="1" data-total-time="2579"><td><a href="https://twitter.com/lambduhh">Jordan Miller</a></td><td>1</td><td>1</td><td>42</td></tr>
+            <tr data-guest="josé valim" data-recordings="1" data-episodes="1" data-total-time="2101"><td><a href="https://twitter.com/josevalim">José Valim</a></td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="kim huizing" data-recordings="1" data-episodes="1" data-total-time="2101"><td>Kim Huizing</td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="koen" data-recordings="1" data-episodes="1" data-total-time="1537"><td><a href="https://www.linkedin.com/in/kpoppe">Koen</a></td><td>1</td><td>1</td><td>25</td></tr>
+            <tr data-guest="koen poppe" data-recordings="1" data-episodes="1" data-total-time="1744"><td><a href="https://github.com/koenpoppe">Koen Poppe</a></td><td>1</td><td>1</td><td>29</td></tr>
+            <tr data-guest="kristen shaker" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="https://www.linkedin.com/in/kristenshaker/">Kristen Shaker</a></td><td>1</td><td>1</td><td>34</td></tr>
+            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="1" data-total-time=""><td><a href="https://x.com/marksaroufim">Mark Saroufim</a></td><td>1</td><td>1</td><td>—</td></tr>
+            <tr data-guest="mateusz pusz" data-recordings="1" data-episodes="1" data-total-time="1783"><td><a href="https://x.com/mateusz_pusz">Mateusz Pusz</a></td><td>1</td><td>1</td><td>29</td></tr>
+            <tr data-guest="matt godbolt" data-recordings="1" data-episodes="1" data-total-time="2772"><td><a href="https://twitter.com/mattgodbolt">Matt Godbolt</a></td><td>1</td><td>1</td><td>46</td></tr>
+            <tr data-guest="paul grosse-bley" data-recordings="1" data-episodes="1" data-total-time="1451"><td>Paul Grosse-Bley</td><td>1</td><td>1</td><td>24</td></tr>
+            <tr data-guest="peer stritzinger" data-recordings="1" data-episodes="1" data-total-time="2101"><td><a href="https://twitter.com/peerstr">Peer Stritzinger</a></td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="phineas porter" data-recordings="1" data-episodes="1" data-total-time="1471"><td><a href="https://twitter.com/dashpin">Phineas Porter</a></td><td>1</td><td>1</td><td>24</td></tr>
+            <tr data-guest="ray" data-recordings="1" data-episodes="1" data-total-time="1451"><td><a href="https://x.com/rayburgemeestre">Ray</a></td><td>1</td><td>1</td><td>24</td></tr>
+            <tr data-guest="robert leahy" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="https://www.linkedin.com/in/robertallanhenniganleahy/">Robert Leahy</a></td><td>1</td><td>1</td><td>34</td></tr>
+            <tr data-guest="simon peyton jones" data-recordings="1" data-episodes="1" data-total-time="2579"><td><a href="https://twitter.com/simonpj0">Simon Peyton Jones</a></td><td>1</td><td>1</td><td>42</td></tr>
+            <tr data-guest="stephen taylor" data-recordings="1" data-episodes="1" data-total-time="1734"><td><a href="https://x.com/5jt">Stephen Taylor</a></td><td>1</td><td>1</td><td>28</td></tr>
+            <tr data-guest="timur doumler" data-recordings="1" data-episodes="1" data-total-time="2772"><td><a href="https://twitter.com/timur_audio">Timur Doumler</a></td><td>1</td><td>1</td><td>46</td></tr>
+            <tr data-guest="toby pfieffer" data-recordings="1" data-episodes="1" data-total-time="2101"><td><a href="https://twitter.com/PragTob">Toby Pfieffer</a></td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="victor ciura" data-recordings="1" data-episodes="1" data-total-time="2513"><td><a href="https://twitter.com/ciura_victor">Victor Ciura</a></td><td>1</td><td>1</td><td>41</td></tr>
+            <tr data-guest="vincent zalzal" data-recordings="1" data-episodes="1" data-total-time="2513"><td><a href="https://twitter.com/Vincent4096">Vincent Zalzal</a></td><td>1</td><td>1</td><td>41</td></tr>
+            <tr data-guest="vittorio romeo" data-recordings="1" data-episodes="1" data-total-time="2819"><td><a href="https://romeo.training/">Vittorio Romeo</a></td><td>1</td><td>1</td><td>46</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="button" class="more-guests-toggle" aria-expanded="false" aria-controls="additional-guests" data-show-label="Show 51 more guests" data-hide-label="Show fewer guests">Show 51 more guests</button>
+    </section>
+  </div>
+</details>
 <div class="episodes-table-wrapper" markdown="1">
 
-| # | Title | Duration | Co-host | Release Date |
+| <button type="button" class="episodes-sort" data-sort-key="number">#</button> | Title | <button type="button" class="episodes-sort" data-sort-key="duration">Duration</button> | Co-host | Release Date |
 | :-: | :---- | :------: | :-----: | :----------: |
 | 302 | [GPU MODE with Mark Saroufim](https://adspthepodcast.com/2026/09/04/Episode-302.html){: .episode-title .guest-purple } | — | Bryce | 2026-09-04 |
 | 301 | [My Existential Crisis, AI Fluency & the Death of Conferences?](https://adspthepodcast.com/2026/08/28/Episode-301.html){: .episode-title } | 44 | Bryce | 2026-08-28 |
@@ -320,3 +544,5 @@ List of all episodes.
 
 </div>
 <!-- END GENERATED EPISODES -->
+
+<script defer src="{{ '/assets/js/episodes.js' | relative_url }}"></script>

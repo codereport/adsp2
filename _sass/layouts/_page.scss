@@ -40,6 +40,268 @@ h1.title {
 }
 
 /* Episodes table */
+.episode-stats {
+  background: #f7f9fb;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 1.5em auto 2em;
+  max-width: 1200px;
+  overflow: hidden;
+  width: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  > summary {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 0.75em;
+    list-style: none;
+    padding: 1em 1.25em;
+  }
+
+  > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  > summary::after {
+    content: "›";
+    font-size: 1.5em;
+    line-height: 1;
+    margin-left: auto;
+    transform: rotate(0deg);
+    transition: transform 150ms ease;
+  }
+
+  &[open] > summary {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &[open] > summary::after {
+    transform: rotate(90deg);
+  }
+
+  h2 {
+    font-size: 1.15em;
+    margin: 0 0 0.35em;
+  }
+}
+
+.episode-stats-summary-title {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.episode-stats-summary-hint,
+.episode-stat-note {
+  color: $meta;
+  font-size: 0.85em;
+}
+
+.episode-stats-content {
+  max-width: 100%;
+  min-width: 0;
+  padding: 1.25em;
+  width: 100%;
+
+  > section + section,
+  > section + .episode-chart-grid,
+  > .episode-chart-grid + section {
+    margin-top: 1.5em;
+  }
+}
+
+.episode-stat-cards {
+  display: grid;
+  gap: 0.75em;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.episode-stat-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.85em 1em;
+
+  strong,
+  span {
+    display: block;
+  }
+
+  strong {
+    font-size: 1.35em;
+    line-height: 1.15;
+  }
+
+  span {
+    color: $meta;
+    font-size: 0.78em;
+    margin-top: 0.3em;
+  }
+}
+
+.episode-stat-highlight {
+  margin: 0.8em 0 0;
+}
+
+.episode-stat-highlight + .episode-stat-highlight {
+  margin-top: 0.35em;
+}
+
+.episode-stat-note {
+  margin: 0 0 0.75em;
+}
+
+.episode-stats-table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.frequent-guests-table {
+  display: table;
+  margin: 0;
+  min-width: 32em;
+  table-layout: auto;
+  width: 100%;
+
+  th,
+  td {
+    padding: 0.45em 0.7em;
+  }
+
+  th:nth-child(n + 2),
+  td:nth-child(n + 2) {
+    text-align: center;
+    width: 8em;
+  }
+
+  .guest-sort {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-weight: inherit;
+    margin: -0.25em;
+    padding: 0.25em;
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:focus-visible {
+      color: inherit;
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+      text-decoration: none;
+    }
+  }
+}
+
+.more-guests-toggle {
+  background: none;
+  border: 0;
+  color: $link-color;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88em;
+  font-weight: 600;
+  margin-top: 0.65em;
+  padding: 0.25em 0;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
+.episode-chart-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
+}
+
+.episode-chart-grid > section {
+  min-width: 0;
+}
+
+.episode-histogram {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: grid;
+  gap: 0.45em;
+  grid-template-columns: repeat(6, minmax(42px, 1fr));
+  height: 13em;
+  padding-top: 0.5em;
+}
+
+.episode-histogram-column {
+  display: grid;
+  font-size: 0.75em;
+  grid-template-rows: minmax(0, 1fr) 2em;
+  text-align: center;
+}
+
+.episode-histogram-bar-area {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 0;
+}
+
+.episode-histogram-bar {
+  background: $theme-color;
+  border-radius: 5px 5px 0 0;
+  display: block;
+  flex-shrink: 0;
+  height: var(--bar-height);
+  margin-top: 0.2em;
+  min-height: 2px;
+  opacity: 0.85;
+  width: 70%;
+}
+
+.guest-share-chart {
+  display: grid;
+  gap: 0.6em;
+  padding-top: 0.4em;
+}
+
+.guest-share-row {
+  align-items: center;
+  display: grid;
+  font-size: 0.82em;
+  gap: 0.65em;
+  grid-template-columns: 3.4em minmax(0, 1fr) 3em;
+
+  strong {
+    text-align: right;
+  }
+}
+
+.guest-share-track {
+  background: rgba(51, 122, 183, 0.14);
+  border-radius: 999px;
+  display: block;
+  height: 0.85em;
+  overflow: hidden;
+}
+
+.guest-share-fill {
+  background: $theme-color;
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+}
+
 .episodes-table-wrapper {
   margin: 1.5em auto;
   max-width: 1200px;
@@ -87,6 +349,30 @@ h1.title {
     padding: 0.5em 1em;
   }
 
+  .episodes-sort {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-weight: inherit;
+    margin: -0.25em;
+    padding: 0.25em;
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:focus-visible {
+      color: inherit;
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+      text-decoration: none;
+    }
+
+  }
+
   .episode-title {
     display: block;
     padding: 0.5em 1em;
@@ -116,5 +402,68 @@ html[data-theme="dark"] .episodes-table {
 
   .trip-green {
     background-color: #30472e;
+  }
+}
+
+html[data-theme="dark"] .episode-stats {
+  background: #24282d;
+  border-color: rgba(255, 255, 255, 0.18);
+
+  &[open] > summary {
+    border-bottom-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .episode-stats-summary-hint,
+  .episode-stat-note,
+  .episode-stat-card span {
+    color: #c1c7cd;
+  }
+
+  .episode-stat-card {
+    background: #1c1f23;
+    border-color: rgba(255, 255, 255, 0.13);
+  }
+
+  .episode-histogram {
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .episode-histogram-bar,
+  .guest-share-fill {
+    background: #6ba5d7;
+  }
+
+  .guest-share-track {
+    background: rgba(107, 165, 215, 0.2);
+  }
+}
+
+@media screen and (max-width: $break) {
+  .episode-stats-summary-hint {
+    display: none;
+  }
+
+  .episode-stat-cards,
+  .episode-chart-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .episode-chart-grid > section {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: $sm-break) {
+  .episode-stat-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .episode-histogram {
+    gap: 0.2em;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .episode-histogram-column {
+    font-size: 0.68em;
   }
 }
