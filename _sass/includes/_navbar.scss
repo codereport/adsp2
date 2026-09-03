@@ -239,8 +239,15 @@ nav {
 
 @media screen and (max-width: $break) {
   .site-header {
+    padding: 0.6em 0.8em;
+
     .branding {
       max-width: calc(100% - 3em);
+    }
+
+    .avatar {
+      margin-bottom: 0;
+      margin-top: 0;
     }
 
     .site-title {

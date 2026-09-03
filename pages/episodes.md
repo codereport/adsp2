@@ -237,7 +237,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
 
 | <button type="button" class="episodes-sort" data-sort-key="number">#</button> | Title | <button type="button" class="episodes-sort" data-sort-key="duration">Duration</button> | Co-host | Release Date |
 | :-: | :---- | :------: | :-----: | :----------: |
-| 302 | [GPU MODE with Mark Saroufim](https://adspthepodcast.com/2026/09/04/Episode-302.html){: .episode-title .guest-purple } | — | Bryce | 2026-09-04 |
+| 302 | [From PyTorch to GPU MODE with Mark Saroufim](https://adspthepodcast.com/2026/09/04/Episode-302.html){: .episode-title .guest-purple } | — | Bryce | 2026-09-04 |
 | 301 | [My Existential Crisis, AI Fluency & the Death of Conferences?](https://adspthepodcast.com/2026/08/28/Episode-301.html){: .episode-title } | 44 | Bryce | 2026-08-28 |
 | 300 | [Sean Parent "I'm not writing code anymore."](https://adspthepodcast.com/2026/08/21/Episode-300.html){: .episode-title .guest-orange } | 1:34 | Bryce | 2026-08-21 |
 | 299 | [Do We Need Humans in the Loop?](https://adspthepodcast.com/2026/08/14/Episode-299.html){: .episode-title } | 36 | Bryce | 2026-08-14 |
