@@ -96,6 +96,16 @@ html[data-theme="dark"] .title {
   transition: color 0.3s ease;
 }
 
+/* Titles displayed over page and post banner images stay legible in both themes. */
+.feature-image header#main .title,
+.feature-image header#main .subtitle,
+html[data-theme="light"] .feature-image header#main .title,
+html[data-theme="light"] .feature-image header#main .subtitle,
+html[data-theme="dark"] .feature-image header#main .title,
+html[data-theme="dark"] .feature-image header#main .subtitle {
+  color: #ffffff !important;
+}
+
 /* Cards and posts */
 html[data-theme="dark"] .post-teaser {
   background-color: var(--post-background);
