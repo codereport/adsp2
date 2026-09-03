@@ -33,6 +33,15 @@ body {
   word-wrap: break-word;
 }
 
+.content {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: clamp(2rem, 4vw, 4rem);
+  }
+}
+
 h1,
 h2,
 h3,

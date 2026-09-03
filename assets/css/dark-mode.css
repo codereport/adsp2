@@ -21,6 +21,11 @@
 }
 
 /* Base elements */
+html {
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
 html[data-theme="dark"] body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -120,14 +125,24 @@ html[data-theme="dark"] .post-teaser {
 
 /* Footer */
 html[data-theme="dark"] footer {
-  background-color: var(--header-background);
-  color: var(--header-text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 footer {
-  background-color: var(--header-background);
-  color: var(--header-text-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.site-header .header-social-item a,
+html[data-theme="light"] .site-header .header-social-item a,
+html[data-theme="dark"] .site-header .header-social-item a {
+  color: var(--header-text-color) !important;
+}
+
+.site-header .header-social-item .fa-inverse {
+  color: var(--header-background) !important;
 }
 
 /* Content */

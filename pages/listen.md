@@ -55,7 +55,7 @@ feature-img: "assets/img/pexels/adsp2.png"
         <span class="listen-service-copy"><strong>Pocket Casts</strong><span>Web, iOS &amp; Android</span></span>
         <span class="listen-service-arrow" aria-hidden="true">&rsaquo;</span>
       </a>
-      <a class="listen-service-card" href="https://podcastaddict.com/" target="_blank" rel="noopener">
+      <a class="listen-service-card" href="https://podcastaddict.com/podcast/adsp-algorithms-data-structures-programs/6172529" target="_blank" rel="noopener">
         <span class="listen-service-logo"><img src="https://cdn.simpleicons.org/podcastaddict" alt="" loading="lazy"></span>
         <span class="listen-service-copy"><strong>Podcast Addict</strong><span>Find in the Android app</span></span>
         <span class="listen-service-arrow" aria-hidden="true">&rsaquo;</span>

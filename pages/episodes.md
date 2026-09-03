@@ -163,69 +163,69 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             </tr>
           </thead>
           <tbody>
-            <tr data-guest="sean parent" data-recordings="10" data-episodes="24" data-total-time="49418"><td><a href="https://twitter.com/seanparent">Sean Parent</a></td><td>10</td><td>24</td><td>13:43</td></tr>
-            <tr data-guest="tristan brindle" data-recordings="5" data-episodes="11" data-total-time="22902"><td><a href="https://twitter.com/tristanbrindle">Tristan Brindle</a></td><td>5</td><td>11</td><td>6:21</td></tr>
-            <tr data-guest="ben deane" data-recordings="4" data-episodes="8" data-total-time="18046"><td><a href="https://twitter.com/ben_deane">Ben Deane</a></td><td>4</td><td>8</td><td>5:00</td></tr>
-            <tr data-guest="kevlin henney" data-recordings="2" data-episodes="7" data-total-time="12694"><td><a href="https://x.com/KevlinHenney">Kevlin Henney</a></td><td>2</td><td>7</td><td>3:31</td></tr>
-            <tr data-guest="zach laine" data-recordings="2" data-episodes="6" data-total-time="16276"><td>Zach Laine</td><td>2</td><td>6</td><td>4:31</td></tr>
-            <tr data-guest="kate gregory" data-recordings="2" data-episodes="5" data-total-time="9216"><td><a href="https://twitter.com/gregcons">Kate Gregory</a></td><td>2</td><td>5</td><td>2:33</td></tr>
-            <tr data-guest="marco franzreb salgado" data-recordings="2" data-episodes="5" data-total-time="9739"><td><a href="https://www.linkedin.com/in/marco-franzreb-578546176/">Marco Franzreb Salgado</a></td><td>2</td><td>5</td><td>2:42</td></tr>
-            <tr data-guest="tony van eerd" data-recordings="2" data-episodes="5" data-total-time="10821"><td><a href="https://twitter.com/tvaneerd">Tony Van Eerd</a></td><td>2</td><td>5</td><td>3:00</td></tr>
-            <tr data-guest="douglas gregor" data-recordings="1" data-episodes="5" data-total-time="11349"><td><a href="https://twitter.com/dgregor79">Douglas Gregor</a></td><td>1</td><td>5</td><td>3:09</td></tr>
-            <tr data-guest="jason turner" data-recordings="2" data-episodes="4" data-total-time="8115"><td><a href="https://twitter.com/lefticus">Jason Turner</a></td><td>2</td><td>4</td><td>2:15</td></tr>
+            <tr data-guest="sean parent" data-recordings="10" data-episodes="24" data-total-time="49418"><td><a href="/tags/#Sean+Parent">Sean Parent</a></td><td>10</td><td>24</td><td>13:43</td></tr>
+            <tr data-guest="tristan brindle" data-recordings="5" data-episodes="11" data-total-time="22902"><td><a href="/tags/#Tristan+Brindle">Tristan Brindle</a></td><td>5</td><td>11</td><td>6:21</td></tr>
+            <tr data-guest="ben deane" data-recordings="4" data-episodes="8" data-total-time="18046"><td><a href="/tags/#Ben+Deane">Ben Deane</a></td><td>4</td><td>8</td><td>5:00</td></tr>
+            <tr data-guest="kevlin henney" data-recordings="2" data-episodes="7" data-total-time="12694"><td><a href="/tags/#Kevlin+Henney">Kevlin Henney</a></td><td>2</td><td>7</td><td>3:31</td></tr>
+            <tr data-guest="zach laine" data-recordings="2" data-episodes="6" data-total-time="16276"><td><a href="/tags/#Zach+Laine">Zach Laine</a></td><td>2</td><td>6</td><td>4:31</td></tr>
+            <tr data-guest="kate gregory" data-recordings="2" data-episodes="5" data-total-time="9216"><td><a href="/tags/#Kate+Gregory">Kate Gregory</a></td><td>2</td><td>5</td><td>2:33</td></tr>
+            <tr data-guest="marco franzreb salgado" data-recordings="2" data-episodes="5" data-total-time="9739"><td><a href="/tags/#Marco+Franzreb+Salgado">Marco Franzreb Salgado</a></td><td>2</td><td>5</td><td>2:42</td></tr>
+            <tr data-guest="tony van eerd" data-recordings="2" data-episodes="5" data-total-time="10821"><td><a href="/tags/#Tony+Van+Eerd">Tony Van Eerd</a></td><td>2</td><td>5</td><td>3:00</td></tr>
+            <tr data-guest="douglas gregor" data-recordings="1" data-episodes="5" data-total-time="11349"><td><a href="/tags/#Doug+Gregor">Douglas Gregor</a></td><td>1</td><td>5</td><td>3:09</td></tr>
+            <tr data-guest="jason turner" data-recordings="2" data-episodes="4" data-total-time="8115"><td>Jason Turner</td><td>2</td><td>4</td><td>2:15</td></tr>
           </tbody>
           <tbody id="additional-guests" hidden>
-            <tr data-guest="jonathan müller" data-recordings="2" data-episodes="4" data-total-time="7716"><td><a href="https://twitter.com/foonathan">Jonathan Müller</a></td><td>2</td><td>4</td><td>2:08</td></tr>
-            <tr data-guest="chandler carruth" data-recordings="1" data-episodes="4" data-total-time="8469"><td><a href="https://twitter.com/chandlerc1024">Chandler Carruth</a></td><td>1</td><td>4</td><td>2:21</td></tr>
-            <tr data-guest="jared hoberock" data-recordings="1" data-episodes="4" data-total-time="9027"><td><a href="https://github.com/jaredhoberock">Jared Hoberock</a></td><td>1</td><td>4</td><td>2:30</td></tr>
-            <tr data-guest="jonathan o&#x27;connor" data-recordings="1" data-episodes="4" data-total-time="8311"><td><a href="https://twitter.com/ninkibah">Jonathan O&#x27;Connor</a></td><td>1</td><td>4</td><td>2:18</td></tr>
-            <tr data-guest="patricia aas" data-recordings="1" data-episodes="4" data-total-time="8469"><td><a href="https://twitter.com/pati_gallardo">Patricia Aas</a></td><td>1</td><td>4</td><td>2:21</td></tr>
-            <tr data-guest="richard feldman" data-recordings="1" data-episodes="4" data-total-time="7306"><td><a href="https://twitter.com/rtfeldman">Richard Feldman</a></td><td>1</td><td>4</td><td>2:01</td></tr>
-            <tr data-guest="jane losare-lusby" data-recordings="1" data-episodes="3" data-total-time="5078"><td><a href="https://twitter.com/yaahc_">Jane Losare-Lusby</a></td><td>1</td><td>3</td><td>1:24</td></tr>
-            <tr data-guest="sean baxter" data-recordings="1" data-episodes="3" data-total-time="8415"><td><a href="https://twitter.com/seanbax">Sean Baxter</a></td><td>1</td><td>3</td><td>2:20</td></tr>
-            <tr data-guest="andor pénzes" data-recordings="2" data-episodes="2" data-total-time="3835"><td><a href="https://twitter.com/sverien">Andor Pénzes</a></td><td>2</td><td>2</td><td>1:03</td></tr>
-            <tr data-guest="jf bastien" data-recordings="2" data-episodes="2" data-total-time="5591"><td><a href="https://twitter.com/jfbastien">JF Bastien</a></td><td>2</td><td>2</td><td>1:33</td></tr>
-            <tr data-guest="phil nash" data-recordings="2" data-episodes="2" data-total-time="4189"><td><a href="https://twitter.com/phil_nash">Phil Nash</a></td><td>2</td><td>2</td><td>1:09</td></tr>
-            <tr data-guest="aaron hsu" data-recordings="1" data-episodes="2" data-total-time="3900"><td><a href="https://www.linkedin.com/in/arcfide/">Aaron Hsu</a></td><td>1</td><td>2</td><td>1:05</td></tr>
-            <tr data-guest="andrei alexandrescu" data-recordings="1" data-episodes="2" data-total-time="4100"><td><a href="https://twitter.com/incomputable">Andrei Alexandrescu</a></td><td>1</td><td>2</td><td>1:08</td></tr>
-            <tr data-guest="barry revzin" data-recordings="1" data-episodes="2" data-total-time="5034"><td><a href="https://twitter.com/BarryRevzin">Barry Revzin</a></td><td>1</td><td>2</td><td>1:23</td></tr>
-            <tr data-guest="dave abrahams" data-recordings="1" data-episodes="2" data-total-time="4422"><td><a href="https://twitter.com/DaveAbrahams">Dave Abrahams</a></td><td>1</td><td>2</td><td>1:13</td></tr>
-            <tr data-guest="eric niebler" data-recordings="1" data-episodes="2" data-total-time="4296"><td><a href="https://twitter.com/ericniebler">Eric Niebler</a></td><td>1</td><td>2</td><td>1:11</td></tr>
-            <tr data-guest="inbal levi" data-recordings="1" data-episodes="2" data-total-time="3527"><td><a href="https://x.com/Inbal_l">Inbal Levi</a></td><td>1</td><td>2</td><td>58</td></tr>
-            <tr data-guest="otto niebler" data-recordings="1" data-episodes="2" data-total-time="4296"><td>Otto Niebler</td><td>1</td><td>2</td><td>1:11</td></tr>
-            <tr data-guest="patrice roy" data-recordings="1" data-episodes="2" data-total-time="4461"><td><a href="https://twitter.com/patriceroy1">Patrice Roy</a></td><td>1</td><td>2</td><td>1:14</td></tr>
-            <tr data-guest="alexis king" data-recordings="1" data-episodes="1" data-total-time="2101"><td><a href="https://twitter.com/lexi_lambda">Alexis King</a></td><td>1</td><td>1</td><td>35</td></tr>
-            <tr data-guest="andreas weis" data-recordings="1" data-episodes="1" data-total-time="2513"><td><a href="https://twitter.com/DerGhulbus">Andreas Weis</a></td><td>1</td><td>1</td><td>41</td></tr>
-            <tr data-guest="barbara trojecka" data-recordings="1" data-episodes="1" data-total-time="2579"><td><a href="https://www.linkedin.com/in/barbara-trojecka-17723a41/">Barbara Trojecka</a></td><td>1</td><td>1</td><td>42</td></tr>
-            <tr data-guest="becca williams" data-recordings="1" data-episodes="1" data-total-time="2579"><td><a href="https://twitter.com/WaveTalentBecca">Becca Williams</a></td><td>1</td><td>1</td><td>42</td></tr>
-            <tr data-guest="bernhard" data-recordings="1" data-episodes="1" data-total-time="1537"><td><a href="https://x.com/BernhardMGruber">Bernhard</a></td><td>1</td><td>1</td><td>25</td></tr>
-            <tr data-guest="damian maclennan" data-recordings="1" data-episodes="1" data-total-time="1701"><td><a href="https://bsky.app/profile/damianm.com">Damian Maclennan</a></td><td>1</td><td>1</td><td>28</td></tr>
-            <tr data-guest="david olsen" data-recordings="1" data-episodes="1" data-total-time="2240"><td>David Olsen</td><td>1</td><td>1</td><td>37</td></tr>
-            <tr data-guest="floris bob van elzelingen" data-recordings="1" data-episodes="1" data-total-time="1783"><td><a href="https://x.com/florisbob">Floris Bob van Elzelingen</a></td><td>1</td><td>1</td><td>29</td></tr>
-            <tr data-guest="jan wilmans" data-recordings="1" data-episodes="1" data-total-time="1744"><td><a href="https://x.com/janwilmans">Jan Wilmans</a></td><td>1</td><td>1</td><td>29</td></tr>
-            <tr data-guest="jason walter" data-recordings="1" data-episodes="1" data-total-time="2257"><td><a href="https://twitter.com/jason_d_walter">Jason Walter</a></td><td>1</td><td>1</td><td>37</td></tr>
-            <tr data-guest="jessica kerr" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="https://twitter.com/jessitron">Jessica Kerr</a></td><td>1</td><td>1</td><td>34</td></tr>
-            <tr data-guest="jordan miller" data-recordings="1" data-episodes="1" data-total-time="2579"><td><a href="https://twitter.com/lambduhh">Jordan Miller</a></td><td>1</td><td>1</td><td>42</td></tr>
-            <tr data-guest="josé valim" data-recordings="1" data-episodes="1" data-total-time="2101"><td><a href="https://twitter.com/josevalim">José Valim</a></td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="jonathan müller" data-recordings="2" data-episodes="4" data-total-time="7716"><td>Jonathan Müller</td><td>2</td><td>4</td><td>2:08</td></tr>
+            <tr data-guest="chandler carruth" data-recordings="1" data-episodes="4" data-total-time="8469"><td><a href="/tags/#Chandler+Carruth">Chandler Carruth</a></td><td>1</td><td>4</td><td>2:21</td></tr>
+            <tr data-guest="jared hoberock" data-recordings="1" data-episodes="4" data-total-time="9027"><td><a href="/tags/#Jared+Hoberock">Jared Hoberock</a></td><td>1</td><td>4</td><td>2:30</td></tr>
+            <tr data-guest="jonathan o&#x27;connor" data-recordings="1" data-episodes="4" data-total-time="8311"><td><a href="/tags/#Jonathan+O%27Connor">Jonathan O&#x27;Connor</a></td><td>1</td><td>4</td><td>2:18</td></tr>
+            <tr data-guest="patricia aas" data-recordings="1" data-episodes="4" data-total-time="8469"><td><a href="/tags/#Patricia+Aas">Patricia Aas</a></td><td>1</td><td>4</td><td>2:21</td></tr>
+            <tr data-guest="richard feldman" data-recordings="1" data-episodes="4" data-total-time="7306"><td><a href="/tags/#Richard+Feldman">Richard Feldman</a></td><td>1</td><td>4</td><td>2:01</td></tr>
+            <tr data-guest="jane losare-lusby" data-recordings="1" data-episodes="3" data-total-time="5078"><td><a href="/tags/#Jane+Losare-Lusby">Jane Losare-Lusby</a></td><td>1</td><td>3</td><td>1:24</td></tr>
+            <tr data-guest="sean baxter" data-recordings="1" data-episodes="3" data-total-time="8415"><td>Sean Baxter</td><td>1</td><td>3</td><td>2:20</td></tr>
+            <tr data-guest="andor pénzes" data-recordings="2" data-episodes="2" data-total-time="3835"><td>Andor Pénzes</td><td>2</td><td>2</td><td>1:03</td></tr>
+            <tr data-guest="jf bastien" data-recordings="2" data-episodes="2" data-total-time="5591"><td><a href="/tags/#JF+Bastien">JF Bastien</a></td><td>2</td><td>2</td><td>1:33</td></tr>
+            <tr data-guest="phil nash" data-recordings="2" data-episodes="2" data-total-time="4189"><td>Phil Nash</td><td>2</td><td>2</td><td>1:09</td></tr>
+            <tr data-guest="aaron hsu" data-recordings="1" data-episodes="2" data-total-time="3900"><td><a href="/tags/#Aaron+Hsu">Aaron Hsu</a></td><td>1</td><td>2</td><td>1:05</td></tr>
+            <tr data-guest="andrei alexandrescu" data-recordings="1" data-episodes="2" data-total-time="4100"><td><a href="/tags/#Andrei+Alexandrescu">Andrei Alexandrescu</a></td><td>1</td><td>2</td><td>1:08</td></tr>
+            <tr data-guest="barry revzin" data-recordings="1" data-episodes="2" data-total-time="5034"><td><a href="/tags/#Barry+Revzin">Barry Revzin</a></td><td>1</td><td>2</td><td>1:23</td></tr>
+            <tr data-guest="dave abrahams" data-recordings="1" data-episodes="2" data-total-time="4422"><td><a href="/tags/#Dave+Abrahams">Dave Abrahams</a></td><td>1</td><td>2</td><td>1:13</td></tr>
+            <tr data-guest="eric niebler" data-recordings="1" data-episodes="2" data-total-time="4296"><td><a href="/tags/#Eric+Niebler">Eric Niebler</a></td><td>1</td><td>2</td><td>1:11</td></tr>
+            <tr data-guest="inbal levi" data-recordings="1" data-episodes="2" data-total-time="3527"><td>Inbal Levi</td><td>1</td><td>2</td><td>58</td></tr>
+            <tr data-guest="otto niebler" data-recordings="1" data-episodes="2" data-total-time="4296"><td><a href="/tags/#Otto+Niebler">Otto Niebler</a></td><td>1</td><td>2</td><td>1:11</td></tr>
+            <tr data-guest="patrice roy" data-recordings="1" data-episodes="2" data-total-time="4461"><td>Patrice Roy</td><td>1</td><td>2</td><td>1:14</td></tr>
+            <tr data-guest="alexis king" data-recordings="1" data-episodes="1" data-total-time="2101"><td>Alexis King</td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="andreas weis" data-recordings="1" data-episodes="1" data-total-time="2513"><td>Andreas Weis</td><td>1</td><td>1</td><td>41</td></tr>
+            <tr data-guest="barbara trojecka" data-recordings="1" data-episodes="1" data-total-time="2579"><td>Barbara Trojecka</td><td>1</td><td>1</td><td>42</td></tr>
+            <tr data-guest="becca williams" data-recordings="1" data-episodes="1" data-total-time="2579"><td>Becca Williams</td><td>1</td><td>1</td><td>42</td></tr>
+            <tr data-guest="bernhard" data-recordings="1" data-episodes="1" data-total-time="1537"><td>Bernhard</td><td>1</td><td>1</td><td>25</td></tr>
+            <tr data-guest="damian maclennan" data-recordings="1" data-episodes="1" data-total-time="1701"><td><a href="/tags/#Damian+Maclennan">Damian Maclennan</a></td><td>1</td><td>1</td><td>28</td></tr>
+            <tr data-guest="david olsen" data-recordings="1" data-episodes="1" data-total-time="2240"><td><a href="/tags/#David+Olsen">David Olsen</a></td><td>1</td><td>1</td><td>37</td></tr>
+            <tr data-guest="floris bob van elzelingen" data-recordings="1" data-episodes="1" data-total-time="1783"><td>Floris Bob van Elzelingen</td><td>1</td><td>1</td><td>29</td></tr>
+            <tr data-guest="jan wilmans" data-recordings="1" data-episodes="1" data-total-time="1744"><td>Jan Wilmans</td><td>1</td><td>1</td><td>29</td></tr>
+            <tr data-guest="jason walter" data-recordings="1" data-episodes="1" data-total-time="2257"><td>Jason Walter</td><td>1</td><td>1</td><td>37</td></tr>
+            <tr data-guest="jessica kerr" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="/tags/#Jessica+Kerr">Jessica Kerr</a></td><td>1</td><td>1</td><td>34</td></tr>
+            <tr data-guest="jordan miller" data-recordings="1" data-episodes="1" data-total-time="2579"><td>Jordan Miller</td><td>1</td><td>1</td><td>42</td></tr>
+            <tr data-guest="josé valim" data-recordings="1" data-episodes="1" data-total-time="2101"><td>José Valim</td><td>1</td><td>1</td><td>35</td></tr>
             <tr data-guest="kim huizing" data-recordings="1" data-episodes="1" data-total-time="2101"><td>Kim Huizing</td><td>1</td><td>1</td><td>35</td></tr>
-            <tr data-guest="koen" data-recordings="1" data-episodes="1" data-total-time="1537"><td><a href="https://www.linkedin.com/in/kpoppe">Koen</a></td><td>1</td><td>1</td><td>25</td></tr>
-            <tr data-guest="koen poppe" data-recordings="1" data-episodes="1" data-total-time="1744"><td><a href="https://github.com/koenpoppe">Koen Poppe</a></td><td>1</td><td>1</td><td>29</td></tr>
-            <tr data-guest="kristen shaker" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="https://www.linkedin.com/in/kristenshaker/">Kristen Shaker</a></td><td>1</td><td>1</td><td>34</td></tr>
-            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="1" data-total-time=""><td><a href="https://x.com/marksaroufim">Mark Saroufim</a></td><td>1</td><td>1</td><td>—</td></tr>
-            <tr data-guest="mateusz pusz" data-recordings="1" data-episodes="1" data-total-time="1783"><td><a href="https://x.com/mateusz_pusz">Mateusz Pusz</a></td><td>1</td><td>1</td><td>29</td></tr>
-            <tr data-guest="matt godbolt" data-recordings="1" data-episodes="1" data-total-time="2772"><td><a href="https://twitter.com/mattgodbolt">Matt Godbolt</a></td><td>1</td><td>1</td><td>46</td></tr>
+            <tr data-guest="koen" data-recordings="1" data-episodes="1" data-total-time="1537"><td>Koen</td><td>1</td><td>1</td><td>25</td></tr>
+            <tr data-guest="koen poppe" data-recordings="1" data-episodes="1" data-total-time="1744"><td>Koen Poppe</td><td>1</td><td>1</td><td>29</td></tr>
+            <tr data-guest="kristen shaker" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="/tags/#Kristen+Shaker">Kristen Shaker</a></td><td>1</td><td>1</td><td>34</td></tr>
+            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="1" data-total-time=""><td><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></td><td>1</td><td>1</td><td>—</td></tr>
+            <tr data-guest="mateusz pusz" data-recordings="1" data-episodes="1" data-total-time="1783"><td>Mateusz Pusz</td><td>1</td><td>1</td><td>29</td></tr>
+            <tr data-guest="matt godbolt" data-recordings="1" data-episodes="1" data-total-time="2772"><td>Matt Godbolt</td><td>1</td><td>1</td><td>46</td></tr>
             <tr data-guest="paul grosse-bley" data-recordings="1" data-episodes="1" data-total-time="1451"><td>Paul Grosse-Bley</td><td>1</td><td>1</td><td>24</td></tr>
-            <tr data-guest="peer stritzinger" data-recordings="1" data-episodes="1" data-total-time="2101"><td><a href="https://twitter.com/peerstr">Peer Stritzinger</a></td><td>1</td><td>1</td><td>35</td></tr>
-            <tr data-guest="phineas porter" data-recordings="1" data-episodes="1" data-total-time="1471"><td><a href="https://twitter.com/dashpin">Phineas Porter</a></td><td>1</td><td>1</td><td>24</td></tr>
-            <tr data-guest="ray" data-recordings="1" data-episodes="1" data-total-time="1451"><td><a href="https://x.com/rayburgemeestre">Ray</a></td><td>1</td><td>1</td><td>24</td></tr>
-            <tr data-guest="robert leahy" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="https://www.linkedin.com/in/robertallanhenniganleahy/">Robert Leahy</a></td><td>1</td><td>1</td><td>34</td></tr>
-            <tr data-guest="simon peyton jones" data-recordings="1" data-episodes="1" data-total-time="2579"><td><a href="https://twitter.com/simonpj0">Simon Peyton Jones</a></td><td>1</td><td>1</td><td>42</td></tr>
-            <tr data-guest="stephen taylor" data-recordings="1" data-episodes="1" data-total-time="1734"><td><a href="https://x.com/5jt">Stephen Taylor</a></td><td>1</td><td>1</td><td>28</td></tr>
-            <tr data-guest="timur doumler" data-recordings="1" data-episodes="1" data-total-time="2772"><td><a href="https://twitter.com/timur_audio">Timur Doumler</a></td><td>1</td><td>1</td><td>46</td></tr>
-            <tr data-guest="toby pfieffer" data-recordings="1" data-episodes="1" data-total-time="2101"><td><a href="https://twitter.com/PragTob">Toby Pfieffer</a></td><td>1</td><td>1</td><td>35</td></tr>
-            <tr data-guest="victor ciura" data-recordings="1" data-episodes="1" data-total-time="2513"><td><a href="https://twitter.com/ciura_victor">Victor Ciura</a></td><td>1</td><td>1</td><td>41</td></tr>
-            <tr data-guest="vincent zalzal" data-recordings="1" data-episodes="1" data-total-time="2513"><td><a href="https://twitter.com/Vincent4096">Vincent Zalzal</a></td><td>1</td><td>1</td><td>41</td></tr>
-            <tr data-guest="vittorio romeo" data-recordings="1" data-episodes="1" data-total-time="2819"><td><a href="https://romeo.training/">Vittorio Romeo</a></td><td>1</td><td>1</td><td>46</td></tr>
+            <tr data-guest="peer stritzinger" data-recordings="1" data-episodes="1" data-total-time="2101"><td>Peer Stritzinger</td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="phineas porter" data-recordings="1" data-episodes="1" data-total-time="1471"><td>Phineas Porter</td><td>1</td><td>1</td><td>24</td></tr>
+            <tr data-guest="ray" data-recordings="1" data-episodes="1" data-total-time="1451"><td>Ray</td><td>1</td><td>1</td><td>24</td></tr>
+            <tr data-guest="robert leahy" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="/tags/#Rob+Leahy">Robert Leahy</a></td><td>1</td><td>1</td><td>34</td></tr>
+            <tr data-guest="simon peyton jones" data-recordings="1" data-episodes="1" data-total-time="2579"><td>Simon Peyton Jones</td><td>1</td><td>1</td><td>42</td></tr>
+            <tr data-guest="stephen taylor" data-recordings="1" data-episodes="1" data-total-time="1734"><td>Stephen Taylor</td><td>1</td><td>1</td><td>28</td></tr>
+            <tr data-guest="timur doumler" data-recordings="1" data-episodes="1" data-total-time="2772"><td>Timur Doumler</td><td>1</td><td>1</td><td>46</td></tr>
+            <tr data-guest="toby pfieffer" data-recordings="1" data-episodes="1" data-total-time="2101"><td>Toby Pfieffer</td><td>1</td><td>1</td><td>35</td></tr>
+            <tr data-guest="victor ciura" data-recordings="1" data-episodes="1" data-total-time="2513"><td>Victor Ciura</td><td>1</td><td>1</td><td>41</td></tr>
+            <tr data-guest="vincent zalzal" data-recordings="1" data-episodes="1" data-total-time="2513"><td>Vincent Zalzal</td><td>1</td><td>1</td><td>41</td></tr>
+            <tr data-guest="vittorio romeo" data-recordings="1" data-episodes="1" data-total-time="2819"><td><a href="/tags/#Vittorio+Romeo">Vittorio Romeo</a></td><td>1</td><td>1</td><td>46</td></tr>
           </tbody>
         </table>
       </div>

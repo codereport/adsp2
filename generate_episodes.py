@@ -8,6 +8,7 @@ import statistics
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from urllib.parse import quote_plus
 from urllib.request import Request, urlopen
 
 
@@ -27,6 +28,10 @@ GENERIC_EVENT_TAGS = {
     "interviews",
 }
 MAX_EVENT_SERIES_TAG_USES = 12
+GUEST_TAG_ALIASES = {
+    "douglas gregor": "doug gregor",
+    "robert leahy": "rob leahy",
+}
 
 POST_NAME_PATTERN = re.compile(
     r"(?P<date>\d{4}-\d{2}-\d{2})-Episode-(?P<number>\d+)\.md$"
@@ -71,12 +76,21 @@ def title_from_post(post, episode_number):
     ).replace("|", r"\|")
 
 
-def post_tags(post):
+def post_tag_values(post):
     tags = front_matter_value(post, "tags").strip("[]")
     return tuple(
-        tag.strip().strip("\"'").casefold()
+        tag.strip().strip("\"'")
         for tag in tags.split(",")
         if tag.strip()
+    )
+
+
+def guest_tag(name, tag_values):
+    normalized_name = name.casefold()
+    normalized_tag = GUEST_TAG_ALIASES.get(normalized_name, normalized_name)
+    return next(
+        (tag for tag in tag_values if tag.casefold() == normalized_tag),
+        "",
     )
 
 
@@ -255,7 +269,8 @@ def read_posts():
         post = path.read_text(encoding="utf-8")
         number = int(match.group("number"))
         title = title_from_post(post, number)
-        tags = post_tags(post)
+        tag_values = post_tag_values(post)
+        tags = tuple(tag.casefold() for tag in tag_values)
         about_guest = about_guest_section(post)
         interviewed_guests = guests_interviewed_section(post)
         guest = is_guest_episode(tags, about_guest, interviewed_guests)
@@ -273,6 +288,7 @@ def read_posts():
                 "date": match.group("date"),
                 "title": title,
                 "tags": tags,
+                "tag_values": tag_values,
                 "guest": guest,
                 "guest_identity": guest_identity(about_guest, tags),
                 "guest_people": guest_people(
@@ -427,9 +443,9 @@ def guest_table_rows(guests, indentation="            "):
         episodes = len(guest["episodes"])
         total_seconds = guest["total_seconds"]
         total_time = format_duration(total_seconds) if total_seconds is not None else "—"
-        if guest["profile_url"]:
+        if guest["tag_name"]:
             name = (
-                f'<a href="{html.escape(guest["profile_url"], quote=True)}">'
+                f'<a href="/tags/#{html.escape(quote_plus(guest["tag_name"]), quote=True)}">'
                 f"{name}</a>"
             )
         rows.append(
@@ -478,6 +494,7 @@ def render_stats(episodes, durations):
                     "profile_url": profile_url,
                     "episodes": set(),
                     "recordings": set(),
+                    "tag_names": set(),
                 },
             )
             for alias in aliases:
@@ -488,6 +505,9 @@ def render_stats(episodes, durations):
             guest["recordings"].add(
                 episode["recorded_date"] or f"episode-{episode['number']}"
             )
+            tag_name = guest_tag(name, episode["tag_values"])
+            if tag_name:
+                guest["tag_names"].add(tag_name)
 
     for guest in guest_stats.values():
         guest_durations = [
@@ -496,6 +516,7 @@ def render_stats(episodes, durations):
             if number in durations
         ]
         guest["total_seconds"] = sum(guest_durations) if guest_durations else None
+        guest["tag_name"] = min(guest["tag_names"], key=str.casefold, default="")
 
     all_guests = sorted(
         guest_stats.values(),

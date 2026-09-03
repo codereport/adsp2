@@ -1,6 +1,6 @@
 {% if site.data.social.rss or site.theme_settings.rss %}
-<li>
-    <a feed.xml href="{{ site.data.social.feed.path | default: 'feed.xml' | relative_url }}"
+<li class="header-social-item">
+    <a href="{{ site.data.social.feed.path | default: 'feed.xml' | relative_url }}"
        title="{{ site.data.language.str_rss_follow | default: "Follow RSS feed" }}">
         <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
@@ -219,7 +219,7 @@
 {% endif %}
 
 {% if site.data.social.twitter or site.theme_settings.twitter %}
-<li>
+<li class="header-social-item">
     <a class="type" href="https://twitter.com/{{ site.data.social.twitter }}"
        title="{{ site.data.language.str_follow_on }} Twitter">
         <span class="fa-stack fa-lg">

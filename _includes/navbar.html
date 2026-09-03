@@ -1,18 +1,21 @@
 <header class="site-header">
 
     <!-- Logo and title -->
-	<div class="branding">
+    <div class="branding">
         {% if site.avatar %}
-		<a href="{{ '/' | relative_url }}">
-			<img alt="logo img" class="avatar" src="{{ site.avatar | relative_url }}" />
-		</a>
-        {% endif %}
-        
-        <!-- Use the original site title - JS will handle its color -->
-        <a class="site-title" aria-label="{{ site.title }}" href="{{ '/' | relative_url }}">
-            {{ site.title }}
+        <a href="{{ '/' | relative_url }}">
+            <img alt="logo img" class="avatar" src="{{ site.avatar | relative_url }}" />
         </a>
-	</div>
+        {% endif %}
+
+        <div class="site-branding-copy">
+            <a class="site-title" aria-label="{{ site.title }}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+            <span class="site-byline-rotator" aria-hidden="true">
+                <span class="site-byline-message site-byline-message-primary">Algorithms + Data Structures = Programs</span>
+                <span class="site-byline-message site-byline-message-secondary">A Discussion with Sean Parent</span>
+            </span>
+        </div>
+    </div>
 
     <!-- Toggle menu -->
     <nav class="clear">
@@ -26,6 +29,9 @@
 
         {% for page in site.pages %}
             {% unless page.title == null or page.hide or name_page contains page.title %}
+            {% if page.title == "About" %}
+                {% include icons.html %}
+            {% endif %}
             <li class="separator"> | </li>
             <li>
                 <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
@@ -38,7 +44,7 @@
         {% endfor %}
     </ul>
 
-	</nav>
+    </nav>
 </header>
 
 <style>
