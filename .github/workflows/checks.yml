@@ -1,0 +1,115 @@
+name: Run Checks
+
+"on":
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Get transcript cache version
+        id: transcript-cache-version
+        run: echo "hash=$(sha256sum .transcript-check-cache | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore transcript cache
+        uses: actions/cache/restore@v5
+        with:
+          path: .transcript-check-cache
+          key: transcript-check-${{ steps.transcript-cache-version.outputs.hash }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            transcript-check-${{ steps.transcript-cache-version.outputs.hash }}-
+
+      - name: Run checks.py
+        id: run-checks
+        shell: bash
+        run: |
+          set +e
+          python3 checks.py | tee checks-output.txt
+          python_status=${PIPESTATUS[0]}
+          set -e
+
+          failed=false
+          if [ "$python_status" -ne 0 ] || grep -Eq '❌|🔧' checks-output.txt; then
+            failed=true
+          fi
+          echo "failed=$failed" >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## checks.py output"
+            echo '```text'
+            cat checks-output.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save transcript cache
+        if: always()
+        uses: actions/cache/save@v5
+        with:
+          path: .transcript-check-cache
+          key: transcript-check-${{ steps.transcript-cache-version.outputs.hash }}-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Notify codereport on the failing commit
+        if: always() && steps.run-checks.outputs.failed == 'true'
+        uses: actions/github-script@v9
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        with:
+          script: |
+            const fs = require("fs");
+            const marker = "<!-- checks-py-notification -->";
+            const output = fs.readFileSync("checks-output.txt", "utf8").slice(0, 50000);
+            const fence = "```";
+            const body = [
+              marker,
+              "@codereport, `checks.py` failed for this commit.",
+              "",
+              `[View the workflow run](${process.env.RUN_URL})`,
+              "",
+              "<details><summary>Check output</summary>",
+              "",
+              `${fence}text`,
+              output,
+              fence,
+              "",
+              "</details>",
+            ].join("\n");
+
+            const comments = await github.paginate(
+              github.rest.repos.listCommentsForCommit,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: context.sha,
+                per_page: 100,
+              },
+            );
+            const existing = comments.find((comment) => comment.body?.includes(marker));
+
+            if (existing) {
+              await github.rest.repos.updateCommitComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.repos.createCommitComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: context.sha,
+                body,
+              });
+            }
+
+      - name: Mark failed checks
+        if: always() && steps.run-checks.outputs.failed == 'true'
+        run: exit 1
