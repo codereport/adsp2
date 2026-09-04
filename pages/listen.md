@@ -12,19 +12,11 @@ feature-img: "assets/img/pexels/adsp2.png"
       <p>Our most popular listening options.</p>
     </div>
     <div class="listen-featured-grid">
-      <a class="listen-feature-card listen-feature-spotify" href="https://open.spotify.com/show/5hcsSlBadLYlO1rfjPnssA" target="_blank" rel="noopener">
-        <img src="https://cdn.simpleicons.org/spotify/1ED760" alt="" aria-hidden="true">
-        <span class="listen-feature-copy">
-          <span>Listen on</span>
-          <strong>Spotify</strong>
-        </span>
+      <a class="listen-platform-badge" href="https://open.spotify.com/show/5hcsSlBadLYlO1rfjPnssA" target="_blank" rel="noopener">
+        <img src="{{ '/assets/img/listen-on-spotify.svg' | relative_url }}" alt="Listen on Spotify Podcasts">
       </a>
-      <a class="listen-feature-card listen-feature-apple" href="https://podcasts.apple.com/ca/podcast/algorithms-data-structures-programs/id1541407369" target="_blank" rel="noopener">
-        <img src="https://cdn.simpleicons.org/applepodcasts/FFFFFF" alt="" aria-hidden="true">
-        <span class="listen-feature-copy">
-          <span>Listen on</span>
-          <strong>Apple Podcasts</strong>
-        </span>
+      <a class="listen-platform-badge" href="https://podcasts.apple.com/ca/podcast/algorithms-data-structures-programs/id1541407369" target="_blank" rel="noopener">
+        <img src="{{ '/assets/img/listen-on-apple-podcasts.svg' | relative_url }}" alt="Listen on Apple Podcasts">
       </a>
     </div>
   </section>
