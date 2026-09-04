@@ -60,14 +60,18 @@
   margin: 0 auto;
 
   a {
+    aspect-ratio: 740 / 189;
+    display: block;
     flex: 0 1 19rem;
     max-width: 100%;
+    overflow: hidden;
   }
 
   img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: fill;
     padding: 0;
   }
 }

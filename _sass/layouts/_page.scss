@@ -765,8 +765,32 @@ html[data-theme="dark"] .episode-stats {
 }
 
 @media screen and (max-width: $sm-break) {
+  .episode-stats {
+    > summary {
+      padding: 0.8em 1em;
+    }
+
+    h2 {
+      font-size: 1.05em;
+    }
+  }
+
+  .episode-stats-summary-title {
+    font-size: 0.9em;
+  }
+
+  .episode-stats-content {
+    font-size: 0.82em;
+    padding: 0.9em;
+  }
+
   .episode-stat-cards {
-    grid-template-columns: 1fr;
+    gap: 0.55em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .episode-stat-card {
+    padding: 0.7em 0.75em;
   }
 
   .episode-histogram {

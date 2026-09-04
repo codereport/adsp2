@@ -17,21 +17,23 @@
         </div>
     </div>
 
+    <!-- Social links stay visible when the mobile menu is collapsed. -->
+    <ul class="header-social-links" aria-label="Podcast links">
+        {% include icons.html %}
+    </ul>
+
     <!-- Toggle menu -->
-    <nav class="clear">
-    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <a aria-label="Toggle navigation" aria-controls="site-navigation" id="pull" class="toggle" href="#">
     <i class="fa fa-bars fa-lg"></i>
     </a>
 
     <!-- Menu -->
+    <nav id="site-navigation">
     <ul class="hide">
         {% assign name_page = "" %}
 
         {% for page in site.pages %}
             {% unless page.title == null or page.hide or name_page contains page.title %}
-            {% if page.title == "About" %}
-                {% include icons.html %}
-            {% endif %}
             <li class="separator"> | </li>
             <li>
                 <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
