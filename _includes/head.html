@@ -1,13 +1,14 @@
 <head>
+    {% assign asset_version = site.time | date: '%s' %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
-    <script defer src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/main.min.js' | relative_url }}?v={{ asset_version }}"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ asset_version }}">
+    <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}?v={{ asset_version }}">
 
     <!--Favicon-->
     <link rel="shortcut icon" href="{{ site.favicon | relative_url }}" type="image/x-icon">
@@ -17,7 +18,7 @@
     
     {% if page.bootstrap %}
     <!-- Bootstrap-4.1.3 isolation CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/vendor/bootstrap-iso.min.css' | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/vendor/bootstrap-iso.min.css' | relative_url }}?v={{ asset_version }}">
     <!-- JQuery 3.3.1 -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Bootstrap 4.1.3 compiled and minified JavaScript -->
