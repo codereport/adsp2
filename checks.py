@@ -106,45 +106,67 @@ print(("❌" if problem else "✅") + " - Dates Differ by 7 Days")
 # Unique Buzzsprout IDs
 problem = False
 buzzsprout_ids = {}
+transcript_buzzsprout_ids = {}
 for post_name in sorted(os.listdir("_posts/")):
     if not post_name.endswith(".md"):
         continue
     with open("_posts/" + post_name) as post:
-        for line in post:
-            if line.startswith("buzzsprout-id:"):
-                bid = line.split(":")[1].strip()
-                if bid in buzzsprout_ids:
-                    if not problem:
-                        print("❌ - Unique Buzzsprout IDs")
-                    print(f"  Duplicate buzzsprout-id {bid}: {buzzsprout_ids[bid]} and {post_name}")
-                    problem = True
-                else:
-                    buzzsprout_ids[bid] = post_name
-                break
+        content = post.read()
+
+    front_matter_match = re.search(r"^buzzsprout-id:\s*(\d+)\s*$", content, re.MULTILINE)
+    player_match = re.search(r"buzzsprout-player-(\d+)", content)
+    id_match = front_matter_match or player_match
+    if not id_match:
+        continue
+
+    bid = id_match.group(1)
+    if bid in buzzsprout_ids:
+        if not problem:
+            print("❌ - Unique Buzzsprout IDs")
+        print(f"  Duplicate buzzsprout-id {bid}: {buzzsprout_ids[bid]} and {post_name}")
+        problem = True
+    else:
+        buzzsprout_ids[bid] = post_name
+
+    episode_number = int(post_name[:-3].split("-")[-1])
+    if episode_number >= 264:
+        transcript_buzzsprout_ids[bid] = post_name
 if not problem:
     print("✅ - Unique Buzzsprout IDs")
 
-# No Unknown Speakers in Buzzsprout Transcripts
+# No Unknown or Placeholder Speakers in Buzzsprout Transcripts
 transcript_cache_path = ".transcript-check-cache"
+transcript_cache_version = "unknown-or-speaker-v2"
 try:
     with open(transcript_cache_path) as cache:
-        passed_transcript_ids = {
-            line.strip() for line in cache if line.strip().isdigit()
-        }
+        cache_lines = [line.strip() for line in cache if line.strip()]
 except FileNotFoundError:
-    passed_transcript_ids = set()
+    cache_lines = []
+
+passed_transcript_ids = (
+    {line for line in cache_lines[1:] if line.isdigit()}
+    if cache_lines[:1] == [f"version:{transcript_cache_version}"]
+    else set()
+)
 
 problem = False
 newly_passed_transcript_ids = set()
-unknown_speaker_patterns = (
-    re.compile(r"<cite(?:\s[^>]*)?>\s*unknown\s*</cite>", re.IGNORECASE),
+placeholder_label = r"(?P<label>unknown|speaker(?:[ _-]*#?[ _-]*\d+|[ _-]+#)?)"
+placeholder_speaker_patterns = (
     re.compile(
-        r"(?:<!--block-->|<br\s*/?>\s*<br\s*/?>)\s*unknown\s*:\s*\d{1,2}:\d{2}",
+        rf"<cite(?:\s[^>]*)?>\s*{placeholder_label}\s*</cite>",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        rf"(?:<!--block-->|<br\s*/?>\s*<br\s*/?>)\s*"
+        rf"{placeholder_label}\s*:\s*\d{{1,2}}:\d{{2}}",
         re.IGNORECASE,
     ),
 )
 
-for bid, post_name in sorted(buzzsprout_ids.items(), key=lambda item: item[0]):
+for bid, post_name in sorted(
+    transcript_buzzsprout_ids.items(), key=lambda item: item[0]
+):
     if not bid or bid in passed_transcript_ids:
         continue
 
@@ -159,8 +181,17 @@ for bid, post_name in sorted(buzzsprout_ids.items(), key=lambda item: item[0]):
         problem = True
         continue
 
-    if any(pattern.search(transcript) for pattern in unknown_speaker_patterns):
-        print(f"  {post_name}: unknown speaker in {transcript_url}")
+    placeholder_labels = {
+        match.group("label").strip()
+        for pattern in placeholder_speaker_patterns
+        for match in pattern.finditer(transcript)
+    }
+    if placeholder_labels:
+        labels = ", ".join(sorted(placeholder_labels, key=str.casefold))
+        print(
+            f"  {post_name}: placeholder speaker label(s) {labels} "
+            f"in {transcript_url}"
+        )
         problem = True
     else:
         newly_passed_transcript_ids.add(bid)
@@ -168,10 +199,14 @@ for bid, post_name in sorted(buzzsprout_ids.items(), key=lambda item: item[0]):
 if newly_passed_transcript_ids:
     passed_transcript_ids.update(newly_passed_transcript_ids)
     with open(transcript_cache_path, "w") as cache:
+        cache.write(f"version:{transcript_cache_version}\n")
         for bid in sorted(passed_transcript_ids, key=int):
             cache.write(f"{bid}\n")
 
-print(("❌" if problem else "✅") + " - No Unknown Speakers in Transcripts")
+print(
+    ("❌" if problem else "✅")
+    + " - No Unknown or Placeholder Speakers in Transcripts"
+)
 
 # Episodes
 print("EPISODES CHECKS")

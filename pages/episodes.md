@@ -12,7 +12,7 @@ List of all episodes.
 <details class="episode-stats">
   <summary>
     <span class="episode-stats-summary-title">Explore episode stats</span>
-    <span class="episode-stats-summary-hint">Guests, lengths and trends</span>
+    <span class="episode-stats-summary-hint">Guests, lengths, conversation and trends</span>
   </summary>
   <div class="episode-stats-content">
     <section aria-labelledby="stats-at-a-glance">
@@ -22,7 +22,7 @@ List of all episodes.
           <strong>303</strong><span>episodes listed</span>
         </div>
         <div class="episode-stat-card">
-          <strong>169h 06m</strong><span>total listening time</span>
+          <strong>169h 32m</strong><span>total listening time</span>
         </div>
         <div class="episode-stat-card">
           <strong>32</strong><span>median minutes</span>
@@ -48,7 +48,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
       <section aria-labelledby="episode-lengths">
         <h2 id="episode-lengths">Episode lengths</h2>
         <p class="episode-stat-note">Number of episodes in each duration range.</p>
-        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 12 episodes; 20–29 minutes: 102 episodes; 30–39 minutes: 126 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
+        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 12 episodes; 20–29 minutes: 103 episodes; 30–39 minutes: 126 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
               <span>12</span>
@@ -58,7 +58,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
           </div>
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
-              <span>102</span>
+              <span>103</span>
               <span class="episode-histogram-bar" style="--bar-height: 69%"></span>
             </div>
             <span>20–29</span>
@@ -211,7 +211,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             <tr data-guest="koen" data-recordings="1" data-episodes="1" data-total-time="1537"><td>Koen</td><td>1</td><td>1</td><td>25</td></tr>
             <tr data-guest="koen poppe" data-recordings="1" data-episodes="1" data-total-time="1744"><td>Koen Poppe</td><td>1</td><td>1</td><td>29</td></tr>
             <tr data-guest="kristen shaker" data-recordings="1" data-episodes="1" data-total-time="2058"><td><a href="/tags/#Kristen+Shaker">Kristen Shaker</a></td><td>1</td><td>1</td><td>34</td></tr>
-            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="1" data-total-time=""><td><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></td><td>1</td><td>1</td><td>—</td></tr>
+            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="1" data-total-time="1548"><td><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></td><td>1</td><td>1</td><td>25</td></tr>
             <tr data-guest="mateusz pusz" data-recordings="1" data-episodes="1" data-total-time="1783"><td>Mateusz Pusz</td><td>1</td><td>1</td><td>29</td></tr>
             <tr data-guest="matt godbolt" data-recordings="1" data-episodes="1" data-total-time="2772"><td>Matt Godbolt</td><td>1</td><td>1</td><td>46</td></tr>
             <tr data-guest="paul grosse-bley" data-recordings="1" data-episodes="1" data-total-time="1451"><td>Paul Grosse-Bley</td><td>1</td><td>1</td><td>24</td></tr>
@@ -231,13 +231,724 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
       </div>
       <button type="button" class="more-guests-toggle" aria-expanded="false" aria-controls="additional-guests" data-show-label="Show 51 more guests" data-hide-label="Show fewer guests">Show 51 more guests</button>
     </section>
+    <section class="conversation-dynamics" aria-labelledby="conversation-dynamics">
+      <h2 id="conversation-dynamics">Conversation dynamics</h2>
+      <p class="episode-stat-note">Based on timestamped transcripts from Episode 264 onward.</p>
+      <div class="conversation-index-overview">
+        <div class="conversation-index-card">
+          <strong>126.2</strong>
+          <span>median BAF</span>
+          <small>30 non-guest episodes</small>
+        </div>
+        <div class="conversation-index-card">
+          <strong>2,635</strong>
+          <span>median words / guest</span>
+          <small>10 appearances · 9 episodes</small>
+        </div>
+        <div class="conversation-index-card">
+          <strong>39</strong>
+          <span>transcripts measured</span>
+          <small>Episodes 264–302</small>
+        </div>
+      </div>
+      <div class="conversation-index-definitions">
+        <p><strong>BAF (back-and-forth index)</strong> is calculated only for episodes without a guest. It is the population standard deviation of the number of words in each speaking turn. Lower means more consistently sized back-and-forth turns; higher means turn lengths vary more.</p>
+        <p><strong>Speaker word counts</strong> measure every identified person in every available transcript. The guest metric is calculated only for guest episodes, with each guest appearance measured separately.</p>
+      </div>
+      <section class="conversation-chart-panel" aria-labelledby="baf-over-time">
+        <h3 id="baf-over-time">BAF over time</h3>
+        <div class="conversation-chart-scroll">
+          <div class="baf-chart" role="img" aria-label="BAF index by non-guest episode. Episode 266: 164.6, Ben; Episode 267: 78.8, Ben; Episode 268: 73.7, Ben; Episode 269: 89.7, Bryce; Episode 270: 128.7, Bryce; Episode 271: 0.0, no co-host; Episode 272: 63.8, Ben; Episode 273: 125.5, Ben; Episode 274: 96.7, Ben; Episode 275: 143.4, Bryce; Episode 276: 116.2, Bryce; Episode 277: 227.7, Bryce; Episode 278: 245.9, Bryce; Episode 279: 193.6, Bryce; Episode 280: 68.2, Ben; Episode 281: 111.5, Ben; Episode 282: 127.0, Ben; Episode 288: 173.6, Ben; Episode 289: 127.6, Ben; Episode 290: 98.6, Ben; Episode 291: 206.2, Bryce; Episode 292: 164.2, Bryce; Episode 293: 172.5, Bryce; Episode 294: 106.9, Bryce; Episode 295: 181.5, Bryce; Episode 296: 113.2, Ben; Episode 297: 111.9, Ben; Episode 298: 140.6, Ben; Episode 299: 106.1, Bryce; Episode 301: 315.4, Bryce" style="--baf-columns: 30">
+            <div class="baf-column" title="Episode 266: BAF 164.6; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 48.0%"></span>
+              </span>
+              <span class="baf-episode-label">266</span>
+            </div>
+            <div class="baf-column" title="Episode 267: BAF 78.8; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 23.0%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 268: BAF 73.7; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 21.5%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 269: BAF 89.7; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 26.2%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 270: BAF 128.7; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 37.5%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 271: BAF 0.0; no co-host">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-unknown" style="--bar-height: 0.0%"></span>
+              </span>
+              <span class="baf-episode-label">271</span>
+            </div>
+            <div class="baf-column" title="Episode 272: BAF 63.8; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 18.6%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 273: BAF 125.5; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 36.6%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 274: BAF 96.7; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 28.2%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 275: BAF 143.4; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 41.8%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 276: BAF 116.2; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 33.9%"></span>
+              </span>
+              <span class="baf-episode-label">276</span>
+            </div>
+            <div class="baf-column" title="Episode 277: BAF 227.7; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 66.4%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 278: BAF 245.9; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 71.7%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 279: BAF 193.6; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 56.5%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 280: BAF 68.2; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 19.9%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 281: BAF 111.5; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 32.5%"></span>
+              </span>
+              <span class="baf-episode-label">281</span>
+            </div>
+            <div class="baf-column" title="Episode 282: BAF 127.0; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 37.0%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 288: BAF 173.6; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 50.6%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 289: BAF 127.6; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 37.2%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 290: BAF 98.6; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 28.8%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 291: BAF 206.2; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 60.2%"></span>
+              </span>
+              <span class="baf-episode-label">291</span>
+            </div>
+            <div class="baf-column" title="Episode 292: BAF 164.2; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 47.9%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 293: BAF 172.5; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 50.3%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 294: BAF 106.9; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 31.2%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 295: BAF 181.5; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 52.9%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 296: BAF 113.2; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 33.0%"></span>
+              </span>
+              <span class="baf-episode-label">296</span>
+            </div>
+            <div class="baf-column" title="Episode 297: BAF 111.9; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 32.7%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 298: BAF 140.6; Ben">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-ben" style="--bar-height: 41.0%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 299: BAF 106.1; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 31.0%"></span>
+              </span>
+              <span class="baf-episode-label"></span>
+            </div>
+            <div class="baf-column" title="Episode 301: BAF 315.4; Bryce">
+              <span class="baf-bar-area">
+                <span class="baf-bar cohost-bryce" style="--bar-height: 92.0%"></span>
+              </span>
+              <span class="baf-episode-label">301</span>
+            </div>
+          </div>
+        </div>
+        <div class="conversation-chart-legend" aria-label="Chart legend">
+          <span><i class="cohost-swatch cohost-bryce"></i>Bryce</span>
+          <span><i class="cohost-swatch cohost-ben"></i>Ben</span>
+        </div>
+      </section>
+      <div class="conversation-detail-grid">
+        <section class="conversation-chart-panel cohost-index-panel" aria-labelledby="indices-by-cohost">
+          <h3 id="indices-by-cohost">By co-host</h3>
+          <div class="cohost-index-list">
+            <article class="cohost-index-card cohost-conor">
+              <h4><i class="cohost-swatch cohost-conor"></i>Conor</h4>
+              <p>30 non-guest transcripts</p>
+              <dl>
+                <div><dt>Median BAF</dt><dd>126.2</dd></div>
+                <div><dt>Guest words / appearance</dt><dd>3,067</dd></div>
+              </dl>
+              <small>10 guest appearances</small>
+            </article>
+            <article class="cohost-index-card cohost-bryce">
+              <h4><i class="cohost-swatch cohost-bryce"></i>Bryce</h4>
+              <p>14 non-guest transcripts</p>
+              <dl>
+                <div><dt>Median BAF</dt><dd>168.3</dd></div>
+                <div><dt>Guest words / appearance</dt><dd>3,211</dd></div>
+              </dl>
+              <small>7 guest appearances</small>
+            </article>
+            <article class="cohost-index-card cohost-ben">
+              <h4><i class="cohost-swatch cohost-ben"></i>Ben</h4>
+              <p>15 non-guest transcripts</p>
+              <dl>
+                <div><dt>Median BAF</dt><dd>111.9</dd></div>
+                <div><dt>Guest words / appearance</dt><dd>—</dd></div>
+              </dl>
+              <small>0 guest appearances</small>
+            </article>
+          </div>
+        </section>
+        <details class="conversation-chart-panel speaker-word-panel speaker-word-details" aria-labelledby="speaker-word-counts">
+          <summary><span id="speaker-word-counts">Words spoken by person</span></summary>
+          <p class="episode-stat-note">Each bar represents all identified words in one episode; exact counts appear alongside it.</p>
+          <div class="speaker-word-chart">
+            <div class="speaker-word-row" title="🇦🇺 Aphantasia, Anendophasia &amp; the Future with Kevlin Henney">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2025/12/12/Episode-264.html" aria-label="Episode 264">264</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 264. Conor: 3,232 words; Kevlin Henney: 4,229 words">
+                <span class="speaker-word-segment" style="--speaker-width: 43.32%; --speaker-color: #8b1f2d" title="Conor: 3,232 words (43.3%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 56.68%; --speaker-color: #6f4aa8" title="Kevlin Henney: 4,229 words (56.7%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,232</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Kevlin+Henney">Kevlin Henney</a></span><strong>4,229</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="🇦🇺 YOW! Live 🇦🇺 Kevlin Henney &amp; Damian Maclennan">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2025/12/19/Episode-265.html" aria-label="Episode 265">265</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 265. Conor: 1,828 words; Damian Maclennan: 524 words; Kevlin Henney: 3,439 words">
+                <span class="speaker-word-segment" style="--speaker-width: 31.57%; --speaker-color: #8b1f2d" title="Conor: 1,828 words (31.6%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 9.05%; --speaker-color: #6f4aa8" title="Damian Maclennan: 524 words (9.0%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 59.39%; --speaker-color: #2a8f70" title="Kevlin Henney: 3,439 words (59.4%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>1,828</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Damian+Maclennan">Damian Maclennan</a></span><strong>524</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #2a8f70"></i><span><a href="/tags/#Kevlin+Henney">Kevlin Henney</a></span><strong>3,439</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Holiday Special 🎄 CppCon, NDC Toronto, C++Now, Teletext, Bamboozle &amp; More!">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2025/12/26/Episode-266.html" aria-label="Episode 266">266</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 266. Conor: 7,310 words; Ben: 4,990 words">
+                <span class="speaker-word-segment" style="--speaker-width: 59.43%; --speaker-color: #8b1f2d" title="Conor: 7,310 words (59.4%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 40.57%; --speaker-color: #c4752e" title="Ben: 4,990 words (40.6%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>7,310</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>4,990</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Advent of Code 2025 (Day 2 &amp; 3)">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/01/02/Episode-267.html" aria-label="Episode 267">267</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 267. Conor: 3,733 words; Ben: 2,582 words; Judy Hopps: 2 words">
+                <span class="speaker-word-segment" style="--speaker-width: 59.09%; --speaker-color: #8b1f2d" title="Conor: 3,733 words (59.1%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 40.87%; --speaker-color: #c4752e" title="Ben: 2,582 words (40.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 0.03%; --speaker-color: #6f4aa8" title="Judy Hopps: 2 words (0.0%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,733</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>2,582</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span>Judy Hopps</span><strong>2</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Advent of Code 2025 (Day 6)">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/01/09/Episode-268.html" aria-label="Episode 268">268</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 268. Conor: 1,913 words; Ben: 988 words">
+                <span class="speaker-word-segment" style="--speaker-width: 65.94%; --speaker-color: #8b1f2d" title="Conor: 1,913 words (65.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 34.06%; --speaker-color: #c4752e" title="Ben: 988 words (34.1%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>1,913</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>988</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="2025 Double Retro">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/01/16/Episode-269.html" aria-label="Episode 269">269</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 269. Conor: 4,746 words; Bryce: 2,221 words">
+                <span class="speaker-word-segment" style="--speaker-width: 68.12%; --speaker-color: #8b1f2d" title="Conor: 4,746 words (68.1%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 31.88%; --speaker-color: #337ab7" title="Bryce: 2,221 words (31.9%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>4,746</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>2,221</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="2026 Predictions - AI, The Future, Books &amp; More!">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/01/23/Episode-270.html" aria-label="Episode 270">270</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 270. Conor: 3,749 words; Bryce: 3,674 words">
+                <span class="speaker-word-segment" style="--speaker-width: 50.51%; --speaker-color: #8b1f2d" title="Conor: 3,749 words (50.5%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 49.49%; --speaker-color: #337ab7" title="Bryce: 3,674 words (49.5%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,749</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>3,674</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Mastermind Algorithms">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/01/30/Episode-271.html" aria-label="Episode 271">271</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 271. Conor: 3,171 words">
+                <span class="speaker-word-segment" style="--speaker-width: 100.00%; --speaker-color: #8b1f2d" title="Conor: 3,171 words (100.0%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,171</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Inverses, Monoids and ∞">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/02/06/Episode-272.html" aria-label="Episode 272">272</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 272. Conor: 2,529 words; Ben: 1,891 words">
+                <span class="speaker-word-segment" style="--speaker-width: 57.22%; --speaker-color: #8b1f2d" title="Conor: 2,529 words (57.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 42.78%; --speaker-color: #c4752e" title="Ben: 1,891 words (42.8%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,529</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>1,891</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Recreational Algorithms, 一百四十一, PEDMAS &amp; Orwell">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/02/13/Episode-273.html" aria-label="Episode 273">273</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 273. Conor: 3,407 words; Ben: 2,227 words">
+                <span class="speaker-word-segment" style="--speaker-width: 60.47%; --speaker-color: #8b1f2d" title="Conor: 3,407 words (60.5%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 39.53%; --speaker-color: #c4752e" title="Ben: 2,227 words (39.5%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,407</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>2,227</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Recreational Math, Calculators &amp; the Quadratic Formula">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/02/20/Episode-274.html" aria-label="Episode 274">274</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 274. Conor: 2,235 words; Ben: 3,175 words; G. H. Hardy: 15 words; Ramanujan: 24 words">
+                <span class="speaker-word-segment" style="--speaker-width: 41.02%; --speaker-color: #8b1f2d" title="Conor: 2,235 words (41.0%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 58.27%; --speaker-color: #c4752e" title="Ben: 3,175 words (58.3%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 0.28%; --speaker-color: #6f4aa8" title="G. H. Hardy: 15 words (0.3%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 0.44%; --speaker-color: #2a8f70" title="Ramanujan: 24 words (0.4%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,235</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>3,175</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span>G. H. Hardy</span><strong>15</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #2a8f70"></i><span>Ramanujan</span><strong>24</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Cartel Chaos &amp; Travel Troubles">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/02/27/Episode-275.html" aria-label="Episode 275">275</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 275. Conor: 3,310 words; Bryce: 3,542 words">
+                <span class="speaker-word-segment" style="--speaker-width: 48.31%; --speaker-color: #8b1f2d" title="Conor: 3,310 words (48.3%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 51.69%; --speaker-color: #337ab7" title="Bryce: 3,542 words (51.7%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,310</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>3,542</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Mini AI / Cursor Update (+ Running)">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/03/06/Episode-276.html" aria-label="Episode 276">276</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 276. Conor: 2,513 words; Bryce: 1,693 words">
+                <span class="speaker-word-segment" style="--speaker-width: 59.75%; --speaker-color: #8b1f2d" title="Conor: 2,513 words (59.7%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 40.25%; --speaker-color: #337ab7" title="Bryce: 1,693 words (40.3%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,513</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>1,693</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="High on AI Update">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/03/13/Episode-277.html" aria-label="Episode 277">277</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 277. Conor: 4,325 words; Bryce: 4,821 words">
+                <span class="speaker-word-segment" style="--speaker-width: 47.29%; --speaker-color: #8b1f2d" title="Conor: 4,325 words (47.3%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 52.71%; --speaker-color: #337ab7" title="Bryce: 4,821 words (52.7%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>4,325</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>4,821</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="The Age of Ideas">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/03/20/Episode-278.html" aria-label="Episode 278">278</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 278. Conor: 3,583 words; Bryce: 2,635 words">
+                <span class="speaker-word-segment" style="--speaker-width: 57.62%; --speaker-color: #8b1f2d" title="Conor: 3,583 words (57.6%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 42.38%; --speaker-color: #337ab7" title="Bryce: 2,635 words (42.4%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,583</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>2,635</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="ArrayBox.dev &amp; Agentic Software Development">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/03/27/Episode-279.html" aria-label="Episode 279">279</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 279. Conor: 4,815 words; Bryce: 1,438 words; Bill Burr: 165 words">
+                <span class="speaker-word-segment" style="--speaker-width: 75.02%; --speaker-color: #8b1f2d" title="Conor: 4,815 words (75.0%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 22.41%; --speaker-color: #337ab7" title="Bryce: 1,438 words (22.4%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 2.57%; --speaker-color: #6f4aa8" title="Bill Burr: 165 words (2.6%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>4,815</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>1,438</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span>Bill Burr</span><strong>165</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="C++26 Big Ticket Items, GCC vs Clang &amp; More">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/04/03/Episode-280.html" aria-label="Episode 280">280</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 280. Conor: 2,052 words; Ben: 2,369 words">
+                <span class="speaker-word-segment" style="--speaker-width: 46.41%; --speaker-color: #8b1f2d" title="Conor: 2,052 words (46.4%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 53.59%; --speaker-color: #c4752e" title="Ben: 2,369 words (53.6%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,052</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>2,369</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="From Hylomorphisms to Boost Ranges to Jello">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/04/10/Episode-281.html" aria-label="Episode 281">281</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 281. Conor: 3,896 words; Ben: 2,506 words">
+                <span class="speaker-word-segment" style="--speaker-width: 60.86%; --speaker-color: #8b1f2d" title="Conor: 3,896 words (60.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 39.14%; --speaker-color: #c4752e" title="Ben: 2,506 words (39.1%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,896</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>2,506</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Programming Language Archaeology &amp; Semantics">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/04/17/Episode-282.html" aria-label="Episode 282">282</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 282. Conor: 2,855 words; Ben: 2,615 words">
+                <span class="speaker-word-segment" style="--speaker-width: 52.19%; --speaker-color: #8b1f2d" title="Conor: 2,855 words (52.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 47.81%; --speaker-color: #c4752e" title="Ben: 2,615 words (47.8%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,855</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>2,615</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="From 0 Programming to NVIDIA in &lt; 3.5 Years">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/04/24/Episode-283.html" aria-label="Episode 283">283</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 283. Conor: 2,285 words; Bryce: 943 words; Marco Franzreb Salgado: 1,342 words">
+                <span class="speaker-word-segment" style="--speaker-width: 50.00%; --speaker-color: #8b1f2d" title="Conor: 2,285 words (50.0%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 20.63%; --speaker-color: #337ab7" title="Bryce: 943 words (20.6%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 29.37%; --speaker-color: #6f4aa8" title="Marco Franzreb Salgado: 1,342 words (29.4%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,285</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>943</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Marco+Franzreb+Salgado">Marco Franzreb Salgado</a></span><strong>1,342</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="GPU Rotate">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/05/01/Episode-284.html" aria-label="Episode 284">284</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 284. Conor: 1,110 words; Bryce: 2,227 words; Marco Franzreb Salgado: 2,808 words">
+                <span class="speaker-word-segment" style="--speaker-width: 18.06%; --speaker-color: #8b1f2d" title="Conor: 1,110 words (18.1%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 36.24%; --speaker-color: #337ab7" title="Bryce: 2,227 words (36.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 45.70%; --speaker-color: #6f4aa8" title="Marco Franzreb Salgado: 2,808 words (45.7%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>1,110</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>2,227</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Marco+Franzreb+Salgado">Marco Franzreb Salgado</a></span><strong>2,808</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="GPU Rotate (Part 2)">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/05/08/Episode-285.html" aria-label="Episode 285">285</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 285. Conor: 1,071 words; Bryce: 1,051 words; Marco Franzreb Salgado: 2,462 words">
+                <span class="speaker-word-segment" style="--speaker-width: 23.36%; --speaker-color: #8b1f2d" title="Conor: 1,071 words (23.4%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 22.93%; --speaker-color: #337ab7" title="Bryce: 1,051 words (22.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 53.71%; --speaker-color: #6f4aa8" title="Marco Franzreb Salgado: 2,462 words (53.7%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>1,071</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>1,051</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Marco+Franzreb+Salgado">Marco Franzreb Salgado</a></span><strong>2,462</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="GPU Profiling with NVIDIA Nsight Compute (NCU)">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/05/15/Episode-286.html" aria-label="Episode 286">286</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 286. Conor: 3,090 words; Bryce: 969 words; Marco Franzreb Salgado: 2,423 words">
+                <span class="speaker-word-segment" style="--speaker-width: 47.67%; --speaker-color: #8b1f2d" title="Conor: 3,090 words (47.7%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 14.95%; --speaker-color: #337ab7" title="Bryce: 969 words (14.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 37.38%; --speaker-color: #6f4aa8" title="Marco Franzreb Salgado: 2,423 words (37.4%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,090</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>969</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Marco+Franzreb+Salgado">Marco Franzreb Salgado</a></span><strong>2,423</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="AI Takes &amp; AI Taxes">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/05/22/Episode-287.html" aria-label="Episode 287">287</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 287. Conor: 4,387 words; Bryce: 4,369 words; Marco Franzreb Salgado: 699 words">
+                <span class="speaker-word-segment" style="--speaker-width: 46.40%; --speaker-color: #8b1f2d" title="Conor: 4,387 words (46.4%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 46.21%; --speaker-color: #337ab7" title="Bryce: 4,369 words (46.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 7.39%; --speaker-color: #6f4aa8" title="Marco Franzreb Salgado: 699 words (7.4%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>4,387</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>4,369</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Marco+Franzreb+Salgado">Marco Franzreb Salgado</a></span><strong>699</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="C++ Now, Lasting Quality &amp; Programming as Theory Building">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/05/29/Episode-288.html" aria-label="Episode 288">288</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 288. Conor: 3,394 words; Ben: 4,346 words">
+                <span class="speaker-word-segment" style="--speaker-width: 43.85%; --speaker-color: #8b1f2d" title="Conor: 3,394 words (43.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 56.15%; --speaker-color: #c4752e" title="Ben: 4,346 words (56.1%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,394</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>4,346</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Ben&#x27;s Updated AI Thoughts">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/06/05/Episode-289.html" aria-label="Episode 289">289</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 289. Conor: 1,784 words; Ben: 2,470 words">
+                <span class="speaker-word-segment" style="--speaker-width: 41.94%; --speaker-color: #8b1f2d" title="Conor: 1,784 words (41.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 58.06%; --speaker-color: #c4752e" title="Ben: 2,470 words (58.1%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>1,784</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>2,470</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="AI Thoughts &amp; The Best Thing You Can Do for Your Career">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/06/12/Episode-290.html" aria-label="Episode 290">290</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 290. Conor: 3,012 words; Ben: 1,248 words">
+                <span class="speaker-word-segment" style="--speaker-width: 70.70%; --speaker-color: #8b1f2d" title="Conor: 3,012 words (70.7%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 29.30%; --speaker-color: #c4752e" title="Ben: 1,248 words (29.3%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,012</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>1,248</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="autoresearch with Opus 4.8 &amp; GPT 5.5">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/06/19/Episode-291.html" aria-label="Episode 291">291</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 291. Conor: 2,645 words; Bryce: 3,621 words">
+                <span class="speaker-word-segment" style="--speaker-width: 42.21%; --speaker-color: #8b1f2d" title="Conor: 2,645 words (42.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 57.79%; --speaker-color: #337ab7" title="Bryce: 3,621 words (57.8%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,645</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>3,621</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="GPU MODE, PLs, Post AGI, Wingspan &amp; Lawn Care">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/06/26/Episode-292.html" aria-label="Episode 292">292</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 292. Conor: 2,684 words; Bryce: 3,790 words">
+                <span class="speaker-word-segment" style="--speaker-width: 41.46%; --speaker-color: #8b1f2d" title="Conor: 2,684 words (41.5%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 58.54%; --speaker-color: #337ab7" title="Bryce: 3,790 words (58.5%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,684</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>3,790</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="APL or Assembly">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/07/03/Episode-293.html" aria-label="Episode 293">293</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 293. Conor: 3,519 words; Bryce: 4,842 words">
+                <span class="speaker-word-segment" style="--speaker-width: 42.09%; --speaker-color: #8b1f2d" title="Conor: 3,519 words (42.1%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 57.91%; --speaker-color: #337ab7" title="Bryce: 4,842 words (57.9%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>3,519</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>4,842</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Histocache">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/07/10/Episode-294.html" aria-label="Episode 294">294</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 294. Conor: 1,690 words; Bryce: 3,414 words">
+                <span class="speaker-word-segment" style="--speaker-width: 33.11%; --speaker-color: #8b1f2d" title="Conor: 1,690 words (33.1%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 66.89%; --speaker-color: #337ab7" title="Bryce: 3,414 words (66.9%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>1,690</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>3,414</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="CityStrides vs Graph Algorithms vs GPT 5.6 Sol">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/07/17/Episode-295.html" aria-label="Episode 295">295</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 295. Conor: 6,171 words; Bryce: 3,814 words">
+                <span class="speaker-word-segment" style="--speaker-width: 61.80%; --speaker-color: #8b1f2d" title="Conor: 6,171 words (61.8%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 38.20%; --speaker-color: #337ab7" title="Bryce: 3,814 words (38.2%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>6,171</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>3,814</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Working in the Video Game Industry">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/07/24/Episode-296.html" aria-label="Episode 296">296</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 296. Conor: 2,306 words; Ben: 2,891 words">
+                <span class="speaker-word-segment" style="--speaker-width: 44.37%; --speaker-color: #8b1f2d" title="Conor: 2,306 words (44.4%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 55.63%; --speaker-color: #c4752e" title="Ben: 2,891 words (55.6%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,306</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>2,891</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Networking, FPS vs RTS, State of Game Industry and the Obra Dinn">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/07/31/Episode-297.html" aria-label="Episode 297">297</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 297. Conor: 2,947 words; Ben: 4,835 words">
+                <span class="speaker-word-segment" style="--speaker-width: 37.87%; --speaker-color: #8b1f2d" title="Conor: 2,947 words (37.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 62.13%; --speaker-color: #c4752e" title="Ben: 4,835 words (62.1%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,947</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>4,835</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Design of APIs, UIs &amp; Algorithms">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/08/07/Episode-298.html" aria-label="Episode 298">298</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 298. Conor: 2,248 words; Ben: 2,009 words">
+                <span class="speaker-word-segment" style="--speaker-width: 52.81%; --speaker-color: #8b1f2d" title="Conor: 2,248 words (52.8%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 47.19%; --speaker-color: #c4752e" title="Ben: 2,009 words (47.2%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,248</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #c4752e"></i><span>Ben</span><strong>2,009</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Do We Need Humans in the Loop?">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/08/14/Episode-299.html" aria-label="Episode 299">299</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 299. Conor: 2,921 words; Bryce: 3,188 words">
+                <span class="speaker-word-segment" style="--speaker-width: 47.81%; --speaker-color: #8b1f2d" title="Conor: 2,921 words (47.8%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 52.19%; --speaker-color: #337ab7" title="Bryce: 3,188 words (52.2%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,921</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>3,188</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Sean Parent \&quot;I&#x27;m not writing code anymore.\&quot;">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/08/21/Episode-300.html" aria-label="Episode 300">300</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 300. Conor: 6,352 words; Bryce: 3,858 words; Sean Parent: 7,760 words; Anders Hejlsberg: 183 words; Reginald Johnston: 32 words">
+                <span class="speaker-word-segment" style="--speaker-width: 34.93%; --speaker-color: #8b1f2d" title="Conor: 6,352 words (34.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 21.22%; --speaker-color: #337ab7" title="Bryce: 3,858 words (21.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 42.67%; --speaker-color: #6f4aa8" title="Sean Parent: 7,760 words (42.7%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 1.01%; --speaker-color: #2a8f70" title="Anders Hejlsberg: 183 words (1.0%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 0.18%; --speaker-color: #b24f83" title="Reginald Johnston: 32 words (0.2%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>6,352</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>3,858</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Sean+Parent">Sean Parent</a></span><strong>7,760</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #2a8f70"></i><span>Anders Hejlsberg</span><strong>183</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #b24f83"></i><span>Reginald Johnston</span><strong>32</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="My Existential Crisis, AI Fluency &amp; the Death of Conferences?">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/08/28/Episode-301.html" aria-label="Episode 301">301</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 301. Conor: 2,381 words; Bryce: 5,266 words">
+                <span class="speaker-word-segment" style="--speaker-width: 31.14%; --speaker-color: #8b1f2d" title="Conor: 2,381 words (31.1%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 68.86%; --speaker-color: #337ab7" title="Bryce: 5,266 words (68.9%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>2,381</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>5,266</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="From PyTorch to GPU MODE with Mark Saroufim">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/09/04/Episode-302.html" aria-label="Episode 302">302</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 302. Conor: 389 words; Bryce: 547 words; Mark Saroufim: 4,985 words">
+                <span class="speaker-word-segment" style="--speaker-width: 6.57%; --speaker-color: #8b1f2d" title="Conor: 389 words (6.6%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 9.24%; --speaker-color: #337ab7" title="Bryce: 547 words (9.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 84.19%; --speaker-color: #6f4aa8" title="Mark Saroufim: 4,985 words (84.2%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span>Conor</span><strong>389</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span>Bryce</span><strong>547</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><strong>4,985</strong></span>
+              </span>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
   </div>
 </details>
 <div class="episodes-table-wrapper" markdown="1">
 
 | <button type="button" class="episodes-sort" data-sort-key="number">#</button> | Title | <button type="button" class="episodes-sort" data-sort-key="duration">Duration</button> | Co-host | Release Date |
 | :-: | :---- | :------: | :-----: | :----------: |
-| 302 | [From PyTorch to GPU MODE with Mark Saroufim](https://adspthepodcast.com/2026/09/04/Episode-302.html){: .episode-title .guest-purple } | — | Bryce | 2026-09-04 |
+| 302 | [From PyTorch to GPU MODE with Mark Saroufim](https://adspthepodcast.com/2026/09/04/Episode-302.html){: .episode-title .guest-purple } | 25 | Bryce | 2026-09-04 |
 | 301 | [My Existential Crisis, AI Fluency & the Death of Conferences?](https://adspthepodcast.com/2026/08/28/Episode-301.html){: .episode-title } | 44 | Bryce | 2026-08-28 |
 | 300 | [Sean Parent "I'm not writing code anymore."](https://adspthepodcast.com/2026/08/21/Episode-300.html){: .episode-title .guest-orange } | 1:34 | Bryce | 2026-08-21 |
 | 299 | [Do We Need Humans in the Loop?](https://adspthepodcast.com/2026/08/14/Episode-299.html){: .episode-title } | 36 | Bryce | 2026-08-14 |

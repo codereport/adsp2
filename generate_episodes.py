@@ -2,6 +2,7 @@
 
 import argparse
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import html
 import re
 import statistics
@@ -16,6 +17,8 @@ ROOT = Path(__file__).resolve().parent
 POSTS_DIR = ROOT / "_posts"
 EPISODES_PAGE = ROOT / "pages" / "episodes.md"
 FEED_URL = "https://feeds.buzzsprout.com/1501960.rss"
+TRANSCRIPT_URL = "https://www.buzzsprout.com/1501960/{buzzsprout_id}/transcript"
+TRANSCRIPT_START_EPISODE = 264
 GENERATED_START = "<!-- BEGIN GENERATED EPISODES -->"
 GENERATED_END = "<!-- END GENERATED EPISODES -->"
 ITUNES_DURATION = "{http://www.itunes.com/dtds/podcast-1.0.dtd}duration"
@@ -40,6 +43,34 @@ EXISTING_ROW_PATTERN = re.compile(
     r"^\|\s*(?P<number>\d+)\s*\|\s*\[(?P<title>.*)\]"
     r"\(https://adspthepodcast\.com/[^)]*/Episode-\d+\.html\)"
     r"(?:\{:[^}]*\})?\s*\|(?P<rest>.*)$"
+)
+TRANSCRIPT_TURN_PATTERN = re.compile(
+    r"<cite(?:\s[^>]*)?>(?P<speaker>.*?)</cite>\s*"
+    r"<time(?:\s[^>]*)?>(?P<timestamp>.*?)</time>\s*"
+    r"<p(?:\s[^>]*)?>(?P<body>.*?)</p>",
+    re.IGNORECASE | re.DOTALL,
+)
+LEGACY_TRANSCRIPT_TURN_PATTERN = re.compile(
+    r"(?:^|\n{2,})(?P<speaker>[^:\n]{1,80}):\s*"
+    r"(?P<timestamp>\d{1,2}:\d{2}(?::\d{2})?)\s*\n",
+)
+HOST_NAMES = {
+    "ben": "Ben",
+    "bryce": "Bryce",
+    "conor": "Conor",
+    "connor": "Conor",
+}
+HOST_SPEAKER_COLORS = {
+    "host:conor": "#8b1f2d",
+    "host:bryce": "#337ab7",
+    "host:ben": "#c4752e",
+}
+OTHER_SPEAKER_COLORS = (
+    "#6f4aa8",
+    "#2a8f70",
+    "#b24f83",
+    "#8a7334",
+    "#477a9e",
 )
 
 
@@ -67,6 +98,15 @@ def front_matter_value(post, key):
     if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
         value = value[1:-1]
     return value
+
+
+def buzzsprout_id_from_post(post):
+    front_matter_id = front_matter_value(post, "buzzsprout-id")
+    if front_matter_id:
+        return front_matter_id
+
+    player_match = re.search(r"buzzsprout-player-(\d+)", post)
+    return player_match.group(1) if player_match else ""
 
 
 def title_from_post(post, episode_number):
@@ -304,6 +344,7 @@ def read_posts():
                 ),
                 "trip": "road trip" in tags,
                 "cohost": cohost_from_post(post),
+                "buzzsprout_id": buzzsprout_id_from_post(post),
             }
         )
 
@@ -341,6 +382,227 @@ def read_durations(feed_file=None):
         if match and duration:
             durations[int(match.group(1))] = parse_duration(duration.strip())
     return durations
+
+
+def parse_timestamp(value):
+    parts = value.strip().split(":")
+    if not parts or not all(part.isdigit() for part in parts):
+        raise ValueError(f"invalid transcript timestamp: {value!r}")
+
+    seconds = 0
+    for part in parts:
+        seconds = seconds * 60 + int(part)
+    return seconds
+
+
+def plain_text(value):
+    without_comments = re.sub(r"<!--.*?-->", "", value, flags=re.DOTALL)
+    without_tags = re.sub(r"<[^>]+>", "", without_comments)
+    return html.unescape(without_tags).strip()
+
+
+def count_words(value):
+    return len(re.findall(r"\b[\w]+(?:[’'-][\w]+)*\b", value, re.UNICODE))
+
+
+def parse_transcript(transcript):
+    turns = []
+    for match in TRANSCRIPT_TURN_PATTERN.finditer(transcript):
+        body = match.group("body")
+        word_times = [
+            float(value)
+            for value in re.findall(r'data-t=["\']([0-9]+(?:\.[0-9]+)?)["\']', body)
+        ]
+        text = plain_text(body)
+        if word_times:
+            speech_seconds = max(0.4, word_times[-1] - word_times[0] + 0.35)
+            final_word_time = word_times[-1] + 0.35
+        else:
+            speech_seconds = max(0.4, len(text.split()) / 2.5)
+            final_word_time = None
+        turns.append(
+            {
+                "speaker": plain_text(match.group("speaker")),
+                "start": parse_timestamp(plain_text(match.group("timestamp"))),
+                "speech_seconds": speech_seconds,
+                "final_word_time": final_word_time,
+                "text": text,
+                "word_count": len(word_times) if word_times else count_words(text),
+            }
+        )
+
+    if turns:
+        transcript_end = max(
+            turn["final_word_time"]
+            if turn["final_word_time"] is not None
+            else turn["start"] + turn["speech_seconds"]
+            for turn in turns
+        )
+        return turns, transcript_end
+
+    # Some Buzzsprout transcripts use one paragraph with speaker/timestamp
+    # markers separated by <br> elements rather than semantic cite/time tags.
+    expanded = re.sub(r"<br\s*/?>", "\n", transcript, flags=re.IGNORECASE)
+    expanded = plain_text(expanded)
+    matches = list(LEGACY_TRANSCRIPT_TURN_PATTERN.finditer(expanded))
+    for index, match in enumerate(matches):
+        body_start = match.end()
+        body_end = matches[index + 1].start() if index + 1 < len(matches) else len(expanded)
+        text = expanded[body_start:body_end].strip()
+        start = parse_timestamp(match.group("timestamp"))
+        next_start = (
+            parse_timestamp(matches[index + 1].group("timestamp"))
+            if index + 1 < len(matches)
+            else None
+        )
+        estimated_speech = max(0.4, len(text.split()) / 2.5)
+        if next_start is not None:
+            estimated_speech = min(estimated_speech, max(0.4, next_start - start))
+        turns.append(
+            {
+                "speaker": match.group("speaker").strip(),
+                "start": start,
+                "speech_seconds": estimated_speech,
+                "final_word_time": None,
+                "text": text,
+                "word_count": count_words(text),
+            }
+        )
+
+    if not turns:
+        raise ValueError("transcript contains no recognizable speaker turns")
+    return turns, turns[-1]["start"] + turns[-1]["speech_seconds"]
+
+
+def normalized_person_name(value):
+    return re.sub(r"[^\w]+", " ", value.casefold()).strip()
+
+
+def guest_speaker_key(episode, normalized_speaker):
+    speaker_words = set(normalized_speaker.split())
+    if not speaker_words:
+        return ""
+
+    for _, guest_name, _ in episode["guest_people"]:
+        normalized_guest = normalized_person_name(guest_name)
+        guest_words = set(normalized_guest.split())
+        if (
+            normalized_speaker == normalized_guest
+            or (
+                len(speaker_words) >= 2
+                and speaker_words.issubset(guest_words)
+            )
+            or (
+                len(guest_words) >= 2
+                and guest_words.issubset(speaker_words)
+            )
+        ):
+            return f"guest:{normalized_guest}"
+    return ""
+
+
+def classify_transcript_speakers(episode, turns):
+    normalized_speakers = {
+        normalized_person_name(turn["speaker"])
+        for turn in turns
+    }
+    inferred_cohost_label = ""
+    normalized_cohost = episode["cohost"].casefold()
+    placeholder_speakers = {
+        speaker for speaker in normalized_speakers if speaker.startswith("speaker_")
+    }
+    if (
+        normalized_cohost
+        and normalized_cohost not in normalized_speakers
+        and len(placeholder_speakers) == 1
+    ):
+        inferred_cohost_label = next(iter(placeholder_speakers))
+
+    classifications = {}
+    for speaker in normalized_speakers:
+        first_name = speaker.split(maxsplit=1)[0] if speaker else ""
+        host = HOST_NAMES.get(speaker) or HOST_NAMES.get(first_name)
+        if host and (host == "Conor" or host == episode["cohost"]):
+            classifications[speaker] = (f"host:{host.casefold()}", "host")
+            continue
+        if speaker == inferred_cohost_label:
+            classifications[speaker] = (f"host:{normalized_cohost}", "host")
+            continue
+        guest_key = guest_speaker_key(episode, speaker) if episode["guest"] else ""
+        if guest_key:
+            classifications[speaker] = (guest_key, "guest")
+
+    return classifications
+
+
+def transcript_indices(episode, transcript):
+    turns, _ = parse_transcript(transcript)
+    classifications = classify_transcript_speakers(episode, turns)
+    turn_word_counts = [turn["word_count"] for turn in turns if turn["word_count"]]
+    guest_word_counts = Counter()
+    speaker_word_counts = Counter()
+    speaker_names = {}
+
+    for turn in turns:
+        speaker = normalized_person_name(turn["speaker"])
+        classification = classifications.get(speaker)
+        if classification:
+            speaker_key, role = classification
+        else:
+            speaker_key, role = f"person:{speaker}", "person"
+        speaker_word_counts[speaker_key] += turn["word_count"]
+        speaker_names.setdefault(speaker_key, turn["speaker"].strip())
+        if role == "guest":
+            guest_word_counts[speaker_key] += turn["word_count"]
+
+    baf = (
+        statistics.pstdev(turn_word_counts)
+        if not episode["guest"] and turn_word_counts
+        else None
+    )
+    return {
+        "baf": baf,
+        "guest_word_counts": dict(guest_word_counts),
+        "speaker_word_counts": dict(speaker_word_counts),
+        "speaker_names": speaker_names,
+    }
+
+
+def read_transcript_indices(episodes):
+    transcript_episodes = [
+        episode
+        for episode in episodes
+        if episode["number"] >= TRANSCRIPT_START_EPISODE
+        and episode["buzzsprout_id"]
+    ]
+
+    def fetch(episode):
+        url = TRANSCRIPT_URL.format(buzzsprout_id=episode["buzzsprout_id"])
+        request = Request(url, headers={"User-Agent": "ADSP episode generator"})
+        with urlopen(request, timeout=30) as response:
+            charset = response.headers.get_content_charset() or "utf-8"
+            transcript = response.read().decode(charset, errors="replace")
+        return episode["number"], transcript_indices(episode, transcript)
+
+    indices = {}
+    failures = []
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        future_episodes = {
+            executor.submit(fetch, episode): episode for episode in transcript_episodes
+        }
+        for future in as_completed(future_episodes):
+            episode = future_episodes[future]
+            try:
+                number, metrics = future.result()
+                indices[number] = metrics
+            except Exception as error:
+                failures.append(f"Episode {episode['number']}: {error}")
+
+    if failures:
+        raise RuntimeError(
+            "could not read transcripts:\n  " + "\n  ".join(sorted(failures))
+        )
+    return indices
 
 
 def existing_table_values(page):
@@ -461,7 +723,351 @@ def guest_table_rows(guests, indentation="            "):
     return rows
 
 
-def render_stats(episodes, durations):
+def cohost_class(cohost):
+    return f"cohost-{cohost.casefold()}" if cohost else "cohost-unknown"
+
+
+def render_conversation_stats(episodes, transcript_stats):
+    episode_by_number = {episode["number"]: episode for episode in episodes}
+    transcript_entries = [
+        (episode_by_number[number], metrics)
+        for number, metrics in sorted(transcript_stats.items())
+        if number in episode_by_number
+    ]
+    if not transcript_entries:
+        return []
+
+    baf_entries = [
+        (episode, metrics)
+        for episode, metrics in transcript_entries
+        if not episode["guest"] and metrics["baf"] is not None
+    ]
+    guest_episode_entries = [
+        (episode, metrics)
+        for episode, metrics in transcript_entries
+        if episode["guest"] and metrics["guest_word_counts"]
+    ]
+    baf_values = [metrics["baf"] for _, metrics in baf_entries]
+    median_baf = statistics.median(baf_values) if baf_values else None
+    median_baf_label = f"{median_baf:.1f}" if median_baf is not None else "—"
+    max_baf = max(baf_values, default=0)
+    baf_description = "; ".join(
+        f'Episode {episode["number"]}: {metrics["baf"]:.1f}, {episode["cohost"] or "no co-host"}'
+        for episode, metrics in baf_entries
+    )
+
+    guest_appearances = []
+    for episode, metrics in guest_episode_entries:
+        people_by_name = {
+            normalized_person_name(name): name
+            for _, name, _ in episode["guest_people"]
+        }
+        for speaker_key, words in metrics["guest_word_counts"].items():
+            normalized_name = speaker_key.removeprefix("guest:")
+            name = people_by_name.get(normalized_name, normalized_name.title())
+            guest_appearances.append(
+                {
+                    "episode": episode,
+                    "name": name,
+                    "words": words,
+                    "tag_name": guest_tag(name, episode["tag_values"]),
+                }
+            )
+
+    guest_appearances.sort(
+        key=lambda appearance: (
+            appearance["episode"]["number"],
+            appearance["name"].casefold(),
+        )
+    )
+    median_guest_words = (
+        statistics.median(
+            appearance["words"] for appearance in guest_appearances
+        )
+        if guest_appearances
+        else None
+    )
+    median_guest_words_label = (
+        f"{median_guest_words:,.0f}"
+        if median_guest_words is not None
+        else "—"
+    )
+
+    speaker_episode_rows = []
+    for episode, metrics in transcript_entries:
+        people_by_name = {
+            normalized_person_name(name): name
+            for _, name, _ in episode["guest_people"]
+        }
+
+        def speaker_sort_key(speaker_key):
+            if speaker_key == "host:conor":
+                return 0, speaker_key
+            if speaker_key == f'host:{episode["cohost"].casefold()}':
+                return 1, speaker_key
+            if speaker_key.startswith("guest:"):
+                return 2, speaker_key
+            return 3, speaker_key
+
+        participants = []
+        other_color_index = 0
+        for speaker_key, words in sorted(
+            metrics["speaker_word_counts"].items(),
+            key=lambda item: speaker_sort_key(item[0]),
+        ):
+            if not words:
+                continue
+            tag_name = ""
+            if speaker_key.startswith("host:"):
+                name = speaker_key.removeprefix("host:").title()
+            elif speaker_key.startswith("guest:"):
+                normalized_name = speaker_key.removeprefix("guest:")
+                name = people_by_name.get(
+                    normalized_name,
+                    metrics["speaker_names"].get(speaker_key, normalized_name.title()),
+                )
+                tag_name = guest_tag(name, episode["tag_values"])
+            else:
+                name = metrics["speaker_names"].get(
+                    speaker_key,
+                    speaker_key.removeprefix("person:").title(),
+                )
+                placeholder = re.fullmatch(
+                    r"speaker[_ ]0*(\d+)", name, re.IGNORECASE
+                )
+                if placeholder:
+                    name = f"Speaker {int(placeholder.group(1))}"
+
+            color = HOST_SPEAKER_COLORS.get(speaker_key)
+            if not color:
+                color = OTHER_SPEAKER_COLORS[
+                    other_color_index % len(OTHER_SPEAKER_COLORS)
+                ]
+                other_color_index += 1
+            participants.append(
+                {
+                    "name": name,
+                    "tag_name": tag_name,
+                    "words": words,
+                    "color": color,
+                }
+            )
+
+        total_words = sum(participant["words"] for participant in participants)
+        if total_words:
+            speaker_episode_rows.append(
+                {
+                    "episode": episode,
+                    "participants": participants,
+                    "total_words": total_words,
+                }
+            )
+
+    lines = [
+        '    <section class="conversation-dynamics" aria-labelledby="conversation-dynamics">',
+        '      <h2 id="conversation-dynamics">Conversation dynamics</h2>',
+        '      <p class="episode-stat-note">Based on timestamped transcripts from '
+        f'Episode {transcript_entries[0][0]["number"]} onward.</p>',
+        '      <div class="conversation-index-overview">',
+        '        <div class="conversation-index-card">',
+        f'          <strong>{median_baf_label}</strong>',
+        '          <span>median BAF</span>',
+        f'          <small>{len(baf_entries)} non-guest episodes</small>',
+        '        </div>',
+        '        <div class="conversation-index-card">',
+        f'          <strong>{median_guest_words_label}</strong>',
+        '          <span>median words / guest</span>',
+        f'          <small>{len(guest_appearances)} appearances · {len(guest_episode_entries)} episodes</small>',
+        '        </div>',
+        '        <div class="conversation-index-card">',
+        f'          <strong>{len(transcript_entries)}</strong>',
+        '          <span>transcripts measured</span>',
+        f'          <small>Episodes {transcript_entries[0][0]["number"]}–{transcript_entries[-1][0]["number"]}</small>',
+        '        </div>',
+        '      </div>',
+        '      <div class="conversation-index-definitions">',
+        '        <p><strong>BAF (back-and-forth index)</strong> is calculated only for episodes without a guest. It is the population standard deviation of the number of words in each speaking turn. Lower means more consistently sized back-and-forth turns; higher means turn lengths vary more.</p>',
+        '        <p><strong>Speaker word counts</strong> measure every identified person in every available transcript. The guest metric is calculated only for guest episodes, with each guest appearance measured separately.</p>',
+        '      </div>',
+        '      <section class="conversation-chart-panel" aria-labelledby="baf-over-time">',
+        '        <h3 id="baf-over-time">BAF over time</h3>',
+        '        <div class="conversation-chart-scroll">',
+        f'          <div class="baf-chart" role="img" aria-label="BAF index by non-guest episode. {html.escape(baf_description, quote=True)}" style="--baf-columns: {len(baf_entries)}">',
+    ]
+
+    for index, (episode, metrics) in enumerate(baf_entries):
+        height = 0 if not max_baf else 92 * metrics["baf"] / max_baf
+        show_label = index % 5 == 0 or index == len(baf_entries) - 1
+        episode_label = str(episode["number"]) if show_label else ""
+        description = (
+            f'Episode {episode["number"]}: BAF {metrics["baf"]:.1f}; '
+            f'{episode["cohost"] or "no co-host"}'
+        )
+        lines.extend(
+            [
+                f'            <div class="baf-column" title="{html.escape(description, quote=True)}">',
+                '              <span class="baf-bar-area">',
+                f'                <span class="baf-bar {cohost_class(episode["cohost"])}" style="--bar-height: {height:.1f}%"></span>',
+                '              </span>',
+                f'              <span class="baf-episode-label">{episode_label}</span>',
+                '            </div>',
+            ]
+        )
+
+    lines.extend(
+        [
+            '          </div>',
+            '        </div>',
+            '        <div class="conversation-chart-legend" aria-label="Chart legend">',
+            '          <span><i class="cohost-swatch cohost-bryce"></i>Bryce</span>',
+            '          <span><i class="cohost-swatch cohost-ben"></i>Ben</span>',
+            '        </div>',
+            '      </section>',
+        ]
+    )
+
+    speaker_lines = [
+        '        <details class="conversation-chart-panel speaker-word-panel speaker-word-details" aria-labelledby="speaker-word-counts">',
+        '          <summary><span id="speaker-word-counts">Words spoken by person</span></summary>',
+        '          <p class="episode-stat-note">Each bar represents all identified words in one episode; exact counts appear alongside it.</p>',
+        '          <div class="speaker-word-chart">',
+    ]
+
+    for row in speaker_episode_rows:
+        episode = row["episode"]
+        participant_description = "; ".join(
+            f'{participant["name"]}: {participant["words"]:,} words'
+            for participant in row["participants"]
+        )
+        speaker_lines.extend(
+            [
+                f'            <div class="speaker-word-row" title="{html.escape(episode["title"], quote=True)}">',
+                f'              <a class="speaker-word-episode" href="{html.escape(episode_url(episode), quote=True)}" aria-label="Episode {episode["number"]}">{episode["number"]}</a>',
+                f'              <span class="speaker-word-track" role="img" aria-label="Episode {episode["number"]}. {html.escape(participant_description, quote=True)}">',
+            ]
+        )
+        for participant in row["participants"]:
+            percentage = 100 * participant["words"] / row["total_words"]
+            description = (
+                f'{participant["name"]}: {participant["words"]:,} words '
+                f'({percentage:.1f}%)'
+            )
+            speaker_lines.append(
+                '                <span class="speaker-word-segment" '
+                f'style="--speaker-width: {percentage:.2f}%; --speaker-color: {participant["color"]}" '
+                f'title="{html.escape(description, quote=True)}"></span>'
+            )
+        speaker_lines.extend(
+            [
+                '              </span>',
+                '              <span class="speaker-word-values">',
+            ]
+        )
+        for participant in row["participants"]:
+            name = html.escape(participant["name"])
+            if participant["tag_name"]:
+                name = (
+                    f'<a href="/tags/#{html.escape(quote_plus(participant["tag_name"]), quote=True)}">'
+                    f'{name}</a>'
+                )
+            speaker_lines.append(
+                '                <span class="speaker-word-person">'
+                f'<i style="--speaker-color: {participant["color"]}"></i>'
+                f'<span>{name}</span><strong>{participant["words"]:,}</strong></span>'
+            )
+        speaker_lines.extend(
+            [
+                '              </span>',
+                '            </div>',
+            ]
+        )
+
+    speaker_lines.extend(
+        [
+            '          </div>',
+            '        </details>',
+        ]
+    )
+
+    lines.extend(
+        [
+            '      <div class="conversation-detail-grid">',
+            '        <section class="conversation-chart-panel cohost-index-panel" aria-labelledby="indices-by-cohost">',
+            '          <h3 id="indices-by-cohost">By co-host</h3>',
+            '          <div class="cohost-index-list">',
+        ]
+    )
+
+    for cohost in ("Conor", "Bryce", "Ben"):
+        if cohost == "Conor":
+            cohost_baf_entries = [metrics for _, metrics in baf_entries]
+            cohost_guest_words = [
+                words
+                for _, metrics in guest_episode_entries
+                for words in metrics["guest_word_counts"].values()
+            ]
+        else:
+            cohost_baf_entries = [
+                metrics
+                for episode, metrics in baf_entries
+                if episode["cohost"] == cohost
+            ]
+            cohost_guest_words = [
+                words
+                for episode, metrics in guest_episode_entries
+                if episode["cohost"] == cohost
+                for words in metrics["guest_word_counts"].values()
+            ]
+        cohost_baf = (
+            statistics.median(metrics["baf"] for metrics in cohost_baf_entries)
+            if cohost_baf_entries
+            else None
+        )
+        cohost_average_guest_words = (
+            statistics.mean(cohost_guest_words)
+            if cohost_guest_words
+            else None
+        )
+        baf_label = f"{cohost_baf:.1f}" if cohost_baf is not None else "—"
+        guest_words_label = (
+            f"{cohost_average_guest_words:,.0f}"
+            if cohost_average_guest_words is not None
+            else "—"
+        )
+        transcript_label = (
+            "non-guest transcript"
+            if len(cohost_baf_entries) == 1
+            else "non-guest transcripts"
+        )
+        guest_label = (
+            "guest appearance" if len(cohost_guest_words) == 1 else "guest appearances"
+        )
+        lines.extend(
+            [
+                f'            <article class="cohost-index-card {cohost_class(cohost)}">',
+                f'              <h4><i class="cohost-swatch {cohost_class(cohost)}"></i>{cohost}</h4>',
+                f'              <p>{len(cohost_baf_entries)} {transcript_label}</p>',
+                '              <dl>',
+                f'                <div><dt>Median BAF</dt><dd>{baf_label}</dd></div>',
+                f'                <div><dt>Guest words / appearance</dt><dd>{guest_words_label}</dd></div>',
+                '              </dl>',
+                f'              <small>{len(cohost_guest_words)} {guest_label}</small>',
+                '            </article>',
+            ]
+        )
+
+    lines.extend(
+        [
+            '          </div>',
+            '        </section>',
+        ]
+    )
+    lines.extend(speaker_lines)
+    lines.extend(['      </div>', '    </section>'])
+    return lines
+
+
+def render_stats(episodes, durations, transcript_stats):
     duration_entries = [
         (episode, durations[episode["number"]])
         for episode in episodes
@@ -563,7 +1169,7 @@ def render_stats(episodes, durations):
         '<details class="episode-stats">',
         "  <summary>",
         '    <span class="episode-stats-summary-title">Explore episode stats</span>',
-        '    <span class="episode-stats-summary-hint">Guests, lengths and trends</span>',
+        '    <span class="episode-stats-summary-hint">Guests, lengths, conversation and trends</span>',
         "  </summary>",
         '  <div class="episode-stats-content">',
         '    <section aria-labelledby="stats-at-a-glance">',
@@ -707,6 +1313,7 @@ def render_stats(episodes, durations):
         ]
     )
     lines.extend(guest_lines)
+    lines.extend(render_conversation_stats(episodes, transcript_stats))
     lines.extend(["  </div>", "</details>"])
     return "\n".join(lines)
 
@@ -774,7 +1381,8 @@ def main():
     existing_values = existing_table_values(current_page)
     episodes = read_posts()
     durations = read_durations(args.feed_file)
-    stats = render_stats(episodes, durations)
+    transcript_stats = read_transcript_indices(episodes)
+    stats = render_stats(episodes, durations, transcript_stats)
     table = render_table(episodes, durations, existing_values)
     generated_page = render_page(current_page, stats, table)
 
