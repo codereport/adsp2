@@ -28,13 +28,15 @@ To host the site locally for development and testing:
 
 2. **Serve the site locally**:
    ```bash
-   bundle exec jekyll serve --host 0.0.0.0 --port 4000
+   ./serve-local.sh
    ```
 
 3. **Access the site**:
    Open your browser and navigate to `http://localhost:4000`
 
-The site will automatically rebuild when you make changes to the source files. Press `Ctrl+C` to stop the server.
+The site will automatically rebuild when you make changes to the source files,
+but it will not refresh the browser automatically. Refresh the page manually to
+see the new build. Press `Ctrl+C` to stop the server.
 
 ## Updating the Episodes Table
 
@@ -51,3 +53,11 @@ green. It copies the title for a new episode once, then preserves that title on
 later runs so you can make small Markdown edits such as adding backticks for inline
 code. If the co-host cannot be inferred from the episode introduction, add
 `cohost: Ben` or `cohost: Bryce` to that post's front matter.
+
+Guest company and language badges are configured in `_data/guest_metadata.json`.
+Add a company to its `companies` catalog, add its key to `featured_companies` to
+show it on the homepage, and assign the key and language keys to each guest. Company
+logo files live in the `company/` directory of the sibling `codereport/logos`
+repository; publish that repository before publishing site metadata that references
+a new logo. Each company's `guests` list determines its homepage destination: the
+generator links the logo to the most recent episode featuring anyone on that list.

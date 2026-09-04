@@ -4,9 +4,7 @@ Script to automatically reorder programming language logos in _layouts/home.html
 based on the frequency of tags in episode posts.
 """
 
-import os
 import re
-import yaml
 from collections import Counter
 from pathlib import Path
 
@@ -111,15 +109,19 @@ def count_tags_in_posts():
                 parts = content.split('---', 2)
                 if len(parts) >= 3:
                     frontmatter = parts[1]
-                    # Parse YAML frontmatter
-                    metadata = yaml.safe_load(frontmatter)
-
-                    if 'tags' in metadata and metadata['tags']:
-                        tags = metadata['tags']
-                        if isinstance(tags, list):
-                            for tag in tags:
-                                if tag in TECHNOLOGIES:
-                                    tag_counts[tag] += 1
+                    tags_match = re.search(
+                        r'^tags:\s*\[(?P<tags>.*)\]\s*$',
+                        frontmatter,
+                        re.MULTILINE,
+                    )
+                    if tags_match:
+                        tags = (
+                            tag.strip().strip('"\'')
+                            for tag in tags_match.group('tags').split(',')
+                        )
+                        for tag in tags:
+                            if tag in TECHNOLOGIES:
+                                tag_counts[tag] += 1
 
         except Exception as e:
             print(f"Error processing {post_file}: {e}")
@@ -154,10 +156,10 @@ def update_home_html(ordered_technologies):
     new_logos_section = '\n'.join(logos_html)
 
     # Find and replace the logos section
-    # Look for the pattern between "Episodes about (or mentioning):" and the next h3
-    pattern = r'(\s*<h3>Episodes about \(or mentioning\):</h3>\s*<div class="topic-logos">)(.*?)(\s*</div>\s*<h3>Most Recent Episodes:</h3>)'
+    # Look for the pattern between the topic heading and company section.
+    pattern = r'(\s*<h3>Episodes about \(or mentioning\):</h3>\s*<div class="topic-logos">)(.*?)(\s*</div>\s*<h3>Interviews with Industry Experts from:</h3>)'
 
-    replacement = f'\\1\n{new_logos_section}\n        \\3'
+    replacement = f'\\1\n{new_logos_section}\\3'
 
     new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
 

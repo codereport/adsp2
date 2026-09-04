@@ -65,18 +65,18 @@ layout: default
             </a>
             <a class="topic-logo" href="https://adspthepodcast.com/tags/#Rust">
                 <img id="rust-logo"
-                    data-light-src="https://raw.githubusercontent.com/codereport/logos/main/rust.png"
-                    data-dark-src="https://raw.githubusercontent.com/codereport/logos/main/rust_darkmode.png"
+                        data-light-src="https://raw.githubusercontent.com/codereport/logos/main/rust.png"
+                        data-dark-src="https://raw.githubusercontent.com/codereport/logos/main/rust_darkmode.png"
                     src="https://raw.githubusercontent.com/codereport/logos/main/rust.png" alt="Rust">
             </a>
             <a class="topic-logo" href="https://adspthepodcast.com/tags/#APL">
                 <img src="https://raw.githubusercontent.com/codereport/logos/main/apl.png" alt="APL">
             </a>
-            <a class="topic-logo" href="https://adspthepodcast.com/tags/#Swift">
-                <img src="https://raw.githubusercontent.com/codereport/logos/main/swift.png" alt="Swift">
-            </a>
             <a class="topic-logo" href="https://adspthepodcast.com/tags/#Haskell">
                 <img src="https://raw.githubusercontent.com/codereport/logos/main/haskell.svg" alt="Haskell">
+            </a>
+            <a class="topic-logo" href="https://adspthepodcast.com/tags/#Swift">
+                <img src="https://raw.githubusercontent.com/codereport/logos/main/swift.png" alt="Swift">
             </a>
             <a class="topic-logo" href="https://adspthepodcast.com/tags/#Python">
                 <img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt="Python">
@@ -87,15 +87,28 @@ layout: default
             <a class="topic-logo" href="https://adspthepodcast.com/tags/#Fortran">
                 <img src="https://raw.githubusercontent.com/codereport/logos/main/fortran.png" alt="Fortran">
             </a>
-            <a class="topic-logo" href="https://adspthepodcast.com/tags/#Clojure">
-                <img src="https://raw.githubusercontent.com/codereport/logos/main/clojure.png" alt="Clojure">
-            </a>
             <a class="topic-logo" href="https://adspthepodcast.com/tags/#Erlang">
                 <img src="https://raw.githubusercontent.com/codereport/logos/main/erlang.png" alt="Erlang">
+            </a>
+            <a class="topic-logo" href="https://adspthepodcast.com/tags/#Clojure">
+                <img src="https://raw.githubusercontent.com/codereport/logos/main/clojure.png" alt="Clojure">
             </a>
             <a class="topic-logo" href="https://adspthepodcast.com/tags/#D">
                 <img src="https://raw.githubusercontent.com/codereport/logos/main/d.png" alt="D">
             </a>
+        </div>
+        <h3>Interviews with Industry Experts from:</h3>
+        <div class="company-logos">
+            {% for company_id in site.data.guest_metadata.featured_companies %}
+                {% assign company = site.data.guest_metadata.companies[company_id] %}
+                {% assign appearance = site.data.company_latest_episodes[company_id] %}
+                <a class="company-logo" href="{{ appearance.url | relative_url }}"
+                    title="Latest {{ company.name }} guest: {{ appearance.guest }}, Episode {{ appearance.episode }}"
+                    aria-label="Latest {{ company.name }} guest: {{ appearance.guest }}, Episode {{ appearance.episode }}">
+                    <img{% if company.dark_invert %} class="company-logo-invert"{% endif %}
+                        src="{{ site.data.guest_metadata.logo_base_url }}{{ company.logo }}" alt="{{ company.name }}">
+                </a>
+            {% endfor %}
         </div>
         <h3>Most Recent Episodes:</h3>
     </center>

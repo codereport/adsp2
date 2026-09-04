@@ -1,0 +1,162 @@
+{
+  "_note": "Guest keys are matched case-insensitively after punctuation is removed. Leave company blank or languages empty when an affiliation is unknown; the episode generator will simply omit those badges.",
+  "logo_base_url": "https://raw.githubusercontent.com/codereport/logos/main/",
+  "featured_companies": [
+    "adobe",
+    "apple",
+    "google",
+    "nvidia",
+    "intel",
+    "jump-trading",
+    "meta",
+    "microsoft",
+    "epic-games",
+    "futurewei",
+    "core-automation"
+  ],
+  "companies": {
+    "adobe": {
+      "name": "Adobe",
+      "logo": "company/adobe.svg",
+      "url": "https://www.adobe.com/",
+      "guests": ["Sean Parent", "Dave Abrahams"]
+    },
+    "apple": {
+      "name": "Apple",
+      "logo": "company/apple.svg",
+      "url": "https://www.apple.com/",
+      "dark_invert": true,
+      "guests": ["Douglas Gregor"]
+    },
+    "core-automation": {
+      "name": "Core Automation",
+      "logo": "company/core-automation.svg",
+      "url": "https://www.coreauto.com/",
+      "dark_invert": true,
+      "guests": ["Mark Saroufim"]
+    },
+    "epic-games": {
+      "name": "Epic Games",
+      "logo": "company/epic-games.svg",
+      "url": "https://www.epicgames.com/",
+      "dark_invert": true,
+      "guests": ["Simon Peyton Jones", "Jason Walter"]
+    },
+    "futurewei": {
+      "name": "Futurewei",
+      "logo": "company/futurewei.svg",
+      "url": "https://www.futurewei.com/",
+      "guests": ["Jane Losare-Lusby"]
+    },
+    "google": {
+      "name": "Google",
+      "logo": "company/google.webp",
+      "url": "https://about.google/",
+      "guests": ["Chandler Carruth"]
+    },
+    "intel": {
+      "name": "Intel",
+      "logo": "company/intel.svg",
+      "url": "https://www.intel.com/",
+      "guests": ["Ben Deane"]
+    },
+    "jump-trading": {
+      "name": "Jump Trading",
+      "logo": "company/jump-trading.webp",
+      "url": "https://www.jumptrading.com/",
+      "guests": ["Barry Revzin", "Phineas Porter"]
+    },
+    "meta": {
+      "name": "Meta",
+      "logo": "company/meta.svg",
+      "url": "https://about.meta.com/",
+      "guests": ["Andrei Alexandrescu"]
+    },
+    "microsoft": {
+      "name": "Microsoft",
+      "logo": "company/microsoft.webp",
+      "url": "https://www.microsoft.com/",
+      "guests": ["Mark Saroufim"]
+    },
+    "nvidia": {
+      "name": "NVIDIA",
+      "logo": "company/nvidia.svg",
+      "url": "https://www.nvidia.com/",
+      "guests": ["Jared Hoberock", "Eric Niebler", "Marco Franzreb Salgado", "Ray", "Bernhard"]
+    }
+  },
+  "languages": {
+    "apl": { "name": "APL", "logo": "apl.png", "tag": "APL" },
+    "bqn": { "name": "BQN", "logo": "bqn.svg", "tag": "BQN" },
+    "c": { "name": "C", "logo": "c.png", "tag": "C" },
+    "clojure": { "name": "Clojure", "logo": "clojure.png", "tag": "Clojure" },
+    "cpp": { "name": "C++", "logo": "cpp.png", "tag": "C%2B%2B" },
+    "cuda": { "name": "CUDA", "logo": "cuda.png", "tag": "CUDA" },
+    "d": { "name": "D", "logo": "d.png", "tag": "D" },
+    "elixir": { "name": "Elixir", "logo": "elixir.png", "tag": "Elixir" },
+    "elm": { "name": "Elm", "logo": "elm.png", "tag": "Elm" },
+    "erlang": { "name": "Erlang", "logo": "erlang.png", "tag": "Erlang" },
+    "fortran": { "name": "Fortran", "logo": "fortran.png", "tag": "Fortran" },
+    "haskell": { "name": "Haskell", "logo": "haskell.svg", "tag": "Haskell" },
+    "java": { "name": "Java", "logo": "java.png", "tag": "Java" },
+    "lisp": { "name": "Lisp", "logo": "lisp.png", "tag": "LISP" },
+    "python": { "name": "Python", "logo": "python.png", "tag": "Python" },
+    "q": { "name": "Q", "logo": "q.png", "tag": "Q" },
+    "racket": { "name": "Racket", "logo": "racket.png", "tag": "Racket" },
+    "roc": { "name": "Roc", "logo": "roc.svg", "tag": "Roc" },
+    "ruby": { "name": "Ruby", "logo": "ruby.png", "tag": "Ruby" },
+    "rust": { "name": "Rust", "logo": "rust.png", "tag": "Rust" },
+    "scala": { "name": "Scala", "logo": "scala.svg", "tag": "Scala" },
+    "scheme": { "name": "Scheme", "logo": "scheme.svg", "tag": "Scheme" },
+    "swift": { "name": "Swift", "logo": "swift.png", "tag": "Swift" }
+  },
+  "guests": {
+    "Aaron Hsu": { "company": "", "languages": ["apl", "scheme", "cpp"] },
+    "Alexis King": { "company": "", "languages": ["haskell"] },
+    "Andor Pénzes": { "company": "", "languages": ["erlang", "elixir"] },
+    "Andrei Alexandrescu": { "company": "nvidia", "languages": ["cpp", "d"] },
+    "Barry Revzin": { "company": "jump-trading", "languages": ["cpp", "rust"] },
+    "Ben Deane": { "company": "intel", "languages": ["cpp", "haskell", "cuda"] },
+    "Bernhard": { "company": "nvidia", "languages": ["cpp", "cuda"] },
+    "Chandler Carruth": { "company": "google", "languages": ["cpp"] },
+    "Dave Abrahams": { "company": "adobe", "languages": ["cpp", "swift"] },
+    "David Olsen": { "company": "", "languages": ["cpp"] },
+    "Douglas Gregor": { "company": "apple", "languages": ["cpp", "swift"] },
+    "Eric Niebler": { "company": "nvidia", "languages": ["cpp"] },
+    "Inbal Levi": { "company": "", "languages": ["cpp"] },
+    "Jane Losare-Lusby": { "company": "futurewei", "languages": ["rust"] },
+    "Jared Hoberock": { "company": "nvidia", "languages": ["cpp", "cuda", "python", "rust"] },
+    "Jason Turner": { "company": "", "languages": ["cpp"] },
+    "Jason Walter": { "company": "epic-games", "languages": ["cpp"] },
+    "Jessica Kerr": { "company": "", "languages": ["clojure"] },
+    "JF Bastien": { "company": "", "languages": ["cpp"] },
+    "Jonathan Müller": { "company": "", "languages": ["cpp"] },
+    "Jonathan O'Connor": { "company": "", "languages": ["cpp", "java", "ruby"] },
+    "José Valim": { "company": "", "languages": ["elixir", "erlang"] },
+    "Kate Gregory": { "company": "", "languages": ["cpp"] },
+    "Kevlin Henney": { "company": "", "languages": ["cpp", "c", "python", "rust", "fortran"] },
+    "Marco Franzreb Salgado": { "company": "nvidia", "languages": ["cpp", "cuda"] },
+    "Mark Saroufim": { "company": "core-automation", "languages": ["python", "cuda"] },
+    "Mateusz Pusz": { "company": "", "languages": ["cpp"] },
+    "Matt Godbolt": { "company": "", "languages": ["cpp"] },
+    "Patricia Aas": { "company": "", "languages": ["cpp"] },
+    "Patrice Roy": { "company": "", "languages": ["cpp"] },
+    "Peer Stritzinger": { "company": "", "languages": ["erlang"] },
+    "Phil Nash": { "company": "", "languages": ["cpp", "swift"] },
+    "Phineas Porter": { "company": "jump-trading", "languages": ["q"] },
+    "Ray": { "company": "nvidia", "languages": ["cpp", "cuda"] },
+    "Richard Feldman": { "company": "", "languages": ["elm", "roc", "rust"] },
+    "Robert Leahy": { "company": "", "languages": ["cpp"] },
+    "Sean Baxter": { "company": "nvidia", "languages": ["cpp", "cuda", "rust"] },
+    "Sean Parent": { "company": "adobe", "languages": ["cpp", "rust"] },
+    "Simon Peyton Jones": { "company": "epic-games", "languages": ["haskell"] },
+    "Stephen Taylor": { "company": "", "languages": ["apl", "q"] },
+    "Timur Doumler": { "company": "", "languages": ["cpp"] },
+    "Tony Van Eerd": { "company": "", "languages": ["cpp"] },
+    "Tristan Brindle": { "company": "", "languages": ["cpp"] },
+    "Victor Ciura": { "company": "", "languages": ["cpp"] },
+    "Vincent Zalzal": { "company": "", "languages": ["cpp"] },
+    "Vittorio Romeo": { "company": "", "languages": ["cpp"] },
+    "Zach Laine": { "company": "", "languages": ["cpp"] }
+  }
+}

@@ -479,6 +479,55 @@ html[data-theme="dark"] .listen-page {
   }
 }
 
+.guest-identity,
+.guest-affiliation-badges {
+  align-items: center;
+  display: inline-flex;
+}
+
+.guest-identity {
+  flex-wrap: wrap;
+  gap: 0.25em 0.45em;
+}
+
+.guest-affiliation-badges {
+  gap: 0.2em;
+}
+
+.guest-affiliation-badge {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(34, 34, 34, 0.18);
+  border-radius: 5px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 1.55em;
+  justify-content: center;
+  line-height: 1;
+  padding: 0.16em;
+  transition: box-shadow 140ms ease, transform 140ms ease;
+  width: 1.55em;
+
+  img {
+    display: block;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    padding: 0;
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+  }
+}
+
+.guest-company-badge {
+  border-radius: 50%;
+}
+
 .more-guests-toggle {
   background: none;
   border: 0;

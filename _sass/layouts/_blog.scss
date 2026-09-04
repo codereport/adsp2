@@ -87,6 +87,18 @@
   .topic-logo {
     display: block;
     line-height: 0;
+    transition: filter 160ms ease, transform 160ms ease;
+
+    &:hover,
+    &:focus-visible {
+      filter: brightness(1.08);
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    &:focus-visible {
+      outline: 3px solid $link-color;
+      outline-offset: 3px;
+    }
   }
 
   img {
@@ -96,6 +108,45 @@
     max-width: none;
     padding: 0;
   }
+}
+
+.company-logos {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem 0.75rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.company-logo {
+  display: block;
+  line-height: 0;
+  transition: filter 160ms ease, transform 160ms ease;
+
+  img {
+    display: block;
+    height: 80px;
+    max-width: 140px;
+    object-fit: contain;
+    padding: 0;
+    width: auto;
+  }
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(1.08);
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  &:focus-visible {
+    outline: 3px solid $link-color;
+    outline-offset: 3px;
+  }
+}
+
+html[data-theme="dark"] .company-logo img.company-logo-invert {
+  filter: invert(1) grayscale(1) brightness(1.25);
 }
 
 @media screen and (max-width: $sm-break) {
@@ -117,6 +168,24 @@
       height: 100%;
       max-width: 100%;
       object-fit: contain;
+    }
+  }
+
+  .company-logos {
+    flex-wrap: wrap;
+    gap: 0.75rem 0.625rem;
+    padding: 0 0.5rem;
+  }
+
+  .company-logo {
+    flex: 0 0 4.25rem;
+    height: 3.625rem;
+
+    img {
+      height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      width: 100%;
     }
   }
 }

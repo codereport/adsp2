@@ -1,0 +1,68 @@
+{
+  "adobe": {
+    "episode": 300,
+    "guest": "Sean Parent",
+    "title": "Sean Parent \\\"I'm not writing code anymore.\\\"",
+    "url": "/2026/08/21/Episode-300.html"
+  },
+  "apple": {
+    "episode": 184,
+    "guest": "Douglas Gregor",
+    "title": "Safety in Swift 6, Protocols & More with Doug Gregor",
+    "url": "/2024/05/31/Episode-184.html"
+  },
+  "google": {
+    "episode": 32,
+    "guest": "Chandler Carruth",
+    "title": "Hiring Inclusively & Company Culture (Part 4)",
+    "url": "/2021/07/02/Episode-32.html"
+  },
+  "nvidia": {
+    "episode": 287,
+    "guest": "Marco Franzreb Salgado",
+    "title": "AI Takes & AI Taxes",
+    "url": "/2026/05/22/Episode-287.html"
+  },
+  "intel": {
+    "episode": 140,
+    "guest": "Ben Deane",
+    "title": "🇨🇦 CppNorth Live 🇨🇦 Victor Ciura, Andreas Weis & More!",
+    "url": "/2023/07/28/Episode-140.html"
+  },
+  "jump-trading": {
+    "episode": 176,
+    "guest": "Phineas Porter",
+    "title": "🇺🇸 prior, deltas & Dinner with Phineas",
+    "url": "/2024/04/05/Episode-176.html"
+  },
+  "meta": {
+    "episode": 69,
+    "guest": "Andrei Alexandrescu",
+    "title": "Special Guest Andrei Alexandrescu (Part 2)",
+    "url": "/2022/03/18/Episode-69.html"
+  },
+  "microsoft": {
+    "episode": 302,
+    "guest": "Mark Saroufim",
+    "title": "From PyTorch to GPU MODE with Mark Saroufim",
+    "url": "/2026/09/04/Episode-302.html"
+  },
+  "epic-games": {
+    "episode": 134,
+    "guest": "Simon Peyton Jones",
+    "title": "🇵🇱 Lambda Days Live 🇵🇱 Simon Peyton Jones, Jordan Miller & More!",
+    "url": "/2023/06/16/Episode-134.html"
+  },
+  "futurewei": {
+    "episode": 108,
+    "guest": "Jane Losare-Lusby",
+    "title": "Jane Losare-Lusby on Rust! (Part 3)",
+    "url": "/2022/12/16/Episode-108.html"
+  },
+  "core-automation": {
+    "episode": 302,
+    "guest": "Mark Saroufim",
+    "title": "From PyTorch to GPU MODE with Mark Saroufim",
+    "url": "/2026/09/04/Episode-302.html"
+  }
+}

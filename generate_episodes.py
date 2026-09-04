@@ -4,6 +4,7 @@ import argparse
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import html
+import json
 import re
 import statistics
 import sys
@@ -16,6 +17,8 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parent
 POSTS_DIR = ROOT / "_posts"
 EPISODES_PAGE = ROOT / "pages" / "episodes.md"
+GUEST_METADATA_PATH = ROOT / "_data" / "guest_metadata.json"
+COMPANY_EPISODES_PATH = ROOT / "_data" / "company_latest_episodes.json"
 FEED_URL = "https://feeds.buzzsprout.com/1501960.rss"
 TRANSCRIPT_URL = "https://www.buzzsprout.com/1501960/{buzzsprout_id}/transcript"
 TRANSCRIPT_START_EPISODE = 264
@@ -685,8 +688,12 @@ def assign_episode_colors(episodes):
 
 
 def episode_url(episode):
+    return f"https://adspthepodcast.com{episode_path(episode)}"
+
+
+def episode_path(episode):
     return (
-        f"https://adspthepodcast.com/{episode['date'].replace('-', '/')}/"
+        f"/{episode['date'].replace('-', '/')}/"
         f"Episode-{episode['number']}.html"
     )
 
@@ -697,19 +704,112 @@ def total_duration_label(seconds):
     return f"{hours:,}h {minutes:02d}m"
 
 
-def guest_table_rows(guests, indentation="            "):
+def read_guest_metadata():
+    metadata = json.loads(GUEST_METADATA_PATH.read_text(encoding="utf-8"))
+    companies = metadata.get("companies", {})
+    languages = metadata.get("languages", {})
+    unknown_featured = set(metadata.get("featured_companies", [])) - set(companies)
+    if unknown_featured:
+        raise ValueError(
+            "unknown featured companies in guest metadata: "
+            + ", ".join(sorted(unknown_featured))
+        )
+    for name, details in metadata.get("guests", {}).items():
+        company = details.get("company")
+        if company and company not in companies:
+            raise ValueError(f"unknown company {company!r} for guest {name!r}")
+        unknown_languages = set(details.get("languages", [])) - set(languages)
+        if unknown_languages:
+            raise ValueError(
+                f"unknown languages for guest {name!r}: "
+                + ", ".join(sorted(unknown_languages))
+            )
+    known_guests = {
+        normalized_person_name(name) for name in metadata.get("guests", {})
+    }
+    for company_key, company in companies.items():
+        unknown_guests = {
+            name
+            for name in company.get("guests", [])
+            if normalized_person_name(name) not in known_guests
+        }
+        if unknown_guests:
+            raise ValueError(
+                f"unknown guests for company {company_key!r}: "
+                + ", ".join(sorted(unknown_guests))
+            )
+    metadata["guests_by_name"] = {
+        normalized_person_name(name): details
+        for name, details in metadata.get("guests", {}).items()
+    }
+    return metadata
+
+
+def guest_badges(name, guest_metadata):
+    guest = guest_metadata["guests_by_name"].get(normalized_person_name(name), {})
+    logo_base_url = guest_metadata.get("logo_base_url", "").rstrip("/") + "/"
+    badges = []
+
+    company_key = guest.get("company")
+    company = guest_metadata.get("companies", {}).get(company_key, {})
+    if company:
+        company_name = company["name"]
+        latest_episode = guest_metadata["company_latest_episodes"][company_key]
+        company_description = (
+            f"Company: {company_name}. Latest guest episode: "
+            f"{latest_episode['guest']}, Episode {latest_episode['episode']}"
+        )
+        badges.append(
+            '<a class="guest-affiliation-badge guest-company-badge" '
+            f'href="{html.escape(latest_episode["url"], quote=True)}" '
+            f'title="{html.escape(company_description, quote=True)}" '
+            f'aria-label="{html.escape(company_description, quote=True)}">'
+            f'<img src="{html.escape(logo_base_url + company["logo"], quote=True)}" alt="">'
+            "</a>"
+        )
+
+    for language_key in guest.get("languages", []):
+        language = guest_metadata.get("languages", {}).get(language_key, {})
+        if not language:
+            continue
+        language_name = language["name"]
+        badges.append(
+            '<a class="guest-affiliation-badge guest-language-badge" '
+            f'href="/tags/#{html.escape(language["tag"], quote=True)}" '
+            f'title="Language: {html.escape(language_name, quote=True)}" '
+            f'aria-label="Language: {html.escape(language_name, quote=True)}">'
+            f'<img src="{html.escape(logo_base_url + language["logo"], quote=True)}" alt="">'
+            "</a>"
+        )
+
+    if not badges:
+        return ""
+    return '<span class="guest-affiliation-badges">' + "".join(badges) + "</span>"
+
+
+def guest_name_html(name, tag_name, guest_metadata):
+    rendered_name = html.escape(name)
+    if tag_name:
+        rendered_name = (
+            f'<a href="/tags/#{html.escape(quote_plus(tag_name), quote=True)}">'
+            f"{rendered_name}</a>"
+        )
+    return (
+        '<span class="guest-identity">'
+        f'<span class="guest-display-name">{rendered_name}</span>'
+        f"{guest_badges(name, guest_metadata)}"
+        "</span>"
+    )
+
+
+def guest_table_rows(guests, guest_metadata, indentation="            "):
     rows = []
     for guest in guests:
-        name = html.escape(guest["name"])
+        name = guest_name_html(guest["name"], guest["tag_name"], guest_metadata)
         recordings = len(guest["recordings"])
         episodes = len(guest["episodes"])
         total_seconds = guest["total_seconds"]
         total_time = format_duration(total_seconds) if total_seconds is not None else "—"
-        if guest["tag_name"]:
-            name = (
-                f'<a href="/tags/#{html.escape(quote_plus(guest["tag_name"]), quote=True)}">'
-                f"{name}</a>"
-            )
         rows.append(
             f'{indentation}<tr data-guest="{html.escape(guest["name"].casefold(), quote=True)}" '
             f'data-recordings="{recordings}" data-episodes="{episodes}" '
@@ -727,7 +827,44 @@ def cohost_class(cohost):
     return f"cohost-{cohost.casefold()}" if cohost else "cohost-unknown"
 
 
-def render_conversation_stats(episodes, transcript_stats):
+def latest_company_episodes(episodes, guest_metadata):
+    latest_by_guest = {}
+    for episode in episodes:
+        for _, guest_name, _ in episode["guest_people"]:
+            guest_key = normalized_person_name(guest_name)
+            previous = latest_by_guest.get(guest_key)
+            if previous is None or (episode["date"], episode["number"]) > (
+                previous["date"],
+                previous["number"],
+            ):
+                latest_by_guest[guest_key] = episode
+
+    result = {}
+    companies = guest_metadata["companies"]
+    for company_key in guest_metadata["featured_companies"]:
+        candidates = []
+        for guest_name in companies[company_key].get("guests", []):
+            episode = latest_by_guest.get(normalized_person_name(guest_name))
+            if episode:
+                candidates.append((episode["date"], episode["number"], guest_name, episode))
+
+        if not candidates:
+            raise ValueError(
+                f"no episode found for a configured guest from {companies[company_key]['name']}"
+            )
+
+        _, _, guest_name, episode = max(candidates)
+        result[company_key] = {
+            "episode": episode["number"],
+            "guest": guest_name,
+            "title": episode["title"].replace(r"\|", "|"),
+            "url": episode_path(episode),
+        }
+
+    return result
+
+
+def render_conversation_stats(episodes, transcript_stats, guest_metadata):
     episode_by_number = {episode["number"]: episode for episode in episodes}
     transcript_entries = [
         (episode_by_number[number], metrics)
@@ -964,12 +1101,9 @@ def render_conversation_stats(episodes, transcript_stats):
             ]
         )
         for participant in row["participants"]:
-            name = html.escape(participant["name"])
-            if participant["tag_name"]:
-                name = (
-                    f'<a href="/tags/#{html.escape(quote_plus(participant["tag_name"]), quote=True)}">'
-                    f'{name}</a>'
-                )
+            name = guest_name_html(
+                participant["name"], participant["tag_name"], guest_metadata
+            )
             speaker_lines.append(
                 '                <span class="speaker-word-person">'
                 f'<i style="--speaker-color: {participant["color"]}"></i>'
@@ -1067,7 +1201,7 @@ def render_conversation_stats(episodes, transcript_stats):
     return lines
 
 
-def render_stats(episodes, durations, transcript_stats):
+def render_stats(episodes, durations, transcript_stats, guest_metadata):
     duration_entries = [
         (episode, durations[episode["number"]])
         for episode in episodes
@@ -1206,7 +1340,7 @@ def render_stats(episodes, durations, transcript_stats):
     guest_lines = [
         '    <section aria-labelledby="frequent-guests">',
         '      <h2 id="frequent-guests">Most frequent guests</h2>',
-        '      <p class="episode-stat-note">Recordings are counted by unique recorded date; one recording can become several episodes.</p>',
+        '      <p class="episode-stat-note">Recordings are counted by unique recorded date; one recording can become several episodes. Logo badges link to company sites and language episode tags.</p>',
         '      <div class="episode-stats-table-wrapper">',
         '        <table class="frequent-guests-table">',
         "          <thead>",
@@ -1220,7 +1354,7 @@ def render_stats(episodes, durations, transcript_stats):
         "          <tbody>",
     ]
 
-    guest_lines.extend(guest_table_rows(frequent_guests))
+    guest_lines.extend(guest_table_rows(frequent_guests, guest_metadata))
 
     if additional_guests:
         guest_lines.extend(
@@ -1229,7 +1363,7 @@ def render_stats(episodes, durations, transcript_stats):
                 '          <tbody id="additional-guests" hidden>',
             ]
         )
-        guest_lines.extend(guest_table_rows(additional_guests))
+        guest_lines.extend(guest_table_rows(additional_guests, guest_metadata))
         guest_lines.extend(
             [
                 "          </tbody>",
@@ -1313,7 +1447,7 @@ def render_stats(episodes, durations, transcript_stats):
         ]
     )
     lines.extend(guest_lines)
-    lines.extend(render_conversation_stats(episodes, transcript_stats))
+    lines.extend(render_conversation_stats(episodes, transcript_stats, guest_metadata))
     lines.extend(["  </div>", "</details>"])
     return "\n".join(lines)
 
@@ -1380,22 +1514,45 @@ def main():
     current_page = EPISODES_PAGE.read_text(encoding="utf-8")
     existing_values = existing_table_values(current_page)
     episodes = read_posts()
+    guest_metadata = read_guest_metadata()
+    company_episodes = latest_company_episodes(episodes, guest_metadata)
+    guest_metadata["company_latest_episodes"] = company_episodes
     durations = read_durations(args.feed_file)
     transcript_stats = read_transcript_indices(episodes)
-    stats = render_stats(episodes, durations, transcript_stats)
+    stats = render_stats(episodes, durations, transcript_stats, guest_metadata)
     table = render_table(episodes, durations, existing_values)
     generated_page = render_page(current_page, stats, table)
+    generated_company_episodes = (
+        json.dumps(company_episodes, ensure_ascii=False, indent=2) + "\n"
+    )
+    current_company_episodes = (
+        COMPANY_EPISODES_PATH.read_text(encoding="utf-8")
+        if COMPANY_EPISODES_PATH.exists()
+        else ""
+    )
+    page_changed = generated_page != current_page
+    company_episodes_changed = generated_company_episodes != current_company_episodes
 
-    if generated_page == current_page:
-        print("✅ - Episodes table is up to date")
+    if not page_changed and not company_episodes_changed:
+        print("✅ - Episodes table and company links are up to date")
         return 0
 
     if args.check:
-        print("❌ - Episodes table is out of date; run python3 generate_episodes.py")
+        print(
+            "❌ - Generated episode data is out of date; "
+            "run python3 generate_episodes.py"
+        )
         return 1
 
-    EPISODES_PAGE.write_text(generated_page, encoding="utf-8")
-    print(f"🔧 - Generated {len(episodes)} rows in {EPISODES_PAGE.relative_to(ROOT)}")
+    if page_changed:
+        EPISODES_PAGE.write_text(generated_page, encoding="utf-8")
+        print(f"🔧 - Generated {len(episodes)} rows in {EPISODES_PAGE.relative_to(ROOT)}")
+    if company_episodes_changed:
+        COMPANY_EPISODES_PATH.write_text(generated_company_episodes, encoding="utf-8")
+        print(
+            "🔧 - Generated latest company appearances in "
+            f"{COMPANY_EPISODES_PATH.relative_to(ROOT)}"
+        )
     return 0
 
 
