@@ -19,10 +19,10 @@ List of all episodes.
       <h2 id="stats-at-a-glance">At a glance</h2>
       <div class="episode-stat-cards">
         <div class="episode-stat-card">
-          <strong>303</strong><span>episodes listed</span>
+          <strong>304</strong><span>episodes listed</span>
         </div>
         <div class="episode-stat-card">
-          <strong>169h 32m</strong><span>total listening time</span>
+          <strong>170h 06m</strong><span>total listening time</span>
         </div>
         <div class="episode-stat-card">
           <strong>32</strong><span>median minutes</span>
@@ -48,7 +48,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
       <section aria-labelledby="episode-lengths">
         <h2 id="episode-lengths">Episode lengths</h2>
         <p class="episode-stat-note">Number of episodes in each duration range.</p>
-        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 12 episodes; 20–29 minutes: 103 episodes; 30–39 minutes: 126 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
+        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 12 episodes; 20–29 minutes: 103 episodes; 30–39 minutes: 127 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
               <span>12</span>
@@ -65,7 +65,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
           </div>
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
-              <span>126</span>
+              <span>127</span>
               <span class="episode-histogram-bar" style="--bar-height: 85%"></span>
             </div>
             <span>30–39</span>
@@ -139,12 +139,12 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             </span>
             <strong>37%</strong>
           </div>
-          <div class="guest-share-row" aria-label="2026: 7 of 36 episodes, 19.4 percent">
+          <div class="guest-share-row" aria-label="2026: 8 of 37 episodes, 21.6 percent">
             <span>2026</span>
             <span class="guest-share-track">
-              <span class="guest-share-fill" style="width: 19.4%"></span>
+              <span class="guest-share-fill" style="width: 21.6%"></span>
             </span>
-            <strong>19%</strong>
+            <strong>22%</strong>
           </div>
         </div>
       </section>
@@ -192,6 +192,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             <tr data-guest="dave abrahams" data-recordings="1" data-episodes="2" data-total-time="4422"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Dave+Abrahams">Dave Abrahams</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/08/21/Episode-300.html" title="Company: Adobe. Latest guest episode: Sean Parent, Episode 300" aria-label="Company: Adobe. Latest guest episode: Sean Parent, Episode 300"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/adobe.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Swift" title="Language: Swift" aria-label="Language: Swift"><img src="https://raw.githubusercontent.com/codereport/logos/main/swift.png" alt=""></a></span></span></td><td>1</td><td>2</td><td>1:13</td></tr>
             <tr data-guest="eric niebler" data-recordings="1" data-episodes="2" data-total-time="4296"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Eric+Niebler">Eric Niebler</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/05/22/Episode-287.html" title="Company: NVIDIA. Latest guest episode: Marco Franzreb Salgado, Episode 287" aria-label="Company: NVIDIA. Latest guest episode: Marco Franzreb Salgado, Episode 287"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/nvidia.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a></span></span></td><td>1</td><td>2</td><td>1:11</td></tr>
             <tr data-guest="inbal levi" data-recordings="1" data-episodes="2" data-total-time="3527"><td><span class="guest-identity"><span class="guest-display-name">Inbal Levi</span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a></span></span></td><td>1</td><td>2</td><td>58</td></tr>
+            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="2" data-total-time="3624"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/09/11/Episode-303.html" title="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 303" aria-label="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 303"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/core-automation.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Python" title="Language: Python" aria-label="Language: Python"><img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></td><td>1</td><td>2</td><td>1:00</td></tr>
             <tr data-guest="otto niebler" data-recordings="1" data-episodes="2" data-total-time="4296"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Otto+Niebler">Otto Niebler</a></span></span></td><td>1</td><td>2</td><td>1:11</td></tr>
             <tr data-guest="patrice roy" data-recordings="1" data-episodes="2" data-total-time="4461"><td><span class="guest-identity"><span class="guest-display-name">Patrice Roy</span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a></span></span></td><td>1</td><td>2</td><td>1:14</td></tr>
             <tr data-guest="alexis king" data-recordings="1" data-episodes="1" data-total-time="2101"><td><span class="guest-identity"><span class="guest-display-name">Alexis King</span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Haskell" title="Language: Haskell" aria-label="Language: Haskell"><img src="https://raw.githubusercontent.com/codereport/logos/main/haskell.svg" alt=""></a></span></span></td><td>1</td><td>1</td><td>35</td></tr>
@@ -211,7 +212,6 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             <tr data-guest="koen" data-recordings="1" data-episodes="1" data-total-time="1537"><td><span class="guest-identity"><span class="guest-display-name">Koen</span></span></td><td>1</td><td>1</td><td>25</td></tr>
             <tr data-guest="koen poppe" data-recordings="1" data-episodes="1" data-total-time="1744"><td><span class="guest-identity"><span class="guest-display-name">Koen Poppe</span></span></td><td>1</td><td>1</td><td>29</td></tr>
             <tr data-guest="kristen shaker" data-recordings="1" data-episodes="1" data-total-time="2058"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Kristen+Shaker">Kristen Shaker</a></span></span></td><td>1</td><td>1</td><td>34</td></tr>
-            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="1" data-total-time="1548"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/09/04/Episode-302.html" title="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 302" aria-label="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 302"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/core-automation.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Python" title="Language: Python" aria-label="Language: Python"><img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></td><td>1</td><td>1</td><td>25</td></tr>
             <tr data-guest="mateusz pusz" data-recordings="1" data-episodes="1" data-total-time="1783"><td><span class="guest-identity"><span class="guest-display-name">Mateusz Pusz</span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a></span></span></td><td>1</td><td>1</td><td>29</td></tr>
             <tr data-guest="matt godbolt" data-recordings="1" data-episodes="1" data-total-time="2772"><td><span class="guest-identity"><span class="guest-display-name">Matt Godbolt</span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a></span></span></td><td>1</td><td>1</td><td>46</td></tr>
             <tr data-guest="paul grosse-bley" data-recordings="1" data-episodes="1" data-total-time="1451"><td><span class="guest-identity"><span class="guest-display-name">Paul Grosse-Bley</span></span></td><td>1</td><td>1</td><td>24</td></tr>
@@ -241,14 +241,14 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
           <small>30 non-guest episodes</small>
         </div>
         <div class="conversation-index-card">
-          <strong>2,635</strong>
+          <strong>2,810</strong>
           <span>median words / guest</span>
-          <small>10 appearances · 9 episodes</small>
+          <small>11 appearances · 10 episodes</small>
         </div>
         <div class="conversation-index-card">
-          <strong>39</strong>
+          <strong>40</strong>
           <span>transcripts measured</span>
-          <small>Episodes 264–302</small>
+          <small>Episodes 264–303</small>
         </div>
       </div>
       <div class="conversation-index-definitions">
@@ -258,7 +258,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
       <section class="conversation-chart-panel" aria-labelledby="baf-over-time">
         <h3 id="baf-over-time">BAF over time</h3>
         <div class="conversation-chart-scroll">
-          <div class="baf-chart" role="img" aria-label="BAF index by non-guest episode. Episode 266: 164.6, Ben; Episode 267: 78.8, Ben; Episode 268: 73.7, Ben; Episode 269: 89.7, Bryce; Episode 270: 128.7, Bryce; Episode 271: 0.0, no co-host; Episode 272: 63.8, Ben; Episode 273: 125.5, Ben; Episode 274: 96.7, Ben; Episode 275: 143.4, Bryce; Episode 276: 116.2, Bryce; Episode 277: 227.7, Bryce; Episode 278: 245.9, Bryce; Episode 279: 193.6, Bryce; Episode 280: 68.2, Ben; Episode 281: 111.5, Ben; Episode 282: 127.0, Ben; Episode 288: 173.6, Ben; Episode 289: 127.6, Ben; Episode 290: 98.6, Ben; Episode 291: 206.2, Bryce; Episode 292: 164.2, Bryce; Episode 293: 172.5, Bryce; Episode 294: 106.9, Bryce; Episode 295: 181.5, Bryce; Episode 296: 113.2, Ben; Episode 297: 111.9, Ben; Episode 298: 140.6, Ben; Episode 299: 106.1, Bryce; Episode 301: 315.4, Bryce" style="--baf-columns: 30">
+          <div class="baf-chart" role="img" aria-label="BAF index by non-guest episode. Episode 266: 164.6, Ben; Episode 267: 78.8, Ben; Episode 268: 73.7, Ben; Episode 269: 89.7, Bryce; Episode 270: 128.7, Bryce; Episode 271: 0.0, no co-host; Episode 272: 63.8, Ben; Episode 273: 125.5, Ben; Episode 274: 96.7, Ben; Episode 275: 143.4, Bryce; Episode 276: 116.2, Bryce; Episode 277: 227.7, Bryce; Episode 278: 245.9, Bryce; Episode 279: 192.9, Bryce; Episode 280: 68.2, Ben; Episode 281: 111.5, Ben; Episode 282: 127.0, Ben; Episode 288: 173.6, Ben; Episode 289: 127.6, Ben; Episode 290: 98.6, Ben; Episode 291: 206.2, Bryce; Episode 292: 164.2, Bryce; Episode 293: 172.5, Bryce; Episode 294: 106.9, Bryce; Episode 295: 181.5, Bryce; Episode 296: 113.2, Ben; Episode 297: 111.9, Ben; Episode 298: 140.6, Ben; Episode 299: 106.0, Bryce; Episode 301: 315.4, Bryce" style="--baf-columns: 30">
             <div class="baf-column" title="Episode 266: BAF 164.6; Ben">
               <span class="baf-bar-area">
                 <span class="baf-bar cohost-ben" style="--bar-height: 48.0%"></span>
@@ -337,9 +337,9 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
               </span>
               <span class="baf-episode-label"></span>
             </div>
-            <div class="baf-column" title="Episode 279: BAF 193.6; Bryce">
+            <div class="baf-column" title="Episode 279: BAF 192.9; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 56.5%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 56.3%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
@@ -427,9 +427,9 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
               </span>
               <span class="baf-episode-label"></span>
             </div>
-            <div class="baf-column" title="Episode 299: BAF 106.1; Bryce">
+            <div class="baf-column" title="Episode 299: BAF 106.0; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 31.0%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 30.9%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
@@ -455,16 +455,16 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
               <p>30 non-guest transcripts</p>
               <dl>
                 <div><dt>Median BAF</dt><dd>126.2</dd></div>
-                <div><dt>Guest words / appearance</dt><dd>3,067</dd></div>
+                <div><dt>Guest words / appearance</dt><dd>3,210</dd></div>
               </dl>
-              <small>10 guest appearances</small>
+              <small>11 guest appearances</small>
             </article>
             <article class="cohost-index-card cohost-bryce">
               <h4><i class="cohost-swatch cohost-bryce"></i>Bryce</h4>
               <p>14 non-guest transcripts</p>
               <dl>
                 <div><dt>Median BAF</dt><dd>168.3</dd></div>
-                <div><dt>Guest words / appearance</dt><dd>3,211</dd></div>
+                <div><dt>Guest words / appearance</dt><dd>3,212</dd></div>
               </dl>
               <small>7 guest appearances</small>
             </article>
@@ -656,14 +656,14 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             </div>
             <div class="speaker-word-row" title="ArrayBox.dev &amp; Agentic Software Development">
               <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/03/27/Episode-279.html" aria-label="Episode 279">279</a>
-              <span class="speaker-word-track" role="img" aria-label="Episode 279. Conor: 4,815 words; Bryce: 1,438 words; Bill Burr: 165 words">
-                <span class="speaker-word-segment" style="--speaker-width: 75.02%; --speaker-color: #8b1f2d" title="Conor: 4,815 words (75.0%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 22.41%; --speaker-color: #337ab7" title="Bryce: 1,438 words (22.4%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 2.57%; --speaker-color: #6f4aa8" title="Bill Burr: 165 words (2.6%)"></span>
+              <span class="speaker-word-track" role="img" aria-label="Episode 279. Conor: 4,802 words; Bryce: 1,434 words; Bill Burr: 165 words">
+                <span class="speaker-word-segment" style="--speaker-width: 75.02%; --speaker-color: #8b1f2d" title="Conor: 4,802 words (75.0%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 22.40%; --speaker-color: #337ab7" title="Bryce: 1,434 words (22.4%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 2.58%; --speaker-color: #6f4aa8" title="Bill Burr: 165 words (2.6%)"></span>
               </span>
               <span class="speaker-word-values">
-                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>4,815</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>1,438</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>4,802</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>1,434</strong></span>
                 <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name">Bill Burr</span></span></span><strong>165</strong></span>
               </span>
             </div>
@@ -715,15 +715,15 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             </div>
             <div class="speaker-word-row" title="GPU Rotate">
               <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/05/01/Episode-284.html" aria-label="Episode 284">284</a>
-              <span class="speaker-word-track" role="img" aria-label="Episode 284. Conor: 1,110 words; Bryce: 2,227 words; Marco Franzreb Salgado: 2,808 words">
-                <span class="speaker-word-segment" style="--speaker-width: 18.06%; --speaker-color: #8b1f2d" title="Conor: 1,110 words (18.1%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 36.24%; --speaker-color: #337ab7" title="Bryce: 2,227 words (36.2%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 45.70%; --speaker-color: #6f4aa8" title="Marco Franzreb Salgado: 2,808 words (45.7%)"></span>
+              <span class="speaker-word-track" role="img" aria-label="Episode 284. Conor: 1,110 words; Bryce: 2,228 words; Marco Franzreb Salgado: 2,810 words">
+                <span class="speaker-word-segment" style="--speaker-width: 18.05%; --speaker-color: #8b1f2d" title="Conor: 1,110 words (18.1%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 36.24%; --speaker-color: #337ab7" title="Bryce: 2,228 words (36.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 45.71%; --speaker-color: #6f4aa8" title="Marco Franzreb Salgado: 2,810 words (45.7%)"></span>
               </span>
               <span class="speaker-word-values">
                 <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>1,110</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>2,227</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Marco+Franzreb+Salgado">Marco Franzreb Salgado</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/05/22/Episode-287.html" title="Company: NVIDIA. Latest guest episode: Marco Franzreb Salgado, Episode 287" aria-label="Company: NVIDIA. Latest guest episode: Marco Franzreb Salgado, Episode 287"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/nvidia.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></span><strong>2,808</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>2,228</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Marco+Franzreb+Salgado">Marco Franzreb Salgado</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/05/22/Episode-287.html" title="Company: NVIDIA. Latest guest episode: Marco Franzreb Salgado, Episode 287" aria-label="Company: NVIDIA. Latest guest episode: Marco Franzreb Salgado, Episode 287"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/nvidia.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></span><strong>2,810</strong></span>
               </span>
             </div>
             <div class="speaker-word-row" title="GPU Rotate (Part 2)">
@@ -888,28 +888,28 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             </div>
             <div class="speaker-word-row" title="Do We Need Humans in the Loop?">
               <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/08/14/Episode-299.html" aria-label="Episode 299">299</a>
-              <span class="speaker-word-track" role="img" aria-label="Episode 299. Conor: 2,921 words; Bryce: 3,188 words">
-                <span class="speaker-word-segment" style="--speaker-width: 47.81%; --speaker-color: #8b1f2d" title="Conor: 2,921 words (47.8%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 52.19%; --speaker-color: #337ab7" title="Bryce: 3,188 words (52.2%)"></span>
+              <span class="speaker-word-track" role="img" aria-label="Episode 299. Conor: 2,913 words; Bryce: 3,182 words">
+                <span class="speaker-word-segment" style="--speaker-width: 47.79%; --speaker-color: #8b1f2d" title="Conor: 2,913 words (47.8%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 52.21%; --speaker-color: #337ab7" title="Bryce: 3,182 words (52.2%)"></span>
               </span>
               <span class="speaker-word-values">
-                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>2,921</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>3,188</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>2,913</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>3,182</strong></span>
               </span>
             </div>
             <div class="speaker-word-row" title="Sean Parent \&quot;I&#x27;m not writing code anymore.\&quot;">
               <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/08/21/Episode-300.html" aria-label="Episode 300">300</a>
-              <span class="speaker-word-track" role="img" aria-label="Episode 300. Conor: 6,352 words; Bryce: 3,858 words; Sean Parent: 7,760 words; Anders Hejlsberg: 183 words; Reginald Johnston: 32 words">
-                <span class="speaker-word-segment" style="--speaker-width: 34.93%; --speaker-color: #8b1f2d" title="Conor: 6,352 words (34.9%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 21.22%; --speaker-color: #337ab7" title="Bryce: 3,858 words (21.2%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 42.67%; --speaker-color: #6f4aa8" title="Sean Parent: 7,760 words (42.7%)"></span>
+              <span class="speaker-word-track" role="img" aria-label="Episode 300. Conor: 6,362 words; Bryce: 3,859 words; Sean Parent: 7,766 words; Anders Hejlsberg: 183 words; Reginald Johnston: 32 words">
+                <span class="speaker-word-segment" style="--speaker-width: 34.95%; --speaker-color: #8b1f2d" title="Conor: 6,362 words (35.0%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 21.20%; --speaker-color: #337ab7" title="Bryce: 3,859 words (21.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 42.67%; --speaker-color: #6f4aa8" title="Sean Parent: 7,766 words (42.7%)"></span>
                 <span class="speaker-word-segment" style="--speaker-width: 1.01%; --speaker-color: #2a8f70" title="Anders Hejlsberg: 183 words (1.0%)"></span>
                 <span class="speaker-word-segment" style="--speaker-width: 0.18%; --speaker-color: #b24f83" title="Reginald Johnston: 32 words (0.2%)"></span>
               </span>
               <span class="speaker-word-values">
-                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>6,352</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>3,858</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Sean+Parent">Sean Parent</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/08/21/Episode-300.html" title="Company: Adobe. Latest guest episode: Sean Parent, Episode 300" aria-label="Company: Adobe. Latest guest episode: Sean Parent, Episode 300"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/adobe.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Rust" title="Language: Rust" aria-label="Language: Rust"><img src="https://raw.githubusercontent.com/codereport/logos/main/rust.png" alt=""></a></span></span></span><strong>7,760</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>6,362</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>3,859</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Sean+Parent">Sean Parent</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/08/21/Episode-300.html" title="Company: Adobe. Latest guest episode: Sean Parent, Episode 300" aria-label="Company: Adobe. Latest guest episode: Sean Parent, Episode 300"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/adobe.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Rust" title="Language: Rust" aria-label="Language: Rust"><img src="https://raw.githubusercontent.com/codereport/logos/main/rust.png" alt=""></a></span></span></span><strong>7,766</strong></span>
                 <span class="speaker-word-person"><i style="--speaker-color: #2a8f70"></i><span><span class="guest-identity"><span class="guest-display-name">Anders Hejlsberg</span></span></span><strong>183</strong></span>
                 <span class="speaker-word-person"><i style="--speaker-color: #b24f83"></i><span><span class="guest-identity"><span class="guest-display-name">Reginald Johnston</span></span></span><strong>32</strong></span>
               </span>
@@ -935,7 +935,20 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
               <span class="speaker-word-values">
                 <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>389</strong></span>
                 <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>547</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/09/04/Episode-302.html" title="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 302" aria-label="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 302"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/core-automation.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Python" title="Language: Python" aria-label="Language: Python"><img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></span><strong>4,985</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/09/11/Episode-303.html" title="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 303" aria-label="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 303"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/core-automation.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Python" title="Language: Python" aria-label="Language: Python"><img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></span><strong>4,985</strong></span>
+              </span>
+            </div>
+            <div class="speaker-word-row" title="Open Models, GPU Kernels &amp; autoresearch with Mark Saroufim">
+              <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/09/11/Episode-303.html" aria-label="Episode 303">303</a>
+              <span class="speaker-word-track" role="img" aria-label="Episode 303. Conor: 361 words; Mark Saroufim: 4,630 words; Bryce: 2,449 words">
+                <span class="speaker-word-segment" style="--speaker-width: 4.85%; --speaker-color: #8b1f2d" title="Conor: 361 words (4.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 62.23%; --speaker-color: #6f4aa8" title="Mark Saroufim: 4,630 words (62.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 32.92%; --speaker-color: #2a8f70" title="Bryce: 2,449 words (32.9%)"></span>
+              </span>
+              <span class="speaker-word-values">
+                <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>361</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/09/11/Episode-303.html" title="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 303" aria-label="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 303"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/core-automation.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Python" title="Language: Python" aria-label="Language: Python"><img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></span><strong>4,630</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #2a8f70"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>2,449</strong></span>
               </span>
             </div>
           </div>
@@ -948,6 +961,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
 
 | <button type="button" class="episodes-sort" data-sort-key="number">#</button> | Title | <button type="button" class="episodes-sort" data-sort-key="duration">Duration</button> | Co-host | Release Date |
 | :-: | :---- | :------: | :-----: | :----------: |
+| 303 | [Open Models, GPU Kernels & autoresearch with Mark Saroufim](https://adspthepodcast.com/2026/09/11/Episode-303.html){: .episode-title .guest-purple } | 34 | — | 2026-09-11 |
 | 302 | [From PyTorch to GPU MODE with Mark Saroufim](https://adspthepodcast.com/2026/09/04/Episode-302.html){: .episode-title .guest-purple } | 25 | Bryce | 2026-09-04 |
 | 301 | [My Existential Crisis, AI Fluency & the Death of Conferences?](https://adspthepodcast.com/2026/08/28/Episode-301.html){: .episode-title } | 44 | Bryce | 2026-08-28 |
 | 300 | [Sean Parent "I'm not writing code anymore."](https://adspthepodcast.com/2026/08/21/Episode-300.html){: .episode-title .guest-orange } | 1:34 | Bryce | 2026-08-21 |

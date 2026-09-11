@@ -93,7 +93,9 @@ def parse_args():
 
 
 def front_matter_value(post, key):
-    match = re.search(rf"^{re.escape(key)}:\s*(.*)$", post, re.MULTILINE)
+    # Keep whitespace matching on the current line. ``\s`` also matches newlines,
+    # which made an empty value consume the following front-matter key.
+    match = re.search(rf"^{re.escape(key)}:[ \t]*(.*)$", post, re.MULTILINE)
     if not match:
         return ""
 
@@ -103,9 +105,11 @@ def front_matter_value(post, key):
     return value
 
 
-def buzzsprout_id_from_post(post):
+def buzzsprout_id_from_post(post, post_name="post"):
     front_matter_id = front_matter_value(post, "buzzsprout-id")
-    if front_matter_id:
+    if re.search(r"^buzzsprout-id:", post, re.MULTILINE):
+        if not front_matter_id:
+            raise ValueError(f"{post_name}: buzzsprout-id must not be blank")
         return front_matter_id
 
     player_match = re.search(r"buzzsprout-player-(\d+)", post)
@@ -347,7 +351,7 @@ def read_posts():
                 ),
                 "trip": "road trip" in tags,
                 "cohost": cohost_from_post(post),
-                "buzzsprout_id": buzzsprout_id_from_post(post),
+                "buzzsprout_id": buzzsprout_id_from_post(post, path.name),
             }
         )
 
