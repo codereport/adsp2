@@ -464,9 +464,9 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
               <p>14 non-guest transcripts</p>
               <dl>
                 <div><dt>Median BAF</dt><dd>168.3</dd></div>
-                <div><dt>Guest words / appearance</dt><dd>3,212</dd></div>
+                <div><dt>Guest words / appearance</dt><dd>3,390</dd></div>
               </dl>
-              <small>7 guest appearances</small>
+              <small>8 guest appearances</small>
             </article>
             <article class="cohost-index-card cohost-ben">
               <h4><i class="cohost-swatch cohost-ben"></i>Ben</h4>
@@ -940,15 +940,15 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             </div>
             <div class="speaker-word-row" title="Open Models, GPU Kernels &amp; autoresearch with Mark Saroufim">
               <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/09/11/Episode-303.html" aria-label="Episode 303">303</a>
-              <span class="speaker-word-track" role="img" aria-label="Episode 303. Conor: 361 words; Mark Saroufim: 4,630 words; Bryce: 2,449 words">
+              <span class="speaker-word-track" role="img" aria-label="Episode 303. Conor: 361 words; Bryce: 2,449 words; Mark Saroufim: 4,630 words">
                 <span class="speaker-word-segment" style="--speaker-width: 4.85%; --speaker-color: #8b1f2d" title="Conor: 361 words (4.9%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 32.92%; --speaker-color: #337ab7" title="Bryce: 2,449 words (32.9%)"></span>
                 <span class="speaker-word-segment" style="--speaker-width: 62.23%; --speaker-color: #6f4aa8" title="Mark Saroufim: 4,630 words (62.2%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 32.92%; --speaker-color: #2a8f70" title="Bryce: 2,449 words (32.9%)"></span>
               </span>
               <span class="speaker-word-values">
                 <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>361</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #337ab7"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>2,449</strong></span>
                 <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/09/11/Episode-303.html" title="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 303" aria-label="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 303"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/core-automation.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Python" title="Language: Python" aria-label="Language: Python"><img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></span><strong>4,630</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #2a8f70"></i><span><span class="guest-identity"><span class="guest-display-name">Bryce</span></span></span><strong>2,449</strong></span>
               </span>
             </div>
           </div>
@@ -961,7 +961,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
 
 | <button type="button" class="episodes-sort" data-sort-key="number">#</button> | Title | <button type="button" class="episodes-sort" data-sort-key="duration">Duration</button> | Co-host | Release Date |
 | :-: | :---- | :------: | :-----: | :----------: |
-| 303 | [Open Models, GPU Kernels & autoresearch with Mark Saroufim](https://adspthepodcast.com/2026/09/11/Episode-303.html){: .episode-title .guest-purple } | 34 | — | 2026-09-11 |
+| 303 | [Open Models, GPU Kernels & autoresearch with Mark Saroufim](https://adspthepodcast.com/2026/09/11/Episode-303.html){: .episode-title .guest-purple } | 34 | Bryce | 2026-09-11 |
 | 302 | [From PyTorch to GPU MODE with Mark Saroufim](https://adspthepodcast.com/2026/09/04/Episode-302.html){: .episode-title .guest-purple } | 25 | Bryce | 2026-09-04 |
 | 301 | [My Existential Crisis, AI Fluency & the Death of Conferences?](https://adspthepodcast.com/2026/08/28/Episode-301.html){: .episode-title } | 44 | Bryce | 2026-08-28 |
 | 300 | [Sean Parent "I'm not writing code anymore."](https://adspthepodcast.com/2026/08/21/Episode-300.html){: .episode-title .guest-orange } | 1:34 | Bryce | 2026-08-21 |
