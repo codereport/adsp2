@@ -372,7 +372,7 @@ def parse_duration(value):
     return seconds
 
 
-def read_durations(feed_file=None):
+def read_durations(feed_file=None, episodes=()):
     if feed_file:
         feed = feed_file.read_bytes()
     else:
@@ -380,14 +380,54 @@ def read_durations(feed_file=None):
         with urlopen(request, timeout=30) as response:
             feed = response.read()
 
+    episodes_by_buzzsprout_id = {
+        episode["buzzsprout_id"]: episode
+        for episode in episodes
+        if episode["buzzsprout_id"]
+    }
     durations = {}
+    feed_episode_numbers = set()
+    feed_buzzsprout_ids = set()
     root = ET.fromstring(feed)
     for item in root.findall("./channel/item"):
         title = item.findtext("title", default="")
         match = re.match(r"Episode\s+(\d+)\s*:", title, re.IGNORECASE)
+        if match:
+            feed_episode_numbers.add(int(match.group(1)))
+
+        guid = item.findtext("guid", default="")
+        guid_match = re.fullmatch(r"Buzzsprout-(\d+)", guid, re.IGNORECASE)
+        buzzsprout_id = guid_match.group(1) if guid_match else ""
+        if buzzsprout_id:
+            feed_buzzsprout_ids.add(buzzsprout_id)
+
         duration = item.findtext(ITUNES_DURATION)
-        if match and duration:
-            durations[int(match.group(1))] = parse_duration(duration.strip())
+        if not duration:
+            continue
+
+        seconds = parse_duration(duration.strip())
+        episode = episodes_by_buzzsprout_id.get(buzzsprout_id)
+        if episode:
+            durations[episode["number"]] = seconds
+        elif match:
+            durations[int(match.group(1))] = seconds
+
+    for episode in episodes:
+        if episode["number"] in durations:
+            continue
+
+        feed_item_found = (
+            episode["buzzsprout_id"] in feed_buzzsprout_ids
+            or episode["number"] in feed_episode_numbers
+        )
+        if feed_item_found:
+            reason = "the RSS item has no <itunes:duration>"
+        else:
+            reason = "its RSS item was not found (the feed may be stale)"
+        print(
+            f"⚠️ - No duration for Episode {episode['number']}: {reason}",
+            file=sys.stderr,
+        )
     return durations
 
 
@@ -1521,7 +1561,7 @@ def main():
     guest_metadata = read_guest_metadata()
     company_episodes = latest_company_episodes(episodes, guest_metadata)
     guest_metadata["company_latest_episodes"] = company_episodes
-    durations = read_durations(args.feed_file)
+    durations = read_durations(args.feed_file, episodes)
     transcript_stats = read_transcript_indices(episodes)
     stats = render_stats(episodes, durations, transcript_stats, guest_metadata)
     table = render_table(episodes, durations, existing_values)

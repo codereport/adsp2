@@ -22,7 +22,7 @@ List of all episodes.
           <strong>305</strong><span>episodes listed</span>
         </div>
         <div class="episode-stat-card">
-          <strong>170h 06m</strong><span>total listening time</span>
+          <strong>171h 49m</strong><span>total listening time</span>
         </div>
         <div class="episode-stat-card">
           <strong>32</strong><span>median minutes</span>
@@ -48,7 +48,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
       <section aria-labelledby="episode-lengths">
         <h2 id="episode-lengths">Episode lengths</h2>
         <p class="episode-stat-note">Number of episodes in each duration range.</p>
-        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 12 episodes; 20–29 minutes: 103 episodes; 30–39 minutes: 127 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
+        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 12 episodes; 20–29 minutes: 103 episodes; 30–39 minutes: 130 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
               <span>12</span>
@@ -59,13 +59,13 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
               <span>103</span>
-              <span class="episode-histogram-bar" style="--bar-height: 69%"></span>
+              <span class="episode-histogram-bar" style="--bar-height: 67%"></span>
             </div>
             <span>20–29</span>
           </div>
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
-              <span>127</span>
+              <span>130</span>
               <span class="episode-histogram-bar" style="--bar-height: 85%"></span>
             </div>
             <span>30–39</span>
@@ -73,7 +73,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
               <span>48</span>
-              <span class="episode-histogram-bar" style="--bar-height: 32%"></span>
+              <span class="episode-histogram-bar" style="--bar-height: 31%"></span>
             </div>
             <span>40–49</span>
           </div>
@@ -182,7 +182,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             <tr data-guest="patricia aas" data-recordings="1" data-episodes="4" data-total-time="8469"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Patricia+Aas">Patricia Aas</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a></span></span></td><td>1</td><td>4</td><td>2:21</td></tr>
             <tr data-guest="richard feldman" data-recordings="1" data-episodes="4" data-total-time="7306"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Richard+Feldman">Richard Feldman</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Elm" title="Language: Elm" aria-label="Language: Elm"><img src="https://raw.githubusercontent.com/codereport/logos/main/elm.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Roc" title="Language: Roc" aria-label="Language: Roc"><img src="https://raw.githubusercontent.com/codereport/logos/main/roc.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Rust" title="Language: Rust" aria-label="Language: Rust"><img src="https://raw.githubusercontent.com/codereport/logos/main/rust.png" alt=""></a></span></span></td><td>1</td><td>4</td><td>2:01</td></tr>
             <tr data-guest="jane losare-lusby" data-recordings="1" data-episodes="3" data-total-time="5078"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Jane+Losare-Lusby">Jane Losare-Lusby</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2022/12/16/Episode-108.html" title="Company: Futurewei. Latest guest episode: Jane Losare-Lusby, Episode 108" aria-label="Company: Futurewei. Latest guest episode: Jane Losare-Lusby, Episode 108"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/futurewei.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Rust" title="Language: Rust" aria-label="Language: Rust"><img src="https://raw.githubusercontent.com/codereport/logos/main/rust.png" alt=""></a></span></span></td><td>1</td><td>3</td><td>1:24</td></tr>
-            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="3" data-total-time="3624"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/09/18/Episode-304.html" title="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 304" aria-label="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 304"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/core-automation.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Python" title="Language: Python" aria-label="Language: Python"><img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></td><td>1</td><td>3</td><td>1:00</td></tr>
+            <tr data-guest="mark saroufim" data-recordings="1" data-episodes="3" data-total-time="5924"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#Mark+Saroufim">Mark Saroufim</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/09/18/Episode-304.html" title="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 304" aria-label="Company: Core Automation. Latest guest episode: Mark Saroufim, Episode 304"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/core-automation.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Python" title="Language: Python" aria-label="Language: Python"><img src="https://raw.githubusercontent.com/codereport/logos/main/python.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a></span></span></td><td>1</td><td>3</td><td>1:38</td></tr>
             <tr data-guest="sean baxter" data-recordings="1" data-episodes="3" data-total-time="8415"><td><span class="guest-identity"><span class="guest-display-name">Sean Baxter</span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-company-badge" href="/2026/05/22/Episode-287.html" title="Company: NVIDIA. Latest guest episode: Marco Franzreb Salgado, Episode 287" aria-label="Company: NVIDIA. Latest guest episode: Marco Franzreb Salgado, Episode 287"><img src="https://raw.githubusercontent.com/codereport/logos/main/company/nvidia.svg" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#CUDA" title="Language: CUDA" aria-label="Language: CUDA"><img src="https://raw.githubusercontent.com/codereport/logos/main/cuda.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Rust" title="Language: Rust" aria-label="Language: Rust"><img src="https://raw.githubusercontent.com/codereport/logos/main/rust.png" alt=""></a></span></span></td><td>1</td><td>3</td><td>2:20</td></tr>
             <tr data-guest="andor pénzes" data-recordings="2" data-episodes="2" data-total-time="3835"><td><span class="guest-identity"><span class="guest-display-name">Andor Pénzes</span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Erlang" title="Language: Erlang" aria-label="Language: Erlang"><img src="https://raw.githubusercontent.com/codereport/logos/main/erlang.png" alt=""></a><a class="guest-affiliation-badge guest-language-badge" href="/tags/#Elixir" title="Language: Elixir" aria-label="Language: Elixir"><img src="https://raw.githubusercontent.com/codereport/logos/main/elixir.png" alt=""></a></span></span></td><td>2</td><td>2</td><td>1:03</td></tr>
             <tr data-guest="jf bastien" data-recordings="2" data-episodes="2" data-total-time="5591"><td><span class="guest-identity"><span class="guest-display-name"><a href="/tags/#JF+Bastien">JF Bastien</a></span><span class="guest-affiliation-badges"><a class="guest-affiliation-badge guest-language-badge" href="/tags/#C%2B%2B" title="Language: C++" aria-label="Language: C++"><img src="https://raw.githubusercontent.com/codereport/logos/main/cpp.png" alt=""></a></span></span></td><td>2</td><td>2</td><td>1:33</td></tr>
@@ -974,7 +974,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
 
 | <button type="button" class="episodes-sort" data-sort-key="number">#</button> | Title | <button type="button" class="episodes-sort" data-sort-key="duration">Duration</button> | Co-host | Release Date |
 | :-: | :---- | :------: | :-----: | :----------: |
-| 304 | [The Agentic Era & Books with Mark Saroufim](https://adspthepodcast.com/2026/09/18/Episode-304.html){: .episode-title .guest-purple } | — | Bryce | 2026-09-18 |
+| 304 | [The Agentic Era & Books with Mark Saroufim](https://adspthepodcast.com/2026/09/18/Episode-304.html){: .episode-title .guest-purple } | 38 | Bryce | 2026-09-18 |
 | 303 | [Open Models, GPU Kernels & autoresearch with Mark Saroufim](https://adspthepodcast.com/2026/09/11/Episode-303.html){: .episode-title .guest-purple } | 34 | Bryce | 2026-09-11 |
 | 302 | [From PyTorch to GPU MODE with Mark Saroufim](https://adspthepodcast.com/2026/09/04/Episode-302.html){: .episode-title .guest-purple } | 25 | Bryce | 2026-09-04 |
 | 301 | [My Existential Crisis, AI Fluency & the Death of Conferences?](https://adspthepodcast.com/2026/08/28/Episode-301.html){: .episode-title } | 44 | Bryce | 2026-08-28 |
@@ -1078,7 +1078,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
 | 203 | [Rotates All the Way Down with Sean Parent (Part 2)](https://adspthepodcast.com/2024/10/11/Episode-203.html){: .episode-title .guest-orange } | 23 | Ben | 2024-10-11 |
 | 202 | [Rotates All the Way Down with Sean Parent (Part 1)](https://adspthepodcast.com/2024/10/04/Episode-202.html){: .episode-title .guest-orange } | 27 | Ben | 2024-10-04 |
 | 201 | [CppCon 2024 Recap!](https://adspthepodcast.com/2024/09/27/Episode-201.html){: .episode-title } | 24 | Ben | 2024-09-27 |
-| 200 | [Episode 200!](https://adspthepodcast.com/2024/09/20/Episode-200.html){: .episode-title } | — | Bryce | 2024-09-20 |
+| 200 | [Episode 200!](https://adspthepodcast.com/2024/09/20/Episode-200.html){: .episode-title } | 33 | Bryce | 2024-09-20 |
 | 199 | [`std::rotate`](https://adspthepodcast.com/2024/09/13/Episode-199.html){: .episode-title } | 25 | Bryce | 2024-09-13 |
 | 198 | [Talks ∧ ¬ (Pigeons ∧ Elevators)](https://adspthepodcast.com/2024/09/06/Episode-198.html){: .episode-title } | 17 | Bryce | 2024-09-06 |
 | 197 | [🇬🇧 Algorithms & Tersity with Aaron Hsu](https://adspthepodcast.com/2024/08/30/Episode-197.html){: .episode-title .guest-purple } | 34 | — | 2024-08-30 |
@@ -1168,7 +1168,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
 | 113 | [The C++26 Pipeline Operator with Barry Revzin!](https://adspthepodcast.com/2023/01/20/Episode-113.html){: .episode-title .guest-orange } | 40 | Bryce | 2023-01-20 |
 | 112 | [2022 Retro & Running!](https://adspthepodcast.com/2023/01/13/Episode-112.html){: .episode-title } | 33 | Bryce | 2023-01-13 |
 | 111 | [C++23 Ranges, 2022 Retro & Star Wars](https://adspthepodcast.com/2023/01/06/Episode-111.html){: .episode-title } | 36 | Bryce | 2023-01-06 |
-| 110 | [Compiler Diagnostics](https://adspthepodcast.com/2022/12/30/Episode-110.html){: .episode-title } | — | Bryce | 2022-12-30 |
+| 110 | [Compiler Diagnostics](https://adspthepodcast.com/2022/12/30/Episode-110.html){: .episode-title } | 31 | Bryce | 2022-12-30 |
 | 109 | [Holiday Special #3 - Trees, Travel, Twitter & Terminology!](https://adspthepodcast.com/2022/12/23/Episode-109.html){: .episode-title } | 1:16 | Bryce | 2022-12-23 |
 | 108 | [Jane Losare-Lusby on Rust! (Part 3)](https://adspthepodcast.com/2022/12/16/Episode-108.html){: .episode-title .guest-purple } | 24 | Bryce | 2022-12-16 |
 | 107 | [Jane Losare-Lusby on Rust! (Part 2)](https://adspthepodcast.com/2022/12/09/Episode-107.html){: .episode-title .guest-purple } | 28 | Bryce | 2022-12-09 |
