@@ -8,30 +8,25 @@ To host the site locally for development and testing:
 
 ### Prerequisites
 
-1. **Install Ruby** (version 3.0 or higher):
+1. **Install Ruby** (version 3.0 or higher). For example, on Ubuntu:
    ```bash
    sudo apt-get update
    sudo apt-get install -y ruby-full
    ```
 
-2. **Install Bundler**:
+2. **Install Bundler** for your user account:
    ```bash
-   sudo gem install bundler
+   gem install bundler --user-install
    ```
 
 ### Setup and Run
 
-1. **Install dependencies**:
-   ```bash
-   sudo bundle install
-   ```
-
-2. **Serve the site locally**:
+1. **Serve the site locally** (the script installs missing gems into `vendor/bundle`):
    ```bash
    ./serve-local.sh
    ```
 
-3. **Access the site**:
+2. **Access the site**:
    Open your browser and navigate to `http://localhost:4000`
 
 The site will automatically rebuild when you make changes to the source files,

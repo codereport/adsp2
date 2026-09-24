@@ -4,18 +4,24 @@ set -eo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-if [[ ! -s "$HOME/.rvm/scripts/rvm" ]]; then
-  echo "RVM was not found at $HOME/.rvm/scripts/rvm" >&2
+if ! command -v ruby >/dev/null 2>&1; then
+  echo "Ruby is required to serve this site. See README.md for setup instructions." >&2
   exit 1
 fi
 
-# Load RVM explicitly so Homebrew Ruby cannot be mixed with RVM gems.
-rvm_silence_path_mismatch_check_flag=1
-source "$HOME/.rvm/scripts/rvm"
-rvm use 3.1.0
-hash -r
-set -u
+if ! command -v bundle >/dev/null 2>&1; then
+  user_gem_bin="$(ruby -r rubygems -e 'print Gem.user_dir')/bin"
+  if [[ -x "$user_gem_bin/bundle" ]]; then
+    export PATH="$user_gem_bin:$PATH"
+  fi
+fi
 
+if ! command -v bundle >/dev/null 2>&1; then
+  echo "Bundler is required to serve this site. Install it with 'gem install bundler --user-install'." >&2
+  exit 1
+fi
+
+bundle config set --local path vendor/bundle
 bundle check || bundle install
 
 exec bundle exec jekyll serve \
