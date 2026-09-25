@@ -972,15 +972,15 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             </div>
             <div class="speaker-word-row" title="DHH, Hinton &amp; Jensen">
               <a class="speaker-word-episode" href="https://adspthepodcast.com/2026/09/25/Episode-305.html" aria-label="Episode 305">305</a>
-              <span class="speaker-word-track" role="img" aria-label="Episode 305. Conor: 1,603 words; Speaker 0: 205 words; Speaker 1: 24 words">
+              <span class="speaker-word-track" role="img" aria-label="Episode 305. Conor: 1,603 words; DHH: 205 words; Geoffrey Hinton: 24 words">
                 <span class="speaker-word-segment" style="--speaker-width: 87.50%; --speaker-color: #8b1f2d" title="Conor: 1,603 words (87.5%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 11.19%; --speaker-color: #6f4aa8" title="Speaker 0: 205 words (11.2%)"></span>
-                <span class="speaker-word-segment" style="--speaker-width: 1.31%; --speaker-color: #2a8f70" title="Speaker 1: 24 words (1.3%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 11.19%; --speaker-color: #6f4aa8" title="DHH: 205 words (11.2%)"></span>
+                <span class="speaker-word-segment" style="--speaker-width: 1.31%; --speaker-color: #2a8f70" title="Geoffrey Hinton: 24 words (1.3%)"></span>
               </span>
               <span class="speaker-word-values">
                 <span class="speaker-word-person"><i style="--speaker-color: #8b1f2d"></i><span><span class="guest-identity"><span class="guest-display-name">Conor</span></span></span><strong>1,603</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name">Speaker 0</span></span></span><strong>205</strong></span>
-                <span class="speaker-word-person"><i style="--speaker-color: #2a8f70"></i><span><span class="guest-identity"><span class="guest-display-name">Speaker 1</span></span></span><strong>24</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #6f4aa8"></i><span><span class="guest-identity"><span class="guest-display-name">DHH</span></span></span><strong>205</strong></span>
+                <span class="speaker-word-person"><i style="--speaker-color: #2a8f70"></i><span><span class="guest-identity"><span class="guest-display-name">Geoffrey Hinton</span></span></span><strong>24</strong></span>
               </span>
             </div>
           </div>
