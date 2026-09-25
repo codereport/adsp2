@@ -236,7 +236,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
       <p class="episode-stat-note">Based on timestamped transcripts from Episode 264 onward.</p>
       <div class="conversation-index-overview">
         <div class="conversation-index-card">
-          <strong>127.1</strong>
+          <strong>125.4</strong>
           <span>median BAF</span>
           <small>31 non-guest episodes</small>
         </div>
@@ -252,40 +252,40 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
         </div>
       </div>
       <div class="conversation-index-definitions">
-        <p><strong>BAF (back-and-forth index)</strong> is calculated only for episodes without a guest. It is the population standard deviation of the number of words in each speaking turn. Lower means more consistently sized back-and-forth turns; higher means turn lengths vary more.</p>
+        <p><strong>BAF (back-and-forth index)</strong> is calculated only for episodes without a guest. Episodes without a co-host have a BAF of 0, even if audio clips contain other voices. For co-hosted episodes, BAF is the population standard deviation of the number of words in each speaking turn. Lower means more consistently sized back-and-forth turns; higher means turn lengths vary more.</p>
         <p><strong>Speaker word counts</strong> measure every identified person in every available transcript. The guest metric is calculated only for guest episodes, with each guest appearance measured separately.</p>
       </div>
       <section class="conversation-chart-panel" aria-labelledby="baf-over-time">
         <h3 id="baf-over-time">BAF over time</h3>
         <div class="conversation-chart-scroll">
-          <div class="baf-chart" role="img" aria-label="BAF index by non-guest episode. Episode 266: 164.5, Ben; Episode 267: 78.7, Ben; Episode 268: 73.7, Ben; Episode 269: 89.7, Bryce; Episode 270: 128.6, Bryce; Episode 271: 0.0, no co-host; Episode 272: 63.7, Ben; Episode 273: 125.4, Ben; Episode 274: 96.7, Ben; Episode 275: 142.4, Bryce; Episode 276: 116.2, Bryce; Episode 277: 227.7, Bryce; Episode 278: 245.8, Bryce; Episode 279: 192.9, Bryce; Episode 280: 68.2, Ben; Episode 281: 111.5, Ben; Episode 282: 127.1, Ben; Episode 288: 173.6, Ben; Episode 289: 127.5, Ben; Episode 290: 98.6, Ben; Episode 291: 206.1, Bryce; Episode 292: 164.2, Bryce; Episode 293: 172.4, Bryce; Episode 294: 106.9, Bryce; Episode 295: 181.1, Bryce; Episode 296: 113.2, Ben; Episode 297: 111.9, Ben; Episode 298: 140.6, Ben; Episode 299: 106.0, Bryce; Episode 301: 315.4, Bryce; Episode 305: 554.4, no co-host" style="--baf-columns: 31">
+          <div class="baf-chart" role="img" aria-label="BAF index by non-guest episode. Episode 266: 164.5, Ben; Episode 267: 78.7, Ben; Episode 268: 73.7, Ben; Episode 269: 89.7, Bryce; Episode 270: 128.6, Bryce; Episode 271: 0.0, no co-host; Episode 272: 63.7, Ben; Episode 273: 125.4, Ben; Episode 274: 96.7, Ben; Episode 275: 142.4, Bryce; Episode 276: 116.2, Bryce; Episode 277: 227.7, Bryce; Episode 278: 245.8, Bryce; Episode 279: 192.9, Bryce; Episode 280: 68.2, Ben; Episode 281: 111.5, Ben; Episode 282: 127.1, Ben; Episode 288: 173.6, Ben; Episode 289: 127.5, Ben; Episode 290: 98.6, Ben; Episode 291: 206.1, Bryce; Episode 292: 164.2, Bryce; Episode 293: 172.4, Bryce; Episode 294: 106.9, Bryce; Episode 295: 181.1, Bryce; Episode 296: 113.2, Ben; Episode 297: 111.9, Ben; Episode 298: 140.6, Ben; Episode 299: 106.0, Bryce; Episode 301: 315.4, Bryce; Episode 305: 0.0, no co-host" style="--baf-columns: 31">
             <div class="baf-column" title="Episode 266: BAF 164.5; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 27.3%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 48.0%"></span>
               </span>
               <span class="baf-episode-label">266</span>
             </div>
             <div class="baf-column" title="Episode 267: BAF 78.7; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 13.1%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 23.0%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 268: BAF 73.7; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 12.2%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 21.5%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 269: BAF 89.7; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 14.9%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 26.2%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 270: BAF 128.6; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 21.3%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 37.5%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
@@ -297,151 +297,151 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
             </div>
             <div class="baf-column" title="Episode 272: BAF 63.7; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 10.6%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 18.6%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 273: BAF 125.4; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 20.8%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 36.6%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 274: BAF 96.7; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 16.0%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 28.2%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 275: BAF 142.4; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 23.6%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 41.5%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 276: BAF 116.2; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 19.3%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 33.9%"></span>
               </span>
               <span class="baf-episode-label">276</span>
             </div>
             <div class="baf-column" title="Episode 277: BAF 227.7; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 37.8%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 66.4%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 278: BAF 245.8; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 40.8%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 71.7%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 279: BAF 192.9; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 32.0%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 56.3%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 280: BAF 68.2; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 11.3%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 19.9%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 281: BAF 111.5; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 18.5%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 32.5%"></span>
               </span>
               <span class="baf-episode-label">281</span>
             </div>
             <div class="baf-column" title="Episode 282: BAF 127.1; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 21.1%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 37.1%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 288: BAF 173.6; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 28.8%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 50.6%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 289: BAF 127.5; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 21.2%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 37.2%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 290: BAF 98.6; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 16.4%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 28.8%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 291: BAF 206.1; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 34.2%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 60.1%"></span>
               </span>
               <span class="baf-episode-label">291</span>
             </div>
             <div class="baf-column" title="Episode 292: BAF 164.2; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 27.2%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 47.9%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 293: BAF 172.4; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 28.6%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 50.3%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 294: BAF 106.9; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 17.7%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 31.2%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 295: BAF 181.1; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 30.0%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 52.8%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 296: BAF 113.2; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 18.8%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 33.0%"></span>
               </span>
               <span class="baf-episode-label">296</span>
             </div>
             <div class="baf-column" title="Episode 297: BAF 111.9; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 18.6%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 32.7%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 298: BAF 140.6; Ben">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-ben" style="--bar-height: 23.3%"></span>
+                <span class="baf-bar cohost-ben" style="--bar-height: 41.0%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 299: BAF 106.0; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 17.6%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 30.9%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
             <div class="baf-column" title="Episode 301: BAF 315.4; Bryce">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-bryce" style="--bar-height: 52.3%"></span>
+                <span class="baf-bar cohost-bryce" style="--bar-height: 92.0%"></span>
               </span>
               <span class="baf-episode-label"></span>
             </div>
-            <div class="baf-column" title="Episode 305: BAF 554.4; no co-host">
+            <div class="baf-column" title="Episode 305: BAF 0.0; no co-host">
               <span class="baf-bar-area">
-                <span class="baf-bar cohost-unknown" style="--bar-height: 92.0%"></span>
+                <span class="baf-bar cohost-unknown" style="--bar-height: 0.0%"></span>
               </span>
               <span class="baf-episode-label">305</span>
             </div>
@@ -460,7 +460,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
               <h4><i class="cohost-swatch cohost-conor"></i>Conor</h4>
               <p>31 non-guest transcripts</p>
               <dl>
-                <div><dt>Median BAF</dt><dd>127.1</dd></div>
+                <div><dt>Median BAF</dt><dd>125.4</dd></div>
                 <div><dt>Guest words / appearance</dt><dd>3,273</dd></div>
               </dl>
               <small>12 guest appearances</small>

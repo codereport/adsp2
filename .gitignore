@@ -31,3 +31,5 @@ test/*
 assets/package-lock.json
 
 vendor/*
+
+__pycache__

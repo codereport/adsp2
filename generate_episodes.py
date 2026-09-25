@@ -602,11 +602,13 @@ def transcript_indices(episode, transcript):
         if role == "guest":
             guest_word_counts[speaker_key] += turn["word_count"]
 
-    baf = (
-        statistics.pstdev(turn_word_counts)
-        if not episode["guest"] and turn_word_counts
-        else None
-    )
+    if episode["guest"]:
+        baf = None
+    elif not episode["cohost"]:
+        # Voices in inserted audio clips do not make a solo episode a conversation.
+        baf = 0.0
+    else:
+        baf = statistics.pstdev(turn_word_counts) if turn_word_counts else None
     return {
         "baf": baf,
         "guest_word_counts": dict(guest_word_counts),
@@ -1067,7 +1069,7 @@ def render_conversation_stats(episodes, transcript_stats, guest_metadata):
         '        </div>',
         '      </div>',
         '      <div class="conversation-index-definitions">',
-        '        <p><strong>BAF (back-and-forth index)</strong> is calculated only for episodes without a guest. It is the population standard deviation of the number of words in each speaking turn. Lower means more consistently sized back-and-forth turns; higher means turn lengths vary more.</p>',
+        '        <p><strong>BAF (back-and-forth index)</strong> is calculated only for episodes without a guest. Episodes without a co-host have a BAF of 0, even if audio clips contain other voices. For co-hosted episodes, BAF is the population standard deviation of the number of words in each speaking turn. Lower means more consistently sized back-and-forth turns; higher means turn lengths vary more.</p>',
         '        <p><strong>Speaker word counts</strong> measure every identified person in every available transcript. The guest metric is calculated only for guest episodes, with each guest appearance measured separately.</p>',
         '      </div>',
         '      <section class="conversation-chart-panel" aria-labelledby="baf-over-time">',
