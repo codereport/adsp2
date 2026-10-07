@@ -48,8 +48,29 @@ topic tags, and applies the same host, clip, and AI exclusions as the statistics
 `MYSTERY SPEAKER` is included. Run `python3 generate_episodes.py --check` to check
 both generated data and guest tags without modifying files.
 
-The separate `python3 update_thrust_cuda_tags.py` script still handles the
-Thrust/CUDA topic rules: `thrust::` adds both tags, and a `Thrust` tag adds `CUDA`.
+Run the topic updater and refresh the homepage logo order after editing titles
+or show notes:
+
+```bash
+python3 update_topic_tags.py
+python3 reorder_logos.py
+python3 generate_episodes.py
+```
+
+The topic updater matches titles and the Show Notes section, including link URLs,
+case-insensitively: `codex` for Codex, OpenAI, GPT, or ChatGPT; `claude` for Claude,
+Anthropic, Opus, or Sonnet; and `cursor` for Cursor. Existing variants of those
+three tags are normalized to lowercase. It also retains the Thrust/CUDA rules:
+`thrust::` anywhere in the episode body adds both tags, and a `Thrust` tag adds
+`CUDA`. Use `python3 update_topic_tags.py --check` to check without writing.
+`update_thrust_cuda_tags.py` remains an alias for the expanded updater.
+
+The Codex, Claude, and Cursor topic logos are stored in `assets/img/`; the homepage
+logo script orders them with the language logos by tagged episode count. Logo
+links stay on the current site, so previews open their own updated tag archives.
+The SVGs come
+from [Lobe Icons](https://github.com/lobehub/lobe-icons); their MIT license is
+included in `assets/img/ai-logos-LICENSE.txt`.
 
 Every episode post has a numeric `buzzsprout-id` in its front matter. The shared
 post template renders its player. The generator checks public transcript pages

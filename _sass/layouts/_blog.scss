@@ -149,6 +149,10 @@ html[data-theme="dark"] .company-logo img.company-logo-invert {
   filter: invert(1) grayscale(1) brightness(1.25);
 }
 
+html[data-theme="dark"] .topic-logo img.topic-logo-invert {
+  filter: invert(1);
+}
+
 @media screen and (max-width: $sm-break) {
   .listen-badge-links {
     padding: 0 1rem;

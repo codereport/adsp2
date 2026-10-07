@@ -1,15 +1,34 @@
 #!/usr/bin/env python3
 """
-Script to automatically reorder programming language logos in _layouts/home.html
+Script to automatically reorder topic logos in _layouts/home.html
 based on the frequency of tags in episode posts.
 """
 
 import re
 from collections import Counter
-from pathlib import Path
+
+from generate_episodes import POSTS_DIR, ROOT, post_tag_values
 
 # Define the technologies we track with their logo configurations
 TECHNOLOGIES = {
+    'codex': {
+        'tag': 'codex',
+        'display_name': 'Codex',
+        'img_src': "{{ '/assets/img/codex.svg' | relative_url }}",
+        'extra_attrs': ''
+    },
+    'claude': {
+        'tag': 'claude',
+        'display_name': 'Claude',
+        'img_src': "{{ '/assets/img/claude.svg' | relative_url }}",
+        'extra_attrs': ''
+    },
+    'cursor': {
+        'tag': 'cursor',
+        'display_name': 'Cursor',
+        'img_src': "{{ '/assets/img/cursor.svg' | relative_url }}",
+        'extra_attrs': 'class="topic-logo-invert"'
+    },
     'C++': {
         'tag': 'C%2B%2B',
         'img_src':
@@ -97,31 +116,16 @@ TECHNOLOGIES = {
 def count_tags_in_posts():
     """Count frequency of each technology tag in all episode posts."""
     tag_counts = Counter()
-    posts_dir = Path('_posts')
+    posts_dir = POSTS_DIR
 
     for post_file in posts_dir.glob('*.md'):
         try:
             with open(post_file, 'r', encoding='utf-8') as f:
                 content = f.read()
 
-            # Extract frontmatter
-            if content.startswith('---'):
-                parts = content.split('---', 2)
-                if len(parts) >= 3:
-                    frontmatter = parts[1]
-                    tags_match = re.search(
-                        r'^tags:\s*\[(?P<tags>.*)\]\s*$',
-                        frontmatter,
-                        re.MULTILINE,
-                    )
-                    if tags_match:
-                        tags = (
-                            tag.strip().strip('"\'')
-                            for tag in tags_match.group('tags').split(',')
-                        )
-                        for tag in tags:
-                            if tag in TECHNOLOGIES:
-                                tag_counts[tag] += 1
+            for tag in set(post_tag_values(content)):
+                if tag in TECHNOLOGIES:
+                    tag_counts[tag] += 1
 
         except Exception as e:
             print(f"Error processing {post_file}: {e}")
@@ -135,14 +139,15 @@ def generate_logo_html(tech_name, config):
     extra_attrs = f'{config["extra_attrs"]}\n                    ' if config[
         'extra_attrs'] else ''
 
-    return f'''            <a class="topic-logo" href="https://adspthepodcast.com/tags/#{config['tag']}">
-                <img {extra_attrs}src="{config['img_src']}" alt="{tech_name}">
+    display_name = config.get('display_name', tech_name)
+    return f'''            <a class="topic-logo" href="{{{{ '/tags/' | relative_url }}}}#{config['tag']}">
+                <img {extra_attrs}src="{config['img_src']}" alt="{display_name}">
             </a>'''
 
 
 def update_home_html(ordered_technologies):
     """Update the _layouts/home.html file with reordered logos."""
-    home_file = Path('_layouts/home.html')
+    home_file = ROOT / '_layouts' / 'home.html'
 
     with open(home_file, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -159,9 +164,12 @@ def update_home_html(ordered_technologies):
     # Look for the pattern between the topic heading and company section.
     pattern = r'(\s*<h3>Episodes about \(or mentioning\):</h3>\s*<div class="topic-logos">)(.*?)(\s*</div>\s*<h3>Interviews with Industry Experts from:</h3>)'
 
-    replacement = f'\\1\n{new_logos_section}\\3'
-
-    new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+    new_content, replacements = re.subn(
+        pattern, lambda match: match.group(1) + '\n' + new_logos_section + match.group(3),
+        content, flags=re.DOTALL,
+    )
+    if replacements != 1:
+        raise ValueError("could not find the homepage topic logos section")
 
     if new_content != content:
         with open(home_file, 'w', encoding='utf-8') as f:
@@ -169,7 +177,7 @@ def update_home_html(ordered_technologies):
         print("✅ Updated _layouts/home.html with reordered logos")
         return True
     else:
-        print("⚠️  No changes made to _layouts/home.html")
+        print("✅ Homepage topic logos are up to date")
         return False
 
 
@@ -185,15 +193,8 @@ def main():
         return
 
     # Sort technologies by frequency (descending)
-    ordered_techs = sorted(tag_counts.keys(),
-                           key=lambda x: tag_counts[x],
-                           reverse=True)
-
-    # Add any technologies that weren't found in posts (with 0 count) at the end
-    missing_techs = [
-        tech for tech in TECHNOLOGIES.keys() if tech not in tag_counts
-    ]
-    ordered_techs.extend(sorted(missing_techs))
+    ordered_techs = sorted(TECHNOLOGIES,
+                           key=lambda tech: (-tag_counts[tech], tech.casefold()))
 
     print("\n📊 Tag frequencies:")
     for tech in ordered_techs:
@@ -209,7 +210,7 @@ def main():
         print(
             "The logos are now ordered from most frequent to least frequent.")
     else:
-        print("\n❌ Failed to update the HTML file.")
+        print("\n✅ Logo order is already current.")
 
 
 if __name__ == '__main__':
