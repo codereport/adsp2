@@ -72,6 +72,44 @@ The SVGs come
 from [Lobe Icons](https://github.com/lobehub/lobe-icons); their MIT license is
 included in `assets/img/ai-logos-LICENSE.txt`.
 
+### Suggest tags from an episode transcript
+
+```bash
+python3 suggest_tags.py 306
+```
+
+The script downloads that episode's public Buzzsprout transcript and suggests
+missing tags using the archive's existing tag spellings first. It lists possible
+new topics and new guest names separately, with mention counts and transcript
+excerpts. Timestamps identify the start of the speaker turn containing each
+excerpt. A final YAML/JSON list makes the suggestions easy to copy into the post.
+It never edits posts, and needs no extra dependencies, login, or API key.
+
+Suggestions use keyword/alias matches, including spoken names such as
+`C plus plus`, and actual guest speaker labels. Review them before adding tags:
+repeated mentions can still be incidental, and transcription errors or topics
+without a matching name can be missed. Known guest names mentioned in conversation
+do not become guest suggestions; the usual host, clip, and AI exclusions apply.
+`MYSTERY SPEAKER` is included. `TOPIC_ALIASES` in the script supplies synonyms and
+potential new technical topics and can be extended as needed.
+
+```bash
+python3 suggest_tags.py 295 --json
+python3 suggest_tags.py 295 --min-mentions 1 --limit 20 --new-limit 10
+python3 suggest_tags.py 295 --transcript-file /path/to/saved-transcript.html
+```
+
+The default minimum is two topic mentions, with up to 12 missing existing tags
+and five possible new tags. Guest suggestions come directly from speaker labels
+and do not need their names spoken aloud. `--transcript-file` reads saved
+Buzzsprout transcript HTML for an offline run.
+
+Terminal output uses cyan timestamps, bold green tag headings, and green
+highlights for matching words and aliases in the excerpts. Guest speaker labels
+are highlighted too. Colors are enabled automatically in a terminal; use
+`--color always` to force them or `--color never` to disable them. `NO_COLOR`
+also disables automatic colors. JSON and redirected output stay plain by default.
+
 Every episode post has a numeric `buzzsprout-id` in its front matter. The shared
 post template renders its player. The generator checks public transcript pages
 across the entire archive and writes `_data/transcripts.json` to show transcript
