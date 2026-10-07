@@ -40,6 +40,14 @@ GUEST_TAG_ALIASES = {
     "douglas gregor": "doug gregor",
     "robert leahy": "rob leahy",
 }
+GUEST_NAME_ALIASES = {
+    "doug gregor": "Douglas Gregor",
+    "marco salgado": "Marco Franzreb Salgado",
+    "trinstan brindle": "Tristan Brindle",
+    "victor cuira": "Victor Ciura",
+    "ray": "Ray Burgemeestre",
+    "bernhard": "Bernhard Manfred Gruber",
+}
 
 POST_NAME_PATTERN = re.compile(
     r"(?P<date>\d{4}-\d{2}-\d{2})-Episode-(?P<number>\d+)\.md$"
@@ -62,8 +70,11 @@ LEGACY_TRANSCRIPT_TURN_PATTERN = re.compile(
 HOST_NAMES = {
     "ben": "Ben",
     "bryce": "Bryce",
+    "bryce adelstein lelbach": "Bryce",
     "conor": "Conor",
+    "conor hoekstra": "Conor",
     "connor": "Conor",
+    "connor hoekstra": "Conor",
 }
 HOST_SPEAKER_COLORS = {
     "host:conor": "#8b1f2d",
@@ -135,10 +146,15 @@ def post_tag_values(post):
 
 
 def guest_tag(name, tag_values):
-    normalized_name = name.casefold()
+    normalized_name = canonical_guest_name(name).casefold()
     normalized_tag = GUEST_TAG_ALIASES.get(normalized_name, normalized_name)
     return next(
-        (tag for tag in tag_values if tag.casefold() == normalized_tag),
+        (
+            tag for tag in tag_values
+            if tag.casefold() == normalized_tag
+            or normalized_person_name(canonical_guest_name(tag))
+            == normalized_person_name(canonical_guest_name(name))
+        ),
         "",
     )
 
@@ -279,7 +295,7 @@ def recorded_date_from_post(post):
 
 def cohost_from_post(post):
     override = front_matter_value(post, "cohost")
-    if override.casefold() in {"ben", "bryce"}:
+    if override.casefold() in {"ben", "bryce", "solo"}:
         return override.title()
 
     introduction = next(
@@ -545,66 +561,97 @@ def normalized_person_name(value):
     return re.sub(r"[^\w]+", " ", value.casefold()).strip()
 
 
-def guest_speaker_key(episode, normalized_speaker):
-    speaker_words = set(normalized_speaker.split())
-    if not speaker_words:
+def canonical_guest_name(name):
+    return GUEST_NAME_ALIASES.get(normalized_person_name(name), name.strip())
+
+
+def guest_catalog(episodes, guest_metadata=None):
+    people = {}
+    for name in (guest_metadata or {}).get("guests", {}):
+        name = canonical_guest_name(name)
+        people[normalized_person_name(name)] = (name, "")
+    for episode in episodes:
+        for _, name, profile_url in episode.get("guest_people", ()):
+            name = canonical_guest_name(name)
+            key = normalized_person_name(name)
+            previous = people.get(key)
+            if not previous or profile_url:
+                people[key] = (name, profile_url)
+    return people
+
+
+def cohost_names(cohost):
+    return tuple(name for name in ("Bryce", "Ben") if name in cohost.split(" & "))
+
+
+def transcript_host(episode, label):
+    if "(" in label or ")" in label:
         return ""
-
-    for _, guest_name, _ in episode["guest_people"]:
-        normalized_guest = normalized_person_name(guest_name)
-        guest_words = set(normalized_guest.split())
-        if (
-            normalized_speaker == normalized_guest
-            or (
-                len(speaker_words) >= 2
-                and speaker_words.issubset(guest_words)
-            )
-            or (
-                len(guest_words) >= 2
-                and guest_words.issubset(speaker_words)
-            )
-        ):
-            return f"guest:{normalized_guest}"
-    return ""
+    name = normalized_person_name(label)
+    # Ben's full name also labels his guest appearances. The introduction
+    # identifies the occasions when he interviewed guests alongside Conor.
+    if name == "ben deane" and "Ben" in cohost_names(episode["cohost"]):
+        return "Ben"
+    return HOST_NAMES.get(name, "")
 
 
-def classify_transcript_speakers(episode, turns):
-    normalized_speakers = {
-        normalized_person_name(turn["speaker"])
-        for turn in turns
-    }
-    inferred_cohost_label = ""
-    normalized_cohost = episode["cohost"].casefold()
-    placeholder_speakers = {
-        speaker for speaker in normalized_speakers if speaker.startswith("speaker_")
-    }
-    if (
-        normalized_cohost
-        and normalized_cohost not in normalized_speakers
-        and len(placeholder_speakers) == 1
-    ):
-        inferred_cohost_label = next(iter(placeholder_speakers))
+def excluded_guest_label(label):
+    name = normalized_person_name(label)
+    return bool(
+        not name or "(" in label or ")" in label
+        or re.fullmatch(r"(?:unknown|unnamed)(?: speaker)?", name)
+        or re.fullmatch(r"speaker(?: \d+)?", name)
+        or re.fullmatch(r"ai host(?: \d+)?", name)
+    )
 
+
+def transcript_guest(label, people):
+    name = canonical_guest_name(label)
+    normalized_name = normalized_person_name(name)
+    person = people.get(normalized_name)
+    if person is None:
+        words = set(normalized_name.split())
+        matches = [
+            details for key, details in people.items()
+            if len(words) >= 2 and len(key.split()) >= 2
+            and (words.issubset(key.split()) or set(key.split()).issubset(words))
+        ]
+        if len(matches) == 1:
+            person = matches[0]
+    if person is not None:
+        name, profile_url = person
+    else:
+        profile_url = ""
+    return (f"name:{normalized_person_name(name)}", name, profile_url)
+
+
+def classify_transcript_speakers(episode, turns, people=None):
+    if people is None:
+        people = guest_catalog([episode])
     classifications = {}
-    for speaker in normalized_speakers:
-        first_name = speaker.split(maxsplit=1)[0] if speaker else ""
-        host = HOST_NAMES.get(speaker) or HOST_NAMES.get(first_name)
-        if host and (host == "Conor" or host == episode["cohost"]):
+    guests = {}
+    hosts = set()
+    for turn in turns:
+        label = turn["speaker"].strip()
+        speaker = normalized_person_name(label)
+        host = transcript_host(episode, label)
+        if host:
             classifications[speaker] = (f"host:{host.casefold()}", "host")
+            hosts.add(host)
             continue
-        if speaker == inferred_cohost_label:
-            classifications[speaker] = (f"host:{normalized_cohost}", "host")
-            continue
-        guest_key = guest_speaker_key(episode, speaker) if episode["guest"] else ""
-        if guest_key:
+        if not excluded_guest_label(label):
+            person = transcript_guest(label, people)
+            guest_key = f"guest:{normalized_person_name(person[1])}"
             classifications[speaker] = (guest_key, "guest")
+            guests[guest_key] = person
 
-    return classifications
+    cohost = " & ".join(host for host in ("Bryce", "Ben") if host in hosts) or "Solo"
+    return classifications, cohost, tuple(guests.values())
 
 
-def transcript_indices(episode, transcript):
+def transcript_indices(episode, transcript, people=None):
     turns, _ = parse_transcript(transcript)
-    classifications = classify_transcript_speakers(episode, turns)
+    classifications, cohost, guests = classify_transcript_speakers(episode, turns, people)
     turn_word_counts = [turn["word_count"] for turn in turns if turn["word_count"]]
     guest_word_counts = Counter()
     speaker_word_counts = Counter()
@@ -622,14 +669,16 @@ def transcript_indices(episode, transcript):
         if role == "guest":
             guest_word_counts[speaker_key] += turn["word_count"]
 
-    if episode["guest"]:
+    if guests:
         baf = None
-    elif not episode["cohost"]:
+    elif cohost == "Solo":
         # Voices in inserted audio clips do not make a solo episode a conversation.
         baf = 0.0
     else:
         baf = statistics.pstdev(turn_word_counts) if turn_word_counts else None
     return {
+        "cohost": cohost,
+        "guest_people": guests,
         "baf": baf,
         "guest_word_counts": dict(guest_word_counts),
         "speaker_word_counts": dict(speaker_word_counts),
@@ -637,7 +686,7 @@ def transcript_indices(episode, transcript):
     }
 
 
-def read_transcript_indices(episodes, feed_root=None):
+def read_transcript_indices(episodes, feed_root=None, guest_metadata=None):
     if feed_root is None:
         feed_root = read_feed_root()
     available_ids = published_transcript_ids(feed_root)
@@ -646,6 +695,7 @@ def read_transcript_indices(episodes, feed_root=None):
         for episode in episodes
         if episode["buzzsprout_id"]
     ]
+    people = guest_catalog(episodes, guest_metadata)
 
     def fetch(episode):
         url = TRANSCRIPT_URL.format(buzzsprout_id=episode["buzzsprout_id"])
@@ -660,7 +710,7 @@ def read_transcript_indices(episodes, feed_root=None):
             if error.code == 404 and episode["buzzsprout_id"] not in available_ids:
                 return None
             raise
-        return episode["number"], transcript_indices(episode, transcript)
+        return episode["number"], transcript_indices(episode, transcript, people)
 
     indices = {}
     failures = []
@@ -683,6 +733,20 @@ def read_transcript_indices(episodes, feed_root=None):
             "could not read transcripts:\n  " + "\n  ".join(sorted(failures))
         )
     return indices
+
+
+def apply_transcript_participants(episodes, transcript_stats):
+    for episode in episodes:
+        metrics = transcript_stats.get(episode["number"])
+        if metrics is None:
+            continue
+        if metrics["guest_people"] and not episode["guest"]:
+            episode["guest_identity"] = ("speakers",) + tuple(
+                sorted(key for key, _, _ in metrics["guest_people"])
+            )
+        episode["cohost"] = metrics["cohost"]
+        episode["guest_people"] = metrics["guest_people"]
+        episode["guest"] = bool(metrics["guest_people"])
 
 
 def existing_table_values(page):
@@ -816,14 +880,16 @@ def read_guest_metadata():
                 + ", ".join(sorted(unknown_guests))
             )
     metadata["guests_by_name"] = {
-        normalized_person_name(name): details
+        normalized_person_name(canonical_guest_name(name)): details
         for name, details in metadata.get("guests", {}).items()
     }
     return metadata
 
 
 def guest_badges(name, guest_metadata):
-    guest = guest_metadata["guests_by_name"].get(normalized_person_name(name), {})
+    guest = guest_metadata["guests_by_name"].get(
+        normalized_person_name(canonical_guest_name(name)), {}
+    )
     logo_base_url = guest_metadata.get("logo_base_url", "").rstrip("/") + "/"
     badges = []
 
@@ -901,14 +967,14 @@ def guest_table_rows(guests, guest_metadata, indentation="            "):
 
 
 def cohost_class(cohost):
-    return f"cohost-{cohost.casefold()}" if cohost else "cohost-unknown"
+    return f"cohost-{cohost.casefold().replace(' & ', '-')}" if cohost else "cohost-unknown"
 
 
 def latest_company_episodes(episodes, guest_metadata):
     latest_by_guest = {}
     for episode in episodes:
         for _, guest_name, _ in episode["guest_people"]:
-            guest_key = normalized_person_name(guest_name)
+            guest_key = normalized_person_name(canonical_guest_name(guest_name))
             previous = latest_by_guest.get(guest_key)
             if previous is None or (episode["date"], episode["number"]) > (
                 previous["date"],
@@ -921,6 +987,7 @@ def latest_company_episodes(episodes, guest_metadata):
     for company_key in guest_metadata["featured_companies"]:
         candidates = []
         for guest_name in companies[company_key].get("guests", []):
+            guest_name = canonical_guest_name(guest_name)
             episode = latest_by_guest.get(normalized_person_name(guest_name))
             if episode:
                 candidates.append((episode["date"], episode["number"], guest_name, episode))
@@ -1017,7 +1084,7 @@ def render_conversation_stats(episodes, transcript_stats, guest_metadata):
         def speaker_sort_key(speaker_key):
             if speaker_key == "host:conor":
                 return 0, speaker_key
-            if speaker_key == f'host:{episode["cohost"].casefold()}':
+            if speaker_key.startswith("host:"):
                 return 1, speaker_key
             if speaker_key.startswith("guest:"):
                 return 2, speaker_key
@@ -1227,12 +1294,12 @@ def render_conversation_stats(episodes, transcript_stats, guest_metadata):
             cohost_baf_entries = [
                 metrics
                 for episode, metrics in baf_entries
-                if episode["cohost"] == cohost
+                if cohost in cohost_names(episode["cohost"])
             ]
             cohost_guest_words = [
                 words
                 for episode, metrics in guest_episode_entries
-                if episode["cohost"] == cohost
+                if cohost in cohost_names(episode["cohost"])
                 for words in metrics["guest_word_counts"].values()
             ]
         cohost_baf = (
@@ -1423,7 +1490,7 @@ def render_stats(episodes, durations, transcript_stats, guest_metadata):
     guest_lines = [
         '    <section aria-labelledby="frequent-guests">',
         '      <h2 id="frequent-guests">Most frequent guests</h2>',
-        '      <p class="episode-stat-note">Recordings are counted by unique recorded date; one recording can become several episodes. Logo badges link to company sites and language episode tags.</p>',
+        '      <p class="episode-stat-note">Guest appearances are identified from transcript speakers, excluding hosts, audio clips and AI voices. Recordings are counted by unique recorded date; one recording can become several episodes. Logo badges link to related episodes.</p>',
         '      <div class="episode-stats-table-wrapper">',
         '        <table class="frequent-guests-table">',
         "          <thead>",
@@ -1598,12 +1665,13 @@ def main():
     existing_values = existing_table_values(current_page)
     episodes = read_posts()
     guest_metadata = read_guest_metadata()
-    company_episodes = latest_company_episodes(episodes, guest_metadata)
-    guest_metadata["company_latest_episodes"] = company_episodes
     feed_root = read_feed_root(args.feed_file)
     durations = read_durations(episodes=episodes, feed_root=feed_root)
-    transcript_stats = read_transcript_indices(episodes, feed_root)
+    transcript_stats = read_transcript_indices(episodes, feed_root, guest_metadata)
     print(f"📄 - Transcripts measured: {len(transcript_stats)}/{len(episodes)} episodes")
+    apply_transcript_participants(episodes, transcript_stats)
+    company_episodes = latest_company_episodes(episodes, guest_metadata)
+    guest_metadata["company_latest_episodes"] = company_episodes
     stats = render_stats(episodes, durations, transcript_stats, guest_metadata)
     table = render_table(episodes, durations, existing_values)
     generated_page = render_page(current_page, stats, table)

@@ -106,8 +106,16 @@ the collapsible statistics section. Repeated guest profiles and shared conferenc
 tags keep a series the same orange or purple, while episodes tagged `Road Trip` are
 green. It copies the title for a new episode once, then preserves that title on
 later runs so you can make small Markdown edits such as adding backticks for inline
-code. If the co-host cannot be inferred from the episode introduction, add
-`cohost: Ben` or `cohost: Bryce` to that post's front matter.
+code. Available transcripts determine the co-host label (`Solo` when Conor is the
+only host), guest appearances, and speaker statistics. Speakers whose labels
+contain parentheses are treated as inserted audio, and AI hosts are excluded from
+guest counts. `MYSTERY SPEAKER` is included as a guest. Guest bios and conference
+lists supply profile links and canonical spellings, but a person must speak in the
+transcript to count as a guest appearance. Without a transcript, the generator
+uses the episode notes; add `cohost: Ben`, `cohost: Bryce`, or `cohost: Solo` to the
+front matter when needed. A `Ben Deane` transcript label remains a guest unless the
+episode introduction or `cohost: Ben` identifies him as the co-host; the short
+`Ben` label identifies a co-host directly.
 
 Guest company and language badges are configured in `_data/guest_metadata.json`.
 Add a company to its `companies` catalog, add its key to `featured_companies` to

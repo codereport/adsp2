@@ -817,8 +817,15 @@ html[data-theme="dark"] .listen-page {
 }
 
 .baf-bar.cohost-unknown,
-.cohost-swatch.cohost-unknown {
+.cohost-swatch.cohost-unknown,
+.baf-bar.cohost-solo,
+.cohost-swatch.cohost-solo {
   background: #777;
+}
+
+.baf-bar.cohost-bryce-ben,
+.cohost-swatch.cohost-bryce-ben {
+  background: linear-gradient(90deg, $theme-color 50%, #c4752e 50%);
 }
 
 .cohost-swatch.cohost-conor {
