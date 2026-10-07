@@ -705,13 +705,76 @@ html[data-theme="dark"] .listen-page {
   overflow-x: auto;
 }
 
+.conversation-chart-header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1em;
+  justify-content: space-between;
+  margin-bottom: 0.65em;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.baf-zoom-controls {
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  display: inline-flex;
+  font-size: 0.75em;
+  gap: 0.2em;
+  padding: 0.15em;
+
+  &[hidden] {
+    display: none;
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.3em;
+    height: 1.75em;
+    line-height: 1;
+    padding: 0;
+    width: 1.75em;
+
+    &:hover:not(:disabled) {
+      background: rgba(127, 127, 127, 0.15);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $theme-color;
+      outline-offset: 1px;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.35;
+    }
+  }
+}
+
+.baf-zoom-value {
+  font-variant-numeric: tabular-nums;
+  min-width: 3.5em;
+  text-align: center;
+}
+
 .baf-chart {
+  --baf-zoom: 2;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   display: grid;
-  gap: 0.2em;
-  grid-template-columns: repeat(var(--baf-columns), minmax(6px, 1fr));
+  gap: calc(2px * var(--baf-zoom));
+  grid-template-columns: repeat(var(--baf-columns), minmax(0, 1fr));
   height: 11em;
   min-width: 28em;
+  width: max(100%, calc(var(--baf-columns) * 12px * var(--baf-zoom)));
 }
 
 .baf-column {
@@ -1117,6 +1180,10 @@ html[data-theme="dark"] .episode-stats {
 
   .baf-chart {
     border-bottom-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .baf-zoom-controls {
+    border-color: rgba(255, 255, 255, 0.2);
   }
 
   .speaker-word-track {

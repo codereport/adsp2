@@ -10,6 +10,7 @@ import statistics
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from urllib.error import HTTPError
 from urllib.parse import quote_plus
 from urllib.request import Request, urlopen
 
@@ -19,9 +20,10 @@ POSTS_DIR = ROOT / "_posts"
 EPISODES_PAGE = ROOT / "pages" / "episodes.md"
 GUEST_METADATA_PATH = ROOT / "_data" / "guest_metadata.json"
 COMPANY_EPISODES_PATH = ROOT / "_data" / "company_latest_episodes.json"
+TRANSCRIPTS_PATH = ROOT / "_data" / "transcripts.json"
 FEED_URL = "https://feeds.buzzsprout.com/1501960.rss"
 TRANSCRIPT_URL = "https://www.buzzsprout.com/1501960/{buzzsprout_id}/transcript"
-TRANSCRIPT_START_EPISODE = 264
+PODCAST_TRANSCRIPT = "{https://podcastindex.org/namespace/1.0}transcript"
 GENERATED_START = "<!-- BEGIN GENERATED EPISODES -->"
 GENERATED_END = "<!-- END GENERATED EPISODES -->"
 ITUNES_DURATION = "{http://www.itunes.com/dtds/podcast-1.0.dtd}duration"
@@ -372,13 +374,32 @@ def parse_duration(value):
     return seconds
 
 
-def read_durations(feed_file=None, episodes=()):
+def read_feed_root(feed_file=None):
     if feed_file:
         feed = feed_file.read_bytes()
     else:
         request = Request(FEED_URL, headers={"User-Agent": "ADSP episode generator"})
         with urlopen(request, timeout=30) as response:
             feed = response.read()
+    return ET.fromstring(feed)
+
+
+def published_transcript_ids(feed_root):
+    ids = set()
+    for item in feed_root.findall("./channel/item"):
+        guid_match = re.fullmatch(
+            r"Buzzsprout-(\d+)", item.findtext("guid", default=""), re.IGNORECASE
+        )
+        if guid_match and any(
+            transcript.get("url") for transcript in item.findall(PODCAST_TRANSCRIPT)
+        ):
+            ids.add(guid_match.group(1))
+    return ids
+
+
+def read_durations(feed_file=None, episodes=(), *, feed_root=None):
+    if feed_root is None:
+        feed_root = read_feed_root(feed_file)
 
     episodes_by_buzzsprout_id = {
         episode["buzzsprout_id"]: episode
@@ -388,8 +409,7 @@ def read_durations(feed_file=None, episodes=()):
     durations = {}
     feed_episode_numbers = set()
     feed_buzzsprout_ids = set()
-    root = ET.fromstring(feed)
-    for item in root.findall("./channel/item"):
+    for item in feed_root.findall("./channel/item"):
         title = item.findtext("title", default="")
         match = re.match(r"Episode\s+(\d+)\s*:", title, re.IGNORECASE)
         if match:
@@ -617,20 +637,29 @@ def transcript_indices(episode, transcript):
     }
 
 
-def read_transcript_indices(episodes):
+def read_transcript_indices(episodes, feed_root=None):
+    if feed_root is None:
+        feed_root = read_feed_root()
+    available_ids = published_transcript_ids(feed_root)
     transcript_episodes = [
         episode
         for episode in episodes
-        if episode["number"] >= TRANSCRIPT_START_EPISODE
-        and episode["buzzsprout_id"]
+        if episode["buzzsprout_id"]
     ]
 
     def fetch(episode):
         url = TRANSCRIPT_URL.format(buzzsprout_id=episode["buzzsprout_id"])
         request = Request(url, headers={"User-Agent": "ADSP episode generator"})
-        with urlopen(request, timeout=30) as response:
-            charset = response.headers.get_content_charset() or "utf-8"
-            transcript = response.read().decode(charset, errors="replace")
+        try:
+            with urlopen(request, timeout=30) as response:
+                charset = response.headers.get_content_charset() or "utf-8"
+                transcript = response.read().decode(charset, errors="replace")
+        except HTTPError as error:
+            # The RSS feed can lag behind completed transcripts for several hours.
+            # Probe public pages too; only an unadvertised 404 means not ready yet.
+            if error.code == 404 and episode["buzzsprout_id"] not in available_ids:
+                return None
+            raise
         return episode["number"], transcript_indices(episode, transcript)
 
     indices = {}
@@ -642,8 +671,10 @@ def read_transcript_indices(episodes):
         for future in as_completed(future_episodes):
             episode = future_episodes[future]
             try:
-                number, metrics = future.result()
-                indices[number] = metrics
+                result = future.result()
+                if result is not None:
+                    number, metrics = result
+                    indices[number] = metrics
             except Exception as error:
                 failures.append(f"Episode {episode['number']}: {error}")
 
@@ -1049,8 +1080,7 @@ def render_conversation_stats(episodes, transcript_stats, guest_metadata):
     lines = [
         '    <section class="conversation-dynamics" aria-labelledby="conversation-dynamics">',
         '      <h2 id="conversation-dynamics">Conversation dynamics</h2>',
-        '      <p class="episode-stat-note">Based on timestamped transcripts from '
-        f'Episode {transcript_entries[0][0]["number"]} onward.</p>',
+        '      <p class="episode-stat-note">Based on available timestamped transcripts.</p>',
         '      <div class="conversation-index-overview">',
         '        <div class="conversation-index-card">',
         f'          <strong>{median_baf_label}</strong>',
@@ -1073,9 +1103,16 @@ def render_conversation_stats(episodes, transcript_stats, guest_metadata):
         '        <p><strong>Speaker word counts</strong> measure every identified person in every available transcript. The guest metric is calculated only for guest episodes, with each guest appearance measured separately.</p>',
         '      </div>',
         '      <section class="conversation-chart-panel" aria-labelledby="baf-over-time">',
-        '        <h3 id="baf-over-time">BAF over time</h3>',
-        '        <div class="conversation-chart-scroll">',
-        f'          <div class="baf-chart" role="img" aria-label="BAF index by non-guest episode. {html.escape(baf_description, quote=True)}" style="--baf-columns: {len(baf_entries)}">',
+        '        <div class="conversation-chart-header">',
+        '          <h3 id="baf-over-time">BAF over time</h3>',
+        '          <div class="baf-zoom-controls" role="group" aria-label="BAF chart zoom" hidden>',
+        '            <button type="button" data-baf-zoom="out" aria-label="Zoom out BAF chart" aria-controls="baf-chart" title="Zoom out">−</button>',
+        '            <output class="baf-zoom-value" aria-live="polite">200%</output>',
+        '            <button type="button" data-baf-zoom="in" aria-label="Zoom in BAF chart" aria-controls="baf-chart" title="Zoom in">+</button>',
+        '          </div>',
+        '        </div>',
+        '        <div class="conversation-chart-scroll" tabindex="0" role="region" aria-label="BAF timeline">',
+        f'          <div id="baf-chart" class="baf-chart" role="img" aria-label="BAF index by non-guest episode. {html.escape(baf_description, quote=True)}" style="--baf-columns: {len(baf_entries)}">',
     ]
 
     for index, (episode, metrics) in enumerate(baf_entries):
@@ -1116,7 +1153,7 @@ def render_conversation_stats(episodes, transcript_stats, guest_metadata):
         '          <div class="speaker-word-chart">',
     ]
 
-    for row in speaker_episode_rows:
+    for row in reversed(speaker_episode_rows):
         episode = row["episode"]
         participant_description = "; ".join(
             f'{participant["name"]}: {participant["words"]:,} words'
@@ -1563,8 +1600,10 @@ def main():
     guest_metadata = read_guest_metadata()
     company_episodes = latest_company_episodes(episodes, guest_metadata)
     guest_metadata["company_latest_episodes"] = company_episodes
-    durations = read_durations(args.feed_file, episodes)
-    transcript_stats = read_transcript_indices(episodes)
+    feed_root = read_feed_root(args.feed_file)
+    durations = read_durations(episodes=episodes, feed_root=feed_root)
+    transcript_stats = read_transcript_indices(episodes, feed_root)
+    print(f"📄 - Transcripts measured: {len(transcript_stats)}/{len(episodes)} episodes")
     stats = render_stats(episodes, durations, transcript_stats, guest_metadata)
     table = render_table(episodes, durations, existing_values)
     generated_page = render_page(current_page, stats, table)
@@ -1578,9 +1617,19 @@ def main():
     )
     page_changed = generated_page != current_page
     company_episodes_changed = generated_company_episodes != current_company_episodes
+    generated_transcripts = json.dumps(
+        sorted(
+            (episode["buzzsprout_id"] for episode in episodes if episode["number"] in transcript_stats),
+            key=int,
+        ), indent=2
+    ) + "\n"
+    transcripts_changed = (
+        not TRANSCRIPTS_PATH.exists()
+        or TRANSCRIPTS_PATH.read_text(encoding="utf-8") != generated_transcripts
+    )
 
-    if not page_changed and not company_episodes_changed:
-        print("✅ - Episodes table and company links are up to date")
+    if not page_changed and not company_episodes_changed and not transcripts_changed:
+        print("✅ - Episodes table, company links, and transcript links are up to date")
         return 0
 
     if args.check:
@@ -1599,6 +1648,9 @@ def main():
             "🔧 - Generated latest company appearances in "
             f"{COMPANY_EPISODES_PATH.relative_to(ROOT)}"
         )
+    if transcripts_changed:
+        TRANSCRIPTS_PATH.write_text(generated_transcripts, encoding="utf-8")
+        print(f"🔧 - Generated available transcript links in {TRANSCRIPTS_PATH.relative_to(ROOT)}")
     return 0
 
 

@@ -22,9 +22,10 @@ layout: default
       <div id="buzzsprout-player-{{ buzzsprout_id }}"></div><script src="https://www.buzzsprout.com/1501960/episodes/{{ buzzsprout_id }}-{{ page.title | slugify }}.js?container_id=buzzsprout-player-{{ buzzsprout_id }}&player=small" type="text/javascript" charset="utf-8"></script>
       {% endif %}
       {{ content }}
-      {% if buzzsprout_id %}
+      {% assign transcript_id = buzzsprout_id | append: "" %}
+      {% if site.data.transcripts contains transcript_id %}
       <h3 id="transcript">Transcript</h3>
-      <a href="https://www.buzzsprout.com/1501960/{{ buzzsprout_id }}-{{ page.title | slugify }}/transcript">View transcript</a>
+      <a href="https://www.buzzsprout.com/1501960/{{ buzzsprout_id }}/transcript">View transcript</a>
       {% endif %}
     {% if page.bootstrap %}
     </div>

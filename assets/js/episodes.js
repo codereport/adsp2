@@ -97,6 +97,40 @@
     updateGuestHeaders();
   }
 
+  const bafChart = document.getElementById("baf-chart");
+  const bafZoomControls = document.querySelector(".baf-zoom-controls");
+
+  if (bafChart && bafZoomControls) {
+    const scroller = bafChart.closest(".conversation-chart-scroll");
+    const zoomOut = bafZoomControls.querySelector('[data-baf-zoom="out"]');
+    const zoomIn = bafZoomControls.querySelector('[data-baf-zoom="in"]');
+    const zoomValue = bafZoomControls.querySelector(".baf-zoom-value");
+    const zoomLevels = [0.5, 1, 1.5, 2, 3, 4];
+    let zoomIndex = 3;
+
+    function updateZoom(nextIndex) {
+      const atStart = scroller.scrollLeft <= 1;
+      const atEnd = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 1;
+      const center = scroller.scrollWidth
+        ? (scroller.scrollLeft + scroller.clientWidth / 2) / scroller.scrollWidth
+        : 0;
+
+      zoomIndex = Math.max(0, Math.min(zoomLevels.length - 1, nextIndex));
+      bafChart.style.setProperty("--baf-zoom", zoomLevels[zoomIndex]);
+      zoomValue.textContent = Math.round(zoomLevels[zoomIndex] * 100) + "%";
+      zoomOut.disabled = zoomIndex === 0;
+      zoomIn.disabled = zoomIndex === zoomLevels.length - 1;
+      scroller.scrollLeft = atStart ? 0 : atEnd
+        ? scroller.scrollWidth - scroller.clientWidth
+        : center * scroller.scrollWidth - scroller.clientWidth / 2;
+    }
+
+    zoomOut.addEventListener("click", function () { updateZoom(zoomIndex - 1); });
+    zoomIn.addEventListener("click", function () { updateZoom(zoomIndex + 1); });
+    bafZoomControls.hidden = false;
+    updateZoom(zoomIndex);
+  }
+
   const table = document.querySelector(".episodes-table");
   if (!table || !table.tBodies.length) {
     return;

@@ -1,9 +1,12 @@
 import os
 import re
+import json
 from datetime import datetime
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse, parse_qs
 from urllib.request import Request, urlopen
+
+from generate_episodes import TRANSCRIPTS_PATH
 
 # Posts
 print("POST CHECKS")
@@ -107,6 +110,11 @@ print(("❌" if problem else "✅") + " - Dates Differ by 7 Days")
 problem = False
 buzzsprout_ids = {}
 transcript_buzzsprout_ids = {}
+try:
+    available_transcript_ids = set(json.loads(TRANSCRIPTS_PATH.read_text()))
+except (OSError, ValueError, TypeError) as error:
+    print(f"❌ - Could not read generated transcript availability ({error}); run generate_episodes.py")
+    available_transcript_ids = set()
 for post_name in sorted(os.listdir("_posts/")):
     if not post_name.endswith(".md"):
         continue
@@ -117,6 +125,8 @@ for post_name in sorted(os.listdir("_posts/")):
     player_match = re.search(r"buzzsprout-player-(\d+)", content)
     id_match = front_matter_match or player_match
     if not id_match:
+        print(f"❌ - Missing Buzzsprout ID: {post_name}")
+        problem = True
         continue
 
     bid = id_match.group(1)
@@ -128,8 +138,7 @@ for post_name in sorted(os.listdir("_posts/")):
     else:
         buzzsprout_ids[bid] = post_name
 
-    episode_number = int(post_name[:-3].split("-")[-1])
-    if episode_number >= 264:
+    if bid in available_transcript_ids:
         transcript_buzzsprout_ids[bid] = post_name
 if not problem:
     print("✅ - Unique Buzzsprout IDs")
