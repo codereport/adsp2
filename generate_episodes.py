@@ -95,7 +95,7 @@ def parse_args():
     parser.add_argument(
         "--check",
         action="store_true",
-        help="exit with an error instead of updating an out-of-date table",
+        help="check episode data and transcript guest tags without changing files",
     )
     parser.add_argument(
         "--feed-file",
@@ -137,12 +137,22 @@ def title_from_post(post, episode_number):
 
 
 def post_tag_values(post):
-    tags = front_matter_value(post, "tags").strip("[]")
-    return tuple(
-        tag.strip().strip("\"'")
-        for tag in tags.split(",")
-        if tag.strip()
-    )
+    if post.startswith("---\n") or post.startswith("---\r\n"):
+        post = post.split("---", 2)[1]
+    value = front_matter_value(post, "tags")
+    inline_list = re.fullmatch(r"\[(.*)\][ \t]*(?:#.*)?", value)
+    tags = inline_list.group(1) if inline_list else value
+    values = []
+    # Keep quoted names containing commas or apostrophes as single YAML tags.
+    for match in re.finditer(r'''\s*("(?:\\.|[^"\\])*"|'(?:''|[^'])*'|[^,]+)\s*(?:,|$)''', tags):
+        tag = match.group(1).strip()
+        if tag.startswith('"') and tag.endswith('"'):
+            tag = json.loads(tag)
+        elif tag.startswith("'") and tag.endswith("'"):
+            tag = tag[1:-1].replace("''", "'")
+        if tag:
+            values.append(tag)
+    return tuple(values)
 
 
 def guest_tag(name, tag_values):
@@ -324,14 +334,16 @@ def cohost_from_post(post):
     return ""
 
 
-def read_posts():
+def read_posts(post_updates=None):
     episodes = []
     for path in POSTS_DIR.glob("*Episode-*.md"):
         match = POST_NAME_PATTERN.fullmatch(path.name)
         if not match:
             continue
 
-        post = path.read_text(encoding="utf-8")
+        post = (post_updates or {}).get(path)
+        if post is None:
+            post = path.read_text(encoding="utf-8")
         number = int(match.group("number"))
         title = title_from_post(post, number)
         tag_values = post_tag_values(post)
@@ -747,6 +759,69 @@ def apply_transcript_participants(episodes, transcript_stats):
         episode["cohost"] = metrics["cohost"]
         episode["guest_people"] = metrics["guest_people"]
         episode["guest"] = bool(metrics["guest_people"])
+
+
+def add_post_tags(post, names):
+    lines = post.splitlines(keepends=True)
+    if not lines or lines[0].strip() != "---":
+        raise ValueError("post has no YAML front matter")
+    end = next((i for i in range(1, len(lines)) if lines[i].strip() == "---"), None)
+    if end is None:
+        raise ValueError("post has no closing YAML front matter delimiter")
+    additions = ", ".join(json.dumps(name, ensure_ascii=False) for name in names)
+    newline = "\r\n" if lines[0].endswith("\r\n") else "\n"
+    for index in range(1, end):
+        if not re.match(r"^tags:", lines[index]):
+            continue
+        match = re.fullmatch(
+            r"(?P<prefix>tags:[ \t]*\[)(?P<tags>.*)(?P<suffix>\][ \t]*(?:#.*)?)(?:\r?\n)?",
+            lines[index],
+        )
+        if match is None:
+            raise ValueError("expected tags to be an inline YAML list")
+        tags = match.group("tags").rstrip()
+        separator = ", " if tags.strip() else ""
+        lines[index] = match.group("prefix") + tags + separator + additions + match.group("suffix") + newline
+        break
+    else:
+        lines.insert(end, f"tags: [{additions}]{newline}")
+    return "".join(lines)
+
+
+def guest_tag_updates(episodes, transcript_stats):
+    tag_counts = Counter(tag for episode in episodes for tag in episode["tag_values"])
+    names = {
+        name for metrics in transcript_stats.values()
+        for _, name, _ in metrics["guest_people"]
+    }
+    preferred_tags = {}
+    for name in names:
+        existing = [tag for tag in tag_counts if guest_tag(name, (tag,))]
+        preferred_tags[name] = (
+            min(existing, key=lambda tag: (-tag_counts[tag], tag.casefold(), tag))
+            if existing else name
+        )
+
+    updates = {}
+    for episode in episodes:
+        metrics = transcript_stats.get(episode["number"])
+        if metrics is None:
+            continue
+        tags = list(episode["tag_values"])
+        added = []
+        for _, name, _ in metrics["guest_people"]:
+            if not guest_tag(name, tags):
+                tag = preferred_tags[name]
+                tags.append(tag)
+                added.append(tag)
+        if added:
+            path = POSTS_DIR / f"{episode['date']}-Episode-{episode['number']}.md"
+            post = path.read_text(encoding="utf-8")
+            try:
+                updates[path] = add_post_tags(post, added)
+            except ValueError as error:
+                raise ValueError(f"{path.name}: {error}") from error
+    return updates
 
 
 def existing_table_values(page):
@@ -1669,6 +1744,9 @@ def main():
     durations = read_durations(episodes=episodes, feed_root=feed_root)
     transcript_stats = read_transcript_indices(episodes, feed_root, guest_metadata)
     print(f"📄 - Transcripts measured: {len(transcript_stats)}/{len(episodes)} episodes")
+    post_updates = guest_tag_updates(episodes, transcript_stats)
+    if post_updates:
+        episodes = read_posts(post_updates)
     apply_transcript_participants(episodes, transcript_stats)
     company_episodes = latest_company_episodes(episodes, guest_metadata)
     guest_metadata["company_latest_episodes"] = company_episodes
@@ -1696,17 +1774,21 @@ def main():
         or TRANSCRIPTS_PATH.read_text(encoding="utf-8") != generated_transcripts
     )
 
-    if not page_changed and not company_episodes_changed and not transcripts_changed:
-        print("✅ - Episodes table, company links, and transcript links are up to date")
+    if not page_changed and not company_episodes_changed and not transcripts_changed and not post_updates:
+        print("✅ - Episode data, transcript links, and guest tags are up to date")
         return 0
 
     if args.check:
         print(
-            "❌ - Generated episode data is out of date; "
+            "❌ - Generated episode data or transcript guest tags are out of date; "
             "run python3 generate_episodes.py"
         )
         return 1
 
+    for path, post in post_updates.items():
+        path.write_text(post, encoding="utf-8")
+    if post_updates:
+        print(f"🔧 - Added transcript guest tags to {len(post_updates)} episode posts")
     if page_changed:
         EPISODES_PAGE.write_text(generated_page, encoding="utf-8")
         print(f"🔧 - Generated {len(episodes)} rows in {EPISODES_PAGE.relative_to(ROOT)}")

@@ -41,6 +41,16 @@ Run the generator after adding or editing an episode post:
 python3 generate_episodes.py
 ```
 
+This also adds missing guest names from available transcripts to each episode's
+front-matter tags, making guest names link to all tagged appearances. It reuses
+existing guest tag spellings (for example, `Doug Gregor`), preserves existing
+topic tags, and applies the same host, clip, and AI exclusions as the statistics.
+`MYSTERY SPEAKER` is included. Run `python3 generate_episodes.py --check` to check
+both generated data and guest tags without modifying files.
+
+The separate `python3 update_thrust_cuda_tags.py` script still handles the
+Thrust/CUDA topic rules: `thrust::` adds both tags, and a `Thrust` tag adds `CUDA`.
+
 Every episode post has a numeric `buzzsprout-id` in its front matter. The shared
 post template renders its player. The generator checks public transcript pages
 across the entire archive and writes `_data/transcripts.json` to show transcript
