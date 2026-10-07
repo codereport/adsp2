@@ -914,10 +914,10 @@ def episode_path(episode):
     )
 
 
-def total_duration_label(seconds):
+def total_duration_label(seconds, *, separator=" "):
     hours, remainder = divmod(seconds, 60 * 60)
     minutes = remainder // 60
-    return f"{hours:,}h {minutes:02d}m"
+    return f"{hours:,}h{separator}{minutes:02d}m"
 
 
 def read_guest_metadata():
@@ -1027,7 +1027,10 @@ def guest_table_rows(guests, guest_metadata, indentation="            "):
         recordings = len(guest["recordings"])
         episodes = len(guest["episodes"])
         total_seconds = guest["total_seconds"]
-        total_time = format_duration(total_seconds) if total_seconds is not None else "—"
+        total_time = (
+            total_duration_label(total_seconds, separator="")
+            if total_seconds is not None else "—"
+        )
         rows.append(
             f'{indentation}<tr data-guest="{html.escape(guest["name"].casefold(), quote=True)}" '
             f'data-recordings="{recordings}" data-episodes="{episodes}" '
