@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "variables" as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -151,7 +154,7 @@ img[align=right] {
 }
 
 blockquote {
-  border-left: 2px solid darken($blockquote-color, 20%);
+  border-left: 2px solid color.adjust($blockquote-color, $lightness: -20%, $space: hsl);
   margin: 1em 1em;
   padding: 0.75em 1em;
   background-color: $blockquote-color;

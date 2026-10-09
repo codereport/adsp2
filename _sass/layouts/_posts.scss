@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "../base/variables" as *;
+@use "../base/utility";
+
 .comments {
   @extend %padding-post;
   border-bottom: 1px solid $border-color;
@@ -90,7 +94,7 @@ header {
   header {
     color: $feature-image-text-color;
     margin-bottom: 0;
-    padding: $padding-large/2.5 $padding-large;
+    padding: math.div($padding-large, 2.5) $padding-large;
 
     .meta {
       color: rgba($feature-image-text-color, .7);

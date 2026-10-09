@@ -1,9 +1,13 @@
+@use "sass:color";
+@use "../base/variables" as *;
+@use "../base/utility";
+
 .site-footer {
   @extend %padding-post;
   z-index: -1;
   display: inline-block;
   text-align: center;
   width: 100%;
-  color: lighten($text-color, 24%);
+  color: color.adjust($text-color, $lightness: 24%, $space: hsl);
   font-size: 0.9em;
 }
