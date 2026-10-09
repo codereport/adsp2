@@ -1,32 +1,27 @@
 // External
-@use 'external/reset';
-@use 'external/font-awesome';
-@use 'external/pacifico';
-@use 'external/katex';
-@use 'external/source-sans-pro';
+@import 'external/reset';
+@import 'external/font-awesome';
+@import 'external/pacifico';
+@import 'external/katex';
+@import 'external/source-sans-pro';
 // Variables
-@use 'base/variables';
+@import 'base/variables';
 // Base
-@use 'base/global';
-@use 'base/highlight';
-@use 'base/utility';
+@import 'base/global';
+@import 'base/highlight';
+@import 'base/utility';
 // Includes
-@use 'includes/footer';
-@use 'includes/post_nav';
-@use 'includes/navbar';
-@use 'includes/portfolio';
-@use 'includes/grid';
-@use 'includes/share_buttons';
-@use 'includes/blog_nav.scss';
-@use 'includes/cookie_consent.scss';
+@import 'includes/footer';
+@import 'includes/post_nav';
+@import 'includes/navbar';
+@import 'includes/portfolio';
+@import 'includes/grid';
+@import 'includes/share_buttons';
+@import 'includes/blog_nav.scss';
+@import 'includes/cookie_consent.scss';
 // Posts
-@use 'layouts/posts';
-@use 'layouts/blog';
-@use 'layouts/page';
-@use 'layouts/tags';
-@use 'layouts/search';
-
-// Extend metadata across all theme modules while preserving their CSS order.
-#post-nav p {
-  @extend .meta;
-}
+@import 'layouts/posts';
+@import 'layouts/blog';
+@import 'layouts/page';
+@import 'layouts/tags';
+@import 'layouts/search';

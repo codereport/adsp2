@@ -10,6 +10,25 @@ permissions:
   contents: write
 
 jobs:
+  styles:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Install the GitHub Pages Sass compiler
+        run: gem install sass:3.7.4 erb --no-document
+
+      - name: Check production stylesheet
+        run: ruby tests/check_styles.rb
+
   checks:
     runs-on: ubuntu-latest
     steps:

@@ -1,6 +1,3 @@
-@use "sass:math";
-@use "variables" as *;
-
 // List Icons
 // -------------------------
 
@@ -14,9 +11,9 @@
   position: absolute;
   left: -$fa-li-width;
   width: $fa-li-width;
-  top: math.div(2em, 14);
+  top: (2em / 14);
   text-align: center;
   &.#{$fa-css-prefix}-lg {
-    left: -$fa-li-width + math.div(4em, 14);
+    left: -$fa-li-width + (4em / 14);
   }
 }

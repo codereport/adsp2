@@ -1,6 +1,3 @@
-@use "../base/variables" as *;
-@use "../base/utility";
-
 /* --- Pagination --- */
 .pagination {
   @extend %padding-nav;

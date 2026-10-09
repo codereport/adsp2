@@ -33,6 +33,18 @@ The site will automatically rebuild when you make changes to the source files,
 but it will not refresh the browser automatically. Refresh the page manually to
 see the new build. Press `Ctrl+C` to stop the server.
 
+GitHub Pages builds the deployed site with Ruby Sass 3.7.4. Keep styles compatible
+with that compiler; `@use`, `@forward`, and `sass:*` modules require Dart Sass and
+cannot be used in this deployment. The local Dart Sass build suppresses the
+legacy syntax deprecation warnings in `_config.yml`.
+
+To run the production stylesheet check used by CI:
+
+```bash
+gem install sass:3.7.4 erb --user-install --no-document
+ruby tests/check_styles.rb
+```
+
 ## Updating the Episodes Table
 
 Run the generator after adding or editing an episode post:

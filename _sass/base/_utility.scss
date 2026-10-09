@@ -1,6 +1,3 @@
-@use "sass:color";
-@use "variables" as *;
-
 // Mix-ins
 %padding-nav {
   padding: $padding-small $padding-x-large;
@@ -73,14 +70,14 @@ a.button {
 .body-link {
   &:hover {
     text-decoration: underline;
-    color: color.adjust($link-color, $lightness: -15%, $space: hsl);
+    color: darken($link-color, 15%);
   }
 }
 
 .post-link {
   &:hover {
     text-decoration: none;
-    color: color.adjust($link-color, $lightness: 10%, $space: hsl);
+    color: lighten($link-color, 10%);
   }
 }
 

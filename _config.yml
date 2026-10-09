@@ -38,6 +38,11 @@ collections:
     permalink: /:collection/:name
 
 # BUILD SETTINGS
+# GitHub Pages uses Ruby Sass, which does not support @use or sass:* modules.
+# Keep the styles compatible and silence their deprecations in local Dart Sass.
+sass:
+  silence_deprecations: [import, global-builtin, color-functions, slash-div]
+
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules", "generate_transcripts.py", "suggest_tags.py", "tests"]
 
