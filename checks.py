@@ -6,7 +6,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse, parse_qs
 from urllib.request import Request, urlopen
 
-from generate_episodes import TRANSCRIPTS_PATH
+from generate_episodes import TRANSCRIPTS_PATH, post_tag_values
 
 # Posts
 print("POST CHECKS")
@@ -105,6 +105,23 @@ for a, b in zip(dates[:-1], dates[1:]):
     if (b - a).days != 7:
         problem = True
 print(("❌" if problem else "✅") + " - Dates Differ by 7 Days")
+
+# No Unknown or Placeholder Speaker Tags
+problem = False
+for post_name in sorted(os.listdir("_posts/")):
+    if not post_name.endswith(".md"):
+        continue
+    with open("_posts/" + post_name) as post:
+        tags = post_tag_values(post.read())
+    placeholder_tags = [
+        tag for tag in tags
+        if tag.strip().casefold() == "unknown"
+        or tag.strip().casefold().startswith("speaker_")
+    ]
+    if placeholder_tags:
+        print(f"  {post_name}: placeholder tag(s) {', '.join(placeholder_tags)}")
+        problem = True
+print(("❌" if problem else "✅") + " - No Unknown or Placeholder Speaker Tags")
 
 # Unique Buzzsprout IDs
 problem = False
