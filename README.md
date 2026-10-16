@@ -56,7 +56,11 @@ python3 generate_episodes.py
 This also adds missing guest names from available transcripts to each episode's
 front-matter tags, making guest names link to all tagged appearances. It reuses
 existing guest tag spellings (for example, `Doug Gregor`), preserves existing
-topic tags, and applies the same host, clip, and AI exclusions as the statistics.
+topic tags, and adds a missing `guest` tag for one guest or `guests` for two or
+more, including historical episodes whose guest names are already tagged.
+Ramona, Shima, and Bryce's Mom retain their name tags and guest-list entries but
+do not count toward adding `guest`/`guests` tags. It applies the same host, clip,
+and AI exclusions as the statistics.
 `MYSTERY SPEAKER` is included. Run `python3 generate_episodes.py --check` to check
 both generated data and guest tags without modifying files.
 

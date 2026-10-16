@@ -42,7 +42,7 @@ class GuestTagTests(unittest.TestCase):
         original = path.read_text()
         updates = generator.guest_tag_updates(episodes, {0: metrics})
         self.assertEqual(path.read_text(), original)
-        self.assertEqual(generator.post_tag_values(updates[path]), ("C++", "CUDA", "Shima", "Ramona", "MYSTERY SPEAKER"))
+        self.assertEqual(generator.post_tag_values(updates[path]), ("C++", "CUDA", "Shima", "Ramona", "MYSTERY SPEAKER", "guest"))
         self.assertEqual(updates[path].split("---", 2)[2], original.split("---", 2)[2])
         self.assertEqual(updates[path].splitlines()[1:3], original.splitlines()[1:3])
 
@@ -55,7 +55,44 @@ class GuestTagTests(unittest.TestCase):
         self.assertEqual(list(updates), [second])
         self.assertIn("Doug Gregor", generator.post_tag_values(updates[second]))
         self.assertNotIn("Douglas Gregor", generator.post_tag_values(updates[second]))
+        self.assertIn("guest", generator.post_tag_values(updates[second]))
         self.assertFalse(generator.guest_tag_updates(generator.read_posts(updates), stats))
+
+    def test_guest_category_tags_backfill_names_and_apply_exclusions(self):
+        for tags, names, expected in (
+            ("[C++]", ("Sean Parent",), ("C++", "Sean Parent", "guest")),
+            ("[C++, Sean Parent]", ("Sean Parent",), ("C++", "Sean Parent", "guest")),
+            ("[C++, Sean Parent]", ("Sean Parent", "Kate Gregory"), ("C++", "Sean Parent", "Kate Gregory", "guests")),
+            ("[C++, Sean Parent, Kate Gregory]", ("Sean Parent", "Kate Gregory"), ("C++", "Sean Parent", "Kate Gregory", "guests")),
+            ("[C++, Guest]", ("Sean Parent",), ("C++", "Guest", "Sean Parent")),
+            ("[C++, Guests]", ("Sean Parent", "Kate Gregory"), ("C++", "Guests", "Sean Parent", "Kate Gregory")),
+            ("[C++]", ("Shima",), ("C++", "Shima")),
+            ("[C++]", ("Ramona",), ("C++", "Ramona")),
+            ("[C++]", ("Bryce's Mom",), ("C++", "Bryce's Mom")),
+            ("[C++, \"Bryce's Mom\"]", ("Bryce's Mom",), None),
+            ("[C++]", ("Bryce's Mom", "Sean Parent"), ("C++", "Bryce's Mom", "Sean Parent", "guest")),
+            ("[C++]", ("Shima", "Ramona"), ("C++", "Shima", "Ramona")),
+            ("[C++, Shima, Ramona]", ("Shima", "Ramona"), None),
+            ("[C++]", ("Shima", "Ramona", "Sean Parent"), ("C++", "Shima", "Ramona", "Sean Parent", "guest")),
+            ("[C++]", ("Shima", "Sean Parent", "Kate Gregory"), ("C++", "Shima", "Sean Parent", "Kate Gregory", "guests")),
+            ("[C++]", (), None),
+        ):
+            with self.subTest(tags=tags, names=names):
+                path = self.write_post(tags=tags)
+                episodes = generator.read_posts()
+                transcript = "".join(
+                    f"<cite>{name}</cite><time>0:00</time><p>Some words.</p>"
+                    for name in ("Conor", "Bryce", *names, "Sean Parent (Clip)", "AI Host 1")
+                )
+                stats = {0: generator.transcript_indices(episodes[0], transcript)}
+                updates = generator.guest_tag_updates(episodes, stats)
+                generator.apply_transcript_participants(episodes, stats)
+                self.assertEqual(tuple(name for _, name, _ in episodes[0]["guest_people"]), names)
+                if expected is None:
+                    self.assertFalse(updates)
+                else:
+                    self.assertEqual(generator.post_tag_values(updates[path]), expected)
+                    self.assertFalse(generator.guest_tag_updates(generator.read_posts(updates), stats))
 
     def test_guest_tag_alias_and_capitalization_are_not_duplicated(self):
         self.write_post(tags="[Guest, Rob Leahy, koen poppe]")
@@ -92,14 +129,14 @@ class GuestTagTests(unittest.TestCase):
         self.assertEqual(path.read_text(), original)
 
     def test_check_mode_detects_missing_tags_without_modifying_files(self):
-        path = self.write_post()
+        path = self.write_post(tags="[C++, CUDA, Sean Parent]")
         original = path.read_text()
         page = self.root / "episodes.md"
         page.write_text(generator.GENERATED_START + "\n" + generator.GENERATED_END + "\n")
         company_path = self.root / "companies.json"
         transcripts_path = self.root / "transcripts.json"
         metadata = {"guests": {}, "guests_by_name": {}, "companies": {}, "languages": {}, "featured_companies": []}
-        metrics = generator.transcript_indices(generator.read_posts()[0], '<cite>Conor</cite><time>0:00</time><p>Hello.</p><cite>Shima</cite><time>0:01</time><p>Hello.</p>')
+        metrics = generator.transcript_indices(generator.read_posts()[0], '<cite>Conor</cite><time>0:00</time><p>Hello.</p><cite>Sean Parent</cite><time>0:01</time><p>Hello.</p>')
         with (
             patch.object(generator, "EPISODES_PAGE", page),
             patch.object(generator, "COMPANY_EPISODES_PATH", company_path),

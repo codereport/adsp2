@@ -40,6 +40,8 @@ GUEST_TAG_ALIASES = {
     "douglas gregor": "doug gregor",
     "robert leahy": "rob leahy",
 }
+# Keep their name tags and guest statistics without adding guest/guests tags.
+GUEST_CATEGORY_TAG_EXCLUSIONS = {"ramona", "shima", "bryce s mom"}
 GUEST_NAME_ALIASES = {
     "doug gregor": "Douglas Gregor",
     "marco salgado": "Marco Franzreb Salgado",
@@ -814,6 +816,15 @@ def guest_tag_updates(episodes, transcript_stats):
                 tag = preferred_tags[name]
                 tags.append(tag)
                 added.append(tag)
+        category_guest_count = sum(
+            normalized_person_name(canonical_guest_name(name)) not in GUEST_CATEGORY_TAG_EXCLUSIONS
+            for _, name, _ in metrics["guest_people"]
+        )
+        if category_guest_count and not {"guest", "guests"}.intersection(
+            tag.casefold() for tag in tags
+        ):
+            count_tag = "guest" if category_guest_count == 1 else "guests"
+            added.append(count_tag)
         if added:
             path = POSTS_DIR / f"{episode['date']}-Episode-{episode['number']}.md"
             post = path.read_text(encoding="utf-8")
