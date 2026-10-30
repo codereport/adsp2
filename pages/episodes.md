@@ -22,7 +22,7 @@ List of all episodes.
           <strong>311</strong><span>episodes listed</span>
         </div>
         <div class="episode-stat-card">
-          <strong>173h 48m</strong><span>total listening time</span>
+          <strong>174h 12m</strong><span>total listening time</span>
         </div>
         <div class="episode-stat-card">
           <strong>32</strong><span>median minutes</span>
@@ -48,7 +48,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
       <section aria-labelledby="episode-lengths">
         <h2 id="episode-lengths">Episode lengths</h2>
         <p class="episode-stat-note">Number of episodes in each duration range.</p>
-        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 13 episodes; 20–29 minutes: 106 episodes; 30–39 minutes: 131 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
+        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 13 episodes; 20–29 minutes: 107 episodes; 30–39 minutes: 131 episodes; 40–49 minutes: 48 episodes; 50–59 minutes: 4 episodes; 60+ minutes: 8 episodes">
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
               <span>13</span>
@@ -58,7 +58,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
           </div>
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
-              <span>106</span>
+              <span>107</span>
               <span class="episode-histogram-bar" style="--bar-height: 69%"></span>
             </div>
             <span>20–29</span>
@@ -5236,7 +5236,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
 
 | <button type="button" class="episodes-sort" data-sort-key="number">#</button> | Title | <button type="button" class="episodes-sort" data-sort-key="duration">Duration</button> | Co-host | Release Date |
 | :-: | :---- | :------: | :-----: | :----------: |
-| 310 | [Leaving NVIDIA for... ?](https://adspthepodcast.com/2026/10/30/Episode-310.html){: .episode-title } | — | Bryce | 2026-10-30 |
+| 310 | [Leaving NVIDIA for... ?](https://adspthepodcast.com/2026/10/30/Episode-310.html){: .episode-title } | 23 | Bryce | 2026-10-30 |
 | 309 | [Default Construction & CppCon 2026 with Jason Turner](https://adspthepodcast.com/2026/10/23/Episode-309.html){: .episode-title .guest-purple } | 28 | Ben | 2026-10-23 |
 | 308 | [Rule of N with Jason Turner](https://adspthepodcast.com/2026/10/16/Episode-308.html){: .episode-title .guest-purple } | 21 | Ben | 2026-10-16 |
 | 307 | [C++ Conferences & Meetups with Jason Turner](https://adspthepodcast.com/2026/10/09/Episode-307.html){: .episode-title .guest-purple } | 25 | Ben | 2026-10-09 |
