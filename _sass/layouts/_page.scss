@@ -449,8 +449,14 @@ html[data-theme="dark"] .listen-page {
     padding: 0.45em 0.7em;
   }
 
-  th:nth-child(n + 2),
-  td:nth-child(n + 2) {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 3em;
+  }
+
+  th:nth-child(n + 3),
+  td:nth-child(n + 3) {
     text-align: center;
     width: 8em;
   }

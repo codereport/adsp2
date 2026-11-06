@@ -68,7 +68,7 @@
           const leftValue = left.getAttribute("data-" + activeGuestKey);
           const rightValue = right.getAttribute("data-" + activeGuestKey);
 
-          // Keep unavailable total times at the bottom in either direction.
+          // Keep unavailable talking times at the bottom in either direction.
           if (leftValue === "" && rightValue === "") {
             return left.dataset.guest.localeCompare(right.dataset.guest);
           }
@@ -85,6 +85,7 @@
         });
 
         rows.forEach(function (row, index) {
+          row.querySelector(".guest-rank").textContent = index + 1;
           const destination = additionalGuestRows && index >= visibleGuestCount
             ? additionalGuestRows
             : primaryGuests;

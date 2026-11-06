@@ -1,3 +1,4 @@
+import re
 import unittest
 
 import generate_episodes as generator
@@ -118,6 +119,67 @@ class EpisodeParticipantTests(unittest.TestCase):
         self.assertEqual(post["cohost"], "Bryce")
         self.assertTrue(post["guest"])
         self.assertEqual(generator.cohost_from_post("cohost: Solo\n<br>In this episode, Conor and Bryce"), "Solo")
+
+
+class GuestStatsTests(unittest.TestCase):
+    def render_rows(self, episodes, durations, metrics):
+        stats = generator.render_stats(
+            episodes, durations, metrics, {"guests_by_name": {}}
+        )
+        return {
+            name: row for name, row in re.findall(
+                r'<tr data-guest="([^"]+)"(.*?)</tr>', stats
+            )
+        }
+
+    def test_talking_time_uses_each_guests_share_of_all_words(self):
+        post = episode(guests=("Sean Parent", "Kate Gregory"))
+        metrics = generator.transcript_indices(
+            post, transcript("Conor", "Sean Parent", "Sean Parent", "Kate Gregory")
+        )
+        rows = self.render_rows([post], {0: 3600}, {0: metrics})
+        self.assertIn('data-talking-time="1800.0"', rows["sean parent"])
+        self.assertIn("<td>0h30m</td>", rows["sean parent"])
+        self.assertIn('data-talking-time="900.0"', rows["kate gregory"])
+
+    def test_talking_time_weights_each_episode_before_summing(self):
+        posts = [episode(number=n, guests=("Sean Parent",)) for n in (0, 1)]
+        metrics = {
+            0: generator.transcript_indices(posts[0], transcript("Conor", "Sean Parent")),
+            1: generator.transcript_indices(posts[1], transcript("Conor", "Bryce", "Sean Parent")),
+        }
+        row = self.render_rows(posts, {0: 3600, 1: 1800}, metrics)["sean parent"]
+        self.assertIn('data-talking-time="2400.0"', row)
+        self.assertIn('data-recordings="1" data-episodes="2"', row)
+        self.assertIn("<td>0h40m</td>", row)
+
+    def test_missing_transcripts_durations_and_empty_word_counts_are_unavailable(self):
+        post = episode(guests=("Sean Parent",))
+        other = episode(number=1)
+        metrics = generator.transcript_indices(post, transcript("Conor", "Sean Parent"))
+        empty = dict(metrics, guest_word_counts={"guest:sean parent": 0}, speaker_word_counts={})
+        for durations, transcript_stats in (
+            ({0: 3600, 1: 1800}, {}),
+            ({1: 1800}, {0: metrics}),
+            ({0: 3600, 1: 1800}, {0: empty}),
+        ):
+            with self.subTest(durations=durations, transcript_stats=transcript_stats):
+                row = self.render_rows([post, other], durations, transcript_stats)["sean parent"]
+                self.assertIn('data-talking-time=""', row)
+                self.assertIn("<td>—</td>", row)
+
+    def test_missing_transcript_does_not_add_full_episode_duration(self):
+        posts = [episode(number=n, guests=("Sean Parent",)) for n in (0, 1)]
+        metrics = {0: generator.transcript_indices(posts[0], transcript("Conor", "Sean Parent"))}
+        row = self.render_rows(posts, {0: 3600, 1: 7200}, metrics)["sean parent"]
+        self.assertIn('data-talking-time="1800.0"', row)
+
+    def test_ranks_continue_into_collapsed_guests(self):
+        post = episode(guests=tuple(f"Guest {n:02}" for n in range(12)))
+        rows = list(self.render_rows([post], {0: 3600}, {}).values())
+        self.assertEqual(len(rows), 12)
+        for rank, row in enumerate(rows, start=1):
+            self.assertIn(f'<td class="guest-rank">{rank}</td>', row)
 
 
 if __name__ == "__main__":

@@ -1031,25 +1031,26 @@ def guest_name_html(name, tag_name, guest_metadata):
     )
 
 
-def guest_table_rows(guests, guest_metadata, indentation="            "):
+def guest_table_rows(guests, guest_metadata, indentation="            ", *, start_rank=1):
     rows = []
-    for guest in guests:
+    for rank, guest in enumerate(guests, start=start_rank):
         name = guest_name_html(guest["name"], guest["tag_name"], guest_metadata)
         recordings = len(guest["recordings"])
         episodes = len(guest["episodes"])
-        total_seconds = guest["total_seconds"]
-        total_time = (
-            total_duration_label(total_seconds, separator="")
-            if total_seconds is not None else "—"
+        talking_seconds = guest["talking_seconds"]
+        talking_time = (
+            total_duration_label(int(talking_seconds), separator="")
+            if talking_seconds is not None else "—"
         )
         rows.append(
             f'{indentation}<tr data-guest="{html.escape(guest["name"].casefold(), quote=True)}" '
             f'data-recordings="{recordings}" data-episodes="{episodes}" '
-            f'data-total-time="{total_seconds if total_seconds is not None else ""}">'
+            f'data-talking-time="{talking_seconds if talking_seconds is not None else ""}">'
+            f'<td class="guest-rank">{rank}</td>'
             f"<td>{name}</td>"
             f"<td>{recordings}</td>"
             f"<td>{episodes}</td>"
-            f"<td>{total_time}</td>"
+            f"<td>{talking_time}</td>"
             "</tr>"
         )
     return rows
@@ -1489,12 +1490,17 @@ def render_stats(episodes, durations, transcript_stats, guest_metadata):
                 guest["tag_names"].add(tag_name)
 
     for guest in guest_stats.values():
-        guest_durations = [
-            durations[number]
-            for number in guest["episodes"]
-            if number in durations
-        ]
-        guest["total_seconds"] = sum(guest_durations) if guest_durations else None
+        speaker_key = f'guest:{normalized_person_name(canonical_guest_name(guest["name"]))}'
+        talking_durations = []
+        for number in sorted(guest["episodes"]):
+            metrics = transcript_stats.get(number)
+            if metrics is None or number not in durations:
+                continue
+            guest_words = metrics["guest_word_counts"].get(speaker_key)
+            total_words = sum(metrics["speaker_word_counts"].values())
+            if guest_words is not None and total_words:
+                talking_durations.append(durations[number] * guest_words / total_words)
+        guest["talking_seconds"] = sum(talking_durations) if talking_durations else None
         guest["tag_name"] = min(guest["tag_names"], key=str.casefold, default="")
 
     all_guests = sorted(
@@ -1579,15 +1585,16 @@ def render_stats(episodes, durations, transcript_stats, guest_metadata):
     guest_lines = [
         '    <section aria-labelledby="frequent-guests">',
         '      <h2 id="frequent-guests">Most frequent guests</h2>',
-        '      <p class="episode-stat-note">Guest appearances are identified from transcript speakers, excluding hosts, audio clips and AI voices. Recordings are counted by unique recorded date; one recording can become several episodes. Logo badges link to related episodes.</p>',
+        '      <p class="episode-stat-note">Guest appearances are identified from transcript speakers, excluding hosts, audio clips and AI voices. Recordings are counted by unique recorded date; one recording can become several episodes. Talking time estimates each guest\'s share of episode duration from their share of transcript words; episodes without a transcript or duration are omitted. Logo badges link to related episodes.</p>',
         '      <div class="episode-stats-table-wrapper">',
         '        <table class="frequent-guests-table">',
         "          <thead>",
         "            <tr>",
+        '              <th scope="col">Rank</th>',
         '              <th><button type="button" class="guest-sort" data-sort-key="guest" data-sort-type="text">Guest</button></th>',
         '              <th><button type="button" class="guest-sort" data-sort-key="recordings" data-sort-type="number">Recordings</button></th>',
         '              <th><button type="button" class="guest-sort" data-sort-key="episodes" data-sort-type="number">Episodes</button></th>',
-        '              <th><button type="button" class="guest-sort" data-sort-key="total-time" data-sort-type="number">Total Time</button></th>',
+        '              <th><button type="button" class="guest-sort" data-sort-key="talking-time" data-sort-type="number">Talking Time</button></th>',
         "            </tr>",
         "          </thead>",
         "          <tbody>",
@@ -1602,7 +1609,9 @@ def render_stats(episodes, durations, transcript_stats, guest_metadata):
                 '          <tbody id="additional-guests" hidden>',
             ]
         )
-        guest_lines.extend(guest_table_rows(additional_guests, guest_metadata))
+        guest_lines.extend(guest_table_rows(
+            additional_guests, guest_metadata, start_rank=len(frequent_guests) + 1
+        ))
         guest_lines.extend(
             [
                 "          </tbody>",
