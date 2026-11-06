@@ -390,6 +390,103 @@ html[data-theme="dark"] .listen-page {
   }
 }
 
+.tssp {
+  --heading-color: var(--tssp-color, #772029);
+  --link-color: var(--tssp-color, #772029);
+  background: var(--tssp-background, #f8eff0);
+  border: 1px solid var(--tssp-border, #d9b3b8);
+  border-radius: 10px;
+  color: var(--tssp-color, #772029);
+  padding: 1em 1.2em;
+  text-align: center;
+
+  &[data-state="warning"] {
+    --tssp-background: #fff5cc;
+    --tssp-border: #c99b21;
+    --tssp-color: #775500;
+  }
+
+  &[data-state="danger"] {
+    --tssp-background: #ffeded;
+    --tssp-border: #ce7171;
+    --tssp-color: #9f2626;
+  }
+}
+
+.tssp-heading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+
+  h2 {
+    color: inherit;
+    margin: 0;
+  }
+}
+
+.tssp-label {
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.tssp-clock {
+  display: flex;
+  margin: 0.9em 0;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.tssp-unit {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.25em 0.2em;
+  text-align: center;
+
+  + .tssp-unit {
+    border-left: 1px solid var(--tssp-border, #d9b3b8);
+  }
+
+  strong {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: clamp(1rem, 4vw, 3rem);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  abbr {
+    border: 0;
+    cursor: help;
+    display: block;
+    font-size: 0.7em;
+    margin-top: 0.4em;
+    text-decoration: none;
+  }
+}
+
+.tssp-latest,
+.tssp-status {
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.tssp-status {
+  font-weight: 700;
+  margin-top: 0.4em;
+}
+
+.tssp-latest a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .episode-stat-cards {
   display: grid;
   gap: 0.75em;
@@ -1147,6 +1244,24 @@ html[data-theme="dark"] .episode-stats {
 
   &[open] > summary {
     border-bottom-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .tssp {
+    --tssp-background: #35252b;
+    --tssp-border: #87545d;
+    --tssp-color: #f2c9ce;
+
+    &[data-state="warning"] {
+      --tssp-background: #3d321a;
+      --tssp-border: #a58429;
+      --tssp-color: #ffe399;
+    }
+
+    &[data-state="danger"] {
+      --tssp-background: #40252a;
+      --tssp-border: #b6606a;
+      --tssp-color: #ffb9bf;
+    }
   }
 
   .episode-stats-summary-hint,

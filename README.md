@@ -64,6 +64,11 @@ and AI exclusions as the statistics.
 `MYSTERY SPEAKER` is included. Run `python3 generate_episodes.py --check` to check
 both generated data and guest tags without modifying files.
 
+The TSSP (Time Since Sean Parent) clock at the top of Episode Stats uses the latest
+published post tagged `Sean Parent` and counts from its release date at midnight
+UTC. It turns yellow after ten calendar months and red after one calendar year.
+Run its calendar and threshold checks with `node --test tests/test_tssp.js`.
+
 Run the topic updater and refresh the homepage logo order after editing titles
 or show notes:
 

@@ -1,0 +1,22 @@
+{%- assign sean_episodes = site.posts | where_exp: "post", "post.tags contains 'Sean Parent'" -%}
+{%- assign latest_sean_episode = sean_episodes | first -%}
+{%- if latest_sean_episode -%}
+{%- assign sean_episode_number = latest_sean_episode.path | split: 'Episode-' | last | split: '.' | first -%}
+<section class="tssp" data-tssp-published="{{ latest_sean_episode.date | date: '%Y-%m-%d' }}" data-state="normal" aria-labelledby="tssp-title">
+  <div class="tssp-heading">
+    <span class="tssp-label">TSSP</span>
+    <h2 id="tssp-title">Time Since Sean Parent</h2>
+  </div>
+  <div class="tssp-clock" role="timer" aria-live="off" hidden>
+    <div class="tssp-unit"><strong data-tssp-unit="months">00</strong><abbr title="Months">M</abbr></div>
+    <div class="tssp-unit"><strong data-tssp-unit="weeks">00</strong><abbr title="Weeks">W</abbr></div>
+    <div class="tssp-unit"><strong data-tssp-unit="days">00</strong><abbr title="Days">D</abbr></div>
+    <div class="tssp-unit"><strong data-tssp-unit="hours">00</strong><abbr title="Hours">H</abbr></div>
+    <div class="tssp-unit"><strong data-tssp-unit="minutes">00</strong><abbr title="Minutes">Min</abbr></div>
+    <div class="tssp-unit"><strong data-tssp-unit="seconds">00</strong><abbr title="Seconds">S</abbr></div>
+  </div>
+  <p class="tssp-latest">Since <a href="{{ latest_sean_episode.url | relative_url }}" title="{{ latest_sean_episode.title | escape }}">Episode {{ sean_episode_number }}</a> aired on <time datetime="{{ latest_sean_episode.date | date: '%Y-%m-%d' }}">{{ latest_sean_episode.date | date: '%B %-d, %Y' }}</time>.</p>
+  <p class="tssp-status" role="status" hidden></p>
+  <script defer src="{{ '/assets/js/tssp.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+</section>
+{%- endif -%}

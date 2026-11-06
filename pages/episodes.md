@@ -15,6 +15,7 @@ List of all episodes.
     <span class="episode-stats-summary-hint">Guests, lengths, conversation and trends</span>
   </summary>
   <div class="episode-stats-content">
+    {% include tssp.html %}
     <section aria-labelledby="stats-at-a-glance">
       <h2 id="stats-at-a-glance">At a glance</h2>
       <div class="episode-stat-cards">
