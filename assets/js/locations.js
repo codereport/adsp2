@@ -10,6 +10,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const logoBase = container.dataset.logoBase;
   const countryBase = container.dataset.countryBase;
+  const flagBase = container.dataset.flagBase;
   container.hidden = false;
 
   const map = L.map(container, {
@@ -89,13 +90,56 @@
     return content;
   }
 
+  // Keep neighboring recording countries distinct, especially along the road trip.
+  const countryColors = {
+    AUS: "#d9894b", AUT: "#9b78c6", CAN: "#dfaa40", HRV: "#ce718c",
+    DNK: "#d9894b", ITA: "#dfaa40", NLD: "#9b78c6", NOR: "#48a897",
+    POL: "#4f91c4", SVN: "#48a897", ESP: "#ce718c", GBR: "#4f91c4", USA: "#4f91c4"
+  };
+
+  function addCountryFlag(layer, code) {
+    const element = layer.getElement();
+    const svg = element.ownerSVGElement;
+    const namespace = "http://www.w3.org/2000/svg";
+    let definitions = svg.querySelector("defs");
+    if (!definitions) {
+      definitions = document.createElementNS(namespace, "defs");
+      svg.insertBefore(definitions, svg.firstChild);
+    }
+    const id = container.id + "-flag-" + code;
+    if (!svg.querySelector("#" + id)) {
+      const pattern = document.createElementNS(namespace, "pattern");
+      pattern.id = id;
+      pattern.setAttribute("patternUnits", "objectBoundingBox");
+      pattern.setAttribute("patternContentUnits", "objectBoundingBox");
+      pattern.setAttribute("width", "1");
+      pattern.setAttribute("height", "1");
+      const background = document.createElementNS(namespace, "rect");
+      background.setAttribute("width", "1");
+      background.setAttribute("height", "1");
+      background.setAttribute("fill", countryColors[code]);
+      pattern.appendChild(background);
+      const flag = document.createElementNS(namespace, "image");
+      flag.setAttribute("href", flagBase + code + ".svg");
+      flag.setAttribute("width", "1");
+      flag.setAttribute("height", "1");
+      flag.setAttribute("preserveAspectRatio", "none");
+      pattern.appendChild(flag);
+      definitions.appendChild(pattern);
+    }
+    element.style.setProperty("--country-flag", 'url("#' + id + '")');
+  }
+
   const countryLayers = new Map();
   const countries = L.geoJSON(data.countries, {
     smoothFactor: 0.3,
-    style: {
-      className: "recording-country",
-      color: "#9f354b", weight: 1,
-      fillColor: "#b94b62", fillOpacity: 0.32
+    style: function (feature) {
+      const color = countryColors[feature.properties.code];
+      return {
+        className: "recording-country",
+        color: color, weight: 1,
+        fillColor: color, fillOpacity: 0.42
+      };
     },
     onEachFeature: function (feature, layer) {
       const country = feature.properties.country;
@@ -109,6 +153,7 @@
       layer.bindTooltip(country, {sticky: true});
       layer.bindPopup(content, {maxWidth: 290, minWidth: 210, maxHeight: 280});
       layer.on("add", function () {
+        addCountryFlag(layer, feature.properties.code);
         const element = layer.getElement();
         element.setAttribute("tabindex", "0");
         element.setAttribute("role", "button");
@@ -388,6 +433,11 @@
 
   panel.querySelectorAll("[data-map-view]").forEach(function (button) {
     button.addEventListener("click", function () { showView(button.dataset.mapView); });
+  });
+  const flagToggle = panel.querySelector("[data-map-flags-toggle]");
+  flagToggle.addEventListener("click", function () {
+    const enabled = container.classList.toggle("recording-map-show-flags");
+    flagToggle.setAttribute("aria-pressed", String(enabled));
   });
   panel.querySelectorAll("[data-map-country]").forEach(function (button) {
     button.addEventListener("click", function () {

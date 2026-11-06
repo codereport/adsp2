@@ -9,7 +9,7 @@
     <h2 id="recording-map-title">ADSP around the world</h2>
     <span class="recording-map-count">{{ site.data.recording_locations | map: 'country' | uniq | size }} countries · {{ conference_count }} conferences</span>
   </div>
-  <div class="recording-map-views" role="group" aria-label="Map view" hidden>
+  <div class="recording-map-views" role="group" aria-label="Map controls" hidden>
     <button type="button" data-map-view="world" aria-pressed="true">World</button>
     <button type="button" data-map-view="europe" aria-pressed="false">Europe</button>
     <button type="button" data-map-view="north-america" aria-pressed="false">North America</button>
@@ -17,8 +17,12 @@
     {% for route in site.data.recording_routes %}
     <button type="button" data-map-view="{{ route.id }}" aria-pressed="false" style="--route-color: {{ route.color }}"><span class="recording-route-swatch" aria-hidden="true"></span>{{ route.label }}</button>
     {% endfor %}
+    <button type="button" data-map-flags-toggle aria-pressed="false" aria-controls="recording-map">Show all flags</button>
   </div>
-  <div id="recording-map" class="recording-map" role="region" aria-label="World map of countries where ADSP has recorded" data-logo-base="{{ '/assets/img/conferences/' | relative_url }}" data-country-base="{{ '/assets/data/recording-countries/' | relative_url }}" hidden></div>
+  <div id="recording-map" class="recording-map" role="region" aria-label="World map of countries where ADSP has recorded"
+    data-logo-base="{{ '/assets/img/conferences/' | relative_url }}"
+    data-country-base="{{ '/assets/data/recording-countries/' | relative_url }}"
+    data-flag-base="{{ '/assets/img/flags/' | relative_url }}" hidden></div>
   <p id="recording-map-fallback">Browse the recording locations and episode links below.</p>
   <div class="recording-map-travel-key" aria-label="Route line styles" hidden>
     <span><i class="recording-travel-line recording-travel-drive" aria-hidden="true"></i>Drive</span>
@@ -32,7 +36,7 @@
     </button>
     {% endfor %}
   </div>
-  <p class="recording-map-caption" hidden><span class="recording-country-key" aria-hidden="true"></span> Countries we've recorded in. Click a country or conference logo for locations and episodes.</p>
+  <p class="recording-map-caption" hidden><span class="recording-country-key" aria-hidden="true"></span> Countries we've recorded in. Hover or focus a country to see its flag. Click a country or conference logo for locations and episodes.</p>
 </section>
 
 {%- assign mapped_episodes = '' | split: '' -%}

@@ -119,6 +119,7 @@
 }
 
 .recording-map.leaflet-container {
+  --country-opacity: 0.42;
   background: #aad3df;
   border-bottom: 1px solid var(--border-color, #ddd);
   border-top: 1px solid var(--border-color, #ddd);
@@ -254,15 +255,26 @@
   font-weight: bold;
 }
 
-.recording-country:hover,
-.recording-country:focus-visible {
-  fill-opacity: 0.5;
-  stroke-width: 2px;
+.recording-country {
+  fill-opacity: var(--country-opacity, 0.42);
+
+  .recording-map-show-flags &,
+  &:hover,
+  &:focus-visible {
+    fill: var(--country-flag);
+    fill-opacity: 0.85;
+    stroke: #111;
+    stroke-width: 1px;
+  }
+
+  &:focus-visible {
+    stroke-width: 2px;
+  }
 }
 
 .recording-country-key {
-  background: rgba(185, 75, 98, 0.32);
-  border: 1px solid #9f354b;
+  background: linear-gradient(120deg, #4f91c4, #48a897, #dfaa40, #9b78c6);
+  border: 1px solid var(--border-color, #999);
   border-radius: 3px;
   display: inline-block;
   height: 0.8em;
@@ -316,6 +328,7 @@
 }
 
 html[data-theme="dark"] .recording-map {
+  --country-opacity: 0.5;
   background: #252d32;
 
   .leaflet-tile-pane {
@@ -326,10 +339,6 @@ html[data-theme="dark"] .recording-map {
     stroke: #a4c6d8;
   }
 
-  .recording-country {
-    fill: #d56880;
-    stroke: #e595a6;
-  }
 }
 
 @media screen and (max-width: 600px) {
