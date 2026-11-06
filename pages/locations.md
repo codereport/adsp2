@@ -17,7 +17,7 @@ Selected episodes are linked below. Years refer to when the episodes were record
 * Australia (Sydney)
 * Austria
 * Canada (Toronto)
-* Croatia
+* Croatia (Savudrija)
 * Denmark (Aarhus, Copenhagen)
 * Italy (Venice)
 * Netherlands (Breda)

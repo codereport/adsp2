@@ -14,9 +14,17 @@
     <button type="button" data-map-view="europe" aria-pressed="false">Europe</button>
     <button type="button" data-map-view="north-america" aria-pressed="false">North America</button>
     <button type="button" data-map-view="australia" aria-pressed="false">Australia</button>
+    {% for route in site.data.recording_routes %}
+    <button type="button" data-map-view="{{ route.id }}" aria-pressed="false" style="--route-color: {{ route.color }}"><span class="recording-route-swatch" aria-hidden="true"></span>{{ route.label }}</button>
+    {% endfor %}
   </div>
-  <div id="recording-map" class="recording-map" role="region" aria-label="World map of countries where ADSP has recorded" data-logo-base="{{ '/assets/img/conferences/' | relative_url }}" hidden></div>
+  <div id="recording-map" class="recording-map" role="region" aria-label="World map of countries where ADSP has recorded" data-logo-base="{{ '/assets/img/conferences/' | relative_url }}" data-country-base="{{ '/assets/data/recording-countries/' | relative_url }}" hidden></div>
   <p id="recording-map-fallback">Browse the recording locations and episode links below.</p>
+  <div class="recording-map-travel-key" aria-label="Route line styles" hidden>
+    <span><i class="recording-travel-line recording-travel-drive" aria-hidden="true"></i>Drive</span>
+    <span><i class="recording-travel-line recording-travel-flight" aria-hidden="true"></i>Flight</span>
+    <span><i class="recording-travel-line recording-travel-train" aria-hidden="true"></i>Train</span>
+  </div>
   <div class="recording-map-flags" role="group" aria-label="Countries where we've recorded" hidden>
     {% for feature in site.data.recording_countries.features %}
     <button type="button" data-map-country="{{ feature.properties.code }}" title="{{ feature.properties.country }}" aria-label="Show recordings in {{ feature.properties.country }}">
@@ -33,8 +41,11 @@
     {%- assign mapped_episodes = mapped_episodes | concat: venue.episodes -%}
   {%- endfor -%}
 {%- endfor -%}
+{%- for route in site.data.recording_routes -%}
+  {%- assign mapped_episodes = mapped_episodes | concat: route.episodes -%}
+{%- endfor -%}
 <script id="recording-map-data" type="application/json">
-{"locations": {{ site.data.recording_locations | jsonify }}, "countries": {{ site.data.recording_countries | jsonify }}, "episodes": {
+{"locations": {{ site.data.recording_locations | jsonify }}, "countries": {{ site.data.recording_countries | jsonify }}, "routes": {{ site.data.recording_routes | jsonify }}, "episodes": {
 {%- assign first_episode = true -%}
 {%- for post in site.posts -%}
   {%- assign number = post.path | split: 'Episode-' | last | split: '.' | first | plus: 0 -%}

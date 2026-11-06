@@ -26,6 +26,65 @@
   white-space: nowrap;
 }
 
+.recording-route-swatch {
+  background: var(--route-color);
+  display: inline-block;
+  height: 3px;
+  margin-right: 0.45em;
+  vertical-align: middle;
+  width: 1.1em;
+}
+
+[data-map-view][aria-pressed="true"] .recording-route-swatch {
+  background: currentColor;
+}
+
+.recording-map-travel-key {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  gap: 0.5em 1.5em;
+  justify-content: center;
+  padding: 0.75em 1em 0;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.recording-travel-line {
+  border-top: 3px solid var(--text-color, #333);
+  display: inline-block;
+  margin-right: 0.4em;
+  vertical-align: middle;
+  width: 1.8em;
+}
+
+.recording-travel-flight {
+  border-top-style: dashed;
+}
+
+.recording-travel-train {
+  border-top-style: dotted;
+}
+
+.recording-route-popup {
+  .recording-route-leg {
+    font-size: 13px;
+    margin: 0 0 0.75em;
+  }
+
+  ol {
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+  }
+
+  li {
+    font-size: 13px;
+    margin: 0.25em 0;
+  }
+}
+
 .recording-map-views {
   display: flex;
   flex-wrap: wrap;

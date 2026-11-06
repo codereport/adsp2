@@ -9,6 +9,7 @@
   const panel = container.closest(".recording-map-panel");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const logoBase = container.dataset.logoBase;
+  const countryBase = container.dataset.countryBase;
   container.hidden = false;
 
   const map = L.map(container, {
@@ -27,6 +28,24 @@
   }).addTo(map);
   map.attributionControl.setPrefix(false);
   map.attributionControl.addAttribution('<a href="https://www.naturalearthdata.com/">Natural Earth</a>');
+  map.createPane("recordingRoutes").style.zIndex = 410;
+  map.createPane("recordingLeaders").style.zIndex = 430;
+
+  function episodeLinks(numbers) {
+    const links = document.createElement("div");
+    links.className = "recording-map-episode-links";
+    numbers.forEach(function (number) {
+      const episode = data.episodes[number];
+      if (!episode) return;
+      const link = document.createElement("a");
+      link.href = episode.url;
+      link.textContent = "Ep. " + number;
+      link.title = episode.title;
+      link.setAttribute("aria-label", episode.title);
+      links.appendChild(link);
+    });
+    return links;
+  }
 
   function badge(location) {
     const element = document.createElement("span");
@@ -64,19 +83,7 @@
       const name = document.createElement("span");
       name.textContent = venue.name;
       section.appendChild(name);
-      const links = document.createElement("div");
-      links.className = "recording-map-episode-links";
-      venue.episodes.forEach(function (number) {
-        const episode = data.episodes[number];
-        if (!episode) return;
-        const link = document.createElement("a");
-        link.href = episode.url;
-        link.textContent = "Ep. " + number;
-        link.title = episode.title;
-        link.setAttribute("aria-label", episode.title);
-        links.appendChild(link);
-      });
-      section.appendChild(links);
+      section.appendChild(episodeLinks(venue.episodes));
       content.appendChild(section);
     });
     return content;
@@ -84,6 +91,7 @@
 
   const countryLayers = new Map();
   const countries = L.geoJSON(data.countries, {
+    smoothFactor: 0.3,
     style: {
       className: "recording-country",
       color: "#9f354b", weight: 1,
@@ -92,7 +100,10 @@
     onEachFeature: function (feature, layer) {
       const country = feature.properties.country;
       const locations = data.locations.filter(function (location) { return location.country === country; });
-      countryLayers.set(feature.properties.code, {layer: layer, locations: locations});
+      countryLayers.set(feature.properties.code, {
+        layer: layer, locations: locations, bounds: layer.getBounds(),
+        overview: feature.geometry, detail: null, loading: false
+      });
       const content = document.createElement("div");
       locations.forEach(function (location) { content.appendChild(popup(location)); });
       layer.bindTooltip(country, {sticky: true});
@@ -111,6 +122,121 @@
       });
     }
   }).addTo(map);
+
+  function setCountryGeometry(country, geometry) {
+    const depth = geometry.type === "MultiPolygon" ? 2 : 1;
+    country.layer.setLatLngs(L.GeoJSON.coordsToLatLngs(geometry.coordinates, depth));
+  }
+
+  function updateCountryDetail() {
+    const detailed = map.getZoom() >= 5;
+    const bounds = map.getBounds();
+    countryLayers.forEach(function (country, code) {
+      if (!detailed) {
+        if (country.showingDetail) {
+          setCountryGeometry(country, country.overview);
+          country.showingDetail = false;
+        }
+        return;
+      }
+      if (!bounds.intersects(country.bounds)) return;
+      if (country.detail) {
+        if (!country.showingDetail) {
+          setCountryGeometry(country, country.detail);
+          country.showingDetail = true;
+        }
+        return;
+      }
+      if (country.loading) return;
+      country.loading = true;
+      // Keep the small world outlines until each visible country's detail is ready.
+      fetch(countryBase + code + ".geojson")
+        .then(function (response) {
+          if (!response.ok) throw new Error("Country outline unavailable");
+          return response.json();
+        })
+        .then(function (feature) {
+          country.detail = feature.geometry;
+          if (feature.properties.attributions) {
+            feature.properties.attributions.forEach(function (attribution) {
+              map.attributionControl.addAttribution(attribution);
+            });
+            scheduleConferenceLayout();
+          }
+          if (map.getZoom() >= 5) {
+            setCountryGeometry(country, country.detail);
+            country.showingDetail = true;
+          }
+        })
+        .catch(function () { /* The overview remains available if a download fails. */ })
+        .finally(function () { country.loading = false; });
+    });
+  }
+  map.on("moveend", updateCountryDetail);
+
+  const travelModes = {
+    drive: {label: "Driving", dash: null},
+    flight: {label: "Flight", dash: "9 7"},
+    train: {label: "Train", dash: "2 6"}
+  };
+  const routeLayers = new Map();
+  function routePopup(route, segment) {
+    const content = document.createElement("div");
+    content.className = "recording-map-popup recording-route-popup";
+    const title = document.createElement("strong");
+    title.className = "recording-map-popup-title";
+    title.textContent = route.name;
+    content.appendChild(title);
+    const leg = document.createElement("p");
+    leg.className = "recording-route-leg";
+    leg.textContent = travelModes[segment.mode].label + " · " +
+      route.stops[segment.from].name + " → " + route.stops[segment.to].name;
+    content.appendChild(leg);
+    const stops = document.createElement("ol");
+    route.stops.forEach(function (stop) {
+      const item = document.createElement("li");
+      item.textContent = stop.name;
+      stops.appendChild(item);
+    });
+    content.appendChild(stops);
+    const note = document.createElement("p");
+    note.className = "recording-map-popup-note";
+    note.textContent = route.note;
+    content.appendChild(note);
+    content.appendChild(episodeLinks(route.episodes));
+    return content;
+  }
+  (data.routes || []).forEach(function (route) {
+    const layer = L.featureGroup().addTo(map);
+    route.segments.forEach(function (segment) {
+      const mode = travelModes[segment.mode];
+      L.polyline(segment.coordinates, {
+        pane: "recordingRoutes", color: "#20333d", weight: 7, opacity: 0.5,
+        dashArray: mode.dash, interactive: false, className: "recording-route-casing"
+      }).addTo(layer);
+      const path = L.polyline(segment.coordinates, {
+        pane: "recordingRoutes", color: route.color, weight: 3.5, opacity: 1,
+        dashArray: mode.dash, className: "recording-route recording-route-" + segment.mode
+      }).addTo(layer);
+      const label = route.name + ": " + mode.label + " · " +
+        route.stops[segment.from].name + " → " + route.stops[segment.to].name;
+      path.bindTooltip(label, {sticky: true});
+      path.bindPopup(routePopup(route, segment), {maxWidth: 300, minWidth: 230, maxHeight: 310});
+      path.on("add", function () {
+        const element = path.getElement();
+        element.setAttribute("tabindex", "0");
+        element.setAttribute("role", "button");
+        element.setAttribute("aria-label", label);
+        L.DomEvent.on(element, "keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            L.DomEvent.preventDefault(event);
+            path.openPopup(L.latLng(segment.coordinates[Math.floor(segment.coordinates.length / 2)]));
+          }
+        });
+      });
+    });
+    routeLayers.set(route.id, layer);
+  });
 
   let conferenceRadius = container.clientWidth < 600 ? 23 : 27;
   container.style.setProperty("--conference-size", conferenceRadius * 2 + "px");
@@ -143,6 +269,7 @@
       return;
     }
     const leader = L.polyline([], {
+      pane: "recordingLeaders",
       className: "recording-conference-leader",
       color: "#56798b", weight: 1.5, opacity: 0.9, interactive: false,
       smoothFactor: 0
@@ -240,13 +367,15 @@
 
   function showView(view) {
     map.closePopup();
+    const route = routeLayers.get(view);
     const locations = data.locations.filter(function (location) {
       return view === "world" || location.region === view;
     });
-    const bounds = L.latLngBounds(locations.map(function (location) { return location.coordinates; }));
+    const bounds = route ? route.getBounds() :
+      L.latLngBounds(locations.map(function (location) { return location.coordinates; }));
     map.fitBounds(bounds, {
       padding: [32, 32],
-      maxZoom: view === "australia" ? 5 : view === "world" ? 2.5 : 5,
+      maxZoom: route ? 9 : view === "world" ? 2.5 : 5,
       animate: false
     });
     panel.querySelectorAll("[data-map-view]").forEach(function (button) {
@@ -264,7 +393,7 @@
     button.addEventListener("click", function () {
       const country = countryLayers.get(button.dataset.mapCountry);
       map.closePopup();
-      map.fitBounds(country.layer.getBounds(), {padding: [32, 32], maxZoom: 5, animate: false});
+      map.fitBounds(country.bounds, {padding: [32, 32], maxZoom: 5, animate: false});
       country.layer.openPopup(L.latLng(country.locations[0].coordinates));
       panel.querySelectorAll("[data-map-view]").forEach(function (view) {
         view.setAttribute("aria-pressed", "false");
@@ -277,6 +406,7 @@
   panel.querySelector(".recording-map-views").hidden = false;
   panel.querySelector(".recording-map-caption").hidden = false;
   panel.querySelector(".recording-map-flags").hidden = false;
+  panel.querySelector(".recording-map-travel-key").hidden = false;
   document.getElementById("recording-map-fallback").hidden = true;
   showView("world");
 })();

@@ -148,12 +148,12 @@
     "venues": [{"name": "2023 road trip", "episodes": [142, 143, 144]}]
   },
   {
-    "place": "Croatia",
+    "place": "Savudrija, Croatia",
     "country": "Croatia",
     "region": "europe",
-    "coordinates": [45.1, 15.2],
+    "coordinates": [45.48997, 13.49105],
     "approximate": true,
-    "venues": [{"name": "2023 road trip", "episodes": [144]}]
+    "venues": [{"name": "2023 road trip · Savudrija lighthouse coast", "episodes": [144]}]
   },
   {
     "place": "Sydney, Australia",
