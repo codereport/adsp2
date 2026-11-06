@@ -1,0 +1,48 @@
+{%- assign conference_count = 0 -%}
+{%- for location in site.data.recording_locations -%}
+  {%- if location.logo or location.mark -%}
+    {%- assign conference_count = conference_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+<section class="recording-map-panel" aria-labelledby="recording-map-title">
+  <div class="recording-map-heading">
+    <h2 id="recording-map-title">ADSP around the world</h2>
+    <span class="recording-map-count">{{ site.data.recording_locations | map: 'country' | uniq | size }} countries · {{ conference_count }} conferences</span>
+  </div>
+  <div class="recording-map-views" role="group" aria-label="Map view" hidden>
+    <button type="button" data-map-view="world" aria-pressed="true">World</button>
+    <button type="button" data-map-view="europe" aria-pressed="false">Europe</button>
+    <button type="button" data-map-view="north-america" aria-pressed="false">North America</button>
+    <button type="button" data-map-view="australia" aria-pressed="false">Australia</button>
+  </div>
+  <div id="recording-map" class="recording-map" role="region" aria-label="World map of countries where ADSP has recorded" data-logo-base="{{ '/assets/img/conferences/' | relative_url }}" hidden></div>
+  <p id="recording-map-fallback">Browse the recording locations and episode links below.</p>
+  <div class="recording-map-flags" role="group" aria-label="Countries where we've recorded" hidden>
+    {% for feature in site.data.recording_countries.features %}
+    <button type="button" data-map-country="{{ feature.properties.code }}" title="{{ feature.properties.country }}" aria-label="Show recordings in {{ feature.properties.country }}">
+      <span aria-hidden="true">{{ feature.properties.flag }}</span>
+    </button>
+    {% endfor %}
+  </div>
+  <p class="recording-map-caption" hidden><span class="recording-country-key" aria-hidden="true"></span> Countries we've recorded in. Click a country or conference logo for locations and episodes.</p>
+</section>
+
+{%- assign mapped_episodes = '' | split: '' -%}
+{%- for location in site.data.recording_locations -%}
+  {%- for venue in location.venues -%}
+    {%- assign mapped_episodes = mapped_episodes | concat: venue.episodes -%}
+  {%- endfor -%}
+{%- endfor -%}
+<script id="recording-map-data" type="application/json">
+{"locations": {{ site.data.recording_locations | jsonify }}, "countries": {{ site.data.recording_countries | jsonify }}, "episodes": {
+{%- assign first_episode = true -%}
+{%- for post in site.posts -%}
+  {%- assign number = post.path | split: 'Episode-' | last | split: '.' | first | plus: 0 -%}
+  {%- if mapped_episodes contains number -%}
+    {%- unless first_episode -%},{%- endunless -%}
+    "{{ number }}": {"url": {{ post.url | relative_url | jsonify }}, "title": {{ post.title | jsonify }}}
+    {%- assign first_episode = false -%}
+  {%- endif -%}
+{%- endfor -%}
+}}
+</script>

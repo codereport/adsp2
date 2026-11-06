@@ -1,0 +1,168 @@
+[
+  {
+    "place": "New York, USA",
+    "country": "USA",
+    "region": "north-america",
+    "coordinates": [40.741, -73.989],
+    "venues": [
+      {"name": "Walking through New York · 2025", "episodes": [232]},
+      {"name": "The Evelyn Hotel lobby", "episodes": [232]},
+      {"name": "Adobe offices, a cab and an elevator · 2024", "episodes": [172]},
+      {"name": "Franchia Vegan Cafe", "episodes": [176]},
+      {"name": "Bryce's apartment", "episodes": [177]}
+    ]
+  },
+  {
+    "place": "San Diego, USA",
+    "country": "USA",
+    "region": "north-america",
+    "coordinates": [32.716, -117.161],
+    "mark": "PLDI",
+    "callout": false,
+    "venues": [{"name": "PLDI / ARRAY · 2022", "episodes": [83]}]
+  },
+  {
+    "place": "Sunnyvale, USA",
+    "country": "USA",
+    "region": "north-america",
+    "coordinates": [37.369, -122.036],
+    "venues": [{"name": "Las Palmas Park · 2025", "episodes": [233]}]
+  },
+  {
+    "place": "Toronto, Canada",
+    "country": "Canada",
+    "region": "north-america",
+    "coordinates": [43.653, -79.383],
+    "logo": "cppnorth.png",
+    "logo_name": "CppNorth",
+    "callout": false,
+    "venues": [
+      {"name": "CppNorth · 2023, 2024", "episodes": [140, 141, 195]},
+      {"name": "Microsoft offices", "episodes": [195]}
+    ]
+  },
+  {
+    "place": "Cádiz, Spain",
+    "country": "Spain",
+    "region": "europe",
+    "coordinates": [36.53, -6.292],
+    "logo": "lambda-world.svg",
+    "logo_name": "Lambda World",
+    "callout_offset": [-110, 50],
+    "venues": [
+      {"name": "Lambda World · 2024", "episodes": [204]},
+      {"name": "Walking through Cádiz", "episodes": []}
+    ]
+  },
+  {
+    "place": "Cambridge, UK",
+    "country": "UK",
+    "region": "europe",
+    "coordinates": [52.205, 0.122],
+    "logo": "iverson-college.png",
+    "logo_name": "Iverson College",
+    "callout_offset": [-95, -45],
+    "venues": [{"name": "Iverson College / The Eagle Pub · 2024", "episodes": [196, 197]}]
+  },
+  {
+    "place": "Folkestone, UK",
+    "country": "UK",
+    "region": "europe",
+    "coordinates": [51.079, 1.179],
+    "logo": "cpp-on-sea.svg",
+    "logo_name": "C++ On Sea",
+    "callout_offset": [-95, 25],
+    "venues": [
+      {"name": "C++ On Sea · 2023", "episodes": [136, 137, 138, 139]},
+      {"name": "Walking through Folkestone", "episodes": []}
+    ]
+  },
+  {
+    "place": "Breda, Netherlands",
+    "country": "Netherlands",
+    "region": "europe",
+    "coordinates": [51.572, 4.768],
+    "logo": "cpp-under-the-sea.png",
+    "logo_name": "C++ Under the Sea",
+    "callout_offset": [105, 40],
+    "venues": [{"name": "C++ Under the Sea · 2024, 2025", "episodes": [205, 206, 207, 260, 261, 262, 263]}]
+  },
+  {
+    "place": "Kraków, Poland",
+    "country": "Poland",
+    "region": "europe",
+    "coordinates": [50.065, 19.945],
+    "logo": "lambda-days.png",
+    "logo_name": "Lambda Days",
+    "callout_offset": [115, 50],
+    "venues": [{"name": "Lambda Days · 2023", "episodes": [133, 134]}]
+  },
+  {
+    "place": "Copenhagen, Denmark",
+    "country": "Denmark",
+    "region": "europe",
+    "coordinates": [55.676, 12.568],
+    "venues": [{"name": "Walking through Copenhagen · 2025", "episodes": [255, 256]}]
+  },
+  {
+    "place": "Aarhus, Denmark",
+    "country": "Denmark",
+    "region": "europe",
+    "coordinates": [56.163, 10.204],
+    "venues": [{"name": "Driving from Aarhus to Copenhagen · 2025", "episodes": [254]}]
+  },
+  {
+    "place": "Kongsberg, Norway",
+    "country": "Norway",
+    "region": "europe",
+    "coordinates": [59.669, 9.65],
+    "logo": "ndc.svg",
+    "logo_name": "NDC TechTown",
+    "callout_offset": [125, -50],
+    "venues": [
+      {"name": "NDC TechTown · 2025", "episodes": [259]},
+      {"name": "Quality Hotel Grand lobby", "episodes": [257, 258]}
+    ]
+  },
+  {
+    "place": "Venice, Italy",
+    "country": "Italy",
+    "region": "europe",
+    "coordinates": [45.441, 12.316],
+    "venues": [{"name": "Walking through Venice · 2023", "episodes": [147, 148]}]
+  },
+  {
+    "place": "Austria",
+    "country": "Austria",
+    "region": "europe",
+    "coordinates": [47.516, 14.55],
+    "approximate": true,
+    "venues": [{"name": "2023 road trip", "episodes": [135]}]
+  },
+  {
+    "place": "Slovenia",
+    "country": "Slovenia",
+    "region": "europe",
+    "coordinates": [46.151, 14.996],
+    "approximate": true,
+    "venues": [{"name": "2023 road trip", "episodes": [142, 143, 144]}]
+  },
+  {
+    "place": "Croatia",
+    "country": "Croatia",
+    "region": "europe",
+    "coordinates": [45.1, 15.2],
+    "approximate": true,
+    "venues": [{"name": "2023 road trip", "episodes": [144]}]
+  },
+  {
+    "place": "Sydney, Australia",
+    "country": "Australia",
+    "region": "australia",
+    "coordinates": [-33.869, 151.209],
+    "logo": "yow.png",
+    "logo_name": "YOW!",
+    "callout": false,
+    "venues": [{"name": "YOW! · 2025", "episodes": [264, 265]}]
+  }
+]

@@ -1,0 +1,29 @@
+Conference marks used to identify recordings on the Where page.
+The logos belong to their respective event organizers; no affiliation is implied.
+
+CppNorth
+https://cppnorth.ca/images/cppnorth_logo.png
+
+C++ On Sea
+https://cpponsea.uk/static/img/logos/cpponsea-logo-bluer.svg
+
+C++ Under the Sea
+https://cppunderthesea.nl/wp-content/uploads/2023/11/cropped-cpp-uts-2023-white-1-192x192.png
+
+Lambda Days
+https://www.lambdadays.org/static/img/favicon.ico
+
+Lambda World
+https://pub-76146776eb2641c9806f07cecd1f292e.r2.dev/lambda-world.svg
+https://www.lambda.world/
+The SVG viewBox is cropped to the event symbol, on a purple background.
+
+Iverson College
+https://iversoncollege.com/img/favicon.ico
+
+NDC TechTown (NDC mark)
+https://ndctechtown.com/favicons/ndc/favicon.svg
+
+YOW!
+https://files.gotocon.com/uploads/files/1/original/1707925825_yow.png
+https://yowcon.com/

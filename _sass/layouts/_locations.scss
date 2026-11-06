@@ -1,0 +1,286 @@
+.recording-map-panel {
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 14px;
+  margin-bottom: 2.5em;
+  overflow: hidden;
+}
+
+.recording-map-heading {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  justify-content: space-between;
+  padding: 1em 1.2em 0.75em;
+
+  h2 {
+    font-size: 1.3em;
+    margin: 0;
+  }
+
+}
+
+.recording-map-count {
+  color: var(--link-color, #337ab7);
+  font-size: 0.78em;
+  white-space: nowrap;
+}
+
+.recording-map-views {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  padding: 0 1.2em 1em;
+
+  &[hidden] {
+    display: none;
+  }
+
+  button {
+    background: transparent;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 20px;
+    color: var(--text-color, #333);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.75em;
+    padding: 0.4em 0.9em;
+
+    &[aria-pressed="true"] {
+      background: var(--link-color, #337ab7);
+      border-color: transparent;
+      color: var(--background-color, #fff);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--link-color, #337ab7);
+      outline-offset: 3px;
+    }
+  }
+}
+
+.recording-map.leaflet-container {
+  background: #aad3df;
+  border-bottom: 1px solid var(--border-color, #ddd);
+  border-top: 1px solid var(--border-color, #ddd);
+  font-family: inherit;
+  height: 510px;
+  isolation: isolate;
+  width: 100%;
+  z-index: 0;
+
+  // Theme-wide image padding must not move tiles or shrink conference logos.
+  img {
+    margin: 0;
+    padding: 0;
+  }
+
+  .leaflet-control-zoom a,
+  .leaflet-popup-content-wrapper,
+  .leaflet-popup-tip {
+    background: var(--background-color, #fff);
+    color: var(--text-color, #333);
+  }
+
+  .leaflet-control-zoom a {
+    border-color: var(--border-color, #ddd);
+
+    &:hover {
+      background: var(--header-background, #f5f5f5);
+      text-decoration: none;
+    }
+  }
+
+  .leaflet-control-attribution {
+    background: var(--background-color, #fff);
+    color: var(--text-color, #333);
+    font-size: 10px;
+  }
+
+  .leaflet-popup-content {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 16px 20px;
+  }
+
+  .leaflet-tooltip {
+    background: var(--background-color, #fff);
+    border-color: var(--border-color, #ddd);
+    color: var(--text-color, #333);
+    font: inherit;
+    font-size: 13px;
+  }
+
+  .leaflet-marker-icon:focus-visible {
+    border-radius: 50%;
+    outline: 3px solid var(--link-color, #337ab7);
+    outline-offset: 4px;
+  }
+}
+
+.recording-marker {
+  background: none;
+  border: 0;
+}
+
+.recording-marker-badge {
+  align-items: center;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  display: flex;
+  height: 46px;
+  justify-content: center;
+  position: relative;
+  width: 46px;
+}
+
+.recording-map .leaflet-marker-pane .recording-marker-badge img {
+  border-radius: 5px;
+  height: 32px;
+  object-fit: contain;
+  width: 36px;
+}
+
+.recording-conference-badge {
+  height: var(--conference-size, 54px);
+  width: var(--conference-size, 54px);
+}
+
+.recording-map .leaflet-marker-pane .recording-conference-badge img {
+  height: calc(var(--conference-size, 54px) - 16px);
+  width: calc(var(--conference-size, 54px) - 12px);
+}
+
+.recording-map-flags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em;
+  justify-content: center;
+  padding: 0.65em 1em 0;
+
+  &[hidden] {
+    display: none;
+  }
+
+  button {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.5em;
+    line-height: 1;
+    padding: 0.2em;
+
+    &:hover,
+    &[aria-pressed="true"] {
+      background: var(--header-background, #f5f5f5);
+      border-color: var(--border-color, #ddd);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--link-color, #337ab7);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.recording-marker-wordmark {
+  color: #5c3990;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.recording-country:hover,
+.recording-country:focus-visible {
+  fill-opacity: 0.5;
+  stroke-width: 2px;
+}
+
+.recording-country-key {
+  background: rgba(185, 75, 98, 0.32);
+  border: 1px solid #9f354b;
+  border-radius: 3px;
+  display: inline-block;
+  height: 0.8em;
+  margin-right: 0.3em;
+  width: 1em;
+}
+
+.recording-map-popup + .recording-map-popup {
+  border-top: 1px solid var(--border-color, #ddd);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.recording-map-popup-title {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.recording-map-popup-note {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.recording-map-venue + .recording-map-venue {
+  border-top: 1px solid var(--border-color, #ddd);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.recording-map-episode-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  margin-top: 4px;
+
+  a {
+    color: var(--link-color, #337ab7);
+    font-size: 13px;
+    padding: 2px 0;
+  }
+}
+
+.recording-map-caption,
+#recording-map-fallback {
+  font-size: 0.7em;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.75;
+  padding: 0.8em 1.6em;
+}
+
+html[data-theme="dark"] .recording-map {
+  background: #252d32;
+
+  .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(0.85) saturate(0.6);
+  }
+
+  .recording-conference-leader {
+    stroke: #a4c6d8;
+  }
+
+  .recording-country {
+    fill: #d56880;
+    stroke: #e595a6;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .recording-map.leaflet-container {
+    height: 400px;
+  }
+
+  .recording-map-heading,
+  .recording-map-views {
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+  }
+}
