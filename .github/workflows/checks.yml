@@ -54,7 +54,7 @@ jobs:
           set +e
           python3 generate_episodes.py --check 2>&1 | tee checks-output.txt
           generator_status=${PIPESTATUS[0]}
-          python3 checks.py 2>&1 | tee -a checks-output.txt
+          ./checks.py 2>&1 | tee -a checks-output.txt
           checks_status=${PIPESTATUS[0]}
           set -e
 

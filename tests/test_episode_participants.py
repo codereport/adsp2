@@ -28,6 +28,97 @@ def transcript(*labels):
     )
 
 
+class EmployerMetadataTests(unittest.TestCase):
+    def test_employer_fields_do_not_hide_later_guest_bios(self):
+        post = """[Link to Episode 24 on Website](https://example.com/episode)
+
+**About the Guests:**
+
+[Ben Deane](https://example.com/ben) is a programmer.
+
+**Employer as of recording:** Intel
+
+[Tristan Brindle](https://example.com/tristan) is a freelance programmer.
+
+**Employer as of recording:** Independent
+
+### Show Notes
+
+**Date Recorded:** 2023-05-16
+"""
+        body = generator.about_guest_section(post)
+        people = generator.guest_people(body, "", ("ben deane", "tristan brindle"))
+        self.assertEqual([name for _, name, _ in people], ["Ben Deane", "Tristan Brindle"])
+        self.assertNotIn("Employer as of recording", body)
+        self.assertNotIn("Date Recorded", body)
+
+    def test_employer_changes_do_not_change_recording_identity(self):
+        post = "**About the Guest:**\n\n[Sean Parent](https://example.com/sean) is a programmer.\n\n"
+        before = generator.about_guest_section(post)
+        after = generator.about_guest_section(post + "**Employer as of recording:** Adobe\n")
+        self.assertEqual(generator.guest_identity(before, ()), generator.guest_identity(after, ()))
+
+    def test_employers_stay_associated_with_their_guest_in_multi_guest_bios(self):
+        post = """[Link to Episode 24 on Website](https://example.com/episode)
+
+**About the Guests:**
+
+For [Ben Deane](https://example.com/ben), C++ pays the bills.
+
+His bio continues in a second paragraph.
+
+**Employer as of recording:** Quantlab
+
+Zach Laine has been using C++ for years.
+
+**Employer as of recording:** [Cadence](https://example.com/cadence); University
+"""
+        self.assertEqual(generator.guest_employers_from_post(post), {
+            generator.normalized_person_name("Ben Deane"): ("Quantlab",),
+            generator.normalized_person_name("Zach Laine"): ("Cadence", "University"),
+        })
+
+    def test_employer_bio_uses_the_full_name_from_guest_tags(self):
+        post = """---
+tags: [Guest, Marco Franzreb Salgado]
+---
+
+**About the Guest:**
+
+[Marco](https://example.com/marco) is a software engineer.
+
+**Employer as of recording:** NVIDIA
+"""
+        self.assertEqual(generator.guest_employers_from_post(post), {
+            generator.normalized_person_name("Marco Franzreb Salgado"): ("NVIDIA",),
+        })
+
+    def test_company_logos_link_to_recordings_from_that_employer(self):
+        episodes = []
+        for number, guest, employer in [
+            (78, "Ben Deane", "Quantlab"),
+            (131, "Ben Deane", "Intel"),
+            (161, "Zach Laine", "Cadence Design Systems"),
+            (311, "Zach Laine", "LSEG"),
+        ]:
+            item = episode(number, guests=(guest,))
+            item["guest_employers"] = {generator.normalized_person_name(guest): (employer,)}
+            episodes.append(item)
+        metadata = {
+            "featured_companies": ["quantlab", "cadence", "lseg", "legacy"],
+            "companies": {
+                "quantlab": {"name": "Quantlab", "guests": ["Ben Deane"]},
+                "cadence": {"name": "Cadence", "aliases": ["Cadence Design Systems"], "guests": ["Zach Laine"]},
+                "lseg": {"name": "LSEG", "guests": ["Zach Laine"]},
+                "legacy": {"name": "Legacy affiliation", "guests": ["Ben Deane"]},
+            },
+        }
+        result = generator.latest_company_episodes(episodes, metadata)
+        self.assertEqual({key: value["episode"] for key, value in result.items()}, {
+            "quantlab": 78, "cadence": 161, "lseg": 311, "legacy": 131,
+        })
+
+
 class EpisodeParticipantTests(unittest.TestCase):
     def test_transcript_finds_cohost_missing_from_notes(self):
         post = episode()

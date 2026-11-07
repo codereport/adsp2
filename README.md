@@ -185,9 +185,11 @@ again to discover jobs that have completed since then.
 machine without Chromium, install Playwright's browser with
 `uv run --with playwright playwright install chromium` first.
 
-Run the transcript automation and archive-discovery checks locally:
+Run the transcript automation, archive-discovery, and browser checks locally.
+Build the site first to include the homepage logo carousel checks:
 
 ```bash
+bundle exec jekyll build
 uv run --with playwright python -m unittest discover -s tests -v
 ```
 
@@ -207,10 +209,36 @@ front matter when needed. A `Ben Deane` transcript label remains a guest unless 
 episode introduction or `cohost: Ben` identifies him as the co-host; the short
 `Ben` label identifies a co-host directly.
 
+Guest bios record historical employment with
+`**Employer as of recording:** Company name` after each guest's bio. Use the
+recording date, not the release date or the guest's current employer. `Independent`
+and `Retired` indicate no company employer; `unconfirmed` marks a value needing
+review. The per-episode review and sources are in `_reviews/guest-employers.csv`.
+The episode generator ignores these metadata lines when identifying guest bios.
+
+Run `./checks.py` to check episode data and report employer follow-ups. It lists
+guests with an `unconfirmed` employer, grouping consecutive episode numbers, and
+companies missing from the homepage logos. These two reports are non-blocking
+warnings. `LOGOS_NOT_INCLUDED` in `checks.py` lists employers intentionally omitted
+from the homepage; new employers still trigger a missing-logo warning. Logo
+coverage uses the recording-time employer fields, the company catalog and `featured_companies`,
+and the images rendered by the home layout; independent and retired statuses
+are excluded. Add an `aliases` list to a company when a bio uses a different name,
+such as `Futurewei Technologies` for `Futurewei`.
+
 Guest company and language badges are configured in `_data/guest_metadata.json`.
 Add a company to its `companies` catalog, add its key to `featured_companies` to
 show it on the homepage, and assign the key and language keys to each guest. Company
-logo files live in the `company/` directory of the sibling `codereport/logos`
-repository; publish that repository before publishing site metadata that references
-a new logo. Each company's `guests` list determines its homepage destination: the
-generator links the logo to the most recent episode featuring anyone on that list.
+logo files normally live in the `company/` directory of `codereport/logos`;
+publish that repository before referencing a new remote logo. A company's optional
+`logo_base_url` overrides the shared base URL; locally stored company logos use
+`/assets/img/` for files in `assets/img/company/`. Each company's `guests` list
+determines its homepage destination: the generator prefers the most recent
+episode whose guest bio records that employer, matching company names and aliases.
+For legacy affiliations without matching employer fields, it uses the guest's
+most recent appearance.
+
+Homepage topic and company logos remain centered when they fit on one line.
+Overflowing rows loop automatically, with a pause/resume control; hovering or
+focusing a row pauses it. Reduced motion disables autoplay and keeps horizontal
+scrolling available. The rows remeasure when images load or the window resizes.

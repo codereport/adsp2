@@ -24,10 +24,10 @@
     "url": "/2026/05/22/Episode-287.html"
   },
   "intel": {
-    "episode": 195,
+    "episode": 131,
     "guest": "Ben Deane",
-    "title": "🇨🇦 CppNorth Live 🇨🇦 David Olsen & Pure Chaos!",
-    "url": "/2024/08/16/Episode-195.html"
+    "title": "One Algorithm To Rule Them All!",
+    "url": "/2023/05/26/Episode-131.html"
   },
   "jump-trading": {
     "episode": 176,
@@ -64,5 +64,29 @@
     "guest": "Mark Saroufim",
     "title": "The Agentic Era & Books with Mark Saroufim",
     "url": "/2026/09/18/Episode-304.html"
+  },
+  "lseg": {
+    "episode": 311,
+    "guest": "Zach Laine",
+    "title": "Career Changes, GPUs & More with Zach Laine",
+    "url": "/2026/11/06/Episode-311.html"
+  },
+  "christie": {
+    "episode": 87,
+    "guest": "Tony Van Eerd",
+    "title": "Special Guest Tony Van Eerd! (Part 4)",
+    "url": "/2022/07/22/Episode-87.html"
+  },
+  "cadence": {
+    "episode": 161,
+    "guest": "Zach Laine",
+    "title": "🎄 EOP, Rust, Hylo, C++20/23/26/29 & More with Zach Laine (Holiday Special #4)",
+    "url": "/2023/12/22/Episode-161.html"
+  },
+  "quantlab": {
+    "episode": 78,
+    "guest": "Ben Deane",
+    "title": "C++ Algorithms & Profiling with Ben Deane (Part 4)",
+    "url": "/2022/05/20/Episode-78.html"
   }
 }

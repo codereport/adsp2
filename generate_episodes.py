@@ -172,6 +172,14 @@ def guest_tag(name, tag_values):
 
 
 def about_guest_section(post):
+    # Per-guest employer fields are metadata, not section boundaries. Remove
+    # them before parsing so later bios in multi-guest episodes remain visible.
+    post = re.sub(
+        r"^\*\*Employer as of recording:\*\*[^\n]*(?:\n|$)",
+        "",
+        post,
+        flags=re.MULTILINE,
+    )
     match = re.search(
         r"^(?:\*\*About the Guests?:\*\*|### About the Guests?)\s*\n"
         r"(?P<body>.*?)(?=^(?:###\s|\*\*[^*\n]+:\*\*)|\Z)",
@@ -296,6 +304,25 @@ def guest_people(about_guest, interviewed_guests, tags):
     )
 
 
+def guest_employers_from_post(post):
+    employers = {}
+    heading = re.search(r"^(?:\*\*About the Guests?:\*\*|### About the Guests?)\s*\n", post, re.MULTILINE)
+    bio_start = heading.end() if heading else 0
+    tags = tuple(tag.casefold() for tag in post_tag_values(post))
+    for match in re.finditer(
+        r"^\*\*Employer as of recording:\*\*[ \t]*([^\r\n]*)", post, re.MULTILINE
+    ):
+        people = guest_people(post[bio_start:match.start()], "", tags)
+        bio_start = match.end()
+        if not people:
+            continue
+        name = normalized_person_name(canonical_guest_name(people[0][1]))
+        value = re.sub(r"\[([^]]+)\]\([^)]+\)", r"\1", match[1])
+        value = html.unescape(re.sub(r"<[^>]+>", "", value))
+        employers[name] = tuple(employer.strip() for employer in value.split(";") if employer.strip())
+    return employers
+
+
 def recorded_date_from_post(post):
     match = re.search(
         r"^\*\*Date Recorded:\*\*\s*(\d{4}-\d{2}-\d{2})\b",
@@ -373,6 +400,7 @@ def read_posts(post_updates=None):
                 "guest_people": guest_people(
                     about_guest, interviewed_guests, tags
                 ),
+                "guest_employers": guest_employers_from_post(post),
                 "recorded_date": recorded_date_from_post(post),
                 "event": guest
                 and bool(
@@ -983,6 +1011,7 @@ def guest_badges(name, guest_metadata):
     company = guest_metadata.get("companies", {}).get(company_key, {})
     if company:
         company_name = company["name"]
+        company_logo_base = company.get("logo_base_url", logo_base_url)
         latest_episode = guest_metadata["company_latest_episodes"][company_key]
         company_description = (
             f"Company: {company_name}. Latest guest episode: "
@@ -993,7 +1022,7 @@ def guest_badges(name, guest_metadata):
             f'href="{html.escape(latest_episode["url"], quote=True)}" '
             f'title="{html.escape(company_description, quote=True)}" '
             f'aria-label="{html.escape(company_description, quote=True)}">'
-            f'<img src="{html.escape(logo_base_url + company["logo"], quote=True)}" alt="">'
+            f'<img src="{html.escape(company_logo_base + company["logo"], quote=True)}" alt="">'
             "</a>"
         )
 
@@ -1076,9 +1105,24 @@ def latest_company_episodes(episodes, guest_metadata):
     companies = guest_metadata["companies"]
     for company_key in guest_metadata["featured_companies"]:
         candidates = []
+        company = companies[company_key]
+        company_names = {
+            normalized_person_name(name)
+            for name in [company_key, company["name"], *company.get("aliases", [])]
+        }
         for guest_name in companies[company_key].get("guests", []):
             guest_name = canonical_guest_name(guest_name)
-            episode = latest_by_guest.get(normalized_person_name(guest_name))
+            guest_key = normalized_person_name(guest_name)
+            episode = latest_by_guest.get(guest_key)
+            recorded_candidates = []
+            for recording in episodes:
+                employers = recording.get("guest_employers", {}).get(guest_key, ())
+                if company_names & {normalized_person_name(name) for name in employers}:
+                    recorded_candidates.append(recording)
+            # Prefer a recording at this employer over appearances after a job
+            # change. Preserve legacy guest affiliations without matching fields.
+            if recorded_candidates:
+                episode = max(recorded_candidates, key=lambda item: (item["date"], item["number"]))
             if episode:
                 candidates.append((episode["date"], episode["number"], guest_name, episode))
 

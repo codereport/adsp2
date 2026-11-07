@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ asset_version }}">
     <link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}?v={{ asset_version }}">
 
+    {% if page.layout == 'home' %}
+    <script defer src="{{ '/assets/js/logo-carousels.js' | relative_url }}?v={{ asset_version }}"></script>
+    {% endif %}
+
     {% if page.recording_map %}
     <link rel="stylesheet" href="{{ '/assets/css/vendor/leaflet/leaflet.css' | relative_url }}">
     <script defer src="{{ '/assets/js/vendor/leaflet/leaflet.js' | relative_url }}"></script>

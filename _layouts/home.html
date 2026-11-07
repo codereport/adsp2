@@ -112,11 +112,12 @@ layout: default
             {% for company_id in site.data.guest_metadata.featured_companies %}
                 {% assign company = site.data.guest_metadata.companies[company_id] %}
                 {% assign appearance = site.data.company_latest_episodes[company_id] %}
+                {% assign logo_base = company.logo_base_url | default: site.data.guest_metadata.logo_base_url %}
                 <a class="company-logo" href="{{ appearance.url | relative_url }}"
                     title="Latest {{ company.name }} guest: {{ appearance.guest }}, Episode {{ appearance.episode }}"
                     aria-label="Latest {{ company.name }} guest: {{ appearance.guest }}, Episode {{ appearance.episode }}">
                     <img{% if company.dark_invert %} class="company-logo-invert"{% endif %}
-                        src="{{ site.data.guest_metadata.logo_base_url }}{{ company.logo }}" alt="{{ company.name }}">
+                        src="{{ logo_base }}{{ company.logo }}" alt="{{ company.name }}">
                 </a>
             {% endfor %}
         </div>

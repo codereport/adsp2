@@ -213,8 +213,8 @@ a.site-title:hover,
 
 /* JavaScript will handle the actual logo switching based on data-theme attribute */
 
-/* Mobile navigation menu dark mode fixes */
-@media screen and (max-width: 768px) {
+/* Match the collapsed navigation breakpoint ($m-break in _navbar.scss). */
+@media screen and (max-width: 1000px) {
   html[data-theme="dark"] nav li {
     background-color: #2d2d2d !important;
   }
