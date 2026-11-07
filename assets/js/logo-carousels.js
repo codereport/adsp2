@@ -33,6 +33,7 @@
     root.append(button);
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const pixelsPerSecond = viewport.classList.contains("topic-logos") ? 34 : 28;
     let overflowing = false;
     let loopWidth = 0;
     let userPaused = false;
@@ -47,7 +48,7 @@
 
     function animate(time) {
       if (lastTime !== null) {
-        offset = (offset + Math.min(time - lastTime, 64) * 0.028) % loopWidth;
+        offset = (offset + Math.min(time - lastTime, 64) * pixelsPerSecond / 1000) % loopWidth;
         viewport.scrollLeft = offset;
       }
       lastTime = time;

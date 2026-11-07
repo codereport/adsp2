@@ -44,9 +44,10 @@
     "christie": {
       "name": "Christie Digital",
       "aliases": ["Christie"],
-      "logo": "company/christie-icon.png",
+      "logo": "company/christie.svg",
       "logo_base_url": "/assets/img/",
       "url": "https://www.christiedigital.com/",
+      "dark_invert": true,
       "guests": ["Tony Van Eerd"]
     },
     "core-automation": {
@@ -91,10 +92,9 @@
     "lseg": {
       "name": "LSEG",
       "aliases": ["London Stock Exchange Group", "MayStreet (LSEG)"],
-      "logo": "company/lseg.svg",
+      "logo": "company/lseg-crest.png",
       "logo_base_url": "/assets/img/",
       "url": "https://www.lseg.com/",
-      "dark_invert": true,
       "guests": ["Zach Laine", "Robert Leahy"]
     },
     "meta": {
