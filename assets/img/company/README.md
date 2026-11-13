@@ -1,3 +1,7 @@
+---
+hide: true
+---
+
 # Company logos
 
 These logos identify guests' employers. The respective companies own their marks.
