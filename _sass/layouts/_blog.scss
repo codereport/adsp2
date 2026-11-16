@@ -53,8 +53,8 @@
 }
 
 .listen-badge-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 22rem));
   justify-content: center;
   gap: 0.5rem;
   margin: 0 auto;
@@ -62,7 +62,6 @@
   a {
     aspect-ratio: 650 / 189;
     display: block;
-    flex: 0 1 22rem;
     max-width: 100%;
     overflow: hidden;
   }
@@ -155,6 +154,7 @@ html[data-theme="dark"] .topic-logo img.topic-logo-invert {
 
 @media screen and (max-width: $sm-break) {
   .listen-badge-links {
+    grid-template-columns: minmax(0, 22rem);
     padding: 0 1rem;
   }
 

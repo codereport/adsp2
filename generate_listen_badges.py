@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Generate matching Spotify and Apple Podcasts listening badges."""
+"""Generate matching POD GOD, Spotify, and Apple Podcasts listening badges."""
 
 import base64
 from pathlib import Path
@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 OUTPUT_DIR = ROOT / "assets" / "img"
 FONT_DIR = ROOT / "assets" / "fonts" / "source-sans-pro"
+BUNGEE_FONT = ROOT / "assets" / "fonts" / "bungee" / "bungee-regular.woff2"
 
 SPOTIFY_PATH = (
     "M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0z"
@@ -49,40 +50,77 @@ APPLE_PODCASTS_PATH = (
     ".974-.966 1.97-.97z"
 )
 
+
+def svg_icon(brand_color, icon_path):
+    icon_svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">'
+        f'<path fill="{brand_color}" d="{icon_path}"/></svg>'
+    )
+    encoded_icon = base64.b64encode(icon_svg.encode("utf-8")).decode("ascii")
+    return f"data:image/svg+xml;base64,{encoded_icon}"
+
+
 BADGES = (
-    ("listen-on-spotify.svg", "Spotify Podcasts", "#1ED760", SPOTIFY_PATH),
+    ("listen-on-pod-god.svg", "POD GOD", OUTPUT_DIR / "pod-god-circle.png"),
+    (
+        "listen-on-spotify.svg",
+        "Spotify Podcasts",
+        svg_icon("#1ED760", SPOTIFY_PATH),
+    ),
     (
         "listen-on-apple-podcasts.svg",
         "Apple Podcasts",
-        "#AE42D3",
-        APPLE_PODCASTS_PATH,
+        svg_icon("#AE42D3", APPLE_PODCASTS_PATH),
     ),
 )
 
 
-def badge_svg(service_name, brand_color, icon_path):
+def badge_svg(service_name, icon_uri):
     regular_font = base64.b64encode(
         (FONT_DIR / "source-sans-pro-regular.woff2").read_bytes()
     ).decode("ascii")
     bold_font = base64.b64encode(
         (FONT_DIR / "source-sans-pro-bold.woff2").read_bytes()
     ).decode("ascii")
-    icon_svg = (
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">'
-        f'<path fill="{brand_color}" d="{icon_path}"/></svg>'
-    )
-    encoded_icon = base64.b64encode(icon_svg.encode("utf-8")).decode("ascii")
+    icon_x = 39
+    text_x = 181
+    brand_font_style = ""
+    gradient_defs = ""
+    wordmark_style = 'fill="#111" font-size="60" font-weight="700"'
+    if service_name == "POD GOD":
+        bungee_font = base64.b64encode(BUNGEE_FONT.read_bytes()).decode("ascii")
+        brand_font_style = (
+            '\n    @font-face { font-family: "Bungee"; '
+            f'src: url("data:font/woff2;base64,{bungee_font}") format("woff2"); '
+            'font-weight: 400; }'
+        )
+        gradient_defs = '''  <defs>
+    <linearGradient id="pod-god-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4d8d"/>
+      <stop offset="50%" stop-color="#c850f2"/>
+      <stop offset="100%" stop-color="#6c63ff"/>
+    </linearGradient>
+  </defs>
+'''
+        # Visible right edge of "POD GOD" in Bungee at 60px with 1.5px spacing.
+        wordmark_width = 281.1
+        icon_x = round((650 - 119 - 23 - wordmark_width) / 2, 2)
+        text_x = round(icon_x + 119 + 23, 2)
+        wordmark_style = (
+            'fill="url(#pod-god-gradient)" font-family="Bungee, sans-serif" '
+            'font-size="60" font-weight="400" letter-spacing="1.5"'
+        )
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="650" height="189" viewBox="0 0 650 189" role="img" aria-labelledby="title">
   <title id="title">Listen on {service_name}</title>
   <style>
     @font-face {{ font-family: "ADSP Badge"; src: url("data:font/woff2;base64,{regular_font}") format("woff2"); font-weight: 400; }}
-    @font-face {{ font-family: "ADSP Badge"; src: url("data:font/woff2;base64,{bold_font}") format("woff2"); font-weight: 700; }}
+    @font-face {{ font-family: "ADSP Badge"; src: url("data:font/woff2;base64,{bold_font}") format("woff2"); font-weight: 700; }}{brand_font_style}
   </style>
-  <rect x="2" y="2" width="646" height="185" rx="34" fill="#fff" stroke="#8A8A8A" stroke-width="3"/>
-  <image x="39" y="35" width="119" height="119" href="data:image/svg+xml;base64,{encoded_icon}" aria-hidden="true"/>
+{gradient_defs}  <rect x="2" y="2" width="646" height="185" rx="34" fill="#fff" stroke="#8A8A8A" stroke-width="3"/>
+  <image x="{icon_x}" y="35" width="119" height="119" href="{icon_uri}" aria-hidden="true"/>
   <g font-family="ADSP Badge, Source Sans Pro, sans-serif">
-    <text x="181" y="72" fill="#555" font-size="40" font-weight="400">Listen on</text>
-    <text x="181" y="148" fill="#111" font-size="60" font-weight="700">{service_name}</text>
+    <text x="{text_x}" y="72" fill="#555" font-size="40" font-weight="400">Listen on</text>
+    <text x="{text_x}" y="148" {wordmark_style}>{service_name}</text>
   </g>
 </svg>
 '''
@@ -90,10 +128,13 @@ def badge_svg(service_name, brand_color, icon_path):
 
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    for filename, service_name, brand_color, icon_path in BADGES:
+    for filename, service_name, icon in BADGES:
+        if isinstance(icon, Path):
+            encoded_icon = base64.b64encode(icon.read_bytes()).decode("ascii")
+            icon = f"data:image/png;base64,{encoded_icon}"
         destination = OUTPUT_DIR / filename
         destination.write_text(
-            badge_svg(service_name, brand_color, icon_path), encoding="utf-8"
+            badge_svg(service_name, icon), encoding="utf-8"
         )
         print(f"Generated {destination.relative_to(ROOT)}")
 

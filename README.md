@@ -45,6 +45,20 @@ gem install sass:3.7.4 erb --user-install --no-document
 ruby tests/check_styles.rb
 ```
 
+## Listening Badges
+
+Regenerate the matching POD GOD, Spotify, and Apple Podcasts badges with:
+
+```bash
+python3 generate_listen_badges.py
+```
+
+The POD GOD badge embeds `assets/img/pod-god-circle.png`, copied from
+`podgod-parent/podgod/player-icon-borderless.png`. Its centered wordmark uses
+the site's pink/purple/blue gradient and Bungee font, embedded from
+`assets/fonts/bungee/`. The font comes from POD GOD's public website assets;
+its SIL Open Font License is included alongside it.
+
 ## Updating the Episodes Table
 
 Run the generator after adding or editing an episode post:
