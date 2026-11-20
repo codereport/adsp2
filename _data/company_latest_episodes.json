@@ -66,10 +66,10 @@
     "url": "/2026/09/18/Episode-304.html"
   },
   "lseg": {
-    "episode": 312,
+    "episode": 313,
     "guest": "Zach Laine",
-    "title": "The C++26 Contracts Fiasco",
-    "url": "/2026/11/13/Episode-312.html"
+    "title": "C++26 Reflection vs CRTP, AI, Kids & More with Zach Laine",
+    "url": "/2026/11/20/Episode-313.html"
   },
   "christie": {
     "episode": 87,
