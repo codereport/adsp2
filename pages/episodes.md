@@ -23,7 +23,7 @@ List of all episodes.
           <strong>315</strong><span>episodes listed</span>
         </div>
         <div class="episode-stat-card">
-          <strong>176h 19m</strong><span>total listening time</span>
+          <strong>177h 20m</strong><span>total listening time</span>
         </div>
         <div class="episode-stat-card">
           <strong>32</strong><span>median minutes</span>
@@ -49,7 +49,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
       <section aria-labelledby="episode-lengths">
         <h2 id="episode-lengths">Episode lengths</h2>
         <p class="episode-stat-note">Number of episodes in each duration range.</p>
-        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 13 episodes; 20–29 minutes: 108 episodes; 30–39 minutes: 131 episodes; 40–49 minutes: 49 episodes; 50–59 minutes: 5 episodes; 60+ minutes: 8 episodes">
+        <div class="episode-histogram" role="img" aria-label="&lt;20 minutes: 13 episodes; 20–29 minutes: 108 episodes; 30–39 minutes: 131 episodes; 40–49 minutes: 49 episodes; 50–59 minutes: 5 episodes; 60+ minutes: 9 episodes">
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
               <span>13</span>
@@ -87,8 +87,8 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
           </div>
           <div class="episode-histogram-column">
             <div class="episode-histogram-bar-area">
-              <span>8</span>
-              <span class="episode-histogram-bar" style="--bar-height: 5%"></span>
+              <span>9</span>
+              <span class="episode-histogram-bar" style="--bar-height: 6%"></span>
             </div>
             <span>60+</span>
           </div>
@@ -5296,7 +5296,7 @@ Episode 239: Claude-Poisoned Dev Sipping Rocket Fuel</a>
 
 | <button type="button" class="episodes-sort" data-sort-key="number">#</button> | Title | <button type="button" class="episodes-sort" data-sort-key="duration">Duration</button> | Co-host | Release Date |
 | :-: | :---- | :------: | :-----: | :----------: |
-| 314 | [5 Years of ADSP - NVIDIA, Modal, POD GOD & Predictions!](https://adspthepodcast.com/2026/11/27/Episode-314.html){: .episode-title } | — | Bryce | 2026-11-27 |
+| 314 | [5 Years of ADSP - NVIDIA, Modal, POD GOD & Predictions!](https://adspthepodcast.com/2026/11/27/Episode-314.html){: .episode-title } | 1:01 | Bryce | 2026-11-27 |
 | 313 | [C++26 Reflection vs CRTP, AI, Kids & More with Zach Laine](https://adspthepodcast.com/2026/11/20/Episode-313.html){: .episode-title .guest-orange } | 47 | Bryce | 2026-11-20 |
 | 312 | [The C++26 Contracts Fiasco](https://adspthepodcast.com/2026/11/13/Episode-312.html){: .episode-title .guest-orange } | 51 | Bryce | 2026-11-13 |
 | 311 | [Career Changes, GPUs & More with Zach Laine](https://adspthepodcast.com/2026/11/06/Episode-311.html){: .episode-title .guest-orange } | 27 | Bryce | 2026-11-06 |
